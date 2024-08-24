@@ -78,3 +78,9 @@
   font-style: normal;
   font-display: swap;
 }
+header .Menu-Container{
+  background-size: 100%;
+}
+h1{
+  background-color:#1e376183;
+}
