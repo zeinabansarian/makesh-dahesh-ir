@@ -19,6 +19,7 @@ module.exports = {
     },
     colors: {
       'b1':'#1E293B',
+      'b2':'#64748B',
       'b3':'#E4E4E7',
       'b4':'#FAFAFA',
       'b5': '#1E1E1E',
@@ -30,7 +31,7 @@ module.exports = {
       'b12': '#BCBDBD',
       'b13': '#F9CF66',
       'white': '#FFFFFF',
-      'gray-500':'#64748B',
+      'gray-500': '#475569',
       'f':'#ffff',
 
     },
