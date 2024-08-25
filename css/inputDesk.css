@@ -205,3 +205,21 @@ color: #000;
   opacity: 0.7;
   transform: scale(3);
 }
+ #s1,#s2{
+ transition: all .4s ease;
+ -webkit-transition: all .4s ease;
+ -moz-transition: all .4s ease;
+ -ms-transition: all .4s ease;
+ -o-transition: all .4s ease;
+}
+.Service .Top-S:hover svg #s1{
+  stroke: #fff !important;
+}
+.Service .Top-S:hover svg #s2{
+  stroke: #fff !important;
+
+}
+
+.Service .Top-S:hover svg{
+  width: 30px;
+}

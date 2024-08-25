@@ -100,3 +100,48 @@ let swiperProject = new Swiper('.swiper-projects',{
     },
 
 })
+
+// SERVICE DROP
+$(document).ready(function() {
+    $('.Service .Bottom-S').slideUp();
+    $(document.querySelector('.Service .Bottom-S')).slideDown();
+    let MainIMG  =document.querySelector('.IMG-SecviceContainer .IMG')
+  let navBtns = document.querySelectorAll('.Service')
+  for(let i=0 ; i<navBtns.length ; i++){
+    navBtns[i].setAttribute('IS-OP',false)
+  }
+  navBtns[0].setAttribute('IS-OP',true)
+  navBtns[0].classList.add('active')
+  navBtns.forEach(nav=>{
+    let IsOpen = false;
+  nav.addEventListener('mouseenter',(e)=>{
+    IsOpen =Boolean(`${e.currentTarget.getAttribute('IS-OP')}`) 
+    e.currentTarget.children[0].classList.add('active')
+    $(e.currentTarget.children[1]).slideDown();
+    // e.currentTarget.children[1].style.display='flex'
+
+    let current = e.currentTarget.getAttribute('data-img')
+    console.log('current img',current);
+    MainIMG.classList.remove('Show')
+    MainIMG.querySelector('img').setAttribute('src',current)
+    setTimeout(() => {
+
+    MainIMG.classList.add('Show')
+
+    }, 200);
+
+    IsOpen =false;
+    e.currentTarget.setAttribute('IS-OP',true)
+      })
+ nav.addEventListener('mouseleave',(e)=>{
+    IsOpen =Boolean(`${e.currentTarget.getAttribute('IS-OP')}`) 
+    e.currentTarget.children[0].classList.remove('active')
+    $(e.currentTarget.children[1]).slideUp();
+    // e.currentTarget.children[1].style.display='none'
+    e.currentTarget.setAttribute('IS-OP',false)
+    IsOpen =true;
+     })
+  })
+
+  })
+  
