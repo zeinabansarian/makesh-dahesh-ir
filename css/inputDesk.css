@@ -274,3 +274,11 @@ display: flex !important;
  -ms-transform: translateY(5em);
  -o-transform: translateY(5em);
 }
+.fadein p{
+  transform: translateY(1.5em);
+  opacity: 0;
+  -webkit-transform: translateY(1.5em);
+  -moz-transform: translateY(1.5em);
+  -ms-transform: translateY(1.5em);
+  -o-transform: translateY(1.5em);
+}

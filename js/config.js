@@ -26,3 +26,14 @@ DropNavs.forEach(d=>{
      e.currentTarget.children[1].classList.toggle('openNav')
     })
 })
+let header = document.querySelector('header')
+window.addEventListener('scroll',(s)=>{
+    console.log(scrollY);
+    if(scrollY > 0){
+        header.classList.add('GoBottom')
+    }
+    else{
+        header.classList.remove('GoBottom')
+    }
+    
+})

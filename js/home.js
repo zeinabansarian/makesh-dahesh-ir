@@ -29,8 +29,8 @@ sections.forEach(s=>{
         y:0,
         scrollTrigger:{
             trigger:s,
-            start:'top 50%',
-            end:'bottom bottom'
+            start:"top 60%",
+            end:"bottom bottom"
         }
       })
 })

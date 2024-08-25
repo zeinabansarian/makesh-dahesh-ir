@@ -796,6 +796,10 @@ video {
   z-index: 10;
 }
 
+.z-\[9999\] {
+  z-index: 9999;
+}
+
 .order-1 {
   order: 1;
 }
@@ -4029,6 +4033,15 @@ svg.BTN #c2,#c1{
   -o-transform: translateY(5em);
 }
 
+.fadein p{
+  transform: translateY(1.5em);
+  opacity: 0;
+  -webkit-transform: translateY(1.5em);
+  -moz-transform: translateY(1.5em);
+  -ms-transform: translateY(1.5em);
+  -o-transform: translateY(1.5em);
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -4254,12 +4267,6 @@ svg.BTN #c2,#c1{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:scale-\[1\.2\] {
-  --tw-scale-x: 1.2;
-  --tw-scale-y: 1.2;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:bg-\[transparent\] {
   background-color: transparent;
 }
@@ -4316,6 +4323,10 @@ svg.BTN #c2,#c1{
   .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.dark *) {
     paint-order: markers;
   }
+}
+
+.\[\&\.GoBottom\]\:bg-\[\#2e319284\].GoBottom {
+  background-color: #2e319284;
 }
 
 .\[\&\.Open\]\:visible.Open {
