@@ -15,3 +15,10 @@ var BannerSlider = new Swiper(".Section-1 .swiper-banner", {
           },
       },
  })
+
+ //  PRODUCT SLIDER
+let swiperProduct= new Swiper(".swiper-products", {
+    slidesPerView:4,
+    spaceBetween: 40,
+      speed:1000
+  });  
