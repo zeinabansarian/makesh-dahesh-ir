@@ -249,3 +249,28 @@ color: #000;
 .Service .Top-S:hover svg{
   width: 30px;
 }
+.navigationBTN .swiper-button-prev,.navigationBTN .swiper-button-next{
+  position: static !important;
+margin: 0 !important;
+padding: 0 !important;
+width: 50% !important;
+display: flex !important;
+}
+.navigationBTN .swiper-button-prev::before,.navigationBTN .swiper-button-next::before,
+.navigationBTN .swiper-button-prev::after,.navigationBTN .swiper-button-next::after{
+  content: none !important;
+}
+.swiper-gallery .swiper-slide-active .IMG{
+  transform:unset !important;
+  -webkit-transform:unset !important;
+  -moz-transform:unset !important;
+  -ms-transform:unset !important;
+  -o-transform:unset !important;
+}
+.swiper-gallery .swiper-slide-next .IMG{
+ transform: translateY(5em);
+ -webkit-transform: translateY(5em);
+ -moz-transform: translateY(5em);
+ -ms-transform: translateY(5em);
+ -o-transform: translateY(5em);
+}

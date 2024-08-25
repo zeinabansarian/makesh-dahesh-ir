@@ -958,6 +958,11 @@ video {
   margin-right: 1.25rem;
 }
 
+.mx-\[\.5em\] {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1042,6 +1047,10 @@ video {
   margin-right: 4.8em;
 }
 
+.mr-\[5em\] {
+  margin-right: 5em;
+}
+
 .mr-auto {
   margin-right: auto;
 }
@@ -1086,16 +1095,12 @@ video {
   margin-top: 3em;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
-.mt-\[em\] {
-  margin-top: em;
-}
-
 .mt-\[5em\] {
   margin-top: 5em;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .box-border {
@@ -1273,6 +1278,10 @@ video {
   width: 128px;
 }
 
+.w-\[15\%\] {
+  width: 15%;
+}
+
 .w-\[150px\] {
   width: 150px;
 }
@@ -1309,8 +1318,20 @@ video {
   width: 80%;
 }
 
+.w-\[80px\] {
+  width: 80px;
+}
+
+.w-\[85\%\] {
+  width: 85%;
+}
+
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[98\%\] {
+  width: 98%;
 }
 
 .w-\[this-is\\\\\] {
@@ -1398,6 +1419,11 @@ video {
 
 .translate-x-\[-100px\] {
   --tw-translate-x: -100px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[-2em\] {
+  --tw-translate-x: -2em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2852,6 +2878,11 @@ video {
   padding-bottom: 2em;
 }
 
+.py-\[3em\] {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
 .py-\[5em\] {
   padding-top: 5em;
   padding-bottom: 5em;
@@ -3577,6 +3608,10 @@ video {
   transition-duration: .5s;
 }
 
+.duration-\[\.8s\] {
+  transition-duration: .8s;
+}
+
 .duration-\[\.9s\] {
   transition-duration: .9s;
 }
@@ -3965,6 +4000,35 @@ svg.BTN #c2,#c1{
   width: 30px;
 }
 
+.navigationBTN .swiper-button-prev,.navigationBTN .swiper-button-next{
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 50% !important;
+  display: flex !important;
+}
+
+.navigationBTN .swiper-button-prev::before,.navigationBTN .swiper-button-next::before,
+.navigationBTN .swiper-button-prev::after,.navigationBTN .swiper-button-next::after{
+  content: none !important;
+}
+
+.swiper-gallery .swiper-slide-active .IMG{
+  transform:unset !important;
+  -webkit-transform:unset !important;
+  -moz-transform:unset !important;
+  -ms-transform:unset !important;
+  -o-transform:unset !important;
+}
+
+.swiper-gallery .swiper-slide-next .IMG{
+  transform: translateY(5em);
+  -webkit-transform: translateY(5em);
+  -moz-transform: translateY(5em);
+  -ms-transform: translateY(5em);
+  -o-transform: translateY(5em);
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -4187,6 +4251,12 @@ svg.BTN #c2,#c1{
 .group:hover .group-hover\:scale-\[1\.1\] {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-\[1\.2\] {
+  --tw-scale-x: 1.2;
+  --tw-scale-y: 1.2;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
