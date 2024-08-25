@@ -22,3 +22,16 @@ let swiperProduct= new Swiper(".swiper-products", {
     spaceBetween: 40,
       speed:1000
   });  
+let sections =document.querySelectorAll('.sec')
+sections.forEach(s=>{
+    gsap.to('.fadein p',{
+        opacity:1,
+        y:0,
+        scrollTrigger:{
+            trigger:s,
+            start:'top 50%',
+            end:'bottom bottom'
+        }
+      })
+})
+ 
