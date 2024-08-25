@@ -145,3 +145,10 @@ $(document).ready(function() {
 
   })
   
+
+  //  BLOG SLIDER
+let swiperBlog= new Swiper(".swiper-blogs", {
+    slidesPerView:3,
+    spaceBetween:30,
+      speed:1000
+  });  

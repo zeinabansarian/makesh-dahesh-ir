@@ -29,7 +29,33 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "IRANSansWebfanum";
+  src: url("../../_fonts/IRANSansWeb(FaNum).eot");
+  src: url("../../_fonts/IRANSansWeb(FaNum).eot?#iefix")
+      format("embedded-opentype"),
+    url("../../_fonts/IRANSansWeb(FaNum).woff") format("woff"),
+    url("../../_fonts/IRANSansWeb(FaNum).woff2") format("woff2"),
+    url("../../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWebfanum";
+  src: url("../../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.faNum {
+  font-family: "IRANSansWebfanum" !important;
+}
 @font-face {
   font-family: "IRANSansWeb500";
   src: url("../../_fonts/IRANSansWeb_Medium.eot");
