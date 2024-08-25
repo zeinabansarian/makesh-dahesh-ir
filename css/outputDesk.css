@@ -780,6 +780,10 @@ video {
   z-index: 2;
 }
 
+.z-3 {
+  z-index: 3;
+}
+
 .z-\[-1\] {
   z-index: -1;
 }
@@ -1205,12 +1209,20 @@ video {
   height: 5px;
 }
 
+.h-\[65px\] {
+  height: 65px;
+}
+
 .h-\[75\%\] {
   height: 75%;
 }
 
 .h-\[90\%\] {
   height: 90%;
+}
+
+.h-\[900px\] {
+  height: 900px;
 }
 
 .h-auto {
@@ -1267,6 +1279,10 @@ video {
 
 .w-\[50\%\] {
   width: 50%;
+}
+
+.w-\[65px\] {
+  width: 65px;
 }
 
 .w-\[70\%\] {
@@ -1404,6 +1420,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[100px\] {
+  --tw-translate-y: 100px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .scale-0 {
   --tw-scale-x: 0;
   --tw-scale-y: 0;
@@ -1437,6 +1458,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-none {
+  cursor: none;
 }
 
 .touch-auto {
@@ -1711,6 +1736,10 @@ video {
 
 .grid-flow-col-dense {
   grid-auto-flow: column dense;
+}
+
+.grid-cols-\[1fr\2c 1fr\2c 1fr\] {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .grid-cols-\[1fr\2c 1fr\] {
@@ -2485,6 +2514,10 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.bg-\[\#00000073\] {
+  background-color: #00000073;
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2507,6 +2540,10 @@ video {
 
 .bg-b6 {
   background-color: #2E3192F3;
+}
+
+.bg-b7 {
+  background-color: #F37021F3;
 }
 
 .bg-b8 {
@@ -2811,6 +2848,10 @@ video {
 
 .pb-\[5em\] {
   padding-bottom: 5em;
+}
+
+.pl-\[2\.5em\] {
+  padding-left: 2.5em;
 }
 
 .pr-5 {
@@ -3464,6 +3505,10 @@ video {
   transition-duration: 75ms;
 }
 
+.duration-\[\.1s\] {
+  transition-duration: .1s;
+}
+
 .duration-\[\.3s\] {
   transition-duration: .3s;
 }
@@ -3474,6 +3519,10 @@ video {
 
 .duration-\[\.5s\] {
   transition-duration: .5s;
+}
+
+.duration-\[\.9s\] {
+  transition-duration: .9s;
 }
 
 .duration-\[1\.5s\] {
@@ -3779,6 +3828,27 @@ svg.BTN #c2,#c1{
   -o-transform: scale(1);
 }
 
+.cursor-follower {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(5px, 5px);
+}
+
+.cursor-follower.active{
+  opacity: 0.7;
+  transform: scale(3);
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -3939,6 +4009,10 @@ svg.BTN #c2,#c1{
   content: var(--tw-content);
 }
 
+.hover\:cursor-none:hover {
+  cursor: none;
+}
+
 .hover\:bg-f:hover {
   background-color: #ffff;
 }
@@ -3988,6 +4062,10 @@ svg.BTN #c2,#c1{
 .group:hover .group-hover\:translate-y-\[0\] {
   --tw-translate-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:bg-\[transparent\] {
+  background-color: transparent;
 }
 
 .group:hover .group-hover\:text-b1 {
