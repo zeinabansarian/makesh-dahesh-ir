@@ -1456,12 +1456,12 @@ video {
   transform: none;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .cursor-none {
   cursor: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .touch-auto {
@@ -2856,6 +2856,10 @@ video {
 
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pr-\[1em\] {
+  padding-right: 1em;
 }
 
 .pr-\[8em\] {

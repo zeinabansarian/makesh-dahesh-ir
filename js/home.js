@@ -85,3 +85,18 @@ $(".ProductCats").on("mouseleave", function(e) {
     cursor.removeClass("active");
     follower.removeClass("active");
 });
+
+// PROJECT SLIDER
+let swiperProject = new Swiper('.swiper-projects',{
+    slidesPerView:2.2,
+    loop: true,
+    loopedSlides: 4,
+    spaceBetween: 30,
+    grabCursor: true,
+    speed:5000,
+    effect:'slide' ,
+    autoplay: {
+        delay: 0,
+    },
+
+})
