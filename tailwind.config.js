@@ -33,6 +33,7 @@ module.exports = {
       'white': '#FFFFFF',
       'gray-500': '#475569',
       'f':'#ffff',
+      'blue':'#31407688'
 
     },
     fontFamily: {

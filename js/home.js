@@ -34,4 +34,9 @@ sections.forEach(s=>{
         }
       })
 })
- 
+//  BRAND SLIDER
+let swiperBrand= new Swiper(".swiper-brands", {
+    slidesPerView:4,
+    spaceBetween: 0,
+      speed:1000
+  });  
