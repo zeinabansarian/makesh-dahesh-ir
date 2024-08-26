@@ -313,7 +313,8 @@ main.RepContainer .Toggle-item,
 main.GalleryCat .Toggle-item,
 main.GalleryList .Toggle-item,
 main.GalleryShow .Toggle-item,
-main.Search .Toggle-item{
+main.Search .Toggle-item,
+main.Error.Toggle-item{
 background-color: #1E1E1E;
 }
 main.RepContainer .Item a,
@@ -325,7 +326,9 @@ main.GalleryList .Item svg path,
 main.GalleryShow .Item a,
 main.GalleryShow .Item svg path,
 main.Search .Item a,
-main.Search .Item svg path{
+main.Search .Item svg path,
+main.Error .Item a,
+main.Error .Item svg path{
 color: #1E1E1E;
 fill: #1E1E1E;
   }
@@ -333,7 +336,8 @@ fill: #1E1E1E;
   main.RepContainer header,
   main.GalleryList header
   main.GalleryShow header,
-  main.Search header{
+  main.Search header,
+  main.Error header{
 
     background-color: #FFFFFF80;
 
