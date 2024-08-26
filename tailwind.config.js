@@ -10,6 +10,7 @@ module.exports = {
   darkMode: 'class',
 
   theme: {
+
     screens: {
       sm: '480px',
       md: '768px',
@@ -32,6 +33,7 @@ module.exports = {
       'white': '#FFFFFF',
       'gray-500': '#475569',
       'f':'#ffff',
+      'blue':'#31407688'
 
     },
     fontFamily: {
@@ -66,6 +68,10 @@ module.exports = {
         '37.97':'37.97px',
         '37.57':'37.57px',
         '31.03':'31.03px',
+        '93.91':'93.91px',
+        '75.13':'75.13px',
+        '31':'31px',
+
 
        
 
