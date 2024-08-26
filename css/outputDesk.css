@@ -1215,12 +1215,12 @@ video {
   margin-top: 8em;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .mt-\[9em\] {
   margin-top: 9em;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .box-border {
@@ -1416,10 +1416,6 @@ video {
 
 .w-3 {
   width: 0.75rem;
-}
-
-.w-3\/4 {
-  width: 75%;
 }
 
 .w-80 {
@@ -1671,6 +1667,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[-3em\] {
+  --tw-translate-y: -3em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[-40px\] {
   --tw-translate-y: -40px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1698,16 +1699,6 @@ video {
 
 .translate-y-\[50px\] {
   --tw-translate-y: 50px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[-4em\] {
-  --tw-translate-y: -4em;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[-3em\] {
-  --tw-translate-y: -3em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2053,10 +2044,6 @@ video {
 
 .grid-cols-\[1fr\2c 2fr\] {
   grid-template-columns: 1fr 2fr;
-}
-
-.grid-cols-\[2fr\2c 1fr\2c 2fr\] {
-  grid-template-columns: 2fr 1fr 2fr;
 }
 
 .grid-cols-\[2fr\2c auto\] {
@@ -3324,10 +3311,6 @@ video {
   padding-bottom: 8em;
 }
 
-.pb-\[8px\] {
-  padding-bottom: 8px;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -3678,10 +3661,6 @@ video {
 
 .leading-\[20\.25px\] {
   line-height: 20.25px;
-}
-
-.leading-\[21\.91px\] {
-  line-height: 21.91px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -4589,6 +4568,10 @@ main.Home .swiper-gallery .swiper-slide-next .IMG{
   background-color: #FFFFFF80;
 }
 
+header.GoBottom .Toggle-item{
+  background-color: #1E1E1E;
+}
+
 main.RepContainer .Toggle-item,
 main.GalleryCat .Toggle-item,
 main.GalleryList .Toggle-item,
@@ -4609,7 +4592,9 @@ main.GalleryShow .Item svg path,
 main.Search .Item a,
 main.Search .Item svg path,
 main.Error .Item a,
-main.Error .Item svg path{
+main.Error .Item svg path,
+header.GoBottom .Item a,
+header.GoBottom svg path{
   color: #1E1E1E;
   fill: #1E1E1E;
 }
@@ -5039,20 +5024,9 @@ main.aboutUS .GallerySlider svg{
   position: absolute;
 }
 
-.before\:inset-y-2\/4::before {
-  content: var(--tw-content);
-  top: 50%;
-  bottom: 50%;
-}
-
 .before\:bottom-0::before {
   content: var(--tw-content);
   bottom: 0px;
-}
-
-.before\:bottom-\[-6px\]::before {
-  content: var(--tw-content);
-  bottom: -6px;
 }
 
 .before\:left-0::before {
@@ -5060,29 +5034,14 @@ main.aboutUS .GallerySlider svg{
   left: 0px;
 }
 
-.before\:left-\[100\%\]::before {
-  content: var(--tw-content);
-  left: 100%;
-}
-
 .before\:right-0::before {
   content: var(--tw-content);
   right: 0px;
 }
 
-.before\:right-2::before {
-  content: var(--tw-content);
-  right: 0.5rem;
-}
-
 .before\:top-\[10\%\]::before {
   content: var(--tw-content);
   top: 10%;
-}
-
-.before\:top-\[40\%\]::before {
-  content: var(--tw-content);
-  top: 40%;
 }
 
 .before\:z-1::before {
@@ -5100,29 +5059,14 @@ main.aboutUS .GallerySlider svg{
   z-index: 0;
 }
 
-.before\:mt-2::before {
-  content: var(--tw-content);
-  margin-top: 0.5rem;
-}
-
 .before\:hidden::before {
   content: var(--tw-content);
   display: none;
 }
 
-.before\:h-\[12px\]::before {
-  content: var(--tw-content);
-  height: 12px;
-}
-
 .before\:h-\[1px\]::before {
   content: var(--tw-content);
   height: 1px;
-}
-
-.before\:h-\[4px\]::before {
-  content: var(--tw-content);
-  height: 4px;
 }
 
 .before\:h-full::before {
@@ -5133,11 +5077,6 @@ main.aboutUS .GallerySlider svg{
 .before\:w-0::before {
   content: var(--tw-content);
   width: 0px;
-}
-
-.before\:w-\[12px\]::before {
-  content: var(--tw-content);
-  width: 12px;
 }
 
 .before\:w-\[60\%\]::before {
@@ -5153,16 +5092,6 @@ main.aboutUS .GallerySlider svg{
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
-}
-
-.before\:origin-right::before {
-  content: var(--tw-content);
-  transform-origin: right;
-}
-
-.before\:rounded-full::before {
-  content: var(--tw-content);
-  border-radius: 9999px;
 }
 
 .before\:bg-\[\#1e376183\]::before {
@@ -5184,12 +5113,6 @@ main.aboutUS .GallerySlider svg{
 .before\:bg-b7::before {
   content: var(--tw-content);
   background-color: #F37021F3;
-}
-
-.before\:bg-b8::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 103 55 / var(--tw-bg-opacity));
 }
 
 .before\:duration-\[\.5s\]::before {
@@ -5220,10 +5143,6 @@ main.aboutUS .GallerySlider svg{
   justify-content: flex-end;
 }
 
-.hover\:origin-left:hover {
-  transform-origin: left;
-}
-
 .hover\:translate-y-\[-1px\]:hover {
   --tw-translate-y: -1px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5250,11 +5169,6 @@ main.aboutUS .GallerySlider svg{
   font-weight: 700;
 }
 
-.hover\:text-b8:hover {
-  --tw-text-opacity: 1;
-  color: rgb(242 103 55 / var(--tw-text-opacity));
-}
-
 .hover\:shadow-\[0_35px_60px_-15px_rgba\(0\2c 0\2c 0\2c 0\.3\)\]:hover {
   --tw-shadow: 0 35px 60px -15px rgba(0,0,0,0.3);
   --tw-shadow-colored: 0 35px 60px -15px var(--tw-shadow-color);
@@ -5273,19 +5187,9 @@ main.aboutUS .GallerySlider svg{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hover\:before\:left-0:hover::before {
-  content: var(--tw-content);
-  left: 0px;
-}
-
 .hover\:before\:w-full:hover::before {
   content: var(--tw-content);
   width: 100%;
-}
-
-.hover\:before\:origin-left:hover::before {
-  content: var(--tw-content);
-  transform-origin: left;
 }
 
 .before\:hover\:text-center:hover::before {

@@ -309,6 +309,9 @@ main.Home .swiper-gallery .swiper-slide-next .IMG{
 .RepContainer header{
   background-color: #FFFFFF80;
 }
+header.GoBottom .Toggle-item{
+  background-color: #1E1E1E;
+}
 main.RepContainer .Toggle-item,
 main.GalleryCat .Toggle-item,
 main.GalleryList .Toggle-item,
@@ -328,10 +331,13 @@ main.GalleryShow .Item svg path,
 main.Search .Item a,
 main.Search .Item svg path,
 main.Error .Item a,
-main.Error .Item svg path{
+main.Error .Item svg path,
+header.GoBottom .Item a,
+header.GoBottom svg path{
 color: #1E1E1E;
 fill: #1E1E1E;
   }
+
   main.aboutUS header,main.GalleryCat header,
   main.RepContainer header,
   main.GalleryList header
