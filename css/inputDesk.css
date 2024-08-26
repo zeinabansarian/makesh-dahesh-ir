@@ -249,25 +249,25 @@ color: #000;
 .Service .Top-S:hover svg{
   width: 30px;
 }
-.navigationBTN .swiper-button-prev,.navigationBTN .swiper-button-next{
+main.Home .navigationBTN .swiper-button-prev,main.Home .navigationBTN .swiper-button-next{
   position: static !important;
 margin: 0 !important;
 padding: 0 !important;
 width: 50% !important;
 display: flex !important;
 }
-.navigationBTN .swiper-button-prev::before,.navigationBTN .swiper-button-next::before,
-.navigationBTN .swiper-button-prev::after,.navigationBTN .swiper-button-next::after{
+main.Home .navigationBTN .swiper-button-prev::before,main.Home .navigationBTN .swiper-button-next::before,
+main.Home .navigationBTN .swiper-button-prev::after,main.Home .navigationBTN .swiper-button-next::after{
   content: none !important;
 }
-.swiper-gallery .swiper-slide-active .IMG{
+main.Home .swiper-gallery .swiper-slide-active .IMG{
   transform:unset !important;
   -webkit-transform:unset !important;
   -moz-transform:unset !important;
   -ms-transform:unset !important;
   -o-transform:unset !important;
 }
-.swiper-gallery .swiper-slide-next .IMG{
+main.Home .swiper-gallery .swiper-slide-next .IMG{
  transform: translateY(5em);
  -webkit-transform: translateY(5em);
  -moz-transform: translateY(5em);
@@ -312,7 +312,8 @@ display: flex !important;
 main.RepContainer .Toggle-item,
 main.GalleryCat .Toggle-item,
 main.GalleryList .Toggle-item,
-main.GalleryShow .Toggle-item{
+main.GalleryShow .Toggle-item,
+main.Search .Toggle-item{
 background-color: #1E1E1E;
 }
 main.RepContainer .Item a,
@@ -322,14 +323,17 @@ main.GalleryCat .Item svg path,
 main.GalleryList .Item a,
 main.GalleryList .Item svg path,
 main.GalleryShow .Item a,
-main.GalleryShow .Item svg path{
+main.GalleryShow .Item svg path,
+main.Search .Item a,
+main.Search .Item svg path{
 color: #1E1E1E;
 fill: #1E1E1E;
   }
   main.aboutUS header,main.GalleryCat header,
   main.RepContainer header,
   main.GalleryList header
-  main.GalleryShow header{
+  main.GalleryShow header,
+  main.Search header{
 
     background-color: #FFFFFF80;
 
