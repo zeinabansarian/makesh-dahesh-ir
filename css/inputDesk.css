@@ -326,13 +326,13 @@ fill: #1E1E1E;
 
 
 
- .relatedPro .swiper-slide .btmPro{
+ .relatedPro .productBox .btmPro{
 opacity: 0;
 transform: translateY(-100%);
 
 }
 
- .relatedPro .swiper-slide:hover .btmPro{
+ .relatedPro .productBox:hover .btmPro{
    transform: translateY(0);
   opacity: 1;
 }
@@ -877,6 +877,12 @@ bottom: 0;
 right: 0;
 }
 
+.activeSchema {
+  transform: scale(1) !important;
+}
+.activeElement .arrow{
+transform: rotate(180deg);
+}
 .btnsMain:hover .text::after{
   width: 90%;
   display: none;
@@ -884,4 +890,8 @@ right: 0;
 .btnsMain:hover span{
   transform: translateY(-8px);
   color: white;
+}
+
+.activeSchemaList{
+  opacity: 1!important;
 }

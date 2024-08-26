@@ -708,8 +708,16 @@ video {
   inset: 0px;
 }
 
+.-right-10 {
+  right: -2.5rem;
+}
+
 .-right-4 {
   right: -1rem;
+}
+
+.-right-\[50\%\] {
+  right: -50%;
 }
 
 .-top-\[12\.5\%\] {
@@ -718,6 +726,14 @@ video {
 
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.bottom-48 {
+  bottom: 12rem;
 }
 
 .bottom-5 {
@@ -774,6 +790,14 @@ video {
 
 .top-14 {
   top: 3.5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-\[120\%\] {
+  top: 120%;
 }
 
 .top-\[126px\] {
@@ -1235,6 +1259,10 @@ video {
 
 .mt-\[1\.5em\] {
   margin-top: 1.5em;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
 }
 
 .mt-\[1em\] {
@@ -1724,6 +1752,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-\[8px\] {
+  --tw-translate-x: 8px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-100 {
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1751,16 +1784,6 @@ video {
 
 .translate-y-\[50\%\] {
   --tw-translate-y: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[5px\] {
-  --tw-translate-x: 5px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[8px\] {
-  --tw-translate-x: 8px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2118,6 +2141,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .grid-cols-\[1fr\2c 1fr\2c 1fr\] {
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -2396,6 +2423,11 @@ video {
 .gap-x-2\.5 {
   -moz-column-gap: 2.5em;
        column-gap: 2.5em;
+}
+
+.gap-x-20 {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
 }
 
 .gap-x-24 {
@@ -3360,6 +3392,11 @@ video {
   padding-bottom: 2em;
 }
 
+.py-\[31px\] {
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
 .py-\[3em\] {
   padding-top: 3em;
   padding-bottom: 3em;
@@ -3420,6 +3457,10 @@ video {
 
 .pl-11 {
   padding-left: 2.75rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
 }
 
 .pl-\[2\.5em\] {
@@ -3832,6 +3873,10 @@ video {
   opacity: 1;
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -4048,13 +4093,13 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.brightness-\[0\.65\] {
-  --tw-brightness: brightness(0.65);
+.brightness-75 {
+  --tw-brightness: brightness(.75);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.brightness-75 {
-  --tw-brightness: brightness(.75);
+.brightness-\[0\.65\] {
+  --tw-brightness: brightness(0.65);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -4670,12 +4715,12 @@ svg.BTN #c2,#c1{
   fill: #1E1E1E;
 }
 
-.relatedPro .swiper-slide .btmPro{
+.relatedPro .productBox .btmPro{
   opacity: 0;
   transform: translateY(-100%);
 }
 
-.relatedPro .swiper-slide:hover .btmPro{
+.relatedPro .productBox:hover .btmPro{
   transform: translateY(0);
   opacity: 1;
 }
@@ -5238,6 +5283,14 @@ html{
   right: 0;
 }
 
+.activeSchema {
+  transform: scale(1) !important;
+}
+
+.activeElement .arrow{
+  transform: rotate(180deg);
+}
+
 .btnsMain:hover .text::after{
   width: 90%;
   display: none;
@@ -5246,6 +5299,10 @@ html{
 .btnsMain:hover span{
   transform: translateY(-8px);
   color: white;
+}
+
+.activeSchemaList{
+  opacity: 1!important;
 }
 
 @media (min-width: 480px) {
@@ -5436,6 +5493,10 @@ html{
   font-weight: 700;
 }
 
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
 .hover\:shadow-\[0_35px_60px_-15px_rgba\(0\2c 0\2c 0\2c 0\.3\)\]:hover {
   --tw-shadow: 0 35px 60px -15px rgba(0,0,0,0.3);
   --tw-shadow-colored: 0 35px 60px -15px var(--tw-shadow-color);
@@ -5473,10 +5534,6 @@ html{
 
 .group:hover .group-hover\:h-\[20px\] {
   height: 20px;
-}
-
-.group:hover .group-hover\:h-\[51px\] {
-  height: 51px;
 }
 
 .group:hover .group-hover\:max-h-\[51px\] {
