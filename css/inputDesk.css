@@ -466,9 +466,9 @@ transform: translateY(-100%);
 
 
 .newsShow .share__wrapper--open-left {
-  top: 60%;
+  /* top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .newsShow .toggle-button {
