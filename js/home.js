@@ -102,6 +102,9 @@ let swiperProject = new Swiper('.swiper-projects',{
 })
 
 // SERVICE DROP
+ document.querySelectorAll('.Service .Bottom-S').forEach(i=>{
+  i.style.display='none'
+ })
 $(document).ready(function() {
     // $('.Service .Bottom-S').slideUp();
     // $(document.querySelector('.Service .Bottom-S')).slideDown();

@@ -3413,6 +3413,11 @@ video {
   padding-right: 3.5em;
 }
 
+.px-\[4em\] {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -3476,6 +3481,11 @@ video {
 .py-\[\.5em\] {
   padding-top: .5em;
   padding-bottom: .5em;
+}
+
+.py-\[1\.2em\] {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
 }
 
 .py-\[1\.5em\] {
@@ -4664,7 +4674,27 @@ header .Menu-Container{
 }
 
 .BTN{
-  transform: translate(2em,-1.5em);
+  transform: translate(2.5em,-1.7em);
+  -webkit-transform: translate(2.5em,-1.7em);
+  -moz-transform: translate(2.5em,-1.7em);
+  -ms-transform: translate(2.5em,-1.7em);
+  -o-transform: translate(2.5em,-1.7em);
+}
+
+footer .btn-show{
+  transform: translateY(1.4em);
+  -webkit-transform: translateY(1.4em);
+  -moz-transform: translateY(1.4em);
+  -ms-transform: translateY(1.4em);
+  -o-transform: translateY(1.4em);
+}
+
+footer .BTN {
+  transform: translate(2.5em,-1.5em) !important;
+  -webkit-transform: translate(2.5em,-1.5em) !important;
+  -moz-transform: translate(2.5em,-1.5em) !important;
+  -ms-transform: translate(2.5em,-1.5em) !important;
+  -o-transform: translate(2.5em,-1.5em) !important;
 }
 
 svg.BTN #c2,#c1{
