@@ -1,687 +1,476 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="css/outputDesk.css">
-    <style>
-        svg{
-            /* position: absolute; */
-  /* bottom: 0;
-  right: 8%;
-  width: 297px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  line-height: 1;
-  font-size: 16px; */
-        }
-        /* svg{
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-        } */
-        /* svg rect {
-  fill: green;
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-  border-radius: 50%;
-    
-} */
- /* #c1{
-    transform: translate(0px,81px) !important;
- } */
- svg #c2,#c1{
-    transition: all .5s ease;
- }
- svg:hover {
-height: 50% !important;
- }
- svg:hover #c2{
-  stroke-width: 36px;
- }
- /* svg:hover #c1{
-r:36px
- } */
-
-    </style>
-</head>
-<body dir="rtl">
-    <main class="Home">
-        <!-- HEADER -->
-         <header class="DecktopHeader z-2 w-full fixed top-0 left-0 justify-center items-center py-8 " dir="rtl">
-          <div class="Co w-[90%] mr-auto ml-auto grid grid-cols-[1fr,1fr] justify-center items-center">
-
-               <div class="Right w-full flex justify-start items-center ">
-                <div class="Items w-auto flex justify-start items-center gap-5">
-                    <span class="Item w-auto flex justify-start items-center">
-                      <div class="Toggles w-auto flex justify-start flex-col items-start gap-1">
-                        <span class="Toggle-item w-[31px] h-[5px] bg-f rounded-[4px]"></span>
-                        <span class="Toggle-item w-[21px] h-[5px] bg-f rounded-[4px]"></span>
-                      </div>
-                    </span>
-                    <span class="Item w-auto flex justify-start items-center">
-                         <a href="" class="w-auto flex justify-start items-center font-normal leading-21.91 text-f
-                         font-IRANSansWeb400 text-sm">
-                            محصولات
-                         </a>
-                    </span>
-                    <span class="Item w-auto flex justify-start items-center">
-                        <div class="searchIcon w-auto flex justify-start items-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.6928 0C4.79783 0 0 4.79783 0 10.6928C0 16.5878 4.79783 21.3856 10.6928 21.3856C16.5878 21.3856 21.3856 16.5878 21.3856 10.6928C21.3856 4.79421 16.5878 0 10.6928 0ZM10.6928 19.9336C5.59445 19.9336 1.4484 15.7876 1.4484 10.6892C1.4484 5.59083 5.59445 1.44478 10.6928 1.44478C15.7912 1.44478 19.9372 5.59083 19.9372 10.6892C19.9372 15.7876 15.7876 19.9336 10.6928 19.9336Z" fill="white"/>
-                                <path d="M20.5956 19.7562C20.3167 19.4701 19.8569 19.4665 19.5708 19.7453C19.2848 20.0241 19.2811 20.484 19.5599 20.7701L22.5038 23.7827C22.645 23.9276 22.8333 24 23.0216 24C23.2027 24 23.3873 23.9312 23.5286 23.7936C23.8146 23.5148 23.8182 23.0549 23.5394 22.7688L20.5956 19.7562Z" fill="white"/>
-                                </svg>
-                                
-                        </div>
-                    </span>
-                </div>
-               </div>
-               <div class="Left w-full flex justify-end items-center">
-                <div class="Logo w-full flex justify-end items-center">
-                    <a href="" class="w-auto">
-                        <img src="images/logo (9) 1 (1).png" alt="">
-                    </a>
-                </div>
-               </div>
-          </div>
-         <div class="Menu-Container w-full grid grid-cols-[1fr,2fr] justify-center top-0 left-0 h-[100vh] 
-          items-center fixed z-[100] bg-cover bg-no-repeat before:content-['']
-           before:absolute before:w-full before:h-full opacity-0 invisible [&.Open]:opacity-[1]
-           [&.Open]:visible group duration-[1.5s]
-          before:left-0 before:bottom-0 before:z-[0] before:bg-[#1e376183]
-          ">
-          <div class="BG w-full flex justify-end h-full
-           items-end absolute left-0 bottom-0 z-[-1]">
-            <img src="images/menu.jpeg" alt="" class=" h-0 duration-[1.5s] opacity-0 invisible w-full object-cover
-            group-[&.Open]:visible group-[&.Open]:opacity-[1] group-[&.Open]:h-[100%]">
-          </div>
-            <div class="Right relative z-0 flex 
-            flex-col justify-between items-start h-[90%] mr-10 my-auto">
-             <div class="Close w-auto flex justify-center items-center">
-                <span class="Close-Icon w-auto flex justify-center items-center">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.42103 0.42103C0.982418 -0.140343 1.89259 -0.140343 2.45397 0.42103L11.5 9.4671L20.5461 0.42103C21.1074 -0.140343 22.0176 -0.140343 22.579 0.42103C23.1403 0.982418 23.1403 1.89259 22.579 2.45397L13.5329 11.5L22.579 20.5461C23.1403 21.1074 23.1403 22.0176 22.579 22.579C22.0176 23.1403 21.1074 23.1403 20.5461 22.579L11.5 13.5329L2.45397 22.579C1.89259 23.1403 0.982418 23.1403 0.42103 22.579C-0.140343 22.0176 -0.140343 21.1074 0.42103 20.5461L9.4671 11.5L0.42103 2.45397C-0.140343 1.89259 -0.140343 0.982418 0.42103 0.42103Z" fill="white"/>
-                        </svg>                      
-                </span>
-             </div>
-             <div class="Logo-Inner w-auto flex justify-center items-center">
-                <a href="" class="w-auto flex justify-center items-center">
-                    <img src="images/Mask group (5).png" alt="">
-                </a>
-             </div>
-             <div class="Socials w-auto flex justify-start items-center gap-6">
-                <a href="" class="Social-link">
-                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5511 5.4389C24.3444 -1.7741 12.66 -1.77452 5.45366 5.4389C-0.766505 11.6649 -1.72659 21.4214 3.12929 28.7223L3.12803 28.7231C3.26458 28.93 3.30408 29.1975 3.21122 29.4478L0.612065 36.4067L7.5192 33.822C7.76164 33.7147 8.05155 33.7299 8.28895 33.8872C20.4545 41.9716 36.9557 33.2971 36.9557 18.4998C36.9562 13.3992 34.8906 8.7815 31.5511 5.4389ZM15.8205 18.043C17.1503 19.867 18.8373 21.2944 20.8255 22.3508C21.4141 21.7103 21.8877 21.0193 22.6238 20.8406V20.8398C22.9595 20.7586 23.3141 20.775 23.6528 20.8839L27.1381 22.0047C27.9154 22.2545 28.507 22.977 28.4238 23.8329C28.3578 24.5104 28.2032 26.768 28.0074 27.2722C27.7137 28.0296 26.9654 28.4935 26.1553 28.4334C16.7721 27.7382 9.27298 20.2321 8.57844 10.8401C8.49861 9.76098 9.26248 8.95057 10.3868 8.84122C15.0738 8.38407 14.3864 7.93954 16.1217 13.3446C16.2305 13.6835 16.2469 14.0389 16.1658 14.3749H16.165C15.9864 15.1118 15.2957 15.5857 14.6562 16.1745C15.0007 16.8268 15.3894 17.4517 15.8205 18.043ZM16.1284 20.873C17.307 22.0527 18.681 23.0427 20.1604 23.8177C21.7003 24.6248 22.6679 22.4429 22.9986 22.4038L26.807 23.6436L26.5511 26.4719C26.5322 26.6641 26.4936 26.8411 26.2679 26.8243C17.6856 26.1888 10.8205 19.3178 10.1847 10.727L10.2511 10.5319C10.3822 10.3901 12.9616 10.2072 13.3255 10.1719C13.5041 10.1546 14.4431 13.3816 14.5894 13.837C14.7772 14.4229 12.3158 15.1698 13.1894 16.8407C13.9625 18.3185 14.952 19.695 16.1284 20.873Z" fill="white"/>
-                        </svg>
-                        
-                </a>
-                <a href="" class="Social-link">
-                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.5003 2.45642C4.20199 2.45179 -2.95951 19.7295 7.14803 29.8362C9.39192 32.0798 12.251 33.6079 15.3637 34.2271C18.4764 34.8464 21.7029 34.529 24.6352 33.3151C27.5674 32.1013 30.0737 30.0454 31.837 27.4076C33.6004 24.7699 34.5416 21.6686 34.5416 18.4961C34.5416 9.63981 27.3616 2.4595 18.5003 2.45642ZM9.41386 10.457C10.1866 6.4513 15.4185 5.37819 17.706 8.75634C19.9934 12.1329 17.0551 16.5919 13.0478 15.821C12.4568 15.7075 11.8939 15.4787 11.3913 15.1477C10.8888 14.8166 10.4564 14.3898 10.1189 13.8917C9.78146 13.3935 9.54548 12.8338 9.42451 12.2445C9.30353 11.6551 9.29991 11.0477 9.41386 10.457ZM16.0802 24.3149C15.3029 28.3191 10.0694 29.3845 7.7866 26.0048C5.5038 22.6251 8.44522 18.1723 12.4524 18.9448C13.0436 19.0589 13.6064 19.2884 14.1087 19.6202C14.611 19.9519 15.043 20.3794 15.3799 20.8782C15.7169 21.3769 15.9521 21.9372 16.0723 22.5269C16.1925 23.1166 16.1952 23.7242 16.0802 24.3149ZM18.0237 20.6068C16.2468 20.263 15.7687 17.9441 17.2664 16.9265C18.7625 15.9089 20.7461 17.204 20.4129 18.9833C20.3635 19.247 20.2625 19.4983 20.1155 19.7228C19.9686 19.9473 19.7788 20.1405 19.5569 20.2914C19.335 20.4423 19.0854 20.5479 18.8226 20.602C18.5597 20.6561 18.2872 20.6578 18.0237 20.6068ZM27.5837 26.5244C26.8109 30.5301 21.579 31.6016 19.2916 28.225C17.0026 24.8469 19.9409 20.3894 23.9497 21.1588C24.5409 21.2723 25.104 21.5012 25.6066 21.8323C26.1093 22.1634 26.5418 22.5904 26.8792 23.0887C27.2167 23.587 27.4527 24.1469 27.5735 24.7365C27.6944 25.326 27.6979 25.9335 27.5837 26.5244ZM24.5497 18.0412C20.5425 17.2688 19.4705 12.0343 22.85 9.74619C26.2279 7.45966 30.6871 10.3968 29.9174 14.4025C29.8046 14.9941 29.5761 15.5575 29.2452 16.0607C28.9142 16.5639 28.4872 16.9968 27.9886 17.3348C27.49 17.6728 26.9296 17.9092 26.3396 18.0304C25.7495 18.1516 25.1412 18.1553 24.5497 18.0412ZM20.9512 35.8679L24.4433 36.8084C25.9117 37.1979 27.4747 36.9885 28.7887 36.2264C30.1027 35.4643 31.0601 34.2117 31.4506 32.7441L32.4377 29.0407C29.6585 32.7413 25.5297 35.195 20.9497 35.8679H20.9512ZM32.74 5.54779L29.0953 4.57798C30.9372 5.99422 32.4793 7.76208 33.6322 9.77892C34.785 11.7958 35.5256 14.0214 35.811 16.3267L36.8136 12.5354C37.1973 11.0687 36.9836 9.50976 36.2195 8.20026C35.4553 6.89075 34.203 5.93748 32.7369 5.54933L32.74 5.54779ZM1.02613 21.2899L0.191672 24.4352C-0.197949 25.903 0.0114753 27.4654 0.773905 28.7789C1.53634 30.0924 2.78936 31.0495 4.25752 31.4397L7.50742 32.3063C4.03778 29.5794 1.72467 25.6461 1.02613 21.2899ZM15.9646 1.08111L12.5604 0.193013C11.8328 -0.000727666 11.0742 -0.0492281 10.3278 0.0502839C9.5815 0.149796 8.86209 0.395369 8.21075 0.772965C7.5594 1.15056 6.98889 1.65278 6.53183 2.2509C6.07476 2.84903 5.74011 3.53133 5.54699 4.25882L4.69711 7.46891C7.50082 3.98073 11.5306 1.69557 15.9646 1.08111Z" fill="white"/>
-                        </svg>
-                        
-                </a>
-                <a href="" class="Social-link">
-                    <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_499_7474)">
-                        <path d="M19.0017 0.780029C8.92792 0.780029 0.761719 9.16113 0.761719 19.5C0.761719 29.8389 8.92792 38.22 19.0017 38.22C29.0755 38.22 37.2417 29.8389 37.2417 19.5C37.2417 9.16113 29.0755 0.780029 19.0017 0.780029ZM14.5367 27.2591H10.8431V15.0599H14.5367V27.2591ZM12.6671 13.5623C11.5005 13.5623 10.7462 12.714 10.7462 11.6649C10.7462 10.5944 11.5233 9.77148 12.7146 9.77148C13.9059 9.77148 14.6355 10.5944 14.6583 11.6649C14.6583 12.714 13.9059 13.5623 12.6671 13.5623ZM28.0267 27.2591H24.3331V20.4984C24.3331 18.9248 23.7973 17.8562 22.4616 17.8562C21.4413 17.8562 20.8352 18.5796 20.5673 19.2758C20.4685 19.5234 20.4438 19.8744 20.4438 20.2235V27.2571H16.7483V18.9501C16.7483 17.4272 16.7008 16.1538 16.6514 15.0579H19.8605L20.0296 16.7525H20.1037C20.5901 15.9569 21.7814 14.783 23.7745 14.783C26.2046 14.783 28.0267 16.4541 28.0267 20.046V27.2591Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_499_7474">
-                        <rect width="38" height="39" fill="white"/>
-                        </clipPath>
-                        </defs>
-                        </svg>
-                        
-                </a>
-                <a href="" class="Social-link">
-                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.2586 22.7981C16.7701 23.1791 17.2825 23.5615 17.7953 23.9434C17.2599 24.4716 16.7236 25.0002 16.19 25.5279C16.1404 25.5789 16.0939 25.6322 16.0451 25.6841L16.0708 25.3347C16.1322 24.4896 16.1941 23.6432 16.2586 22.7981ZM20.4664 15.3478C17.8648 16.9888 15.2632 18.6342 12.6603 20.2742C12.6075 20.3072 12.5497 20.3329 12.491 20.3595C12.8319 21.4493 13.1727 22.5395 13.5126 23.6301C13.7555 24.3975 14.0074 25.1632 14.2372 25.9337C14.332 26.2534 14.4963 26.4244 14.843 26.364C14.9391 25.0598 15.0312 23.7565 15.1296 22.4519C15.1409 22.2998 15.159 22.1454 15.1775 21.9933C15.0303 21.9088 15.0949 21.7472 15.1459 21.694C15.2357 21.6014 15.3255 21.5071 15.4154 21.4132C15.4474 21.3834 15.4808 21.3531 15.512 21.3233C15.5571 21.2764 15.6009 21.2294 15.6456 21.1829C15.8609 20.9825 16.0754 20.7785 16.2907 20.5771C16.4135 20.4611 16.5376 20.3446 16.6609 20.2291C16.9949 19.9162 17.3285 19.6039 17.6684 19.296C18.5325 18.5105 19.4141 17.7431 20.2799 16.9608C21.3837 15.9622 22.4847 14.96 23.5781 13.9502C23.6584 13.8387 23.7103 13.6951 23.7807 13.5724C23.5848 13.5985 23.3551 13.566 23.1993 13.6577C22.2789 14.2062 21.3733 14.7763 20.4664 15.3478ZM37.951 19.0405C37.951 29.4838 29.485 37.9498 19.0417 37.9498C8.59795 37.9498 0.132812 29.4838 0.132812 19.0405C0.132812 8.59675 8.59795 0.131165 19.0417 0.131165C29.485 0.131165 37.951 8.59675 37.951 19.0405ZM27.4856 11.5071C27.4757 11.4349 27.4684 11.3608 27.454 11.29C27.2874 10.4873 26.8477 10.2449 26.0604 10.5144C25.9449 10.5532 25.8266 10.5785 25.7092 10.6106C25.27 10.792 24.8353 10.9861 24.3897 11.1527C23.6512 11.4313 22.9054 11.6917 22.1606 11.9603C21.7064 12.1495 21.2555 12.3472 20.7973 12.5264C19.6493 12.9751 18.4991 13.4153 17.3493 13.8595C14.9829 14.7718 12.6161 15.6837 10.2479 16.596C9.71613 16.8014 9.17983 16.996 8.65347 17.2149C8.19076 17.4059 7.71857 17.591 7.29242 17.8474C7.10373 17.9607 6.89607 18.2586 6.91774 18.4478C6.93851 18.6387 7.23058 18.8021 7.40934 18.9728C7.44184 19.0039 7.49737 19.0138 7.54432 19.0283C8.79883 19.4165 10.0533 19.8047 11.3088 20.1921C11.302 20.323 11.3169 20.4566 11.358 20.5889L11.8144 22.0528L12.4143 23.9737C12.4847 24.1967 12.5556 24.4156 12.6251 24.6345C12.7958 25.1695 12.9732 25.722 13.1343 26.2628C13.4855 27.4361 14.4326 27.5268 14.7148 27.5268C14.7567 27.5268 14.8014 27.5241 14.8457 27.5223C14.889 27.5241 14.9324 27.5255 14.9752 27.5255C15.6998 27.5255 16.1652 27.1264 16.4424 26.8876C16.4934 26.8429 16.5421 26.8018 16.5773 26.7748C16.6347 26.7319 16.6884 26.6854 16.7344 26.6335C16.7706 26.596 16.8035 26.5572 16.8392 26.5201C16.8974 26.4551 16.952 26.3942 17.0003 26.3463C17.4215 25.9292 17.8418 25.5135 18.2639 25.0973L18.7641 24.6038C18.8345 24.6526 18.9049 24.7009 18.9758 24.7492C20.1138 25.5988 21.2501 26.4524 22.3922 27.2975C23.2445 27.9277 23.8403 27.7643 24.2529 26.8014C24.4285 25.9893 24.6032 25.1754 24.7775 24.365C24.9373 23.5547 25.0953 22.7467 25.2533 21.9382C25.3549 21.494 25.4551 21.0484 25.5553 20.6047C25.8216 19.3533 26.0875 18.1006 26.3525 16.8488C26.4387 16.4493 26.5232 16.0502 26.6089 15.6507C26.6297 15.5559 26.6545 15.4607 26.6735 15.365C26.9452 14.0789 27.2152 12.7937 27.4856 11.5071Z" fill="white"/>
-</svg>
-
-                </a>
-             </div>
-            </div>
-            <div class="Left  w-full 
-            relative z-0 flex justify-start items-center h-full">
-                <div class="Menu w-full flex  justify-start items-start h-full">
-                    <ul class="Menu-1 w-[50%] flex-col flex h-0  group-[&.Open]:h-[50%] duration-[.4s]
-                     delay-[1s] border-r-[1px] border-f pr-5
-                     my-auto justify-between items-start">
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                صفحه نخست
-                            </a>
-                        </li>
-                        <li class="Menu-item navbtn w-auto flex justify-center items-center relative">
-                            <span class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                محصولات
-                            </span>
-                            <div class="DropDown-Menu translate-y-100 opacity-0 [&.openNav]:opacity-[1]
-                             flex-col flex absolute ml-[-1em] [&.openNav]:translate-y-[0]
-                             duration-150
-                            left-0 before:content-['']  before:absolute before:right-0 before:top-[10%]
-                             before:w-[60%] before:h-[1px] before:bg-b7 before:z-1
-                             top-0 z-5
-                            justify-between items-start translate-x-[-100%] pr-[8em]">
-                                <div class="Menu-item">
-                                    <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                        تهویه مطبوع
-                                    </a>
-                                </div>
-                                <div class="Menu-item">
-                                    <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                        تهویه مطبوع
-                                    </a>
-                                </div>
-                                <div class="Menu-item">
-                                    <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                        تهویه مطبوع
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="Menu-item w-auto flex justify-center items-center overflow-hidden">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                پروژه ها
-                            </a>
-                    
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                برند
-                            </a>
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                اخبار
-                            </a>
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                اخبار
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="Menu-2 w-[50% flex flex-col h-0 duration-[1s] group-[&.Open]:h-[50%] delay-[.4s]  border-r-[1px] border-f pr-5
-                     my-auto justify-between items-start gap-4">
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                درباره ما
-                            </a>
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center">
-                            <a href=" " class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                گالری
-                            </a>
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                خدمات
-                            </a>
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                تماس با ما
-                            </a>
-                        </li>
-                        <li class="Menu-item w-auto flex justify-center items-center ">
-                            <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                            translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                            before:absolute before:duration-[.5s]
-                            before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                            hover:before:w-full 
-                             text-xl leading-31.03 text-f pb-2">
-                                نمایندگی ها
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-         </div>
-         </header>
-        <!-- HEADER -->
-      <section class="Section-1 w-full ">
-        <div class="Banner-Container w-full ">
-            <div class="swiper-banner w-full ">
-                <div class="swiper-wrapper w-full ">
-                    <div class="swiper-slide w-full ">
-                        <div class="IMG w-full ">
-                            <img src="images/q.jpeg" alt="" class="w-full ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
-       <!-- FOOTER -->
-  <footer class="FooterDesktop-2 flex flex-col  relative">
-    <div  class="News-Form
-   
-    ml-auto mr-auto w-[100%] bg-b6">
-      <div class="FormC w-[90%] ml-auto mr-auto flex gap-2 justify-start items-center pt-5 pb-5">
-          <span class="Title w-[30%] flex justify-start items-center" >
-              <span class="w-max font-IRANSansWeb500 text-f1 leading-23 text-f">
-                  عضویت در خبرنامه
-              </span>
-          </span>
-          <div class="Form-Container w-[70%] flex justify-end items-center">
-              <div class="Box w-full flex justify-end items-center" >
-                  <basis core="schema" run="atclient" OnRendered="rendered"
-                  schemaUrl="/schema/domainform/CAF8D957-6EFB-4D19-A590-5BD254CD749D/DEFB5430-D3BB-45DD-A785-4FA284CD9F51/fa/خبرنامه"
-              displayMode="new" button="[data-btn-add]" resultSourceId="demo.data"> 
-              </basis> 
-              
-              <basis core="callback" run="AtClient" triggers="demo.data" method="onSource"></basis> 
-              <basis core="api" url="/schema/domainform/CAF8D957-6EFB-4D19-A590-5BD254CD749D/fa/editobject" method="post" 
-              run="atclient" 
-              body="object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}" 
-              content-type="application/x-www-form-urlencoded" triggers="edit.object" if="{##edit.object|(false)##}" 
-              OnProcessed="OnProcessesEditObjectFn"> 
-              </basis>
-              <basis core="dbsource" source="trust_login" run="atclient" name="captcha" triggers="refresh.captcha">
-                  <member type="scalar" request="captcha" name="code" />
-                  </basis>
-                      <div class="col w-auto flex justify-end items-end">
-                      <basis core="print" datamembername="captcha.code" run="atclient">
-                          <layout>
-                              <script type="text/template">
-                              @child
-                              </script>
-                          </layout>
-                          <face>
-                        
-                             <script type="text/template">
-                                 <div class="captchaBox gap-4 border-b border-b-1 border-f border-solid
-                                  w-full flex justify-start items-center">
-                                     <input type="hidden" name="captchaid" value="@captcha@"
-                                     class="border-b border border-b9 border-solid" />
-                                       <!-- <input type="hidden" name="captcha" value="@captcha@" /> -->
-                                    <input type="text" class="codeinputm
-                                    placeholder:text-f 
-                                    placeholder:font-IRANSansWeb300
-                                    placeholder:text-right   placeholder:font-light   placeholder:text-sm
-                                    placeholder:leading-21.91 pt-[.8em] pb-[.8em]" 
-                                    name="captcha" placeholder="  کد امنیتی را وارد کنید "
-                                   /> 
-                                   <div class="captchaa">
-                                     <img src="@captcha@" alt="captcha"  title="captcha"
-                                     class="capcha border-l-1 border-r-1 border-b9 border-solid"/>
-                                    </div>
-                      
-                                 
-                                    <img src="https://www.freeform.ir/assets/images/sync.png" class="refresh" alt="" bc-triggers="click" 
-                                    name="refresh.captcha" bc-value="true"/>
-                                  
-                               </div>
-                              </script>
-                          </face>
-                      </basis>
-                      <div class="relative z-[10] w-[150px] translate-y-[-5em]">
-                        <!-- <svg width="162" height="51" viewBox="0 0 162 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25.5" cy="25.5" r="25" id="c1" stroke="#E4E4E7"/>
-                            <mask id="path-2-inside-1_457_4114" fill="white">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28 51H157C159.761 51 162 48.7614 162 46V5C162 2.23858 159.761 0 157 0H28V1H157C159.209 1 161 2.79086 161 5V46C161 48.2091 159.209 50 157 50H28V51Z"/>
-                            </mask>
-                            <path d="M28 51H27V52H28V51ZM28 0V-1H27V0H28ZM28 1H27V2H28V1ZM28 50V49H27V50H28ZM157 50H28V52H157V50ZM161 46C161 48.2091 159.209 50 157 50V52C160.314 52 163 49.3137 163 46H161ZM161 5V46H163V5H161ZM157 1C159.209 1 161 2.79086 161 5H163C163 1.68629 160.314 -1 157 -1V1ZM28 1H157V-1H28V1ZM27 0V1H29V0H27ZM157 0H28V2H157V0ZM162 5C162 2.23858 159.761 0 157 0V2C158.657 2 160 3.34315 160 5H162ZM162 46V5H160V46H162ZM157 51C159.761 51 162 48.7614 162 46H160C160 47.6569 158.657 49 157 49V51ZM28 51H157V49H28V51ZM27 50V51H29V50H27Z" fill="#E4E4E7" mask="url(#path-2-inside-1_457_4114)"/>
-                            <circle cx="25.5" cy="25.5" r="8" id="c2" stroke="#E4E4E7"/>
-                            <path d="M74.3824 27.6061C74.6421 27.6061 74.916 27.602 75.2042 27.5939C75.4963 27.5858 75.7844 27.5675 76.0685 27.5391C76.3526 27.5067 76.6244 27.46 76.8842 27.3991C77.1479 27.3383 77.3772 27.2551 77.572 27.1496C77.7708 27.0441 77.9291 26.9122 78.0468 26.7539C78.1644 26.5957 78.2233 26.4029 78.2233 26.1757C78.2233 25.9768 78.1604 25.7719 78.0346 25.5609C77.9128 25.3499 77.7526 25.1388 77.5537 24.9278C77.3549 24.7128 77.1297 24.4997 76.8781 24.2887C76.6305 24.0736 76.3789 23.8646 76.1233 23.6617C75.8717 23.4588 75.6302 23.2641 75.3989 23.0774C75.1676 22.8907 74.9728 22.7162 74.8146 22.5539L74.9911 20.9591L80.2685 18.7861L80.8833 20.2348L76.4215 22C76.6528 22.1948 76.8882 22.3977 77.1276 22.6087C77.3711 22.8197 77.6065 23.0388 77.8337 23.2661C78.065 23.4893 78.2821 23.7186 78.485 23.9539C78.6879 24.1893 78.8644 24.4267 79.0146 24.6661C79.1688 24.9055 79.2885 25.147 79.3737 25.3904C79.463 25.6339 79.5076 25.8774 79.5076 26.1209C79.5076 26.5997 79.4285 27.0096 79.2702 27.3504C79.112 27.6872 78.8989 27.9693 78.6311 28.1965C78.3673 28.4197 78.061 28.5983 77.712 28.7322C77.367 28.862 77.0059 28.9594 76.6285 29.0243C76.2552 29.0893 75.8778 29.1299 75.4963 29.1461C75.1189 29.1664 74.7659 29.1765 74.4372 29.1765C73.9624 29.1765 73.5079 29.1725 73.0737 29.1643C72.6436 29.1562 72.2357 29.1339 71.8502 29.0974C71.4647 29.0609 71.1015 29.0061 70.7607 28.933C70.4239 28.86 70.1134 28.7565 69.8294 28.6226C69.5453 28.4887 69.2856 28.3203 69.0502 28.1174C68.8189 27.9145 68.616 27.667 68.4415 27.3748C68.2792 27.107 68.1859 26.8087 68.1615 26.48C68.1534 26.3786 68.1494 26.2791 68.1494 26.1817C68.1494 25.9504 68.1757 25.6928 68.2285 25.4087C68.2853 25.1246 68.3807 24.8243 68.5146 24.5078C68.6485 24.1913 68.7946 23.9072 68.9528 23.6557L70.085 24.6052C70.016 24.6986 69.9389 24.8284 69.8537 24.9948C69.7685 25.1571 69.6934 25.3296 69.6285 25.5122C69.5636 25.6948 69.5189 25.8733 69.4946 26.0478C69.4865 26.1046 69.4824 26.1594 69.4824 26.2122C69.4824 26.3136 69.5007 26.4029 69.5372 26.48C69.6184 26.6545 69.7624 26.8046 69.9694 26.9304C70.1763 27.0522 70.4198 27.1557 70.6998 27.2409C70.9798 27.322 71.2842 27.387 71.6128 27.4357C71.9456 27.4843 72.2763 27.5209 72.605 27.5452C72.9378 27.5696 73.2584 27.5858 73.5668 27.5939C73.8752 27.602 74.147 27.6061 74.3824 27.6061ZM79.8668 18.2748L74.9728 20.3443L75.0155 19.5652L79.5807 17.66L79.8668 18.2748ZM80.8446 31.9217C81.4412 31.8041 81.9788 31.6458 82.4577 31.447C82.9406 31.2522 83.3586 31.033 83.7116 30.7896C84.0646 30.5461 84.3507 30.2864 84.5699 30.0104C84.793 29.7345 84.9412 29.4586 85.0142 29.1826C84.6855 29.1826 84.3649 29.1725 84.0525 29.1522C83.74 29.1319 83.4438 29.0913 83.1638 29.0304C82.8878 28.9736 82.6322 28.8925 82.3968 28.787C82.1655 28.6774 81.9646 28.5354 81.7942 28.3609C81.6278 28.1823 81.498 27.9672 81.4046 27.7157C81.3113 27.4641 81.2646 27.1638 81.2646 26.8148C81.2646 26.5916 81.289 26.3583 81.3377 26.1148C81.3864 25.8713 81.4554 25.6339 81.5446 25.4026C81.638 25.1672 81.7516 24.9461 81.8855 24.7391C82.0194 24.5281 82.1736 24.3435 82.3481 24.1852C82.5226 24.0229 82.7154 23.8951 82.9264 23.8017C83.1374 23.7084 83.3646 23.6617 83.6081 23.6617C84.2371 23.6617 84.8113 23.9417 85.3307 24.5017C85.5012 24.6925 85.6554 24.9055 85.7933 25.1409C85.9313 25.3762 86.051 25.6278 86.1525 25.8957C86.2539 26.1635 86.3351 26.4435 86.3959 26.7357C86.4609 27.0238 86.5015 27.32 86.5177 27.6243H86.9255V29.1826H86.3899C86.2519 29.7832 86.0186 30.3229 85.6899 30.8017C85.3612 31.2846 84.9655 31.7046 84.5029 32.0617C84.0444 32.4188 83.533 32.713 82.969 32.9443C82.4049 33.1757 81.8186 33.342 81.2099 33.4435L80.8446 31.9217ZM83.6081 25.2261C83.5026 25.2261 83.389 25.2707 83.2673 25.36C83.1455 25.4493 83.0339 25.5649 82.9325 25.707C82.831 25.8449 82.7458 25.9991 82.6768 26.1696C82.6119 26.34 82.5794 26.5064 82.5794 26.6687C82.5794 26.8391 82.618 26.9812 82.6951 27.0948C82.7762 27.2084 82.8777 27.2997 82.9994 27.3687C83.1252 27.4377 83.2652 27.4904 83.4194 27.527C83.5777 27.5594 83.7339 27.5817 83.8881 27.5939C83.9733 27.602 84.0667 27.6081 84.1681 27.6122C84.2696 27.6122 84.373 27.6142 84.4786 27.6183C84.5881 27.6223 84.6957 27.6243 84.8012 27.6243C84.9067 27.6243 85.0061 27.6243 85.0994 27.6243C85.0873 27.4742 85.0568 27.3119 85.0081 27.1374C84.9635 26.9588 84.9046 26.7803 84.8316 26.6017C84.7586 26.4232 84.6754 26.2528 84.582 26.0904C84.4887 25.9241 84.3873 25.778 84.2777 25.6522C84.1722 25.5223 84.0626 25.4188 83.949 25.3417C83.8354 25.2646 83.7217 25.2261 83.6081 25.2261ZM86.6771 27.6243H87.1397C87.3629 27.6243 87.5475 27.6 87.6936 27.5513C87.8397 27.4986 87.9533 27.4174 88.0345 27.3078C88.1156 27.1983 88.1704 27.0583 88.1988 26.8878C88.2313 26.7133 88.2475 26.5043 88.2475 26.2609C88.2475 26.1675 88.2475 26.0559 88.2475 25.9261C88.2516 25.7962 88.2516 25.6217 88.2475 25.4026C88.2475 25.1794 88.2394 24.8994 88.2232 24.5626C88.2069 24.2217 88.1806 23.7957 88.144 23.2843C88.1278 22.8501 88.1096 22.4342 88.0893 22.0365C88.069 21.6388 88.0487 21.2838 88.0284 20.9713C88.0122 20.6588 87.9959 20.4012 87.9797 20.1983C87.9675 19.9954 87.9594 19.8716 87.9553 19.827L89.4893 19.4983C89.5339 19.9771 89.5745 20.5351 89.611 21.1722C89.6516 21.8093 89.6881 22.4951 89.7206 23.2296C89.7368 23.7814 89.751 24.2359 89.7632 24.593C89.7753 24.9461 89.7855 25.2403 89.7936 25.4757C89.8058 25.707 89.8139 25.8977 89.818 26.0478C89.822 26.1939 89.824 26.3359 89.824 26.4739C89.824 26.8919 89.7713 27.2693 89.6658 27.6061C89.5603 27.9388 89.398 28.2229 89.1788 28.4583C88.9597 28.6896 88.6817 28.8681 88.3449 28.9939C88.0081 29.1197 87.6064 29.1826 87.1397 29.1826H86.6771V27.6243ZM94.1778 29.1826H93.9343C93.1106 29.1826 92.4856 28.9757 92.0596 28.5617C91.6335 28.1478 91.4184 27.5229 91.4143 26.687C91.4143 26.5571 91.4184 26.3441 91.4265 26.0478C91.4346 25.7475 91.4387 25.3823 91.4387 24.9522C91.4387 24.6965 91.4367 24.4226 91.4326 24.1304C91.4285 23.8342 91.4225 23.5339 91.4143 23.2296C91.4062 22.9212 91.394 22.6148 91.3778 22.3104C91.3656 22.002 91.3494 21.7058 91.3291 21.4217C91.3088 21.1336 91.2845 20.8658 91.2561 20.6183C91.2277 20.3667 91.1952 20.1455 91.1587 19.9548L92.6865 19.4983C92.7311 19.7336 92.7717 20.0217 92.8082 20.3626C92.8448 20.6994 92.8772 21.0606 92.9056 21.4461C92.934 21.8316 92.9543 22.2252 92.9665 22.627C92.9827 23.0246 92.9909 23.4 92.9909 23.753C92.9909 23.9681 92.9929 24.1974 92.9969 24.4409C93.001 24.6803 93.003 24.8913 93.003 25.0739C93.003 25.2281 93.001 25.3742 92.9969 25.5122C92.9969 25.6461 92.9949 25.7759 92.9909 25.9017C92.9909 26.0275 92.9888 26.1513 92.9848 26.273C92.9848 26.3948 92.9848 26.5186 92.9848 26.6443C92.9848 26.6768 92.9848 26.7093 92.9848 26.7417C92.9848 26.8878 92.999 27.0177 93.0274 27.1313C93.0598 27.2449 93.1146 27.3403 93.1917 27.4174C93.2688 27.4904 93.3662 27.5432 93.4839 27.5757C93.6056 27.6081 93.7456 27.6243 93.9039 27.6243H94.1778V29.1826ZM93.9369 27.6243H95.2334C95.4241 27.6243 95.629 27.6142 95.8482 27.5939C96.0713 27.5696 96.2763 27.5229 96.4629 27.4539C96.6537 27.3809 96.8099 27.2774 96.9316 27.1435C97.0574 27.0096 97.1203 26.831 97.1203 26.6078C97.1203 26.5023 97.098 26.3542 97.0534 26.1635C97.0087 25.9728 96.9499 25.7617 96.8769 25.5304C96.8038 25.2991 96.7166 25.0597 96.6151 24.8122C96.5177 24.5646 96.4142 24.3333 96.3047 24.1183L97.7108 23.4243C97.8122 23.6557 97.9137 23.9012 98.0151 24.1609C98.1166 24.4206 98.2058 24.6884 98.2829 24.9643C98.3641 25.2362 98.429 25.5101 98.4777 25.7861C98.5264 26.062 98.5508 26.3319 98.5508 26.5957C98.5508 27.0664 98.4635 27.4661 98.289 27.7948C98.1145 28.1235 97.8751 28.3913 97.5708 28.5983C97.2705 28.8012 96.9174 28.9493 96.5116 29.0426C96.1099 29.1359 95.6798 29.1826 95.2212 29.1826H93.9369V27.6243ZM96.6638 21.2817L95.629 22.3165L94.5821 21.2757L95.6169 20.2348L96.6638 21.2817ZM98.9647 21.2878L97.9299 22.3287L96.8829 21.2817L97.9177 20.247L98.9647 21.2878ZM103.106 29.1826H102.862C102.038 29.1826 101.413 28.9757 100.987 28.5617C100.561 28.1478 100.346 27.5229 100.342 26.687C100.342 26.5571 100.346 26.3441 100.354 26.0478C100.362 25.7475 100.366 25.3823 100.366 24.9522C100.366 24.6965 100.364 24.4226 100.36 24.1304C100.356 23.8342 100.35 23.5339 100.342 23.2296C100.334 22.9212 100.322 22.6148 100.306 22.3104C100.293 22.002 100.277 21.7058 100.257 21.4217C100.237 21.1336 100.212 20.8658 100.184 20.6183C100.155 20.3667 100.123 20.1455 100.086 19.9548L101.614 19.4983C101.659 19.7336 101.699 20.0217 101.736 20.3626C101.773 20.6994 101.805 21.0606 101.833 21.4461C101.862 21.8316 101.882 22.2252 101.894 22.627C101.91 23.0246 101.919 23.4 101.919 23.753C101.919 23.9681 101.921 24.1974 101.925 24.4409C101.929 24.6803 101.931 24.8913 101.931 25.0739C101.931 25.2281 101.929 25.3742 101.925 25.5122C101.925 25.6461 101.923 25.7759 101.919 25.9017C101.919 26.0275 101.917 26.1513 101.913 26.273C101.913 26.3948 101.913 26.5186 101.913 26.6443C101.913 26.6768 101.913 26.7093 101.913 26.7417C101.913 26.8878 101.927 27.0177 101.955 27.1313C101.988 27.2449 102.042 27.3403 102.119 27.4174C102.197 27.4904 102.294 27.5432 102.412 27.5757C102.533 27.6081 102.673 27.6243 102.832 27.6243H103.106V29.1826ZM102.865 27.6243H103.625C103.824 27.6243 104.029 27.6223 104.24 27.6183C104.455 27.6142 104.662 27.6 104.861 27.5757C105.06 27.5513 105.249 27.5128 105.427 27.46C105.606 27.4072 105.762 27.3322 105.896 27.2348C106.03 27.1333 106.135 27.0075 106.212 26.8574C106.29 26.7032 106.328 26.5145 106.328 26.2913C106.328 25.9991 106.257 25.7009 106.115 25.3965C105.973 25.0881 105.778 24.7736 105.531 24.453C105.283 24.1284 104.991 23.7957 104.654 23.4548C104.321 23.1139 103.962 22.767 103.577 22.4139L103.741 20.9591L108.586 18.8043L109.201 20.253L105.232 21.9696C105.415 22.1238 105.596 22.2861 105.774 22.4565C105.957 22.627 106.141 22.8157 106.328 23.0226C106.608 23.3351 106.845 23.6475 107.04 23.96C107.235 24.2684 107.391 24.5667 107.509 24.8548C107.631 25.1429 107.718 25.4168 107.771 25.6765C107.827 25.9362 107.856 26.1736 107.856 26.3887C107.856 26.8148 107.775 27.2003 107.612 27.5452C107.454 27.8901 107.239 28.1843 106.967 28.4278C106.695 28.6672 106.379 28.8539 106.018 28.9878C105.661 29.1177 105.285 29.1826 104.892 29.1826H102.865V27.6243ZM114.486 26.7904C114.64 26.8878 114.825 26.9872 115.04 27.0887C115.259 27.1901 115.484 27.2814 115.716 27.3626C115.951 27.4438 116.18 27.5107 116.404 27.5635C116.631 27.6162 116.83 27.6426 117 27.6426C117.069 27.6426 117.154 27.6406 117.256 27.6365C117.357 27.6325 117.465 27.6243 117.578 27.6122C117.692 27.5959 117.806 27.5736 117.919 27.5452C118.033 27.5128 118.134 27.4701 118.224 27.4174C118.317 27.3606 118.392 27.2916 118.449 27.2104C118.506 27.1252 118.536 27.0217 118.54 26.9C118.54 26.8919 118.54 26.8858 118.54 26.8817C118.54 26.7194 118.493 26.5368 118.4 26.3339C118.311 26.127 118.187 25.9119 118.029 25.6887C117.871 25.4614 117.688 25.2342 117.481 25.007C117.274 24.7797 117.059 24.5626 116.836 24.3557C116.613 24.1446 116.387 23.9519 116.16 23.7774C115.937 23.5988 115.728 23.4487 115.533 23.327L116.44 21.9817C116.813 22.2374 117.181 22.5255 117.542 22.8461C117.907 23.1667 118.242 23.5096 118.546 23.8748C118.855 24.2359 119.12 24.6133 119.344 25.007C119.571 25.4006 119.733 25.7983 119.831 26.2C119.883 26.4313 119.91 26.6525 119.91 26.8635C119.91 27.0664 119.871 27.3099 119.794 27.5939C119.721 27.878 119.553 28.158 119.289 28.4339C119.025 28.7058 118.69 28.9148 118.284 29.0609C117.935 29.1867 117.552 29.2496 117.134 29.2496C117.065 29.2496 116.994 29.2475 116.921 29.2435C116.653 29.2435 116.381 29.2171 116.105 29.1643C115.829 29.1157 115.557 29.0467 115.29 28.9574C115.026 28.8681 114.77 28.7667 114.523 28.653C114.279 28.5354 114.052 28.4116 113.841 28.2817L114.486 26.7904ZM120.698 31.9217C121.295 31.8041 121.832 31.6458 122.311 31.447C122.794 31.2522 123.212 31.033 123.565 30.7896C123.918 30.5461 124.204 30.2864 124.423 30.0104C124.647 29.7345 124.795 29.4586 124.868 29.1826C124.539 29.1826 124.218 29.1725 123.906 29.1522C123.594 29.1319 123.297 29.0913 123.017 29.0304C122.741 28.9736 122.486 28.8925 122.25 28.787C122.019 28.6774 121.818 28.5354 121.648 28.3609C121.481 28.1823 121.351 27.9672 121.258 27.7157C121.165 27.4641 121.118 27.1638 121.118 26.8148C121.118 26.5916 121.143 26.3583 121.191 26.1148C121.24 25.8713 121.309 25.6339 121.398 25.4026C121.491 25.1672 121.605 24.9461 121.739 24.7391C121.873 24.5281 122.027 24.3435 122.202 24.1852C122.376 24.0229 122.569 23.8951 122.78 23.8017C122.991 23.7084 123.218 23.6617 123.462 23.6617C124.091 23.6617 124.665 23.9417 125.184 24.5017C125.355 24.6925 125.509 24.9055 125.647 25.1409C125.785 25.3762 125.905 25.6278 126.006 25.8957C126.107 26.1635 126.189 26.4435 126.249 26.7357C126.314 27.0238 126.355 27.32 126.371 27.6243H126.779V29.1826H126.243C126.105 29.7832 125.872 30.3229 125.543 30.8017C125.215 31.2846 124.819 31.7046 124.356 32.0617C123.898 32.4188 123.387 32.713 122.823 32.9443C122.258 33.1757 121.672 33.342 121.063 33.4435L120.698 31.9217ZM123.462 25.2261C123.356 25.2261 123.243 25.2707 123.121 25.36C122.999 25.4493 122.887 25.5649 122.786 25.707C122.685 25.8449 122.599 25.9991 122.53 26.1696C122.465 26.34 122.433 26.5064 122.433 26.6687C122.433 26.8391 122.471 26.9812 122.549 27.0948C122.63 27.2084 122.731 27.2997 122.853 27.3687C122.979 27.4377 123.119 27.4904 123.273 27.527C123.431 27.5594 123.587 27.5817 123.742 27.5939C123.827 27.602 123.92 27.6081 124.022 27.6122C124.123 27.6122 124.227 27.6142 124.332 27.6183C124.442 27.6223 124.549 27.6243 124.655 27.6243C124.76 27.6243 124.86 27.6243 124.953 27.6243C124.941 27.4742 124.91 27.3119 124.862 27.1374C124.817 26.9588 124.758 26.7803 124.685 26.6017C124.612 26.4232 124.529 26.2528 124.436 26.0904C124.342 25.9241 124.241 25.778 124.131 25.6522C124.026 25.5223 123.916 25.4188 123.803 25.3417C123.689 25.2646 123.575 25.2261 123.462 25.2261ZM126.531 27.6243H126.975C127.121 27.6243 127.257 27.6122 127.383 27.5878C127.509 27.5635 127.62 27.5128 127.718 27.4357C127.815 27.3545 127.894 27.2429 127.955 27.1009C128.016 26.9588 128.054 26.7681 128.071 26.5287C128.071 26.4354 128.073 26.273 128.077 26.0417C128.085 25.8064 128.091 25.5284 128.095 25.2078C128.099 24.8832 128.103 24.5281 128.107 24.1426C128.111 23.7571 128.113 23.3635 128.113 22.9617C128.113 22.6493 128.111 22.3429 128.107 22.0426C128.107 21.7383 128.103 21.4461 128.095 21.1661C128.091 20.8861 128.081 20.6223 128.065 20.3748C128.052 20.1272 128.034 19.902 128.01 19.6991L129.562 19.4983C129.59 19.7174 129.613 19.9649 129.629 20.2409C129.645 20.5168 129.657 20.811 129.665 21.1235C129.678 21.4319 129.684 21.7565 129.684 22.0974C129.688 22.4342 129.69 22.7751 129.69 23.12C129.69 23.887 129.682 24.5545 129.665 25.1226C129.653 25.6907 129.647 26.1939 129.647 26.6322C129.647 26.9406 129.726 27.1841 129.885 27.3626C130.043 27.5371 130.278 27.6243 130.591 27.6243H130.725V29.1826H130.591C130.566 29.1826 130.544 29.1826 130.524 29.1826C130.365 29.1826 130.209 29.1684 130.055 29.14C129.905 29.1157 129.759 29.0771 129.617 29.0243C129.479 28.9757 129.351 28.9168 129.233 28.8478C129.116 28.7788 129.012 28.7078 128.923 28.6348C128.805 28.7484 128.675 28.8417 128.533 28.9148C128.395 28.9838 128.253 29.0386 128.107 29.0791C127.961 29.1197 127.817 29.1461 127.675 29.1583C127.533 29.1745 127.405 29.1826 127.291 29.1826H126.531V27.6243ZM130.482 27.6243H131.462C131.653 27.6243 131.847 27.6142 132.046 27.5939C132.249 27.5696 132.432 27.5229 132.594 27.4539C132.756 27.3809 132.888 27.2774 132.99 27.1435C133.095 27.0096 133.148 26.831 133.148 26.6078C133.148 26.5023 133.126 26.3542 133.081 26.1635C133.036 25.9728 132.977 25.7617 132.904 25.5304C132.831 25.2991 132.744 25.0597 132.643 24.8122C132.545 24.5646 132.442 24.3333 132.332 24.1183L133.738 23.4243C133.84 23.6557 133.941 23.9012 134.043 24.1609C134.144 24.4206 134.233 24.6884 134.31 24.9643C134.392 25.2362 134.457 25.5101 134.505 25.7861C134.554 26.062 134.578 26.3319 134.578 26.5957C134.578 27.0501 134.501 27.4417 134.347 27.7704C134.193 28.0951 133.978 28.3629 133.702 28.5739C133.426 28.7809 133.095 28.933 132.71 29.0304C132.328 29.1319 131.908 29.1826 131.45 29.1826H130.482V27.6243ZM133.592 21.3609L132.424 22.5296L131.261 21.3609L132.424 20.1983L133.592 21.3609ZM137.392 19.4983C137.493 20.2733 137.564 21.0139 137.605 21.72C137.646 22.422 137.67 23.1099 137.678 23.7835C137.686 24.3557 137.688 24.8852 137.684 25.3722C137.684 25.8591 137.68 26.3136 137.672 26.7357C137.664 27.1536 137.652 27.5452 137.635 27.9104C137.619 28.2716 137.603 28.6104 137.587 28.927L135.992 29.1704C136.077 27.8313 136.12 26.6484 136.12 25.6217C136.12 25.2078 136.114 24.8203 136.102 24.4591C136.069 23.6272 136.033 22.8461 135.992 22.1157C135.951 21.3812 135.897 20.6791 135.828 20.0096L137.392 19.4983ZM139.314 26.7904C139.469 26.8878 139.653 26.9872 139.868 27.0887C140.087 27.1901 140.313 27.2814 140.544 27.3626C140.779 27.4438 141.009 27.5107 141.232 27.5635C141.459 27.6162 141.658 27.6426 141.828 27.6426C141.897 27.6426 141.982 27.6406 142.084 27.6365C142.185 27.6325 142.293 27.6243 142.406 27.6122C142.52 27.5959 142.634 27.5736 142.747 27.5452C142.861 27.5128 142.962 27.4701 143.052 27.4174C143.145 27.3606 143.22 27.2916 143.277 27.2104C143.334 27.1252 143.364 27.0217 143.368 26.9C143.368 26.8919 143.368 26.8858 143.368 26.8817C143.368 26.7194 143.322 26.5368 143.228 26.3339C143.139 26.127 143.015 25.9119 142.857 25.6887C142.699 25.4614 142.516 25.2342 142.309 25.007C142.102 24.7797 141.887 24.5626 141.664 24.3557C141.441 24.1446 141.215 23.9519 140.988 23.7774C140.765 23.5988 140.556 23.4487 140.361 23.327L141.268 21.9817C141.642 22.2374 142.009 22.5255 142.37 22.8461C142.735 23.1667 143.07 23.5096 143.374 23.8748C143.683 24.2359 143.949 24.6133 144.172 25.007C144.399 25.4006 144.561 25.7983 144.659 26.2C144.711 26.4313 144.738 26.6525 144.738 26.8635C144.738 27.0664 144.699 27.3099 144.622 27.5939C144.549 27.878 144.381 28.158 144.117 28.4339C143.853 28.7058 143.518 28.9148 143.113 29.0609C142.764 29.1867 142.38 29.2496 141.962 29.2496C141.893 29.2496 141.822 29.2475 141.749 29.2435C141.481 29.2435 141.209 29.2171 140.933 29.1643C140.657 29.1157 140.386 29.0467 140.118 28.9574C139.854 28.8681 139.598 28.7667 139.351 28.653C139.107 28.5354 138.88 28.4116 138.669 28.2817L139.314 26.7904Z" fill="white"/>
-                            </svg> -->
-<div>
-    <svg width="162" height="51" viewBox="0 0 162 51" fill="none" xmlns="http://www.w3.org/2000/svg"
-    style="position: relative;">
-        <!-- <circle cx="25.5" cy="25.5" r="25" id="c1" stroke="#E4E4E7"/> -->
-        <mask id="path-2-inside-1_457_4114" fill="white">
-        <path  d="M28 51H157C159.761 51 162 48.7614 162 46V5C162 2.23858 159.761 0 157 0H28V1H157C159.209 1 161 2.79086 161 5V46C161 48.2091 159.209 50 157 50H28V51Z"/>
-        </mask>
-        <path fill="none" stroke="#3DA4AB" stroke-width="7px"   mask="url(#path-2-inside-1_457_4114)" />
-        <rect width="200" height="100" x="10" y="10" rx="20" ry="20" fill="blue"  mask="url(#path-2-inside-1_457_4114)" />
-
-        <!-- <path d="M28 51H27V52H28V51ZM28 0V-1H27V0H28ZM28 1H27V2H28V1ZM28 50V49H27V50H28ZM157 50H28V52H157V50ZM161 46C161 48.2091 159.209 50 157 50V52C160.314 52 163 49.3137 163 46H161ZM161 5V46H163V5H161ZM157 1C159.209 1 161 2.79086 161 5H163C163 1.68629 160.314 -1 157 -1V1ZM28 1H157V-1H28V1ZM27 0V1H29V0H27ZM157 0H28V2H157V0ZM162 5C162 2.23858 159.761 0 157 0V2C158.657 2 160 3.34315 160 5H162ZM162 46V5H160V46H162ZM157 51C159.761 51 162 48.7614 162 46H160C160 47.6569 158.657 49 157 49V51ZM28 51H157V49H28V51ZM27 50V51H29V50H27Z" fill="#E4E4E7" mask="url(#path-2-inside-1_457_4114)"/> -->
-        <!-- <circle cx="25.5" cy="25.5" r="8" id="c2" stroke="#E4E4E7"/> -->
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+  </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
+    <member name="productShow" type="view"  />
+  </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9570">
+    <member name="contactus" type="view"/>
+  </basis>
+  
+  <basis core="dbsource" name="db"  source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]">
+    <member name="productGallery" type="list" format="4" size="419x419"/>
+  </basis>
+  <basis core="dbsource" name="db"  source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]">
+    <member name="video" type="list" format="3"/>
+  </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
+    <member name="relatedProduct" type="list" blgid="18" size="281x281"/>
+  </basis>
+  <basis core="dbsource" source="basiscore" mid="20" name="db" lid="1" usedforid="[##cms.query.id##]">
+    <member name="navigation" type="tree" request="navigationcat" link="product-cat.bc"  postsql=" select * from [db.navigation] where Parentcatid <> 204186 AND Parentcatid <> 204188 AND Parentcatid <> 204192" ></member></basis>
+  
+    <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+      <member request="json-ld" type="scalar" name="fq" /> 
+     </basis>
+     <basis core="dbsource" source="py_hosting" name="keyword" lid="1"
+     request="keywordinfo" wordid="[##cms.query.wordid##]">
+     <member name="info" type="view" />
+     </basis>
+     <basis core="dbsource" source="py_hosting" request="landingpagelist" 
+     name="landingpage" lid="1" wordid="[##cms.qurey.wordid##]">
+     <member type="list" name="list"  />
+     </basis>
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <basis core="print" datamembername="db.list">
+        <face>
+            <title>[##cms.seo.title|db.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+        </face>
+    </basis>
+  
+  <link href="[##cms.cms.cdn##]/css/bootstrap.css" rel="stylesheet" >
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css" />
+  <style>
+    .product .section3 .description:nth-of-type(2) {
+      display: block;
+  }
+  .description h2{
       
-     <p style="position: absolute; top:.5em ">دانلود کاتالوگ</p>
-        </svg>
-        <svg width="162" height="51" viewBox="0 0 162 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="25.5" cy="25.5" r="25" id="c1" stroke="#E4E4E7"/>
-            <mask id="path-2-inside-1_457_4114" fill="white">
-            <path  d="M28 51H157C159.761 51 162 48.7614 162 46V5C162 2.23858 159.761 0 157 0H28V1H157C159.209 1 161 2.79086 161 5V46C161 48.2091 159.209 50 157 50H28V51Z"/>
-            </mask>
-            <path d="M28 51H27V52H28V51ZM28 0V-1H27V0H28ZM28 1H27V2H28V1ZM28 50V49H27V50H28ZM157 50H28V52H157V50ZM161 46C161 48.2091 159.209 50 157 50V52C160.314 52 163 49.3137 163 46H161ZM161 5V46H163V5H161ZM157 1C159.209 1 161 2.79086 161 5H163C163 1.68629 160.314 -1 157 -1V1ZM28 1H157V-1H28V1ZM27 0V1H29V0H27ZM157 0H28V2H157V0ZM162 5C162 2.23858 159.761 0 157 0V2C158.657 2 160 3.34315 160 5H162ZM162 46V5H160V46H162ZM157 51C159.761 51 162 48.7614 162 46H160C160 47.6569 158.657 49 157 49V51ZM28 51H157V49H28V51ZM27 50V51H29V50H27Z" fill="#E4E4E7" mask="url(#path-2-inside-1_457_4114)"/>
-            <circle cx="25.5" cy="25.5" r="8" id="c2" stroke="#E4E4E7"/>
-            <path d="M74.3824 27.6061C74.6421 27.6061 74.916 27.602 75.2042 27.5939C75.4963 27.5858 75.7844 27.5675 76.0685 27.5391C76.3526 27.5067 76.6244 27.46 76.8842 27.3991C77.1479 27.3383 77.3772 27.2551 77.572 27.1496C77.7708 27.0441 77.9291 26.9122 78.0468 26.7539C78.1644 26.5957 78.2233 26.4029 78.2233 26.1757C78.2233 25.9768 78.1604 25.7719 78.0346 25.5609C77.9128 25.3499 77.7526 25.1388 77.5537 24.9278C77.3549 24.7128 77.1297 24.4997 76.8781 24.2887C76.6305 24.0736 76.3789 23.8646 76.1233 23.6617C75.8717 23.4588 75.6302 23.2641 75.3989 23.0774C75.1676 22.8907 74.9728 22.7162 74.8146 22.5539L74.9911 20.9591L80.2685 18.7861L80.8833 20.2348L76.4215 22C76.6528 22.1948 76.8882 22.3977 77.1276 22.6087C77.3711 22.8197 77.6065 23.0388 77.8337 23.2661C78.065 23.4893 78.2821 23.7186 78.485 23.9539C78.6879 24.1893 78.8644 24.4267 79.0146 24.6661C79.1688 24.9055 79.2885 25.147 79.3737 25.3904C79.463 25.6339 79.5076 25.8774 79.5076 26.1209C79.5076 26.5997 79.4285 27.0096 79.2702 27.3504C79.112 27.6872 78.8989 27.9693 78.6311 28.1965C78.3673 28.4197 78.061 28.5983 77.712 28.7322C77.367 28.862 77.0059 28.9594 76.6285 29.0243C76.2552 29.0893 75.8778 29.1299 75.4963 29.1461C75.1189 29.1664 74.7659 29.1765 74.4372 29.1765C73.9624 29.1765 73.5079 29.1725 73.0737 29.1643C72.6436 29.1562 72.2357 29.1339 71.8502 29.0974C71.4647 29.0609 71.1015 29.0061 70.7607 28.933C70.4239 28.86 70.1134 28.7565 69.8294 28.6226C69.5453 28.4887 69.2856 28.3203 69.0502 28.1174C68.8189 27.9145 68.616 27.667 68.4415 27.3748C68.2792 27.107 68.1859 26.8087 68.1615 26.48C68.1534 26.3786 68.1494 26.2791 68.1494 26.1817C68.1494 25.9504 68.1757 25.6928 68.2285 25.4087C68.2853 25.1246 68.3807 24.8243 68.5146 24.5078C68.6485 24.1913 68.7946 23.9072 68.9528 23.6557L70.085 24.6052C70.016 24.6986 69.9389 24.8284 69.8537 24.9948C69.7685 25.1571 69.6934 25.3296 69.6285 25.5122C69.5636 25.6948 69.5189 25.8733 69.4946 26.0478C69.4865 26.1046 69.4824 26.1594 69.4824 26.2122C69.4824 26.3136 69.5007 26.4029 69.5372 26.48C69.6184 26.6545 69.7624 26.8046 69.9694 26.9304C70.1763 27.0522 70.4198 27.1557 70.6998 27.2409C70.9798 27.322 71.2842 27.387 71.6128 27.4357C71.9456 27.4843 72.2763 27.5209 72.605 27.5452C72.9378 27.5696 73.2584 27.5858 73.5668 27.5939C73.8752 27.602 74.147 27.6061 74.3824 27.6061ZM79.8668 18.2748L74.9728 20.3443L75.0155 19.5652L79.5807 17.66L79.8668 18.2748ZM80.8446 31.9217C81.4412 31.8041 81.9788 31.6458 82.4577 31.447C82.9406 31.2522 83.3586 31.033 83.7116 30.7896C84.0646 30.5461 84.3507 30.2864 84.5699 30.0104C84.793 29.7345 84.9412 29.4586 85.0142 29.1826C84.6855 29.1826 84.3649 29.1725 84.0525 29.1522C83.74 29.1319 83.4438 29.0913 83.1638 29.0304C82.8878 28.9736 82.6322 28.8925 82.3968 28.787C82.1655 28.6774 81.9646 28.5354 81.7942 28.3609C81.6278 28.1823 81.498 27.9672 81.4046 27.7157C81.3113 27.4641 81.2646 27.1638 81.2646 26.8148C81.2646 26.5916 81.289 26.3583 81.3377 26.1148C81.3864 25.8713 81.4554 25.6339 81.5446 25.4026C81.638 25.1672 81.7516 24.9461 81.8855 24.7391C82.0194 24.5281 82.1736 24.3435 82.3481 24.1852C82.5226 24.0229 82.7154 23.8951 82.9264 23.8017C83.1374 23.7084 83.3646 23.6617 83.6081 23.6617C84.2371 23.6617 84.8113 23.9417 85.3307 24.5017C85.5012 24.6925 85.6554 24.9055 85.7933 25.1409C85.9313 25.3762 86.051 25.6278 86.1525 25.8957C86.2539 26.1635 86.3351 26.4435 86.3959 26.7357C86.4609 27.0238 86.5015 27.32 86.5177 27.6243H86.9255V29.1826H86.3899C86.2519 29.7832 86.0186 30.3229 85.6899 30.8017C85.3612 31.2846 84.9655 31.7046 84.5029 32.0617C84.0444 32.4188 83.533 32.713 82.969 32.9443C82.4049 33.1757 81.8186 33.342 81.2099 33.4435L80.8446 31.9217ZM83.6081 25.2261C83.5026 25.2261 83.389 25.2707 83.2673 25.36C83.1455 25.4493 83.0339 25.5649 82.9325 25.707C82.831 25.8449 82.7458 25.9991 82.6768 26.1696C82.6119 26.34 82.5794 26.5064 82.5794 26.6687C82.5794 26.8391 82.618 26.9812 82.6951 27.0948C82.7762 27.2084 82.8777 27.2997 82.9994 27.3687C83.1252 27.4377 83.2652 27.4904 83.4194 27.527C83.5777 27.5594 83.7339 27.5817 83.8881 27.5939C83.9733 27.602 84.0667 27.6081 84.1681 27.6122C84.2696 27.6122 84.373 27.6142 84.4786 27.6183C84.5881 27.6223 84.6957 27.6243 84.8012 27.6243C84.9067 27.6243 85.0061 27.6243 85.0994 27.6243C85.0873 27.4742 85.0568 27.3119 85.0081 27.1374C84.9635 26.9588 84.9046 26.7803 84.8316 26.6017C84.7586 26.4232 84.6754 26.2528 84.582 26.0904C84.4887 25.9241 84.3873 25.778 84.2777 25.6522C84.1722 25.5223 84.0626 25.4188 83.949 25.3417C83.8354 25.2646 83.7217 25.2261 83.6081 25.2261ZM86.6771 27.6243H87.1397C87.3629 27.6243 87.5475 27.6 87.6936 27.5513C87.8397 27.4986 87.9533 27.4174 88.0345 27.3078C88.1156 27.1983 88.1704 27.0583 88.1988 26.8878C88.2313 26.7133 88.2475 26.5043 88.2475 26.2609C88.2475 26.1675 88.2475 26.0559 88.2475 25.9261C88.2516 25.7962 88.2516 25.6217 88.2475 25.4026C88.2475 25.1794 88.2394 24.8994 88.2232 24.5626C88.2069 24.2217 88.1806 23.7957 88.144 23.2843C88.1278 22.8501 88.1096 22.4342 88.0893 22.0365C88.069 21.6388 88.0487 21.2838 88.0284 20.9713C88.0122 20.6588 87.9959 20.4012 87.9797 20.1983C87.9675 19.9954 87.9594 19.8716 87.9553 19.827L89.4893 19.4983C89.5339 19.9771 89.5745 20.5351 89.611 21.1722C89.6516 21.8093 89.6881 22.4951 89.7206 23.2296C89.7368 23.7814 89.751 24.2359 89.7632 24.593C89.7753 24.9461 89.7855 25.2403 89.7936 25.4757C89.8058 25.707 89.8139 25.8977 89.818 26.0478C89.822 26.1939 89.824 26.3359 89.824 26.4739C89.824 26.8919 89.7713 27.2693 89.6658 27.6061C89.5603 27.9388 89.398 28.2229 89.1788 28.4583C88.9597 28.6896 88.6817 28.8681 88.3449 28.9939C88.0081 29.1197 87.6064 29.1826 87.1397 29.1826H86.6771V27.6243ZM94.1778 29.1826H93.9343C93.1106 29.1826 92.4856 28.9757 92.0596 28.5617C91.6335 28.1478 91.4184 27.5229 91.4143 26.687C91.4143 26.5571 91.4184 26.3441 91.4265 26.0478C91.4346 25.7475 91.4387 25.3823 91.4387 24.9522C91.4387 24.6965 91.4367 24.4226 91.4326 24.1304C91.4285 23.8342 91.4225 23.5339 91.4143 23.2296C91.4062 22.9212 91.394 22.6148 91.3778 22.3104C91.3656 22.002 91.3494 21.7058 91.3291 21.4217C91.3088 21.1336 91.2845 20.8658 91.2561 20.6183C91.2277 20.3667 91.1952 20.1455 91.1587 19.9548L92.6865 19.4983C92.7311 19.7336 92.7717 20.0217 92.8082 20.3626C92.8448 20.6994 92.8772 21.0606 92.9056 21.4461C92.934 21.8316 92.9543 22.2252 92.9665 22.627C92.9827 23.0246 92.9909 23.4 92.9909 23.753C92.9909 23.9681 92.9929 24.1974 92.9969 24.4409C93.001 24.6803 93.003 24.8913 93.003 25.0739C93.003 25.2281 93.001 25.3742 92.9969 25.5122C92.9969 25.6461 92.9949 25.7759 92.9909 25.9017C92.9909 26.0275 92.9888 26.1513 92.9848 26.273C92.9848 26.3948 92.9848 26.5186 92.9848 26.6443C92.9848 26.6768 92.9848 26.7093 92.9848 26.7417C92.9848 26.8878 92.999 27.0177 93.0274 27.1313C93.0598 27.2449 93.1146 27.3403 93.1917 27.4174C93.2688 27.4904 93.3662 27.5432 93.4839 27.5757C93.6056 27.6081 93.7456 27.6243 93.9039 27.6243H94.1778V29.1826ZM93.9369 27.6243H95.2334C95.4241 27.6243 95.629 27.6142 95.8482 27.5939C96.0713 27.5696 96.2763 27.5229 96.4629 27.4539C96.6537 27.3809 96.8099 27.2774 96.9316 27.1435C97.0574 27.0096 97.1203 26.831 97.1203 26.6078C97.1203 26.5023 97.098 26.3542 97.0534 26.1635C97.0087 25.9728 96.9499 25.7617 96.8769 25.5304C96.8038 25.2991 96.7166 25.0597 96.6151 24.8122C96.5177 24.5646 96.4142 24.3333 96.3047 24.1183L97.7108 23.4243C97.8122 23.6557 97.9137 23.9012 98.0151 24.1609C98.1166 24.4206 98.2058 24.6884 98.2829 24.9643C98.3641 25.2362 98.429 25.5101 98.4777 25.7861C98.5264 26.062 98.5508 26.3319 98.5508 26.5957C98.5508 27.0664 98.4635 27.4661 98.289 27.7948C98.1145 28.1235 97.8751 28.3913 97.5708 28.5983C97.2705 28.8012 96.9174 28.9493 96.5116 29.0426C96.1099 29.1359 95.6798 29.1826 95.2212 29.1826H93.9369V27.6243ZM96.6638 21.2817L95.629 22.3165L94.5821 21.2757L95.6169 20.2348L96.6638 21.2817ZM98.9647 21.2878L97.9299 22.3287L96.8829 21.2817L97.9177 20.247L98.9647 21.2878ZM103.106 29.1826H102.862C102.038 29.1826 101.413 28.9757 100.987 28.5617C100.561 28.1478 100.346 27.5229 100.342 26.687C100.342 26.5571 100.346 26.3441 100.354 26.0478C100.362 25.7475 100.366 25.3823 100.366 24.9522C100.366 24.6965 100.364 24.4226 100.36 24.1304C100.356 23.8342 100.35 23.5339 100.342 23.2296C100.334 22.9212 100.322 22.6148 100.306 22.3104C100.293 22.002 100.277 21.7058 100.257 21.4217C100.237 21.1336 100.212 20.8658 100.184 20.6183C100.155 20.3667 100.123 20.1455 100.086 19.9548L101.614 19.4983C101.659 19.7336 101.699 20.0217 101.736 20.3626C101.773 20.6994 101.805 21.0606 101.833 21.4461C101.862 21.8316 101.882 22.2252 101.894 22.627C101.91 23.0246 101.919 23.4 101.919 23.753C101.919 23.9681 101.921 24.1974 101.925 24.4409C101.929 24.6803 101.931 24.8913 101.931 25.0739C101.931 25.2281 101.929 25.3742 101.925 25.5122C101.925 25.6461 101.923 25.7759 101.919 25.9017C101.919 26.0275 101.917 26.1513 101.913 26.273C101.913 26.3948 101.913 26.5186 101.913 26.6443C101.913 26.6768 101.913 26.7093 101.913 26.7417C101.913 26.8878 101.927 27.0177 101.955 27.1313C101.988 27.2449 102.042 27.3403 102.119 27.4174C102.197 27.4904 102.294 27.5432 102.412 27.5757C102.533 27.6081 102.673 27.6243 102.832 27.6243H103.106V29.1826ZM102.865 27.6243H103.625C103.824 27.6243 104.029 27.6223 104.24 27.6183C104.455 27.6142 104.662 27.6 104.861 27.5757C105.06 27.5513 105.249 27.5128 105.427 27.46C105.606 27.4072 105.762 27.3322 105.896 27.2348C106.03 27.1333 106.135 27.0075 106.212 26.8574C106.29 26.7032 106.328 26.5145 106.328 26.2913C106.328 25.9991 106.257 25.7009 106.115 25.3965C105.973 25.0881 105.778 24.7736 105.531 24.453C105.283 24.1284 104.991 23.7957 104.654 23.4548C104.321 23.1139 103.962 22.767 103.577 22.4139L103.741 20.9591L108.586 18.8043L109.201 20.253L105.232 21.9696C105.415 22.1238 105.596 22.2861 105.774 22.4565C105.957 22.627 106.141 22.8157 106.328 23.0226C106.608 23.3351 106.845 23.6475 107.04 23.96C107.235 24.2684 107.391 24.5667 107.509 24.8548C107.631 25.1429 107.718 25.4168 107.771 25.6765C107.827 25.9362 107.856 26.1736 107.856 26.3887C107.856 26.8148 107.775 27.2003 107.612 27.5452C107.454 27.8901 107.239 28.1843 106.967 28.4278C106.695 28.6672 106.379 28.8539 106.018 28.9878C105.661 29.1177 105.285 29.1826 104.892 29.1826H102.865V27.6243ZM114.486 26.7904C114.64 26.8878 114.825 26.9872 115.04 27.0887C115.259 27.1901 115.484 27.2814 115.716 27.3626C115.951 27.4438 116.18 27.5107 116.404 27.5635C116.631 27.6162 116.83 27.6426 117 27.6426C117.069 27.6426 117.154 27.6406 117.256 27.6365C117.357 27.6325 117.465 27.6243 117.578 27.6122C117.692 27.5959 117.806 27.5736 117.919 27.5452C118.033 27.5128 118.134 27.4701 118.224 27.4174C118.317 27.3606 118.392 27.2916 118.449 27.2104C118.506 27.1252 118.536 27.0217 118.54 26.9C118.54 26.8919 118.54 26.8858 118.54 26.8817C118.54 26.7194 118.493 26.5368 118.4 26.3339C118.311 26.127 118.187 25.9119 118.029 25.6887C117.871 25.4614 117.688 25.2342 117.481 25.007C117.274 24.7797 117.059 24.5626 116.836 24.3557C116.613 24.1446 116.387 23.9519 116.16 23.7774C115.937 23.5988 115.728 23.4487 115.533 23.327L116.44 21.9817C116.813 22.2374 117.181 22.5255 117.542 22.8461C117.907 23.1667 118.242 23.5096 118.546 23.8748C118.855 24.2359 119.12 24.6133 119.344 25.007C119.571 25.4006 119.733 25.7983 119.831 26.2C119.883 26.4313 119.91 26.6525 119.91 26.8635C119.91 27.0664 119.871 27.3099 119.794 27.5939C119.721 27.878 119.553 28.158 119.289 28.4339C119.025 28.7058 118.69 28.9148 118.284 29.0609C117.935 29.1867 117.552 29.2496 117.134 29.2496C117.065 29.2496 116.994 29.2475 116.921 29.2435C116.653 29.2435 116.381 29.2171 116.105 29.1643C115.829 29.1157 115.557 29.0467 115.29 28.9574C115.026 28.8681 114.77 28.7667 114.523 28.653C114.279 28.5354 114.052 28.4116 113.841 28.2817L114.486 26.7904ZM120.698 31.9217C121.295 31.8041 121.832 31.6458 122.311 31.447C122.794 31.2522 123.212 31.033 123.565 30.7896C123.918 30.5461 124.204 30.2864 124.423 30.0104C124.647 29.7345 124.795 29.4586 124.868 29.1826C124.539 29.1826 124.218 29.1725 123.906 29.1522C123.594 29.1319 123.297 29.0913 123.017 29.0304C122.741 28.9736 122.486 28.8925 122.25 28.787C122.019 28.6774 121.818 28.5354 121.648 28.3609C121.481 28.1823 121.351 27.9672 121.258 27.7157C121.165 27.4641 121.118 27.1638 121.118 26.8148C121.118 26.5916 121.143 26.3583 121.191 26.1148C121.24 25.8713 121.309 25.6339 121.398 25.4026C121.491 25.1672 121.605 24.9461 121.739 24.7391C121.873 24.5281 122.027 24.3435 122.202 24.1852C122.376 24.0229 122.569 23.8951 122.78 23.8017C122.991 23.7084 123.218 23.6617 123.462 23.6617C124.091 23.6617 124.665 23.9417 125.184 24.5017C125.355 24.6925 125.509 24.9055 125.647 25.1409C125.785 25.3762 125.905 25.6278 126.006 25.8957C126.107 26.1635 126.189 26.4435 126.249 26.7357C126.314 27.0238 126.355 27.32 126.371 27.6243H126.779V29.1826H126.243C126.105 29.7832 125.872 30.3229 125.543 30.8017C125.215 31.2846 124.819 31.7046 124.356 32.0617C123.898 32.4188 123.387 32.713 122.823 32.9443C122.258 33.1757 121.672 33.342 121.063 33.4435L120.698 31.9217ZM123.462 25.2261C123.356 25.2261 123.243 25.2707 123.121 25.36C122.999 25.4493 122.887 25.5649 122.786 25.707C122.685 25.8449 122.599 25.9991 122.53 26.1696C122.465 26.34 122.433 26.5064 122.433 26.6687C122.433 26.8391 122.471 26.9812 122.549 27.0948C122.63 27.2084 122.731 27.2997 122.853 27.3687C122.979 27.4377 123.119 27.4904 123.273 27.527C123.431 27.5594 123.587 27.5817 123.742 27.5939C123.827 27.602 123.92 27.6081 124.022 27.6122C124.123 27.6122 124.227 27.6142 124.332 27.6183C124.442 27.6223 124.549 27.6243 124.655 27.6243C124.76 27.6243 124.86 27.6243 124.953 27.6243C124.941 27.4742 124.91 27.3119 124.862 27.1374C124.817 26.9588 124.758 26.7803 124.685 26.6017C124.612 26.4232 124.529 26.2528 124.436 26.0904C124.342 25.9241 124.241 25.778 124.131 25.6522C124.026 25.5223 123.916 25.4188 123.803 25.3417C123.689 25.2646 123.575 25.2261 123.462 25.2261ZM126.531 27.6243H126.975C127.121 27.6243 127.257 27.6122 127.383 27.5878C127.509 27.5635 127.62 27.5128 127.718 27.4357C127.815 27.3545 127.894 27.2429 127.955 27.1009C128.016 26.9588 128.054 26.7681 128.071 26.5287C128.071 26.4354 128.073 26.273 128.077 26.0417C128.085 25.8064 128.091 25.5284 128.095 25.2078C128.099 24.8832 128.103 24.5281 128.107 24.1426C128.111 23.7571 128.113 23.3635 128.113 22.9617C128.113 22.6493 128.111 22.3429 128.107 22.0426C128.107 21.7383 128.103 21.4461 128.095 21.1661C128.091 20.8861 128.081 20.6223 128.065 20.3748C128.052 20.1272 128.034 19.902 128.01 19.6991L129.562 19.4983C129.59 19.7174 129.613 19.9649 129.629 20.2409C129.645 20.5168 129.657 20.811 129.665 21.1235C129.678 21.4319 129.684 21.7565 129.684 22.0974C129.688 22.4342 129.69 22.7751 129.69 23.12C129.69 23.887 129.682 24.5545 129.665 25.1226C129.653 25.6907 129.647 26.1939 129.647 26.6322C129.647 26.9406 129.726 27.1841 129.885 27.3626C130.043 27.5371 130.278 27.6243 130.591 27.6243H130.725V29.1826H130.591C130.566 29.1826 130.544 29.1826 130.524 29.1826C130.365 29.1826 130.209 29.1684 130.055 29.14C129.905 29.1157 129.759 29.0771 129.617 29.0243C129.479 28.9757 129.351 28.9168 129.233 28.8478C129.116 28.7788 129.012 28.7078 128.923 28.6348C128.805 28.7484 128.675 28.8417 128.533 28.9148C128.395 28.9838 128.253 29.0386 128.107 29.0791C127.961 29.1197 127.817 29.1461 127.675 29.1583C127.533 29.1745 127.405 29.1826 127.291 29.1826H126.531V27.6243ZM130.482 27.6243H131.462C131.653 27.6243 131.847 27.6142 132.046 27.5939C132.249 27.5696 132.432 27.5229 132.594 27.4539C132.756 27.3809 132.888 27.2774 132.99 27.1435C133.095 27.0096 133.148 26.831 133.148 26.6078C133.148 26.5023 133.126 26.3542 133.081 26.1635C133.036 25.9728 132.977 25.7617 132.904 25.5304C132.831 25.2991 132.744 25.0597 132.643 24.8122C132.545 24.5646 132.442 24.3333 132.332 24.1183L133.738 23.4243C133.84 23.6557 133.941 23.9012 134.043 24.1609C134.144 24.4206 134.233 24.6884 134.31 24.9643C134.392 25.2362 134.457 25.5101 134.505 25.7861C134.554 26.062 134.578 26.3319 134.578 26.5957C134.578 27.0501 134.501 27.4417 134.347 27.7704C134.193 28.0951 133.978 28.3629 133.702 28.5739C133.426 28.7809 133.095 28.933 132.71 29.0304C132.328 29.1319 131.908 29.1826 131.45 29.1826H130.482V27.6243ZM133.592 21.3609L132.424 22.5296L131.261 21.3609L132.424 20.1983L133.592 21.3609ZM137.392 19.4983C137.493 20.2733 137.564 21.0139 137.605 21.72C137.646 22.422 137.67 23.1099 137.678 23.7835C137.686 24.3557 137.688 24.8852 137.684 25.3722C137.684 25.8591 137.68 26.3136 137.672 26.7357C137.664 27.1536 137.652 27.5452 137.635 27.9104C137.619 28.2716 137.603 28.6104 137.587 28.927L135.992 29.1704C136.077 27.8313 136.12 26.6484 136.12 25.6217C136.12 25.2078 136.114 24.8203 136.102 24.4591C136.069 23.6272 136.033 22.8461 135.992 22.1157C135.951 21.3812 135.897 20.6791 135.828 20.0096L137.392 19.4983ZM139.314 26.7904C139.469 26.8878 139.653 26.9872 139.868 27.0887C140.087 27.1901 140.313 27.2814 140.544 27.3626C140.779 27.4438 141.009 27.5107 141.232 27.5635C141.459 27.6162 141.658 27.6426 141.828 27.6426C141.897 27.6426 141.982 27.6406 142.084 27.6365C142.185 27.6325 142.293 27.6243 142.406 27.6122C142.52 27.5959 142.634 27.5736 142.747 27.5452C142.861 27.5128 142.962 27.4701 143.052 27.4174C143.145 27.3606 143.22 27.2916 143.277 27.2104C143.334 27.1252 143.364 27.0217 143.368 26.9C143.368 26.8919 143.368 26.8858 143.368 26.8817C143.368 26.7194 143.322 26.5368 143.228 26.3339C143.139 26.127 143.015 25.9119 142.857 25.6887C142.699 25.4614 142.516 25.2342 142.309 25.007C142.102 24.7797 141.887 24.5626 141.664 24.3557C141.441 24.1446 141.215 23.9519 140.988 23.7774C140.765 23.5988 140.556 23.4487 140.361 23.327L141.268 21.9817C141.642 22.2374 142.009 22.5255 142.37 22.8461C142.735 23.1667 143.07 23.5096 143.374 23.8748C143.683 24.2359 143.949 24.6133 144.172 25.007C144.399 25.4006 144.561 25.7983 144.659 26.2C144.711 26.4313 144.738 26.6525 144.738 26.8635C144.738 27.0664 144.699 27.3099 144.622 27.5939C144.549 27.878 144.381 28.158 144.117 28.4339C143.853 28.7058 143.518 28.9148 143.113 29.0609C142.764 29.1867 142.38 29.2496 141.962 29.2496C141.893 29.2496 141.822 29.2475 141.749 29.2435C141.481 29.2435 141.209 29.2171 140.933 29.1643C140.657 29.1157 140.386 29.0467 140.118 28.9574C139.854 28.8681 139.598 28.7667 139.351 28.653C139.107 28.5354 138.88 28.4116 138.669 28.2817L139.314 26.7904Z" fill="white"/>
-            </svg>
-</div>
-                        
-   <!-- <span  class="schemaBtn 
-                      ShowListBTN bg-transparent w-[200px]
-                      h-[57px]
-                     flex justify-between items-center gap-[1em] group duration-75
-                       border-f border-[1px] border-solid relative hover:bg-f
-                        rounded  " data-btn-add data-btn-submit="" >
-                  
-                          
-                              <span  class="font-IRANSansWeb500 w-full flex justify-center mr-[-1em] font-medium
-                              text-sm leading-23 text-f group-hover:text-b1 duration-75">
-                                  ثبت 
-                              </span>
-                              <svg viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)" width="200" height="100">
-                                <circle fill="transparent" stroke="#295fdb" id="c1" stroke-dasharray="565.48px" stroke-dashoffset="0" style="transform: translate(90px,137px);" r="20" cy="20" stroke-width="5" cx="100"></circle>
-                                 <circle id="c2" cx="100" cy="100" fill="transparent" stroke="#295fdb" stroke-width="5" stroke-dasharray="565.48px" stroke-dashoffset="0" r="80"></circle>
-                                  </svg>
-                      </span>
-                      -->
-                    </div>
-                   
-                      
-                      
-                      </div>
-                   
-                 
-              </div>
-            
-          </div>
+    text-align: right;
+    font-size: 17px;
+    margin-bottom: 25px;
+    font-family: "IranSansFaNum";
+
+    direction: rtl;
+  }
+.productDetailTitle h1{
+    font-family: "IranSansFaNum";
+}
+  .description h3{
+      
+      text-align: right;
+      font-size: 16px;
+      margin-bottom: 25px;
+      font-family: "IranSansFaNum";
+    direction: rtl;
+    }
+    .tag{
+        display: flex;
+        direction: rtl;
+    }
+    .tag a,
+    .tag h1 {
+        font-family: "IranSansFaNum";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: black;
+    margin-bottom: 29px;
+    direction: rtl;
+    text-decoration: none;
+    }
+  </style>
+  </head>
+  
+  <body>
+  <div class="product">
+  <basis core="call" file="header.inc" /> 
+  
+    <div class="section1">
+      <div class="banner">
+  <basis core="print" datamembername="db.navigation">
+  <face filter="RowNumber = 1">
+        <img src="[##cms.cms.cdn##]/images/banner-@Catid.jpg"  alt="product banner" title="product banner" loading="lazy" />
+  </face>
+  </basis>
+        <div class="catTitle scrollTops">
+  <basis core="print" datamembername="db.productShow">
+  <face filter="ord = 700">
+          <h1>@Answer</h1>
+  </face>
+  </basis>
+        </div>
       </div>
     </div>
- 
-   <div class="Bottom bg-f ml-auto mr-auto w-[90%] flex flex-col pt-[1em] pb-[1em]
-   justify-center items-center gap-[3em]">
-   <div class="Canter grid grid-cols-[1fr,2fr,1fr]">
-     <div class="Middle w-full flex justify-start items-center h-full">
-         <div class="box h-full w-auto flex-col flex justify-center items-center gap-3">
-             <span class="Qr w-auto flex justify-center items-center">
-                 <img src="images/Frame 15823.png" alt="mackesh-dahesh" title="mackesh-dahesh">
-             </span>
-             <span class="Link w-auto flex justify-start items-center">
-                 <a href="[##cms.cms.cdn##]/file/MackeshFanSelection.zip" download="" alt="mackesh-dahesh" title="mackesh-dahesh"
-                  class="text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                     دریافت نرم افزار
-                 </a>
-             </span>
-             <span class="Link w-auto flex justify-start items-center">
-               <basis core="print" datamembername="db.cataloge">
-                   <layout>
-                       @child
-                   </layout>
-                   <face filter="ord=1000">
-                       <a href="@largeIMG" download="" alt="mackesh-dahesh" title="mackesh-dahesh"
-                       class="text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                           دریافت کاتالوگ
-                       </a>
-                   </face>
-               </basis>
-              
-             </span>
-             <span class="Link w-auto flex justify-start items-center">
-                 <a href="#" alt="mackesh-dahesh" title="mackesh-dahesh"
-                 class="text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                     دریافت رزومه
-                 </a>
-             </span>
-         </div>
-     </div>
-     <div class="Right w-full flex flex-col justify-center items-center">
-         <div class="Logo  w-full flex justify-center items-center">
-             <a href="/" alt="mackesh-dahesh" title="mackesh-dahesh">
-                 <img src="/images/logo (9) 1 (1).png" alt="mackesh-dahesh" title="mackesh-dahesh">
-             </a>
-         </div>
-          <div class="Contact-box w-full flex justify-center items-center flex-col gap-5">
-              <span class="Address w-full flex justify-start items-center">
-                <basis core="print" datamembername="db.footer">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="TypeID=244">
-                        <p class="text-center font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                       @Answer
-                        </p>
-                    </face>
-                </basis>
-                
-              </span>
-              <span class="Phones w-full flex justify-center items-center gap-3 
-              [&>a:not(:last-child)]:before:absolute
-              [&>a:not(:last-child)]:before:left-[-7px]  [&>a:not(:last-child)]:before:top-0
-              [&>a:not(:last-child)]:before:text-b9  [&>a:not(:last-child)]:before:content-[',']">
-              <basis core="print" datamembername="db.footer">
-                <layout>
-                    @child
-                </layout>
-                <face filter="TypeID=240">
-                    <a href="tel:@Answer" alt="mackesh-dahesh" title="makesh-dahesh"
-                     class="relative text-center font-IRANSansWeb300 font-light 
-                    text-sm leading-21.91 text-b9">
-                   @Answer
-                </a>
-                </face>
-            </basis>
-            
-              </span>
-              <span class="Email  w-full flex justify-center items-center gap-3">
-                <basis core="print" datamembername="db.footer">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="TypeID=242">
-                        <a href="mailto:@Answer" class="YekanBakh400 font-normal text-sm leading-23 text-center text-b9">
-                       @Answer
-                    </a>
-                    </face>
-                </basis>
-               
-              </span>
-              <span class="Time w-full flex justify-center items-center gap-3">
-      
-                  <p class="text-center font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                      شنبه تا چهارشنبه از ساعت 9 الی 17 
-                  </p>
-              </span>
-              <div class="Socials w-full flex justify-center items-center gap-[1.3em]">
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                        
- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path fill-rule="evenodd" clip-rule="evenodd" d="M27.286 4.70399C21.0531 -1.53429 10.9477 -1.53465 4.7152 4.70399C-0.664401 10.0886 -1.49474 18.5267 2.70493 24.841L2.70384 24.8417C2.82195 25.0207 2.8561 25.252 2.7758 25.4684L0.527876 31.487L6.50162 29.2515C6.71129 29.1588 6.96203 29.1719 7.16734 29.3079C17.6889 36.2998 31.9602 28.7976 31.9602 15.9999C31.9606 11.5886 30.1742 7.59489 27.286 4.70399ZM13.6811 15.6049C14.8312 17.1824 16.2902 18.4168 18.0098 19.3305C18.5189 18.7766 18.9284 18.179 19.5651 18.0244V18.0236C19.8554 17.9535 20.1621 17.9676 20.455 18.0618L23.4693 19.0312C24.1416 19.2472 24.6532 19.8721 24.5813 20.6123C24.5242 21.1983 24.3905 23.1507 24.2212 23.5868C23.9671 24.2419 23.32 24.6431 22.6193 24.5911C14.5042 23.9899 8.0184 17.4981 7.41772 9.37533C7.34867 8.442 8.00931 7.7411 8.98174 7.64653C13.0353 7.25116 12.4408 6.8667 13.9416 11.5413C14.0357 11.8345 14.0499 12.1418 13.9798 12.4324H13.9791C13.8246 13.0697 13.2272 13.4796 12.6741 13.9888C12.9721 14.553 13.3082 15.0935 13.6811 15.6049ZM13.9474 18.0524C14.9667 19.0726 16.155 19.9289 17.4345 20.5992C18.7663 21.2972 19.6032 19.4102 19.8892 19.3763L23.183 20.4486L22.9616 22.8947C22.9453 23.0609 22.9119 23.214 22.7167 23.1995C15.2942 22.6499 9.35676 16.7073 8.80695 9.27748L8.86437 9.10872C8.97774 8.98614 11.2086 8.82792 11.5233 8.79737C11.6777 8.78245 12.4899 11.5733 12.6163 11.9672C12.7788 12.4739 10.6501 13.1199 11.4055 14.565C12.0742 15.8431 12.93 17.0336 13.9474 18.0524Z" fill="#1E1E1E"/>
-     </svg>
-     
-                      </a>
-                  </span> 
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                
- <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M16.5003 2.19086C3.74772 2.18674 -2.63957 17.5966 6.37527 26.6107C8.37657 28.6118 10.9266 29.9746 13.7028 30.5269C16.479 31.0792 19.3567 30.7961 21.9719 29.7135C24.5872 28.6308 26.8225 26.7973 28.3952 24.4447C29.9679 22.092 30.8073 19.326 30.8074 16.4965C30.8074 8.59766 24.4036 2.19361 16.5003 2.19086ZM8.39615 9.32649C9.08536 5.75386 13.7517 4.79676 15.7918 7.80971C17.8319 10.8213 15.2113 14.7982 11.6373 14.1106C11.1101 14.0094 10.6081 13.8053 10.1598 13.5101C9.71162 13.2148 9.32599 12.8342 9.025 12.3899C8.724 11.9456 8.51354 11.4464 8.40564 10.9207C8.29774 10.3951 8.29451 9.85337 8.39615 9.32649ZM14.3418 21.6863C13.6485 25.2576 8.98081 26.2078 6.9448 23.1935C4.9088 20.1791 7.53222 16.2077 11.1062 16.8967C11.6335 16.9985 12.1354 17.2032 12.5834 17.4991C13.0315 17.795 13.4167 18.1762 13.7172 18.6211C14.0177 19.0659 14.2276 19.5656 14.3348 20.0915C14.4419 20.6175 14.4443 21.1594 14.3418 21.6863ZM16.0752 18.3791C14.4904 18.0724 14.064 16.0042 15.3997 15.0966C16.7341 14.189 18.5033 15.3441 18.2061 16.931C18.1621 17.1662 18.0719 17.3904 17.9409 17.5906C17.8099 17.7908 17.6405 17.9632 17.4426 18.0978C17.2447 18.2323 17.0221 18.3265 16.7877 18.3747C16.5532 18.423 16.3102 18.4245 16.0752 18.3791ZM24.6017 23.6569C23.9125 27.2295 19.2461 28.1852 17.206 25.1737C15.1645 22.1607 17.7852 18.1852 21.3606 18.8714C21.8879 18.9726 22.39 19.1767 22.8384 19.4721C23.2867 19.7674 23.6724 20.1482 23.9734 20.5926C24.2744 21.0371 24.4848 21.5365 24.5926 22.0622C24.7004 22.588 24.7035 23.1299 24.6017 23.6569ZM21.8957 16.0908C18.3217 15.4019 17.3656 10.7333 20.3797 8.69255C23.3924 6.65321 27.3695 9.27286 26.6831 12.8455C26.5824 13.3731 26.3787 13.8756 26.0835 14.3244C25.7883 14.7732 25.4075 15.1593 24.9628 15.4608C24.5181 15.7622 24.0183 15.9731 23.492 16.0812C22.9657 16.1893 22.4233 16.1926 21.8957 16.0908ZM18.6862 31.9903L21.8008 32.8291C23.1104 33.1765 24.5044 32.9898 25.6764 32.31C26.8483 31.6303 27.7023 30.5132 28.0505 29.2042L28.9309 25.9011C26.4522 29.2017 22.7697 31.3901 18.6849 31.9903H18.6862ZM29.2006 4.94803L25.9498 4.08306C27.5926 5.3462 28.968 6.92293 29.9963 8.72174C31.0245 10.5206 31.685 12.5056 31.9396 14.5617L32.8337 11.1802C33.1759 9.87206 32.9854 8.48168 32.3038 7.31374C31.6223 6.14581 30.5054 5.29559 29.1978 4.9494L29.2006 4.94803ZM0.915194 18.9883L0.170951 21.7936C-0.176549 23.1027 0.0102347 24.4962 0.69024 25.6677C1.37025 26.8392 2.48781 27.6928 3.79725 28.0409L6.69581 28.8137C3.60126 26.3817 1.53822 22.8736 0.915194 18.9883ZM14.2387 0.964231L11.2025 0.172146C10.5536 -0.000649 9.87698 -0.0439061 9.21132 0.0448478C8.54566 0.133602 7.90403 0.352626 7.3231 0.689401C6.74217 1.02618 6.23334 1.4741 5.82568 2.00756C5.41803 2.54102 5.11955 3.14957 4.94731 3.79841L4.18931 6.66146C6.68992 3.55038 10.2841 1.51226 14.2387 0.964231Z" fill="#1E1E1E"/>
-     </svg>
-     
-                              
-                      </a>
-                  </span>
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                       
- <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M16.5002 0.659912C7.75186 0.659912 0.660156 7.75161 0.660156 16.4999C0.660156 25.2482 7.75186 32.3399 16.5002 32.3399C25.2485 32.3399 32.3402 25.2482 32.3402 16.4999C32.3402 7.75161 25.2485 0.659912 16.5002 0.659912ZM12.6227 23.0653H9.41506V12.7429H12.6227V23.0653ZM10.9991 11.4757C9.98596 11.4757 9.33091 10.7579 9.33091 9.87021C9.33091 8.96436 10.0058 8.26806 11.0403 8.26806C12.0749 8.26806 12.7085 8.96436 12.7283 9.87021C12.7283 10.7579 12.0749 11.4757 10.9991 11.4757ZM24.3377 23.0653H21.1301V17.3447C21.1301 16.0132 20.6648 15.109 19.5048 15.109C18.6188 15.109 18.0924 15.7211 17.8598 16.3102C17.774 16.5197 17.7525 16.8167 17.7525 17.1121V23.0636H14.5433V16.0346C14.5433 14.746 14.502 13.6685 14.4591 12.7412H17.246L17.3928 14.1751H17.4572C17.8796 13.5019 18.9141 12.5086 20.645 12.5086C22.7553 12.5086 24.3377 13.9226 24.3377 16.9619V23.0653Z" fill="#1E1E1E"/>
-     </svg>
-     
-                      </a>
-                  </span>
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                      
- <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M13.7582 19.2908C14.191 19.6132 14.6245 19.9368 15.0585 20.2599C14.6054 20.7068 14.1516 21.1541 13.7002 21.6006C13.6581 21.6438 13.6188 21.6889 13.5775 21.7328L13.5993 21.4372C13.6513 20.7221 13.7036 20.0059 13.7582 19.2908ZM17.3186 12.9867C15.1173 14.3752 12.916 15.7675 10.7135 17.1552C10.6688 17.1831 10.6199 17.2049 10.5702 17.2274C10.8586 18.1495 11.147 19.072 11.4347 19.9948C11.6402 20.6442 11.8533 21.292 12.0477 21.944C12.1279 22.2145 12.267 22.3592 12.5603 22.3081C12.6417 21.2045 12.7196 20.1018 12.8029 18.9979C12.8124 18.8691 12.8277 18.7385 12.8434 18.6098C12.7189 18.5383 12.7735 18.4016 12.8166 18.3565C12.8927 18.2782 12.9687 18.1984 13.0447 18.1189C13.0718 18.0937 13.1001 18.0681 13.1264 18.0429C13.1646 18.0032 13.2017 17.9635 13.2395 17.9241C13.4217 17.7545 13.6031 17.5819 13.7853 17.4115C13.8892 17.3134 13.9943 17.2148 14.0986 17.117C14.3812 16.8523 14.6635 16.588 14.9511 16.3275C15.6822 15.6628 16.4282 15.0135 17.1609 14.3515C18.0948 13.5066 19.0264 12.6586 19.9516 11.8041C20.0196 11.7098 20.0635 11.5883 20.1231 11.4844C19.9573 11.5066 19.7629 11.4791 19.6311 11.5566C18.8522 12.0207 18.086 12.5031 17.3186 12.9867ZM32.1133 16.1113C32.1133 24.9479 24.9497 32.1115 16.1131 32.1115C7.27609 32.1115 0.113281 24.9479 0.113281 16.1113C0.113281 7.27427 7.27609 0.111084 16.1131 0.111084C24.9497 0.111084 32.1133 7.27427 32.1133 16.1113ZM23.2579 9.73687C23.2495 9.67575 23.2434 9.61311 23.2312 9.55314C23.0903 8.87399 22.7182 8.66886 22.052 8.8969C21.9543 8.92975 21.8542 8.95114 21.7549 8.97826C21.3832 9.13182 21.0154 9.29607 20.6384 9.43702C20.0134 9.6727 19.3824 9.8931 18.7522 10.1204C18.3679 10.2804 17.9863 10.4477 17.5986 10.5994C16.6272 10.9791 15.654 11.3515 14.6811 11.7273C12.6787 12.4993 10.6761 13.2709 8.67221 14.0429C8.22224 14.2167 7.76845 14.3813 7.32307 14.5666C6.93154 14.7281 6.532 14.8848 6.17141 15.1017C6.01175 15.1976 5.83604 15.4497 5.85437 15.6097C5.87194 15.7713 6.11908 15.9096 6.27034 16.054C6.29785 16.0803 6.34483 16.0887 6.38456 16.101C7.44607 16.4295 8.50758 16.758 9.56985 17.0857C9.56412 17.1965 9.57673 17.3095 9.61149 17.4215L9.99766 18.6602L10.5053 20.2855C10.5649 20.4742 10.6249 20.6595 10.6837 20.8447C10.8281 21.2974 10.9782 21.7649 11.1146 22.2225C11.4117 23.2153 12.2131 23.292 12.4519 23.292C12.4874 23.292 12.5252 23.2897 12.5626 23.2882C12.5993 23.2897 12.636 23.2909 12.6723 23.2909C13.2853 23.2909 13.6791 22.9532 13.9137 22.7512C13.9568 22.7133 13.9981 22.6786 14.0279 22.6557C14.0764 22.6194 14.1219 22.58 14.1608 22.5361C14.1914 22.5044 14.2193 22.4715 14.2494 22.4402C14.2987 22.3852 14.3449 22.3337 14.3858 22.2932C14.7422 21.9402 15.0978 21.5884 15.4549 21.2362L15.8782 20.8187C15.9378 20.86 15.9974 20.9009 16.0573 20.9417C17.0203 21.6606 17.9817 22.3829 18.9481 23.098C19.6693 23.6312 20.1735 23.493 20.5226 22.6782C20.6712 21.991 20.819 21.3023 20.9665 20.6167C21.1017 19.931 21.2354 19.2473 21.3691 18.5632C21.455 18.1873 21.5398 17.8103 21.6246 17.4348C21.85 16.376 22.075 15.316 22.2992 14.2568C22.3721 13.9187 22.4436 13.5811 22.5161 13.243C22.5337 13.1628 22.5547 13.0822 22.5708 13.0012C22.8007 11.913 23.0291 10.8255 23.2579 9.73687Z" fill="#1E1E1E"/>
-     </svg>
-     
-                      </a>
-                  </span>
-              </div>
-          </div>
-      </div>
-        
-         
-          <div class="Left w-full flex justify-end items-center h-full">
-            <basis core="print" datamembername="db.footer">
-                <face filter="TypeID =246">
-                   <div class=" Map Map_1 w-full mt-auto flex justify-end items-center h-[75%]" id="Map_1" data-x="@text" data-y="@largetext">
-                    <img src="images/Frame 1302.png" alt="">
-                </div>
-             </face>
-                </basis>
-            
-          </div>
-   </div>
+    <div class="section2">
+      <div class="productDetailSection">
+        <div class="productDetailTitle">
+          <div class="detailCategory">
+  <h5>
+  دسته بندی
+  </h5>
   
-      <div class="Top bg-f ml-auto mr-auto w-[90%] grid grid-cols-[2fr,auto]
-      justify-center items-center  ">
-   
-        <div class="Right w-full flex justify-start items-center">
-            <nav class="Menu w-full flex justify-start items-center">
-               <ul class="w-full flex justify-center items-center gap-5">
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="/" alt="makesh-dahesh" title="mackesh-dahesh" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    صفحه نخست
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="محصولات"  alt="محصولات" title="محصولات" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03  text-b9">
-                    محصولات
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="پروژه-های-مکش-و-دهش" alt="پروژه-های-مکش-و-دهش" title="پروژه-های-مکش-و-دهش"  class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03  text-b9">
-                    پروژه ها
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="خدمات-مکش-و-دهش" alt="خدمات-مکش-و-دهش" title="خدمات-مکش-و-دهش" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    خدمات
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="اخبار-و-مقالات" alt="اخبار-و-مقالات" title="اخبار-و-مقالات" 
-                    class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    اخبار
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="اخبار-و-مقالات" alt="اخبار-و-مقالات" title="اخبار-و-مقالات"  class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    مقالات
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="تماس-با-فروشگاه-مکش-و-دهش" alt="تماس-با-فروشگاه-مکش-و-دهش" title="تماس-با-فروشگاه-مکش-و-دهش"
-                     class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    تماس با ما 
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="معرفی-فروشگاه-مکش-و-دهش" alt="معرفی-فروشگاه-مکش-و-دهش"  title="معرفی-فروشگاه-مکش-و-دهش"
-                    class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    درباره ما
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="نمایندگی-ها" alt="نمایندگی-ها" title="نمایندگی-ها" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    نمایندگی
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="گالری" alt="گالری" title="گالری" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    گالری
-                </a>
-                </li>
-               </ul>
-            </nav>
+  
+  <basis core="print" datamembername="db.navigation">
+  <face >
+  
+            <a href="/@Link" title="@title"> @Title <span> ، </span> </a>
+  </face>
+  </basis>
+          </div>
+  
+        <basis core="print" datamembername="db.productShow">
+  <face filter="ord = 700">
+          <h1>@Answer</h1>
+  </face>
+  </basis>
+  
         </div>
-     </div>
-   </div>
- 
-   <div class="CopyRightC w-full flex bg-b6 justify-center items-center pt-4 pb-4">
-          <a href="https://www.namasite.ir/" alt="namasite" title="namasite"
-           class="w-auto flex justify-center items-center gap-3"> 
-              <span class="copyRight text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-f">
-                  طراحی سایت و بهینه سازی سایت
-               </span>
-               <span>
-                  <img src="images/Namasite- 1.png" alt="namasite" title="namasite">
-               </span>
+        <div class="productDetailTable">
+          <table>
+  <basis core="print" datamembername="db.productShow">
+  <face filter="TypeID in (128) ">
+  
+            <tr>
+              <td>@Question</td>
+              <td>@Answer</td>
+            </tr>
+  </face>
+  </basis>
+  <basis core="print" datamembername="db.productShow">
+  <face filter="TypeID in (132) ">
+  
+            <tr>
+              <td>@Question</td>
+              <td>@Answer</td>
+            </tr>
+  </face>
+  </basis>
+          </table>
+        </div>
+        <div class="priceDetail">
+          <p class="h3">
+            شما می‌توانید برای مشاوره و اطلاع از قیمت محصولات تماس بگیرید.
+          </p>
+          
+  <basis core="print" datamembername="db.contactus">
+  <face filter="TypeID= 240">
+          <a href="tel:@Answer" title="phone">
+            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.19366 2.81977L11.1203 2.23903C12.9345 1.6922 14.8727 2.57593 15.6496 4.3041L16.849 6.97198C17.5112 8.44501 17.1622 10.1762 15.9811 11.2776L13.886 13.2312C13.8602 13.2554 13.8389 13.2841 13.8233 13.3159C13.6042 13.7638 13.9363 14.9605 14.9803 16.7688C16.1571 18.807 17.0666 19.6135 17.4867 19.4883L20.2368 18.6475C21.7809 18.1754 23.4542 18.7383 24.3989 20.0477L26.1022 22.4083C27.208 23.9409 27.0091 26.0551 25.637 27.3546L24.1721 28.7419C23.1373 29.7219 21.6884 30.1332 20.2931 29.8431C16.2107 28.9944 12.5531 25.7069 9.28958 20.0543C6.02285 14.3962 5.00579 9.58086 6.31785 5.61887C6.76348 4.27322 7.83646 3.22886 9.19366 2.81977ZM9.69613 4.48676C8.88181 4.73221 8.23802 5.35883 7.97065 6.16622C6.84011 9.58005 7.75587 13.9157 10.7974 19.1838C13.836 24.4468 17.1296 27.4072 20.6475 28.1385C21.4847 28.3126 22.354 28.0658 22.9749 27.4778L24.4398 26.0905C25.1786 25.3907 25.2857 24.2523 24.6903 23.4271L22.987 21.0664C22.4783 20.3614 21.5773 20.0583 20.7459 20.3125L17.9899 21.1551C16.4645 21.6098 15.0308 20.3385 13.4725 17.6393C12.1532 15.3543 11.6953 13.7038 12.2594 12.5508C12.3684 12.3279 12.5173 12.127 12.6987 11.9579L14.7937 10.0043C15.4297 9.41119 15.6176 8.47903 15.261 7.68586L14.0617 5.01798C13.6433 4.08742 12.5996 3.61157 11.6228 3.90601L9.69613 4.48676Z"
+                fill="white" />
+            </svg>
+            @Answer
           </a>
-   </div>
-  </footer>
-  <!-- FOOTER -->
-    </main>
-    <script src="js/gsap.js"></script>
-    <script src="js/scrollTrigger.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/jQuery.js"></script>
-    <script src="js/config.js"></script>
-</body>
-</html>
+  </face>
+  </basis>
+        </div>
+      </div>
+      <div class="imgSection">
+  <basis core="print" datamembername="db.productGallery">
+  <face filter="ord = 1000">
+        <img src="/@largeIMG" alt="product" title="product" loading="lazy" />
+  
+  </face>
+  </basis>
+      </div>
+    </div>
+    <div class="section3">
+      <!-- Nav tabs -->
+      <div class="card">
+  
+        <ul class="nav nav-tabs">
+          <li  class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" title="product" aria-selected="true">
+              توضیحات محصول
+  
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.25 4C3.00736 4 2 5.00736 2 6.25V8.75C2 9.99264 3.00736 11 4.25 11H6.75C7.99264 11 9 9.99264 9 8.75V6.25C9 5.00736 7.99264 4 6.75 4H4.25ZM3.5 6.25C3.5 5.83579 3.83579 5.5 4.25 5.5H6.75C7.16421 5.5 7.5 5.83579 7.5 6.25V8.75C7.5 9.16421 7.16421 9.5 6.75 9.5H4.25C3.83579 9.5 3.5 9.16421 3.5 8.75V6.25ZM11.25 5C10.8358 5 10.5 5.33579 10.5 5.75C10.5 6.16421 10.8358 6.5 11.25 6.5H21.25C21.6642 6.5 22 6.16421 22 5.75C22 5.33579 21.6642 5 21.25 5H11.25ZM11.25 8C10.8358 8 10.5 8.33579 10.5 8.75C10.5 9.16421 10.8358 9.5 11.25 9.5H18.25C18.6642 9.5 19 9.16421 19 8.75C19 8.33579 18.6642 8 18.25 8H11.25ZM4.25 13C3.00736 13 2 14.0074 2 15.25V17.75C2 18.9926 3.00736 20 4.25 20H6.75C7.99264 20 9 18.9926 9 17.75V15.25C9 14.0074 7.99264 13 6.75 13H4.25ZM3.5 15.25C3.5 14.8358 3.83579 14.5 4.25 14.5H6.75C7.16421 14.5 7.5 14.8358 7.5 15.25V17.75C7.5 18.1642 7.16421 18.5 6.75 18.5H4.25C3.83579 18.5 3.5 18.1642 3.5 17.75V15.25ZM11.25 14C10.8358 14 10.5 14.3358 10.5 14.75C10.5 15.1642 10.8358 15.5 11.25 15.5H21.25C21.6642 15.5 22 15.1642 22 14.75C22 14.3358 21.6642 14 21.25 14H11.25ZM11.25 17C10.8358 17 10.5 17.3358 10.5 17.75C10.5 18.1642 10.8358 18.5 11.25 18.5H18.25C18.6642 18.5 19 18.1642 19 17.75C19 17.3358 18.6642 17 18.25 17H11.25Z"
+                fill="#242424" />
+            </svg>
+          </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a title="bpp"  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">نظرات مشتریان
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.25 18C3.45507 18 2 16.5449 2 14.75V6.25C2 4.45507 3.45507 3 5.25 3H18.75C20.5449 3 22 4.45507 22 6.25V14.75C22 16.5449 20.5449 18 18.75 18H13.0125L7.99868 21.7507C7.44585 22.1642 6.6625 22.0512 6.24901 21.4984C6.08736 21.2822 6 21.0196 6 20.7499L5.99921 18H5.25ZM12.5135 16.5H18.75C19.7165 16.5 20.5 15.7165 20.5 14.75V6.25C20.5 5.2835 19.7165 4.5 18.75 4.5H5.25C4.2835 4.5 3.5 5.2835 3.5 6.25V14.75C3.5 15.7165 4.2835 16.5 5.25 16.5H7.49879L7.499 17.2498L7.49986 20.2506L12.5135 16.5Z"
+                  fill="#242424" />
+              </svg></a>
+          </li>
+  
+        </ul>
+  
+  
+  
+  
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="productTabDescription">
+                <div class="tag">
+                
+                    <basis core="print" datamembername="landingpage.list">
+                        <face>  
+                            <a href="@url">@keyword</a>
+                        </face>
+                       
+                    </basis>
+                </div>
+                <div class="tag">
+                    <basis core="print" datamembername="keyword.info">
+                        <face>
+                            <h1 class="column-tir-2">@title</h1>
+                            <p>@description</p>
+                        </face>
+                    </basis>
+                </div>
+               
+            
+              
+              <basis core="print" datamembername="db.productShow">
+                <face filter="TypeID in (144) ">
+                <div class="description">
+              
+               <span style="font-weight:bold"> @text </span>
+  @largetext
+                </div>
+         
+                </face>
+                </basis>
+                         
+              <div class="video">
+                <img src="[##cms.cms.cdn##]/images/Play Circle.png" class="playbtn"  alt="Play video" title="Play video" loading="lazy">
+  
+  <basis core="print" datamembername="db.productGallery">
+  <face filter="ord = 10">
+  
+              <video poster="/@largeIMG">
+  </face>
+  </basis>
+  
+  <basis core="print" datamembername="db.video">
+  <face>
+                <source src="/@largeIMG" />
+              </video>
+  
+  </face>
+  </basis>
+              </div>
+  
+  <div class="box2 description">
+                
+  </div>
+  
+            </div>
+  
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="commentSection">
+  
+  
+              <div class="commentItem">
+                <div class="commentUserInfo">
+                  <div class="commentUser">
+                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="account" title="account" loading="lazy">
+                    <h4>شیرین مرادی</h4>
+                  </div>
+                  <div class="commentDate">
+                    <span>1400/5/4</span>
+                    <a href="" title="reply">
+                      پاسخ
+  
+                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
+                          fill="#121212" />
+                      </svg>
+  
+                    </a>
+                  </div>
+                </div>
+                <div class="commentText">
+                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
+                  </p>
+                </div>
+              </div>
+              <div class="commentItem">
+                <div class="commentUserInfo">
+                  <div class="commentUser">
+                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="bamdad petro parsan" title="bamdad petro parsan" loading="lazy">
+                    <h4>شیرین مرادی</h4>
+                  </div>
+                  <div class="commentDate">
+                    <span>1400/5/4</span>
+                    <a href="" title="reply">
+                      پاسخ
+  
+                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
+                          fill="#121212" />
+                      </svg>
+  
+                    </a>
+                  </div>
+                </div>
+                <div class="commentText">
+                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
+                  </p>
+                </div>
+              </div>
+              <div class="commentItem">
+                <div class="commentUserInfo">
+                  <div class="commentUser">
+                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="bpp" title="bpp" loading="lazy">
+                    <h4>شیرین مرادی</h4>
+                  </div>
+                  <div class="commentDate">
+                    <span>1400/5/4</span>
+                    <a href="" title="reply">
+                      پاسخ
+  
+                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
+                          fill="#121212" />
+                      </svg>
+  
+                    </a>
+                  </div>
+                </div>
+                <div class="commentText">
+                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
+                  </p>
+                </div>
+              </div>
+              <div class="commentBtn">
+  
+                
+                
+  
+  
+  
+  
+  
+  
+  
+  
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-whatever="@mdo">
+                  ثبت نظر
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <ul>
+                          <li>نظر خود را با ما به اشتراک بگذارید</li>
+                        </ul>
+                        <form>
+                          <input class="name" id="name" type="text" placeholder="نام نام خانوادگی">
+                          <input class="email" id="email" type="email" placeholder="ایمیل">
+                          <________textarea class="commentArea" name="commentArea" id="" cols="30" rows="10"
+                            placeholder="متن نظر"></________textarea>
+                          <div class="btnCapcha">
+                            <button type="submit">ثبت نظر</button>
+                            <div class="capcha">
+                         
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section4">
+      <div class="relatedProTitle">
+        <h4 class="newsRight">کالاهای <strong>مرتبط</strong></h4>
+        <span class="newsLeft"></span>
+      </div>
+  
+      <div class="relatedProducts">
+  <basis core="print" datamembername="db.relatedProduct">
+  <face>
+        <div class="proItem">
+          <a href="/@link" title="@title">
+            <img src="/@image" alt="@title" title="@title" loading="lazy"/>
+            <span> @title</span>
+          </a>
+        </div>
+  </face>
+  </basis>
+  
+      </div>
+    </div>
+    <div class="section5">
+      <div class="productNav">
+        <div class="nextProduct">
+  <basis core="print" datamembername="db.relatedProduct">
+  <face filter="RowNumber = 1">
+          <a href="/@link" title="@title">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="#2F2F2F" />
+            </svg>
+            محصول بعدی
+  
+          </a>
+  </face>
+  </basis>
+        </div>
+        <div class="prevProduct">
+  <basis core="print" datamembername="db.relatedProduct">
+  <face filter="RowNumber = 2">
+          <a href="/@link" title="@title">
+  
+            محصول قبلی
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.825 7H16V9H3.825L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7Z" fill="#2F2F2F" />
+            </svg>
+          </a>
+  </face>
+  </basis>
+        </div>
+      </div>
+    </div>
+  </div>
+  <basis core="call" file="footer.inc" />
+  
+  <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="[##cms.cms.cdn##]/js/bootstrap.bundle.min.js" ></script>
+  
+  <script src="[##cms.cms.cdn##]/js/playVideo.js"></script>
+  <!-- 
+  <script src="[##cms.cms.cdn##]/js/product.js"></script> -->
+  <script type="application/ld+json"> 
+    [##json.fq.column1##] 
+    </script>
+  </body>
+  
+  </html>

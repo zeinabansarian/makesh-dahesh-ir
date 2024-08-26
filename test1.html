@@ -1,0 +1,373 @@
+<basis core="dbsource" source="py_hosting" name="keyword" lid="1"
+request="keywordinfo" wordid="[##cms.query.wordid##]">
+<member name="info" type="view" />
+</basis>
+<basis core="dbsource" source="py_hosting" request="landingpagelist" 
+name="landingpage" lid="1" wordid="[##cms.qurey.wordid##]">
+<member type="list" name="list"  />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+<member name="list" type="list" request="product" id="[##cms.query.id##]" />
+</basis>
+<basis core="dbsource" name="blog" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+<member name="blogshow" type="view" postsql="select * from [blog.blogshow] where typeid not in (159,160,161,162)"/>
+</basis>
+
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]">
+<member name="image" type="list" format="4"/>
+</basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+<member name="relatedblog"  type="list" blgid="222" size="600X600"/>
+</basis>
+
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+<member name="project" type="list" blgid="222" propertyid="7244" size="600x600"/>
+</basis>
+
+<basis core="dbsource" source="media" name="db" lid="1" usedforid="[##cms.query.id##]" sourcemid="19">
+        <member name="gallery" type="list" format="4" />
+    </basis>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" usedforid="[##cms.query.id##]" mid="1">
+<member type="view" name="project" />
+    <member type="list" name="rel" perpage="10" pageno="1" typeid="159" size="1317x864" valueID="3853374" RowNumber="10" prpID="61429" blgid="1611"  />
+</basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+<member name="relatedblog"  type="list" blgid="222" propertyid="7244" size="600X600"/>
+</basis>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <title>[##cms.seo.title##]</title>
+        <meta name="description" content="[##cms.seo.description##]" />
+  
+<meta charset="UTF-8">
+<link rel="stylesheet" href="[##cms.cms.cdn##]/css/BlogShow.css">
+<link rel="stylesheet" href="[##cms.cms.cdn##]/css/global.css">
+<link href="[##cms.cms.cdn##]/css/splide.min.css" rel="stylesheet">
+<link href="[##cms.cms.cdn##]/css/aos.css" rel="stylesheet">
+
+</head>
+<body>
+<basis core="call" file="Header.inc" />
+<main class="main-blog-show">
+<div class="section1">
+<basis core="print" datamembername="db.image">
+<face filter="ord in (1)">
+    <img src="[##cms.cdn.cdn##]/@largeIMG" alt="دفینه سبز" title="دفینه سبز">
+</face>
+</basis>
+<basis core="print" datamembername="blog.blogshow">
+<face filter="TypeID in (150)">
+    <span>@text</span>
+</face>
+</basis>
+    <div class="details">
+        <div class="like">
+            <div><img src="[##cms.cdn.cdn##]/images/like-w.svg"  alt="دفینه سبز" title="دفینه سبز"></div>
+            <div><img src="[##cms.cdn.cdn##]/images/dislike-w.svg"  alt="دفینه سبز" title="دفینه سبز"></div>
+        </div>
+        <div class="social">
+            <div><a href="#"><img src="[##cms.cdn.cdn##]/images/twitter-w.svg" alt="دفینه سبز" title="دفینه سبز"></a></div>
+            <div><a href="#"><img src="[##cms.cdn.cdn##]/images/instagram.svg" alt="دفینه سبز" title="دفینه سبز"></a></div>
+            <div><a href="#"><img src="[##cms.cdn.cdn##]/images/pinterest-w.svg" alt="دفینه سبز" title="دفینه سبز"></a></div>
+            <div><a href="#"><img src="[##cms.cdn.cdn##]/images/linkedin-w.svg" alt="دفینه سبز" title="دفینه سبز"></a></div>
+        </div>
+    </div>
+</div>
+<div class="section2">
+    <h1 class="title" data-aos="fade-up"
+ data-aos-duration="3000">
+<basis core="print" datamembername="blog.blogshow">
+<face filter="RowNumber = 1">
+@text
+</face>
+</basis>
+</h1>
+    <div class="des-1" data-aos="fade-up"
+ data-aos-duration="3000">
+<basis core="print" datamembername="blog.blogshow">
+<face filter="RowNumber = 2">
+@Answer
+</face>
+</basis>
+
+    </div>
+    <div class="des-2" data-aos="fade-up"
+ data-aos-duration="3000">
+        <div class="text">
+<basis core="print" datamembername="blog.blogshow">
+<face filter="RowNumber = 3">
+@Answer
+</face>
+</basis>
+        </div>
+        <div class="img">
+<basis core="print" datamembername="db.image">
+<face filter="ord in (2)">
+            <img src="[##cms.cdn.cdn##]/@largeIMG" alt="دفینه سبز" title="دفینه سبز">
+</face>
+</basis>
+        </div>
+    </div>
+    <div class="des-3" data-aos="fade-up"
+ data-aos-duration="3000">
+<basis core="print" datamembername="blog.blogshow">
+<face filter="RowNumber = 4">
+@Answer
+</face>
+</basis>
+    </div>
+    <div class="des-4" data-aos="fade-up"
+ data-aos-duration="3000">
+        <div class="img">
+<basis core="print" datamembername="db.image">
+<face filter="ord in (3)">
+            <img src="[##cms.cdn.cdn##]/@largeIMG" alt="دفینه سبز" title="دفینه سبز">
+</face>
+</basis>
+        </div>
+        <div class="text">
+<basis core="print" datamembername="blog.blogshow">
+<face filter="RowNumber = 5">
+@Answer
+</face>
+</basis>
+
+    <basis core="print" datamembername="keyword.info">
+        <face>
+            <h1 class="column-tir-2">@title</h1>
+            <p>@description</p>
+        </face>
+    </basis>
+
+        <p>کلمات کلیدی :</p>
+<basis core="print" datamembername="landingpage.list">
+    <face>  
+        <a href="@url">@keyword</a><span>،</span> 
+    </face>
+   
+</basis>
+
+</div>
+        </div>
+    
+    </div>
+</div>
+<div class="section3">
+    <div class="line"></div>
+    <div class="images splide" id="splide1">
+        <div class="splide__track">
+            <div class="splide__list">
+<basis core="print" datamembername="db.image">
+<face filter="ord in (1000)">
+<div class="img splide__slide">
+                    <img src="[##cms.cdn.cdn##]/@largeIMG" alt="دفینه سبز" title="دفینه سبز">
+         </div>
+</face>
+</basis>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<basis core="print" datamembername="db.relatedblog">
+<layout>
+    <div class="section4">
+        <div class="main-last-news splide" id="splide2">
+            <div class="header">
+                <div class="title"> <span>مقالات مرتبط</span></div>
+                <div class="arrows splide__arrows">
+                    <button class="a-left splide__arrow splide__arrow--prev"><img src="[##cms.cdn.cdn##]/images/a-left.svg" alt="دفینه سبز" title="دفینه سبز"></button>
+                    <button class="a-right splide__arrow splide__arrow--next"><img src="[##cms.cdn.cdn##]/images/a-right.svg" alt="دفینه سبز" title="دفینه سبز"></button>
+                </div>
+            </div>
+            <div class="news">
+                <div class="splide__track">
+                    <div class="splide__list">
+    @child
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</layout>
+<face>
+     <div class="article splide__slide">
+                    <div class="img">
+                        <img src="[##cms.cdn.cdn##]/@00600X00600prp" alt="@title">
+                    </div>
+                    <div class="title">
+                        <div class="name">@title</div>
+                        <div class="data">@date</div>
+                    </div>
+                    <div class="des">
+
+@prp_7244
+
+                    </div>
+                    <a href="./@link" class="more">
+                        <div class="img"><img src="[##cms.cdn.cdn##]/images/arrow-left.svg" alt="دفینه سبز" title="دفینه سبز"></div>
+                        <span>نمایش بیشتر</span>
+                    </a>
+                </div>
+</face>
+</basis>
+
+                    
+  
+
+              <basis core="print" datamembername="db.rel">
+                <layout>
+                    <div class="section5">
+                        <div class="title">پروژه مرتبط</div>
+                        <div class="main-list-project splide" id="splide3">
+                            <div class="splide__track">
+                                <div class="projects splide__list">
+                    @child
+                </div>
+            </div>
+        </div>
+    </div>
+                </layout>
+<face>
+                <a href="/@link" class="project splide__slide">
+                    <img src="[##cms.cdn.cdn##]/@01317X00864prp" alt="@title">
+                    <div class="info">
+                        <span>@title</span>
+                    </div>
+                </a>
+       </face>
+</basis>
+
+   
+</main>
+<basis core="call" file="Footer.inc" />
+<script src="[##cms.cms.cdn##]/js/splide.min.js"></script>
+<script src="[##cms.cms.cdn##]/js/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+<script>
+new Splide( '#splide1', {
+    drag   : 'free',
+    pagination: false,
+    direction: 'rtl',
+    gap: 38,
+    width: '50%',
+    height: '570px',
+    arrows: false,
+} ).mount()
+
+new Splide( '#splide2', {
+    drag   : 'free',
+    perPage: 3,
+    pagination: false,
+direction: 'rtl',
+    breakpoints: {
+        1440: {
+            perPage: 2,
+        },
+        1024: {
+            perPage: 2,
+        },
+        767: {
+            perPage: 1,
+        },
+    },
+} ).mount()
+
+new Splide( '#splide3', {
+    pagination: false,
+    arrows: false,
+    direction: 'rtl',
+    width: '100%',
+    height: '650px',
+    gap: '60px'
+} ).mount()
+</script>
+<script>
+window.addEventListener('scroll', function() {
+var parent = document.querySelector('.main-list-project')
+    var project = document.querySelectorAll('.main-list-project .projects .project')
+    var element = document.querySelector('.section5 .splide__list')
+    var elementImage = document.querySelector('.section5').getBoundingClientRect()
+    var position = element.getBoundingClientRect();
+
+    if (position.bottom-500 <= window.innerHeight) {
+        element.style.transform = 'translateX(' + (elementImage.bottom-1000) + 'px)';
+        parent.style.height = (project.length*100) + 'vw'
+    }
+});
+
+document.querySelectorAll('.main-list-project .project').forEach((project) => {
+var projectSlect = project.querySelector('.info').style
+project.querySelector('.info').style.background = '#978775'
+project.querySelector('.info').style.opacity = .8
+project.addEventListener('mouseenter', () => {
+    project.querySelector('.info').style.display = 'flex'
+})
+project.addEventListener('mousemove', (event) => {
+    const rect = project.getBoundingClientRect();
+const x = event.clientX - rect.left;
+const y = event.clientY - rect.top;
+    
+    projectSlect.left = x + 'px'
+    projectSlect.top = y + 'px'
+})
+project.addEventListener('mouseleave', () => {
+    project.querySelector('.info').style.display = 'none'
+})
+})
+
+const imageText1 = document.querySelector(".des-2 .text p img")
+let image1 = document.querySelector(".des-2 .img img")
+const imageText2 = document.querySelector(".des-4 .text p img")
+let image2 = document.querySelector(".des-4 .img img")
+image1.src = imageText1.src;
+image2.src = imageText2.src;
+
+
+
+
+
+
+</script>
+<script>
+ var cursor = document.getElementById("cursor");
+document.body.addEventListener("mousemove", function(e) {
+cursor.style.left = e.clientX + "px",
+cursor.style.top = e.clientY + "px";
+});
+const btn = document.querySelectorAll("a")
+
+btn.forEach((userItem) => {
+userItem.onmouseenter = function() {
+
+const collection = cursor.children;
+collection[0].style.transform="scale(1.8)";
+}
+userItem.onmouseleave = function() {
+const collection = cursor.children;
+collection[0].style.transform="scale(1)";
+}
+});
+
+
+
+
+</script>
+</body>
+</html>

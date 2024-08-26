@@ -28,7 +28,6 @@ DropNavs.forEach(d=>{
 })
 let header = document.querySelector('header')
 window.addEventListener('scroll',(s)=>{
-    console.log(scrollY);
     if(scrollY > 0){
         header.classList.add('GoBottom')
     }

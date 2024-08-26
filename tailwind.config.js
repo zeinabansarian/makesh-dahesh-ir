@@ -33,7 +33,8 @@ module.exports = {
       'white': '#FFFFFF',
       'gray-500': '#475569',
       'f':'#ffff',
-      'blue':'#31407688'
+      'blue':'#31407688',
+      'blue1':'#2E3192'
 
     },
     fontFamily: {
