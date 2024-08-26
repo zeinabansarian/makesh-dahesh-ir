@@ -104,6 +104,10 @@
   font-style: normal;
   font-display: swap;
 }
+
+*{
+  font-family: "IRANSansWeb400";
+}
 header .Menu-Container{
   background-size: 100%;
 }
@@ -322,18 +326,18 @@ fill: #1E1E1E;
 
 
 
-.brandShow .relatedPro .swiper-slide .btmPro{
+ .relatedPro .swiper-slide .btmPro{
 opacity: 0;
-height: 0;
+transform: translateY(-100%);
 
 }
 
-.brandShow .relatedPro .swiper-slide:hover .btmPro{
+ .relatedPro .swiper-slide:hover .btmPro{
+   transform: translateY(0);
   opacity: 1;
- height: auto;
 }
 
-.brandShow .share .share__wrapper {
+.relatedPro .share .share__wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -342,18 +346,18 @@ height: 0;
   cursor: pointer;
 }
 
-.brandShow .share .social-link {
+ .relatedPro .share .social-link {
   height: 30px;
   width: 30px;
   position: absolute;
   cursor: pointer;
 }
-/* .brandShow .share .share__wrapper {
+/*  .relatedPro .share .share__wrapper {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 } */
-.brandShow .share .toggle-button {
+ .relatedPro .share .toggle-button {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -363,48 +367,49 @@ height: 0;
   width: 100%;
   height: 100%;
 }
-.brandShow .share .toggle-button:focus {
+ .relatedPro .share .toggle-button:focus {
   outline: 0;
 }
-.brandShow .share .toggle-button:before,
-.brandShow .share .toggle-button:after {
+ .relatedPro .share .toggle-button:before,
+ .relatedPro .share .toggle-button:after {
   content: "";
   position: absolute;
 }
-.brandShow .share .toggle-button:after {
+ .relatedPro .share .toggle-button:after {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transition: all 0.2s ease;
 }
-.brandShow .share .toggle-button--active:after {
+ .relatedPro .share .toggle-button--active:after {
 }
-.brandShow .share .social-link {
+ .relatedPro .share .social-link {
   visibility: hidden;
   border-radius: 50%;
   transition: all 0.1s ease;
 }
-.brandShow .share .social-link:nth-child(1) {
+ .relatedPro .share .social-link:nth-child(1) {
   left: 80px;
 }
-.brandShow .share .social-link:nth-child(2) {
+ .relatedPro .share .social-link:nth-child(2) {
   left: 120px;
 }
-.brandShow .share .social-link:nth-child(3) {
+ .relatedPro .share .social-link:nth-child(3) {
   left: 160px;
 }
-.brandShow .share .share__wrapper--active .social-link {
+ .relatedPro .share .share__wrapper--active .social-link {
   visibility: visible;
   animation: 0.1s left forwards;
 }
-.brandShow
+ .relatedPro
   .share
   .share__wrapper--active
   .social-link:nth-child(1) {
   animation-delay: 0.075s;
 }
-.brandShow
+
+ .relatedPro
   .share
   .share__wrapper--active
   .social-link:nth-child(2) {
@@ -551,6 +556,9 @@ stroke: #2E3192;
     line-height: 21.91px;
     text-decoration: none;
     color: #f26737;
+  }
+  a:hover{
+text-decoration: none;
   }
 
   .newsList nav ul li.activeList{
@@ -760,7 +768,6 @@ stroke: #2E3192;
   
 .star-rating {
   direction: rtl;
-  display: inline-block;
   cursor: default;
 }
 .star-rating input[type="radio"] {
@@ -817,4 +824,64 @@ html{
 }
 .nav-tabs>li>a:hover{
   background-color: transparent;
+}
+
+
+.btttns .hole:nth-child(1){
+  height: 17px;
+width: 17px;
+border-radius: 50%;
+  mask: radial-gradient(10px,#0000 98%, #000);
+}
+
+
+.holes{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.holes .hole1{
+width: 51px;
+height: 51px;
+border-radius: 50%;
+border: 1px solid #D9D9D9;
+}
+.holes .hole2{
+width: 17px;
+height: 17px;
+border-radius: 50%;
+position: absolute;
+border: 1px solid #D9D9D9;
+}
+
+.btnsMain:hover .hole2{
+border: none;
+}
+.btnsMain:hover .hole1{
+  border: 17px solid #2e3192
+}
+.btnsMain:hover .text{
+  transform: scaleY(0.7) scaleX(0.9);
+  background-color:#2e3192 ;
+  border: none;
+}
+
+.btnsMain .text::after{
+content: "";
+width: 100%;
+background-color: #D9D9D9;
+height: 1px;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.btnsMain:hover .text::after{
+  width: 90%;
+  display: none;
+}
+.btnsMain:hover span{
+  transform: translateY(-8px);
+  color: white;
 }
