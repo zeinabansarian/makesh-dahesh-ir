@@ -78,3 +78,260 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+
+
+.brandShow .relatedPro .swiper-slide .btmPro{
+opacity: 0;
+height: 0;
+
+}
+
+.brandShow .relatedPro .swiper-slide:hover .btmPro{
+  opacity: 1;
+ height: auto;
+}
+
+.brandShow .share .share__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.brandShow .share .social-link {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+/* .brandShow .share .share__wrapper {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.brandShow .share .toggle-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.brandShow .share .toggle-button:focus {
+  outline: 0;
+}
+.brandShow .share .toggle-button:before,
+.brandShow .share .toggle-button:after {
+  content: "";
+  position: absolute;
+}
+.brandShow .share .toggle-button:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+.brandShow .share .toggle-button--active:after {
+}
+.brandShow .share .social-link {
+  visibility: hidden;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}
+.brandShow .share .social-link:nth-child(1) {
+  left: 80px;
+}
+.brandShow .share .social-link:nth-child(2) {
+  left: 120px;
+}
+.brandShow .share .social-link:nth-child(3) {
+  left: 160px;
+}
+.brandShow .share .share__wrapper--active .social-link {
+  visibility: visible;
+  animation: 0.1s left forwards;
+}
+.brandShow
+  .share
+  .share__wrapper--active
+  .social-link:nth-child(1) {
+  animation-delay: 0.075s;
+}
+.brandShow
+  .share
+  .share__wrapper--active
+  .social-link:nth-child(2) {
+  animation-delay: 0.05s;
+}
+@keyframes shareClose {
+  0% {
+    opacity: 0;
+    transform: rotateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+@keyframes left {
+  50% {
+    transform: translateX(-170%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-130%);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(-130%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+    left: 0;
+  }
+}
+
+
+
+
+
+.newsShow .share__wrapper {
+  position: relative;
+}
+.newsShow .social-link {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: -6px;
+}
+
+
+
+.newsShow .share__wrapper--open-left {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.newsShow .toggle-button {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.newsShow .toggle-button:focus {
+  outline: 0;
+}
+.newsShow .toggle-button:before,
+.newsShow .toggle-button:after {
+  content: "";
+  position: absolute;
+}
+.newsShow .toggle-button:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.newsShow .toggle-button--active:after {
+}
+
+
+.newsShow .social-link path{
+stroke: #2E3192;
+}
+.newsShow .social-link {
+  visibility: hidden;
+
+  transition: all 0.1s ease;
+}
+.newsShow .social-link:nth-child(1) {
+  left: -80px;
+}
+.newsShow .social-link:nth-child(2) {
+  left: -40px;
+}
+.newsShow .social-link:nth-child(3) {
+}
+
+.newsShow .share__wrapper--active .social-link {
+  visibility: visible;
+  animation: 0.1s left forwards;
+}
+.newsShow .share__wrapper--active .social-link:nth-child(1) {
+  animation-delay: 0.075s;
+}
+.newsShow .share__wrapper--active .social-link:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+
+
+
+  h1,
+  h2 {
+    font-size: 24px;
+    line-height: 23px;
+    text-align: right;
+    font-family: "IRANSansWeb500";
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "IRANSansWeb500";
+    font-size: 16px;
+    line-height: 25.04px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  a {
+    font-family: "IRANSansWeb700";
+    font-size: 14px;
+    line-height: 21.91px;
+    text-decoration: none;
+    color: #f26737;
+  }
+
+  .newsList nav ul li.activeList{
+    background-color: #E4E4E7;
+    color: #1E1E1E!important;
+    border-bottom: 5px solid #F37021F3;
+  }
+  
+  .newsList nav ul li.activeList span{
+    
+    color: #1E1E1E!important;
+
+  }
+
+
+  .newsList .newsBox:hover .imgS img:nth-child(2){
+    opacity: 1;
+  }
+
+
+  .scrollToTop{
+    opacity: 0;
+    transform: translateY(60%);
+  }
