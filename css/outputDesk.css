@@ -1181,6 +1181,10 @@ video {
   margin-top: auto;
 }
 
+.mb-\[1em\] {
+  margin-bottom: 1em;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1612,9 +1616,30 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[50px\] {
+  --tw-translate-y: 50px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[2em\] {
+  --tw-translate-y: 2em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[3em\] {
+  --tw-translate-y: 3em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .scale-0 {
   --tw-scale-x: 0;
   --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-\[1\.2\] {
+  --tw-scale-x: 1.2;
+  --tw-scale-y: 1.2;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3165,6 +3190,10 @@ video {
   padding-bottom: 70px;
 }
 
+.pb-\[8em\] {
+  padding-bottom: 8em;
+}
+
 .pl-\[10px\] {
   padding-left: 10px;
 }
@@ -3225,8 +3254,16 @@ video {
   padding-top: 50px;
 }
 
-.pb-\[8em\] {
-  padding-bottom: 8em;
+.pb-\[\.5em\] {
+  padding-bottom: .5em;
+}
+
+.pl-\[1em\] {
+  padding-left: 1em;
+}
+
+.pt-\[\.5em\] {
+  padding-top: .5em;
 }
 
 .text-left {
@@ -3565,6 +3602,22 @@ video {
   opacity: 0;
 }
 
+.opacity-\[\] {
+  opacity: ;
+}
+
+.opacity-\[-2em\] {
+  opacity: -2em;
+}
+
+.opacity-\[2em\] {
+  opacity: 2em;
+}
+
+.opacity-\[0\] {
+  opacity: 0;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -3868,6 +3921,10 @@ video {
 
 .delay-\[1s\] {
   transition-delay: 1s;
+}
+
+.delay-\[\.3s\] {
+  transition-delay: .3s;
 }
 
 .duration-1000 {
@@ -4897,6 +4954,14 @@ main.aboutUS .GallerySlider svg{
   content: var(--tw-content);
 }
 
+.odd\:justify-start:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.even\:justify-end:nth-child(even) {
+  justify-content: flex-end;
+}
+
 .hover\:cursor-none:hover {
   cursor: none;
 }
@@ -4927,6 +4992,12 @@ main.aboutUS .GallerySlider svg{
 .hover\:shadow-\[rgba\(50\2c 50\2c 93\2c 0\.25\)_0px_6px_12px_-2px\2c _rgba\(0\2c 0\2c 0\2c 0\.3\)_0px_3px_7px_-3px\]:hover {
   --tw-shadow: rgba(50,50,93,0.25) 0px 6px 12px -2px, rgba(0,0,0,0.3) 0px 3px 7px -3px;
   --tw-shadow-colored: 0px 6px 12px -2px var(--tw-shadow-color), 0px 3px 7px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-\[0_2\.8px_2\.2px_rgba\(0\2c _0\2c _0\2c _0\.034\)\2c _0_6\.7px_5\.3px_rgba\(0\2c _0\2c _0\2c _0\.048\)\2c _0_12\.5px_10px_rgba\(0\2c _0\2c _0\2c _0\.06\)\2c _0_22\.3px_17\.9px_rgba\(0\2c _0\2c _0\2c _0\.072\)\2c _0_41\.8px_33\.4px_rgba\(0\2c _0\2c _0\2c _0\.086\)\2c _0_100px_80px_rgba\(0\2c _0\2c _0\2c _0\.12\)\]:hover {
+  --tw-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  --tw-shadow-colored: 0 2.8px 2.2px var(--tw-shadow-color), 0 6.7px 5.3px var(--tw-shadow-color), 0 12.5px 10px var(--tw-shadow-color), 0 22.3px 17.9px var(--tw-shadow-color), 0 41.8px 33.4px var(--tw-shadow-color), 0 100px 80px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -4996,6 +5067,10 @@ main.aboutUS .GallerySlider svg{
 
 .group:hover .group-hover\:opacity-\[1\] {
   opacity: 1;
+}
+
+.group:hover .group-hover\:opacity-\[0\] {
+  opacity: 0;
 }
 
 .group.Open .group-\[\&\.Open\]\:visible {
