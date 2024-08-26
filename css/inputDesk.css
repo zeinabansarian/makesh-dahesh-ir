@@ -282,3 +282,38 @@ display: flex !important;
   -ms-transform: translateY(1.5em);
   -o-transform: translateY(1.5em);
 }
+
+.map svg path.hasBranch:hover {
+  cursor: pointer;
+  fill:#F26737;
+}
+.map svg path {
+  fill: #BCBDBD;
+  stroke: #fff;
+  transition: all 500ms;
+}
+.Rep-Lists li{
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+}
+.Rep-Lists li{
+  color: #BCBDBD;
+}
+.Rep-Lists li.active{
+  color: #1E1E1E;
+  border-bottom: 1px solid #1E1E1E;
+}
+.RepContainer header{
+  background-color: #FFFFFF80;
+}
+.RepContainer .Toggle-item{
+background-color: #1E1E1E;
+}
+.RepContainer .Item a,
+.RepContainer .Item svg path{
+color: #1E1E1E;
+fill: #1E1E1E;
+  }

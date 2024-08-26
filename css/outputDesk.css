@@ -1087,6 +1087,10 @@ video {
   margin-top: 2.25rem;
 }
 
+.mt-\[1\.5em\] {
+  margin-top: 1.5em;
+}
+
 .mt-\[1em\] {
   margin-top: 1em;
 }
@@ -1101,6 +1105,10 @@ video {
 
 .mt-\[5em\] {
   margin-top: 5em;
+}
+
+.mt-\[8em\] {
+  margin-top: 8em;
 }
 
 .mt-auto {
@@ -1240,6 +1248,10 @@ video {
 
 .h-\[75\%\] {
   height: 75%;
+}
+
+.h-\[78vh\] {
+  height: 78vh;
 }
 
 .h-\[90\%\] {
@@ -2036,6 +2048,10 @@ video {
   gap: 4em;
 }
 
+.gap-\[8em\] {
+  gap: 8em;
+}
+
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
@@ -2546,6 +2562,11 @@ video {
   border-style: none;
 }
 
+.border-b1 {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
 .border-b3 {
   --tw-border-opacity: 1;
   border-color: rgb(228 228 231 / var(--tw-border-opacity));
@@ -2707,6 +2728,10 @@ video {
 
 .bg-origin-content {
   background-origin: content-box;
+}
+
+.fill-b8 {
+  fill: #F26737;
 }
 
 .object-contain {
@@ -2912,6 +2937,10 @@ video {
   padding-bottom: .8em;
 }
 
+.pb-\[10em\] {
+  padding-bottom: 10em;
+}
+
 .pb-\[1em\] {
   padding-bottom: 1em;
 }
@@ -2926,6 +2955,10 @@ video {
 
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pr-\[1\.2em\] {
+  padding-right: 1.2em;
 }
 
 .pr-\[1em\] {
@@ -3150,6 +3183,10 @@ video {
 .stacked-fractions {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.leading-18\.78 {
+  line-height: 18.78px;
 }
 
 .leading-21\.91 {
@@ -4042,6 +4079,45 @@ svg.BTN #c2,#c1{
   -o-transform: translateY(1.5em);
 }
 
+.map svg path.hasBranch:hover {
+  cursor: pointer;
+  fill:#F26737;
+}
+
+.map svg path {
+  fill: #BCBDBD;
+  stroke: #fff;
+  transition: all 500ms;
+}
+
+.Rep-Lists li{
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  color: #BCBDBD;
+}
+
+.Rep-Lists li.active{
+  color: #1E1E1E;
+  border-bottom: 1px solid #1E1E1E;
+}
+
+.RepContainer header{
+  background-color: #FFFFFF80;
+}
+
+.RepContainer .Toggle-item{
+  background-color: #1E1E1E;
+}
+
+.RepContainer .Item a,
+.RepContainer .Item svg path{
+  color: #1E1E1E;
+  fill: #1E1E1E;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -4210,6 +4286,10 @@ svg.BTN #c2,#c1{
   cursor: pointer;
 }
 
+.hover\:border-b-\[1px\]:hover {
+  border-bottom-width: 1px;
+}
+
 .hover\:bg-f:hover {
   background-color: #ffff;
 }
@@ -4339,6 +4419,10 @@ svg.BTN #c2,#c1{
 
 .\[\&\.Show\]\:opacity-\[1\].Show {
   opacity: 1;
+}
+
+.\[\&\.active\]\:fill-b8.active {
+  fill: #F26737;
 }
 
 .\[\&\.openNav\]\:translate-y-\[0\].openNav {
