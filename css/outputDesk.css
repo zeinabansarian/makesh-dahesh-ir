@@ -1297,6 +1297,10 @@ video {
   margin-top: 1em;
 }
 
+.mt-\[2\.8em\] {
+  margin-top: 2.8em;
+}
+
 .mt-\[2em\] {
   margin-top: 2em;
 }
@@ -1432,6 +1436,10 @@ video {
   height: 0px;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-3 {
   height: 0.75rem;
 }
@@ -1446,6 +1454,10 @@ video {
 
 .h-\[125\%\] {
   height: 125%;
+}
+
+.h-\[134px\] {
+  height: 134px;
 }
 
 .h-\[17vh\] {
@@ -1579,6 +1591,10 @@ video {
 
 .w-\[21px\] {
   width: 21px;
+}
+
+.w-\[25\%\] {
+  width: 25%;
 }
 
 .w-\[30\%\] {
@@ -4527,6 +4543,180 @@ video {
   direction: rtl;
 }
 
+footer [data-bc-section]{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+footer [data-bc-schema-main-container]{
+  width: 45%;
+}
+
+footer [data-bc-section-title],
+footer [data-bc-title-container]{
+  display: none;
+}
+
+footer [data-bc-question]{
+  margin: 0;
+}
+
+footer [data-bc-answer-container],
+footer [data-bc-schema-info-part="1"] [data-bc-part-related-cell]{
+  width: 100% !important;
+  margin: 0;
+}
+
+footer [data-bc-answer]{
+  position: relative;
+}
+
+footer [data-bc-answer]::before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '*';
+  color: #F26737;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.91px;
+}
+
+footer [data-bc-answer-container] input[type="text"],
+footer [data-bc-answer-container] input[type="password"],
+footer [data-bc-answer-container] input[type="time"],
+footer [data-bc-answer-container] input[type="file"],
+footer [data-bc-answer-container] select,
+footer [data-bc-answer-container] textarea {
+  width: 100% !important;
+  background-color: transparent;
+  border: none;
+  height: 66px !important;
+  border-bottom: 1px solid #fff;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  transform: translateY(0px);
+}
+
+footer [data-bc-part-container], [data-bc-btn-container] {
+  width: 100%;
+}
+
+footer [data-bc-answer]{
+  width: 90%;
+}
+
+footer [data-bc-answer-container] input[type="text"]::-moz-placeholder{
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: #fff;
+  font-family: IRANSansWeb300, IRANSansWeb300;
+}
+
+footer [data-bc-answer-container] input[type="text"]::placeholder{
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: #fff;
+  font-family: IRANSansWeb300, IRANSansWeb300;
+}
+
+footer .col{
+  gap: 2em;
+  width: 100%;
+  align-items: center;
+}
+
+input:focus-visible,
+input:focus{
+  outline: none;
+  border: none;
+}
+
+footer .captchaa{
+  position: relative;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding: 0 !important;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform:  translateY(-.6em);
+}
+
+footer .captchaBox{
+  height: 66px;
+  overflow: hidden;
+}
+
+.codeinputm{
+  width: 60%;
+  background-color: transparent !important;
+}
+
+.Address p{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: #1E293B;
+  text-align: center;
+  font-family: IRANSansWeb300, IRANSansWeb300;
+}
+
+.Address{
+  width: 80%;
+}
+
+footer .Contact-box{
+  margin-top: 3em;
+}
+
+.main-container{
+  position: fixed;
+  z-index: 50;
+  width: 200px;
+  height: auto;
+  padding: 2em;
+  background-color: #E4E4E7;
+  top: 45%;
+  left: -100%;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container.SEND{
+  left: 42%;
+}
+
+.main-container span{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.91px;
+  color: #1E1E1E;
+  text-align: center;
+  font-family: IRANSansWeb500, IRANSansWeb500;
+}
+
+footer [data-bc-answer-container] input[type="text"]:focus,footer [data-bc-answer-container] input[type="file"]:focus, 
+footer[data-bc-answer-container] select:focus,footer [data-bc-answer-container] textarea:focus{
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 @font-face {
   font-family: "YekanBakh400";
 
@@ -4692,19 +4882,19 @@ header .Menu-Container{
 }
 
 footer .btn-show{
-  transform: translateY(1.4em);
-  -webkit-transform: translateY(1.4em);
-  -moz-transform: translateY(1.4em);
-  -ms-transform: translateY(1.4em);
-  -o-transform: translateY(1.4em);
+  transform: translate(-3em,1.4em);
+  -webkit-transform: translate(-3em,1.4em);
+  -moz-transform: translate(-3em,1.4em);
+  -ms-transform: translate(-3em,1.4em);
+  -o-transform: translate(-3em,1.4em);
 }
 
 footer .BTN {
-  transform: translate(2.5em,-1.5em) !important;
-  -webkit-transform: translate(2.5em,-1.5em) !important;
-  -moz-transform: translate(2.5em,-1.5em) !important;
-  -ms-transform: translate(2.5em,-1.5em) !important;
-  -o-transform: translate(2.5em,-1.5em) !important;
+  transform: translate(2.2em,-1.4em) !important;
+  -webkit-transform: translate(2.2em,-1.4em) !important;
+  -moz-transform: translate(2.2em,-1.4em) !important;
+  -ms-transform: translate(2.2em,-1.4em) !important;
+  -o-transform: translate(2.2em,-1.4em) !important;
 }
 
 svg.BTN #c2,#c1{
@@ -4946,7 +5136,7 @@ main.Search .Item svg path,
 main.Error .Item a,
 main.Error .Item svg path,
 header.GoBottom .Item a,
-header.GoBottom svg path{
+header.GoBottom .Co svg path{
   color: #1E1E1E;
   fill: #1E1E1E;
 }
