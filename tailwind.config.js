@@ -31,6 +31,7 @@ module.exports = {
       'b12': '#BCBDBD',
       'b13': '#F9CF66',
       'white': '#FFFFFF',
+      'black': '#000000',
       'gray-500': '#475569',
       'f':'#ffff',
       'blue':'#31407688'
