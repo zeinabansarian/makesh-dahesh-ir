@@ -1,0 +1,476 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+  </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
+    <member name="productShow" type="view"  />
+  </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9570">
+    <member name="contactus" type="view"/>
+  </basis>
+  
+  <basis core="dbsource" name="db"  source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]">
+    <member name="productGallery" type="list" format="4" size="419x419"/>
+  </basis>
+  <basis core="dbsource" name="db"  source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]">
+    <member name="video" type="list" format="3"/>
+  </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
+    <member name="relatedProduct" type="list" blgid="18" size="281x281"/>
+  </basis>
+  <basis core="dbsource" source="basiscore" mid="20" name="db" lid="1" usedforid="[##cms.query.id##]">
+    <member name="navigation" type="tree" request="navigationcat" link="product-cat.bc"  postsql=" select * from [db.navigation] where Parentcatid <> 204186 AND Parentcatid <> 204188 AND Parentcatid <> 204192" ></member></basis>
+  
+    <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+      <member request="json-ld" type="scalar" name="fq" /> 
+     </basis>
+     <basis core="dbsource" source="py_hosting" name="keyword" lid="1"
+     request="keywordinfo" wordid="[##cms.query.wordid##]">
+     <member name="info" type="view" />
+     </basis>
+     <basis core="dbsource" source="py_hosting" request="landingpagelist" 
+     name="landingpage" lid="1" wordid="[##cms.qurey.wordid##]">
+     <member type="list" name="list"  />
+     </basis>
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <basis core="print" datamembername="db.list">
+        <face>
+            <title>[##cms.seo.title|db.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+        </face>
+    </basis>
+  
+  <link href="[##cms.cms.cdn##]/css/bootstrap.css" rel="stylesheet" >
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css" />
+  <style>
+    .product .section3 .description:nth-of-type(2) {
+      display: block;
+  }
+  .description h2{
+      
+    text-align: right;
+    font-size: 17px;
+    margin-bottom: 25px;
+    font-family: "IranSansFaNum";
+
+    direction: rtl;
+  }
+.productDetailTitle h1{
+    font-family: "IranSansFaNum";
+}
+  .description h3{
+      
+      text-align: right;
+      font-size: 16px;
+      margin-bottom: 25px;
+      font-family: "IranSansFaNum";
+    direction: rtl;
+    }
+    .tag{
+        display: flex;
+        direction: rtl;
+    }
+    .tag a,
+    .tag h1 {
+        font-family: "IranSansFaNum";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: black;
+    margin-bottom: 29px;
+    direction: rtl;
+    text-decoration: none;
+    }
+  </style>
+  </head>
+  
+  <body>
+  <div class="product">
+  <basis core="call" file="header.inc" /> 
+  
+    <div class="section1">
+      <div class="banner">
+  <basis core="print" datamembername="db.navigation">
+  <face filter="RowNumber = 1">
+        <img src="[##cms.cms.cdn##]/images/banner-@Catid.jpg"  alt="product banner" title="product banner" loading="lazy" />
+  </face>
+  </basis>
+        <div class="catTitle scrollTops">
+  <basis core="print" datamembername="db.productShow">
+  <face filter="ord = 700">
+          <h1>@Answer</h1>
+  </face>
+  </basis>
+        </div>
+      </div>
+    </div>
+    <div class="section2">
+      <div class="productDetailSection">
+        <div class="productDetailTitle">
+          <div class="detailCategory">
+  <h5>
+  دسته بندی
+  </h5>
+  
+  
+  <basis core="print" datamembername="db.navigation">
+  <face >
+  
+            <a href="/@Link" title="@title"> @Title <span> ، </span> </a>
+  </face>
+  </basis>
+          </div>
+  
+        <basis core="print" datamembername="db.productShow">
+  <face filter="ord = 700">
+          <h1>@Answer</h1>
+  </face>
+  </basis>
+  
+        </div>
+        <div class="productDetailTable">
+          <table>
+  <basis core="print" datamembername="db.productShow">
+  <face filter="TypeID in (128) ">
+  
+            <tr>
+              <td>@Question</td>
+              <td>@Answer</td>
+            </tr>
+  </face>
+  </basis>
+  <basis core="print" datamembername="db.productShow">
+  <face filter="TypeID in (132) ">
+  
+            <tr>
+              <td>@Question</td>
+              <td>@Answer</td>
+            </tr>
+  </face>
+  </basis>
+          </table>
+        </div>
+        <div class="priceDetail">
+          <p class="h3">
+            شما می‌توانید برای مشاوره و اطلاع از قیمت محصولات تماس بگیرید.
+          </p>
+          
+  <basis core="print" datamembername="db.contactus">
+  <face filter="TypeID= 240">
+          <a href="tel:@Answer" title="phone">
+            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.19366 2.81977L11.1203 2.23903C12.9345 1.6922 14.8727 2.57593 15.6496 4.3041L16.849 6.97198C17.5112 8.44501 17.1622 10.1762 15.9811 11.2776L13.886 13.2312C13.8602 13.2554 13.8389 13.2841 13.8233 13.3159C13.6042 13.7638 13.9363 14.9605 14.9803 16.7688C16.1571 18.807 17.0666 19.6135 17.4867 19.4883L20.2368 18.6475C21.7809 18.1754 23.4542 18.7383 24.3989 20.0477L26.1022 22.4083C27.208 23.9409 27.0091 26.0551 25.637 27.3546L24.1721 28.7419C23.1373 29.7219 21.6884 30.1332 20.2931 29.8431C16.2107 28.9944 12.5531 25.7069 9.28958 20.0543C6.02285 14.3962 5.00579 9.58086 6.31785 5.61887C6.76348 4.27322 7.83646 3.22886 9.19366 2.81977ZM9.69613 4.48676C8.88181 4.73221 8.23802 5.35883 7.97065 6.16622C6.84011 9.58005 7.75587 13.9157 10.7974 19.1838C13.836 24.4468 17.1296 27.4072 20.6475 28.1385C21.4847 28.3126 22.354 28.0658 22.9749 27.4778L24.4398 26.0905C25.1786 25.3907 25.2857 24.2523 24.6903 23.4271L22.987 21.0664C22.4783 20.3614 21.5773 20.0583 20.7459 20.3125L17.9899 21.1551C16.4645 21.6098 15.0308 20.3385 13.4725 17.6393C12.1532 15.3543 11.6953 13.7038 12.2594 12.5508C12.3684 12.3279 12.5173 12.127 12.6987 11.9579L14.7937 10.0043C15.4297 9.41119 15.6176 8.47903 15.261 7.68586L14.0617 5.01798C13.6433 4.08742 12.5996 3.61157 11.6228 3.90601L9.69613 4.48676Z"
+                fill="white" />
+            </svg>
+            @Answer
+          </a>
+  </face>
+  </basis>
+        </div>
+      </div>
+      <div class="imgSection">
+  <basis core="print" datamembername="db.productGallery">
+  <face filter="ord = 1000">
+        <img src="/@largeIMG" alt="product" title="product" loading="lazy" />
+  
+  </face>
+  </basis>
+      </div>
+    </div>
+    <div class="section3">
+      <!-- Nav tabs -->
+      <div class="card">
+  
+        <ul class="nav nav-tabs">
+          <li  class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" title="product" aria-selected="true">
+              توضیحات محصول
+  
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.25 4C3.00736 4 2 5.00736 2 6.25V8.75C2 9.99264 3.00736 11 4.25 11H6.75C7.99264 11 9 9.99264 9 8.75V6.25C9 5.00736 7.99264 4 6.75 4H4.25ZM3.5 6.25C3.5 5.83579 3.83579 5.5 4.25 5.5H6.75C7.16421 5.5 7.5 5.83579 7.5 6.25V8.75C7.5 9.16421 7.16421 9.5 6.75 9.5H4.25C3.83579 9.5 3.5 9.16421 3.5 8.75V6.25ZM11.25 5C10.8358 5 10.5 5.33579 10.5 5.75C10.5 6.16421 10.8358 6.5 11.25 6.5H21.25C21.6642 6.5 22 6.16421 22 5.75C22 5.33579 21.6642 5 21.25 5H11.25ZM11.25 8C10.8358 8 10.5 8.33579 10.5 8.75C10.5 9.16421 10.8358 9.5 11.25 9.5H18.25C18.6642 9.5 19 9.16421 19 8.75C19 8.33579 18.6642 8 18.25 8H11.25ZM4.25 13C3.00736 13 2 14.0074 2 15.25V17.75C2 18.9926 3.00736 20 4.25 20H6.75C7.99264 20 9 18.9926 9 17.75V15.25C9 14.0074 7.99264 13 6.75 13H4.25ZM3.5 15.25C3.5 14.8358 3.83579 14.5 4.25 14.5H6.75C7.16421 14.5 7.5 14.8358 7.5 15.25V17.75C7.5 18.1642 7.16421 18.5 6.75 18.5H4.25C3.83579 18.5 3.5 18.1642 3.5 17.75V15.25ZM11.25 14C10.8358 14 10.5 14.3358 10.5 14.75C10.5 15.1642 10.8358 15.5 11.25 15.5H21.25C21.6642 15.5 22 15.1642 22 14.75C22 14.3358 21.6642 14 21.25 14H11.25ZM11.25 17C10.8358 17 10.5 17.3358 10.5 17.75C10.5 18.1642 10.8358 18.5 11.25 18.5H18.25C18.6642 18.5 19 18.1642 19 17.75C19 17.3358 18.6642 17 18.25 17H11.25Z"
+                fill="#242424" />
+            </svg>
+          </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a title="bpp"  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">نظرات مشتریان
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.25 18C3.45507 18 2 16.5449 2 14.75V6.25C2 4.45507 3.45507 3 5.25 3H18.75C20.5449 3 22 4.45507 22 6.25V14.75C22 16.5449 20.5449 18 18.75 18H13.0125L7.99868 21.7507C7.44585 22.1642 6.6625 22.0512 6.24901 21.4984C6.08736 21.2822 6 21.0196 6 20.7499L5.99921 18H5.25ZM12.5135 16.5H18.75C19.7165 16.5 20.5 15.7165 20.5 14.75V6.25C20.5 5.2835 19.7165 4.5 18.75 4.5H5.25C4.2835 4.5 3.5 5.2835 3.5 6.25V14.75C3.5 15.7165 4.2835 16.5 5.25 16.5H7.49879L7.499 17.2498L7.49986 20.2506L12.5135 16.5Z"
+                  fill="#242424" />
+              </svg></a>
+          </li>
+  
+        </ul>
+  
+  
+  
+  
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="productTabDescription">
+                <div class="tag">
+                
+                    <basis core="print" datamembername="landingpage.list">
+                        <face>  
+                            <a href="@url">@keyword</a>
+                        </face>
+                       
+                    </basis>
+                </div>
+                <div class="tag">
+                    <basis core="print" datamembername="keyword.info">
+                        <face>
+                            <h1 class="column-tir-2">@title</h1>
+                            <p>@description</p>
+                        </face>
+                    </basis>
+                </div>
+               
+            
+              
+              <basis core="print" datamembername="db.productShow">
+                <face filter="TypeID in (144) ">
+                <div class="description">
+              
+               <span style="font-weight:bold"> @text </span>
+  @largetext
+                </div>
+         
+                </face>
+                </basis>
+                         
+              <div class="video">
+                <img src="[##cms.cms.cdn##]/images/Play Circle.png" class="playbtn"  alt="Play video" title="Play video" loading="lazy">
+  
+  <basis core="print" datamembername="db.productGallery">
+  <face filter="ord = 10">
+  
+              <video poster="/@largeIMG">
+  </face>
+  </basis>
+  
+  <basis core="print" datamembername="db.video">
+  <face>
+                <source src="/@largeIMG" />
+              </video>
+  
+  </face>
+  </basis>
+              </div>
+  
+  <div class="box2 description">
+                
+  </div>
+  
+            </div>
+  
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="commentSection">
+  
+  
+              <div class="commentItem">
+                <div class="commentUserInfo">
+                  <div class="commentUser">
+                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="account" title="account" loading="lazy">
+                    <h4>شیرین مرادی</h4>
+                  </div>
+                  <div class="commentDate">
+                    <span>1400/5/4</span>
+                    <a href="" title="reply">
+                      پاسخ
+  
+                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
+                          fill="#121212" />
+                      </svg>
+  
+                    </a>
+                  </div>
+                </div>
+                <div class="commentText">
+                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
+                  </p>
+                </div>
+              </div>
+              <div class="commentItem">
+                <div class="commentUserInfo">
+                  <div class="commentUser">
+                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="bamdad petro parsan" title="bamdad petro parsan" loading="lazy">
+                    <h4>شیرین مرادی</h4>
+                  </div>
+                  <div class="commentDate">
+                    <span>1400/5/4</span>
+                    <a href="" title="reply">
+                      پاسخ
+  
+                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
+                          fill="#121212" />
+                      </svg>
+  
+                    </a>
+                  </div>
+                </div>
+                <div class="commentText">
+                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
+                  </p>
+                </div>
+              </div>
+              <div class="commentItem">
+                <div class="commentUserInfo">
+                  <div class="commentUser">
+                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="bpp" title="bpp" loading="lazy">
+                    <h4>شیرین مرادی</h4>
+                  </div>
+                  <div class="commentDate">
+                    <span>1400/5/4</span>
+                    <a href="" title="reply">
+                      پاسخ
+  
+                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
+                          fill="#121212" />
+                      </svg>
+  
+                    </a>
+                  </div>
+                </div>
+                <div class="commentText">
+                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
+                  </p>
+                </div>
+              </div>
+              <div class="commentBtn">
+  
+                
+                
+  
+  
+  
+  
+  
+  
+  
+  
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-whatever="@mdo">
+                  ثبت نظر
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <ul>
+                          <li>نظر خود را با ما به اشتراک بگذارید</li>
+                        </ul>
+                        <form>
+                          <input class="name" id="name" type="text" placeholder="نام نام خانوادگی">
+                          <input class="email" id="email" type="email" placeholder="ایمیل">
+                          <________textarea class="commentArea" name="commentArea" id="" cols="30" rows="10"
+                            placeholder="متن نظر"></________textarea>
+                          <div class="btnCapcha">
+                            <button type="submit">ثبت نظر</button>
+                            <div class="capcha">
+                         
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section4">
+      <div class="relatedProTitle">
+        <h4 class="newsRight">کالاهای <strong>مرتبط</strong></h4>
+        <span class="newsLeft"></span>
+      </div>
+  
+      <div class="relatedProducts">
+  <basis core="print" datamembername="db.relatedProduct">
+  <face>
+        <div class="proItem">
+          <a href="/@link" title="@title">
+            <img src="/@image" alt="@title" title="@title" loading="lazy"/>
+            <span> @title</span>
+          </a>
+        </div>
+  </face>
+  </basis>
+  
+      </div>
+    </div>
+    <div class="section5">
+      <div class="productNav">
+        <div class="nextProduct">
+  <basis core="print" datamembername="db.relatedProduct">
+  <face filter="RowNumber = 1">
+          <a href="/@link" title="@title">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="#2F2F2F" />
+            </svg>
+            محصول بعدی
+  
+          </a>
+  </face>
+  </basis>
+        </div>
+        <div class="prevProduct">
+  <basis core="print" datamembername="db.relatedProduct">
+  <face filter="RowNumber = 2">
+          <a href="/@link" title="@title">
+  
+            محصول قبلی
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.825 7H16V9H3.825L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7Z" fill="#2F2F2F" />
+            </svg>
+          </a>
+  </face>
+  </basis>
+        </div>
+      </div>
+    </div>
+  </div>
+  <basis core="call" file="footer.inc" />
+  
+  <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="[##cms.cms.cdn##]/js/bootstrap.bundle.min.js" ></script>
+  
+  <script src="[##cms.cms.cdn##]/js/playVideo.js"></script>
+  <!-- 
+  <script src="[##cms.cms.cdn##]/js/product.js"></script> -->
+  <script type="application/ld+json"> 
+    [##json.fq.column1##] 
+    </script>
+  </body>
+  
+  </html>

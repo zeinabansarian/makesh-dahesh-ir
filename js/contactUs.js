@@ -20,3 +20,21 @@ var map = L.map("map", {
  greenIconContact = L.icon({ iconUrl: "images/location-64.png", iconSize: [29,34] });
  markerContact = L.marker([yLatContact, xLatcontact], { icon: greenIconContact });
 markerContact.addTo(map);
+
+
+
+gsap.registerPlugin(ScrollTrigger) 
+// Scale in animation
+let scrollToTop = document.querySelectorAll('.scrollToTop')
+scrollToTop.forEach(s=>{
+      gsap.to(s , {
+        scrollTrigger:{
+          trigger:s,
+          start : "top 80%",
+          end : "bottom bottom",
+        },
+        opacity :1,
+        y:0,
+      })
+ 
+})
