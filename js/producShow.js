@@ -23,7 +23,18 @@ document.querySelectorAll('.toggle-button').forEach(btn => {
 
 
 
+  const relatedPro = new Swiper(".relatedPro", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 4,
 
+  });
+  const relatedProject = new Swiper(".relatedProject", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 2.5,
+    spaceBetween: 49,
+  });
 
 
   
