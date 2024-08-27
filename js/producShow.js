@@ -23,7 +23,18 @@ document.querySelectorAll('.toggle-button').forEach(btn => {
 
 
 
+  const relatedPro = new Swiper(".relatedPro", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 4,
 
+  });
+  const relatedProject = new Swiper(".relatedProject", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 2.5,
+    spaceBetween: 49,
+  });
 
 
   
@@ -62,3 +73,21 @@ for (let i = 0; i < starsRating.length; i++) {
     }, 100);
   })
 }
+
+
+
+gsap.registerPlugin(ScrollTrigger) 
+// Scale in animation
+let scrollToTop = document.querySelectorAll('.scrollToTop')
+scrollToTop.forEach(s=>{
+      gsap.to(s , {
+        scrollTrigger:{
+          trigger:s,
+          start : "top 60%",
+          end : "bottom bottom",
+        },
+        opacity :1,
+        y:0,
+      })
+ 
+})

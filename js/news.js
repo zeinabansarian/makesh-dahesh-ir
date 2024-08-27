@@ -5,20 +5,7 @@ document.querySelectorAll('.toggle-button').forEach(btn => {
     });
   });
 
-  const relatedPro = new Swiper('.relatedPro', {
-    // Optional parameters
-    // loop: true,
-    spaceBetween : 52,
-    slidesPerView : 3,
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.nextProBtn',
-      prevEl: '.prevProBtn',
-    },
-  
-
-  });
 
 
   gsap.registerPlugin(ScrollTrigger) 
@@ -28,7 +15,7 @@ scrollToTop.forEach(s=>{
       gsap.to(s , {
         scrollTrigger:{
           trigger:s,
-          start : "top 40%",
+          start : "top 60%",
           end : "bottom bottom",
         },
         opacity :1,
@@ -36,3 +23,20 @@ scrollToTop.forEach(s=>{
       })
  
 })
+
+
+
+const relatedPro = new Swiper(".relatedPro", {
+  // Optional parameters
+  // loop: true,
+  slidesPerView: 4,
+
+});
+const relatedProject = new Swiper(".relatedProject", {
+  // Optional parameters
+  // loop: true,
+  slidesPerView: 2.5,
+  spaceBetween: 49,
+});
+
+

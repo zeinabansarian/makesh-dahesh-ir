@@ -1,0 +1,74 @@
+main.Home .About-Container .Text  p,
+main.aboutUS .AboutUS-c .Text p,
+main.aboutUS .Detail-Container .Box .Text p,
+main.aboutUS .multimedia__subline p {
+font-size: 14px;
+font-weight: 300;
+line-height: 31px;
+color: #fff;
+text-align: justify;
+font-family: "IRANSansWeb300";
+}
+
+.Services-Container .Bottom-S,
+main.aboutUS .AboutUS-c .Text p ,
+main.aboutUS .Detail-Container .Box .Text p,
+main.aboutUS .multimedia__subline p{
+    color:#1E1E1E !important; 
+}
+main.Home .swiper-brands,
+main.Home .swiper-brands .swiper-slide,
+main.Home .swiper-brands .swiper-slide a,
+main.Home .swiper-brands .swiper-slide .IMG-2,
+main.Home .swiper-brands .swiper-slide .IMG-2 img{
+    height: 134px;
+}
+main.Home .Brands-Container a.btn-show{
+    transform: translate(-3em, 1em) !important;
+    -webkit-transform: translate(-3em, 1em) !important;
+    -moz-transform: translate(-3em, 1em) !important;
+    -ms-transform: translate(-3em, 1em) !important;
+    -o-transform: translate(-3em, 1em) !important;
+}
+.P-Cat .Det{
+    width: 80%;
+}
+.representaition-Container >.Top{
+    margin-top: 1em;
+}
+.GalleryShow .VideoBox ,
+.GalleryShow .VideoBox .Video,
+.GalleryShow .VideoBox .Video video{
+  height: 244px;
+  object-fit: cover;
+}
+.timeline__entry:nth-child(2n):after{
+    bottom: -.7em !important; 
+}
+.timeline__entry:nth-child(2n) span{
+    margin-top: 127px !important;
+}
+.timeline__entry:after{
+    bottom: 49px !important; 
+}
+.timeline__map::before{
+    background-color: #FAFAFA !important;
+}
+.fade-in p,
+.fade-in h2,
+.fade-in h3,
+.fade-in h4,
+.fade-in h5,
+.fade-in h6{
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transition: all .8s ;
+    -webkit-transition: all .8s ;
+    -moz-transition: all .8s ;
+    -ms-transition: all .8s ;
+    -o-transition: all .8s ;
+}

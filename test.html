@@ -1,476 +1,799 @@
-<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
-    <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2359771">
+  <member name="image-slider" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2359771">
+ <member name="video-slider" type="list" format="3"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2359771">
+ <member name="bannertext" type="view" postsql="select * from [db.bannertext] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="1445255"> 
+  <member name="pdf-def" type="list" format="9" postsql="select * from [db.pdf-def] where ord=1000"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209687">
+  <member name="list-DefProduct" size="283x283" type="list"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2359909"> 
+  <member name="AboutDef" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2359909"> 
+  <member name="image-AboutDef" type="list" format="4"/> 
+</basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="58083"> 
+  <member name="list-DefBrand" size="264x134" type="list" typeID="159"/>
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+  <member request="cat" type="tree" name="productCat" parentid="21181" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" >
+  <member request="cat" type="tree" name="ProjectCat" parentid="58702"  /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209725">
+  <member name="list-DefServices" size="816x403" type="list"/>
   </basis>
-  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
-    <member name="productShow" type="view"  />
-  </basis>
-  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9570">
-    <member name="contactus" type="view"/>
-  </basis>
-  
-  <basis core="dbsource" name="db"  source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]">
-    <member name="productGallery" type="list" format="4" size="419x419"/>
-  </basis>
-  <basis core="dbsource" name="db"  source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]">
-    <member name="video" type="list" format="3"/>
-  </basis>
-  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]">
-    <member name="relatedProduct" type="list" blgid="18" size="281x281"/>
-  </basis>
-  <basis core="dbsource" source="basiscore" mid="20" name="db" lid="1" usedforid="[##cms.query.id##]">
-    <member name="navigation" type="tree" request="navigationcat" link="product-cat.bc"  postsql=" select * from [db.navigation] where Parentcatid <> 204186 AND Parentcatid <> 204188 AND Parentcatid <> 204192" ></member></basis>
-  
-    <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
-      <member request="json-ld" type="scalar" name="fq" /> 
-     </basis>
-     <basis core="dbsource" source="py_hosting" name="keyword" lid="1"
-     request="keywordinfo" wordid="[##cms.query.wordid##]">
-     <member name="info" type="view" />
-     </basis>
-     <basis core="dbsource" source="py_hosting" request="landingpagelist" 
-     name="landingpage" lid="1" wordid="[##cms.qurey.wordid##]">
-     <member type="list" name="list"  />
-     </basis>
-  <!DOCTYPE html>
-  <html lang="en">
-  
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <basis core="print" datamembername="db.list">
-        <face>
-            <title>[##cms.seo.title|db.list.title##]</title>
-            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
-        </face>
-    </basis>
-  
-  <link href="[##cms.cms.cdn##]/css/bootstrap.css" rel="stylesheet" >
-  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css" />
-  <style>
-    .product .section3 .description:nth-of-type(2) {
-      display: block;
-  }
-  .description h2{
-      
-    text-align: right;
-    font-size: 17px;
-    margin-bottom: 25px;
-    font-family: "IranSansFaNum";
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="25653">
+  <member name="list-DefBlog" size="457x304" type="list" propertyid="7248,7244"/>
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2359974">
+  <member name="image-GalleyDef" type="list" format="4"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مکش و دهش</title>
+  <meta name="description" content="مکش و دهش">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/outputDesk.css">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/f-style.css">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/leaflet.css">
 
-    direction: rtl;
-  }
-.productDetailTitle h1{
-    font-family: "IranSansFaNum";
-}
-  .description h3{
-      
-      text-align: right;
-      font-size: 16px;
-      margin-bottom: 25px;
-      font-family: "IranSansFaNum";
-    direction: rtl;
-    }
-    .tag{
-        display: flex;
-        direction: rtl;
-    }
-    .tag a,
-    .tag h1 {
-        font-family: "IranSansFaNum";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: right;
-    color: black;
-    margin-bottom: 29px;
-    direction: rtl;
-    text-decoration: none;
-    }
-  </style>
-  </head>
-  
-  <body>
-  <div class="product">
-  <basis core="call" file="header.inc" /> 
-  
-    <div class="section1">
-      <div class="banner">
-  <basis core="print" datamembername="db.navigation">
-  <face filter="RowNumber = 1">
-        <img src="[##cms.cms.cdn##]/images/banner-@Catid.jpg"  alt="product banner" title="product banner" loading="lazy" />
-  </face>
-  </basis>
-        <div class="catTitle scrollTops">
-  <basis core="print" datamembername="db.productShow">
-  <face filter="ord = 700">
-          <h1>@Answer</h1>
-  </face>
-  </basis>
-        </div>
-      </div>
-    </div>
-    <div class="section2">
-      <div class="productDetailSection">
-        <div class="productDetailTitle">
-          <div class="detailCategory">
-  <h5>
-  دسته بندی
-  </h5>
-  
-  
-  <basis core="print" datamembername="db.navigation">
-  <face >
-  
-            <a href="/@Link" title="@title"> @Title <span> ، </span> </a>
-  </face>
-  </basis>
-          </div>
-  
-        <basis core="print" datamembername="db.productShow">
-  <face filter="ord = 700">
-          <h1>@Answer</h1>
-  </face>
-  </basis>
-  
-        </div>
-        <div class="productDetailTable">
-          <table>
-  <basis core="print" datamembername="db.productShow">
-  <face filter="TypeID in (128) ">
-  
-            <tr>
-              <td>@Question</td>
-              <td>@Answer</td>
-            </tr>
-  </face>
-  </basis>
-  <basis core="print" datamembername="db.productShow">
-  <face filter="TypeID in (132) ">
-  
-            <tr>
-              <td>@Question</td>
-              <td>@Answer</td>
-            </tr>
-  </face>
-  </basis>
-          </table>
-        </div>
-        <div class="priceDetail">
-          <p class="h3">
-            شما می‌توانید برای مشاوره و اطلاع از قیمت محصولات تماس بگیرید.
-          </p>
-          
-  <basis core="print" datamembername="db.contactus">
-  <face filter="TypeID= 240">
-          <a href="tel:@Answer" title="phone">
-            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.19366 2.81977L11.1203 2.23903C12.9345 1.6922 14.8727 2.57593 15.6496 4.3041L16.849 6.97198C17.5112 8.44501 17.1622 10.1762 15.9811 11.2776L13.886 13.2312C13.8602 13.2554 13.8389 13.2841 13.8233 13.3159C13.6042 13.7638 13.9363 14.9605 14.9803 16.7688C16.1571 18.807 17.0666 19.6135 17.4867 19.4883L20.2368 18.6475C21.7809 18.1754 23.4542 18.7383 24.3989 20.0477L26.1022 22.4083C27.208 23.9409 27.0091 26.0551 25.637 27.3546L24.1721 28.7419C23.1373 29.7219 21.6884 30.1332 20.2931 29.8431C16.2107 28.9944 12.5531 25.7069 9.28958 20.0543C6.02285 14.3962 5.00579 9.58086 6.31785 5.61887C6.76348 4.27322 7.83646 3.22886 9.19366 2.81977ZM9.69613 4.48676C8.88181 4.73221 8.23802 5.35883 7.97065 6.16622C6.84011 9.58005 7.75587 13.9157 10.7974 19.1838C13.836 24.4468 17.1296 27.4072 20.6475 28.1385C21.4847 28.3126 22.354 28.0658 22.9749 27.4778L24.4398 26.0905C25.1786 25.3907 25.2857 24.2523 24.6903 23.4271L22.987 21.0664C22.4783 20.3614 21.5773 20.0583 20.7459 20.3125L17.9899 21.1551C16.4645 21.6098 15.0308 20.3385 13.4725 17.6393C12.1532 15.3543 11.6953 13.7038 12.2594 12.5508C12.3684 12.3279 12.5173 12.127 12.6987 11.9579L14.7937 10.0043C15.4297 9.41119 15.6176 8.47903 15.261 7.68586L14.0617 5.01798C13.6433 4.08742 12.5996 3.61157 11.6228 3.90601L9.69613 4.48676Z"
-                fill="white" />
-            </svg>
-            @Answer
-          </a>
-  </face>
-  </basis>
-        </div>
-      </div>
-      <div class="imgSection">
-  <basis core="print" datamembername="db.productGallery">
-  <face filter="ord = 1000">
-        <img src="/@largeIMG" alt="product" title="product" loading="lazy" />
-  
-  </face>
-  </basis>
-      </div>
-    </div>
-    <div class="section3">
-      <!-- Nav tabs -->
-      <div class="card">
-  
-        <ul class="nav nav-tabs">
-          <li  class="nav-item" role="presentation">
-            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" title="product" aria-selected="true">
-              توضیحات محصول
-  
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.25 4C3.00736 4 2 5.00736 2 6.25V8.75C2 9.99264 3.00736 11 4.25 11H6.75C7.99264 11 9 9.99264 9 8.75V6.25C9 5.00736 7.99264 4 6.75 4H4.25ZM3.5 6.25C3.5 5.83579 3.83579 5.5 4.25 5.5H6.75C7.16421 5.5 7.5 5.83579 7.5 6.25V8.75C7.5 9.16421 7.16421 9.5 6.75 9.5H4.25C3.83579 9.5 3.5 9.16421 3.5 8.75V6.25ZM11.25 5C10.8358 5 10.5 5.33579 10.5 5.75C10.5 6.16421 10.8358 6.5 11.25 6.5H21.25C21.6642 6.5 22 6.16421 22 5.75C22 5.33579 21.6642 5 21.25 5H11.25ZM11.25 8C10.8358 8 10.5 8.33579 10.5 8.75C10.5 9.16421 10.8358 9.5 11.25 9.5H18.25C18.6642 9.5 19 9.16421 19 8.75C19 8.33579 18.6642 8 18.25 8H11.25ZM4.25 13C3.00736 13 2 14.0074 2 15.25V17.75C2 18.9926 3.00736 20 4.25 20H6.75C7.99264 20 9 18.9926 9 17.75V15.25C9 14.0074 7.99264 13 6.75 13H4.25ZM3.5 15.25C3.5 14.8358 3.83579 14.5 4.25 14.5H6.75C7.16421 14.5 7.5 14.8358 7.5 15.25V17.75C7.5 18.1642 7.16421 18.5 6.75 18.5H4.25C3.83579 18.5 3.5 18.1642 3.5 17.75V15.25ZM11.25 14C10.8358 14 10.5 14.3358 10.5 14.75C10.5 15.1642 10.8358 15.5 11.25 15.5H21.25C21.6642 15.5 22 15.1642 22 14.75C22 14.3358 21.6642 14 21.25 14H11.25ZM11.25 17C10.8358 17 10.5 17.3358 10.5 17.75C10.5 18.1642 10.8358 18.5 11.25 18.5H18.25C18.6642 18.5 19 18.1642 19 17.75C19 17.3358 18.6642 17 18.25 17H11.25Z"
-                fill="#242424" />
-            </svg>
-          </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a title="bpp"  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">نظرات مشتریان
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.25 18C3.45507 18 2 16.5449 2 14.75V6.25C2 4.45507 3.45507 3 5.25 3H18.75C20.5449 3 22 4.45507 22 6.25V14.75C22 16.5449 20.5449 18 18.75 18H13.0125L7.99868 21.7507C7.44585 22.1642 6.6625 22.0512 6.24901 21.4984C6.08736 21.2822 6 21.0196 6 20.7499L5.99921 18H5.25ZM12.5135 16.5H18.75C19.7165 16.5 20.5 15.7165 20.5 14.75V6.25C20.5 5.2835 19.7165 4.5 18.75 4.5H5.25C4.2835 4.5 3.5 5.2835 3.5 6.25V14.75C3.5 15.7165 4.2835 16.5 5.25 16.5H7.49879L7.499 17.2498L7.49986 20.2506L12.5135 16.5Z"
-                  fill="#242424" />
-              </svg></a>
-          </li>
-  
-        </ul>
-  
-  
-  
-  
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-            <div class="productTabDescription">
-                <div class="tag">
-                
-                    <basis core="print" datamembername="landingpage.list">
-                        <face>  
-                            <a href="@url">@keyword</a>
-                        </face>
-                       
-                    </basis>
-                </div>
-                <div class="tag">
-                    <basis core="print" datamembername="keyword.info">
-                        <face>
-                            <h1 class="column-tir-2">@title</h1>
-                            <p>@description</p>
-                        </face>
-                    </basis>
-                </div>
-               
-            
-              
-              <basis core="print" datamembername="db.productShow">
-                <face filter="TypeID in (144) ">
-                <div class="description">
-              
-               <span style="font-weight:bold"> @text </span>
-  @largetext
-                </div>
-         
-                </face>
-                </basis>
-                         
-              <div class="video">
-                <img src="[##cms.cms.cdn##]/images/Play Circle.png" class="playbtn"  alt="Play video" title="Play video" loading="lazy">
-  
-  <basis core="print" datamembername="db.productGallery">
-  <face filter="ord = 10">
-  
-              <video poster="/@largeIMG">
-  </face>
-  </basis>
-  
-  <basis core="print" datamembername="db.video">
-  <face>
-                <source src="/@largeIMG" />
-              </video>
-  
-  </face>
-  </basis>
-              </div>
-  
-  <div class="box2 description">
-                
-  </div>
-  
-            </div>
-  
-          </div>
-          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-            <div class="commentSection">
-  
-  
-              <div class="commentItem">
-                <div class="commentUserInfo">
-                  <div class="commentUser">
-                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="account" title="account" loading="lazy">
-                    <h4>شیرین مرادی</h4>
-                  </div>
-                  <div class="commentDate">
-                    <span>1400/5/4</span>
-                    <a href="" title="reply">
-                      پاسخ
-  
-                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
-                          fill="#121212" />
-                      </svg>
-  
-                    </a>
-                  </div>
-                </div>
-                <div class="commentText">
-                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
-                  </p>
-                </div>
-              </div>
-              <div class="commentItem">
-                <div class="commentUserInfo">
-                  <div class="commentUser">
-                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="bamdad petro parsan" title="bamdad petro parsan" loading="lazy">
-                    <h4>شیرین مرادی</h4>
-                  </div>
-                  <div class="commentDate">
-                    <span>1400/5/4</span>
-                    <a href="" title="reply">
-                      پاسخ
-  
-                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
-                          fill="#121212" />
-                      </svg>
-  
-                    </a>
-                  </div>
-                </div>
-                <div class="commentText">
-                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
-                  </p>
-                </div>
-              </div>
-              <div class="commentItem">
-                <div class="commentUserInfo">
-                  <div class="commentUser">
-                    <img src="[##cms.cms.cdn##]/images/account_circle.png"  alt="bpp" title="bpp" loading="lazy">
-                    <h4>شیرین مرادی</h4>
-                  </div>
-                  <div class="commentDate">
-                    <span>1400/5/4</span>
-                    <a href="" title="reply">
-                      پاسخ
-  
-                      <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M14.7846 13.1562V1.34375C14.7846 0.87793 15.1689 0.5 15.6425 0.5C16.1161 0.5 16.5 0.87793 16.5 1.34375V13.1562C16.5 13.6221 16.1157 14 15.6421 14C15.1686 14 14.7846 13.6238 14.7846 13.1562ZM6.79643 3.36523L3.51071 6.40625H12.2107C12.6857 6.40625 13.0704 6.78594 13.0704 7.25C13.0704 7.71406 12.6857 8.09375 12.2107 8.09375H3.51071L6.79571 11.1358C6.975 11.3035 7.06429 11.525 7.06429 11.75C7.06429 11.9576 6.98721 12.1652 6.83086 12.328C6.50696 12.6674 5.96407 12.6838 5.61907 12.3642L0.758357 7.86421C0.412142 7.54563 0.412142 6.95437 0.758357 6.63586L5.61907 2.13586C5.96418 1.81614 6.50693 1.83263 6.83086 2.1721C7.15714 2.51094 7.14286 3.04531 6.79643 3.36523Z"
-                          fill="#121212" />
-                      </svg>
-  
-                    </a>
-                  </div>
-                </div>
-                <div class="commentText">
-                  <p>نسبت به قیمت مناسب هست، بسیار پیشنهاد میکنم
-                  </p>
-                </div>
-              </div>
-              <div class="commentBtn">
-  
-                
-                
-  
-  
-  
-  
-  
-  
-  
-  
-   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                  data-bs-whatever="@mdo">
-                  ثبت نظر
-                </button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <ul>
-                          <li>نظر خود را با ما به اشتراک بگذارید</li>
-                        </ul>
-                        <form>
-                          <input class="name" id="name" type="text" placeholder="نام نام خانوادگی">
-                          <input class="email" id="email" type="email" placeholder="ایمیل">
-                          <________textarea class="commentArea" name="commentArea" id="" cols="30" rows="10"
-                            placeholder="متن نظر"></________textarea>
-                          <div class="btnCapcha">
-                            <button type="submit">ثبت نظر</button>
-                            <div class="capcha">
-                         
-                            </div>
+</head>
+<body dir="rtl">
+  <main class="Home overflow-hidden">
+ <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+  <!-- SECTION-1 -->
+    <section class="Section-1 sec w-full flex justify-center items-center h-[100vh]">
+      <div class="Banner-Container w-full flex justify-center items-center h-full overflow-hidden">
+          <div class="swiper-banner w-full flex justify-center items-center h-full">
+              <div class="swiper-wrapper w-full  h-full">
+                  <basis core="print" datamembername="db.video-slider">
+                      <layout>
+                          @child
+                      </layout>
+                      <face filter="ord=1000">
+                          <div class="swiper-slide w-full flex justify-center items-center relative h-full ">
+                              <div class="IMG w-full flex justify-center items-center h-full ">
+                                 <video src="@largeIMG" autoplay loop muted class="w-full h-[100vh] object-cover"></video>
+                              </div>
+                              <div class="OV absolute left-0 top-0 w-full h-full z-1 flex flex-col
+                              justify-end items-start">
+                                  <div class="Title-1 flex justify-start mr-[4.8em]
+                                  items-center overflow-hidden">
+                                      <h1 class="font-IRANSansWeb400 text-6xl
+                                      font-normal leading-93.91 text-f">
+                                      [##db.bannertext.text##]
+                                      </h1>
+                                  </div>
+                                  <div class="Title-2 flex justify-start 
+                                  items-center mb-[3em] mr-[4.8em]">
+                                      <h2 class="font-IRANSansWeb400 text-5xl 
+                                      font-normal leading-75.13 text-b7">
+                                        [##db.bannertext.largetext##]
+                                      </h2>
+                                  </div>
+                                  <div class="Btn-c mr-[4.8em] flex justify-center items-center mb-[4em]">
+                                      <a href="[##db.pdf-def.largeIMG##]" download="" 
+                                      class="btn-show group bg-transparent duration-[.4s]
+                                      border-none outline-none flex justify-start
+                                       items-start relative">
+                                          <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                                          justify-center items-center leading-23 text-f rounded-sm
+                                           font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[2em] border-t-[1px]
+                                           border-b-[1px] border-f">
+                                              دانلود کاتالوگ
+                                          </span>
+                                          <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            width="100" height="100">
+                                              <circle  fill="transparent" stroke="#fff" id="c1" 
+                                              stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                                              style="transform: translate(2px,82px);" r="30"
+                                               cy="20" stroke-width="5" cx="100"></circle>
+                                               <circle id="c2" cx="100" cy="100" 
+                                               fill="transparent" stroke="#fff" stroke-width="5" 
+                                               stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                                                </svg>
+                                              </a>
+                                  </div>
+                             
+                              </div>
+                          </div> 
+                      </face>
+                  </basis>
+                <basis core="print" datamembername="db.image-slider">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="ord=1000">
+                      <div class="swiper-slide w-full flex justify-center items-center relative h-full ">
+                          <div class="IMG w-full flex justify-center items-center h-full ">
+                              <img src="@largeIMG" alt="makesh-dahesh" title="makesh-dahesh" class="w-full h-full object-cover">
                           </div>
-                        </form>
+                          <div class="OV absolute left-0 top-0 w-full h-full z-1 flex flex-col
+                          justify-end items-start">
+                              <div class="Title-1 flex justify-start mr-[4.8em]
+                              items-center overflow-hidden">
+                                  <h2 class="font-IRANSansWeb400 text-6xl
+                                  font-normal leading-93.91 text-f">
+                                  [##db.bannertext.text##]
+                                  </h2>
+                              </div>
+                              <div class="Title-2 flex justify-start 
+                              items-center mb-[3em] mr-[4.8em]">
+                                  <h2 class="font-IRANSansWeb400 text-5xl 
+                                  font-normal leading-75.13 text-b7">
+                                  [##db.bannertext.largetext##]
+                                  </h2>
+                              </div>
+                              <div class="Btn-c mr-[4.8em] flex justify-center items-center mb-[4em]">
+                                  <a href="[##db.pdf-def.largeIMG##]" download="" 
+                                   class="btn-show group bg-transparent duration-[.4s]
+                                  border-none outline-none flex justify-start
+                                   items-start relative">
+                                      <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                                      justify-center items-center leading-23 text-f rounded-sm
+                                       font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[2em] border-t-[1px]
+                                       border-b-[1px] border-f">
+                                          دانلود کاتالوگ
+                                      </span>
+                                      <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        width="100" height="100">
+                                          <circle  fill="transparent" stroke="#fff" id="c1" 
+                                          stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                                          style="transform: translate(2px,82px);" r="30"
+                                           cy="20" stroke-width="5" cx="100"></circle>
+                                           <circle id="c2" cx="100" cy="100" 
+                                           fill="transparent" stroke="#fff" stroke-width="5" 
+                                           stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                                            </svg>
+                                          </a>
+                              </div>
+                         
+                          </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
+                    </face>
+                </basis>
+           
               </div>
-            </div>
+              <div class="swiper-pagination right-0 left-[unset] flex justify-end gap-3 w-[80%]"></div>
           </div>
-        </div>
       </div>
-    </div>
-    <div class="section4">
-      <div class="relatedProTitle">
-        <h4 class="newsRight">کالاهای <strong>مرتبط</strong></h4>
-        <span class="newsLeft"></span>
+    </section>
+   <!-- SECTION-1 -->
+  <!-- SECTION-2 -->
+   <section class="Section-2 sec w-full flex justify-start items-start mt-[2.8em] flex-col">
+   <div class="Title-p w-[90%] ml-auto mr-auto flex justify-start items-center py-[2em]">
+      <h3 class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b1">
+          محصولات منتخب
+      </h3>
+   </div>
+   <div class="Products-slider w-[90%] ml-auto mr-auto">
+      <div class="swiper-products w-full flex justify-center items-center pb-[5em]">
+          <div class="swiper-wrapper  w-full">
+              <basis core="print" datamembername="db.list-DefProduct">
+                  <layout>
+                      @child
+                  </layout>
+                  <face>
+                      <div class="swiper-slide w-full flex justify-start items-start flex-col">
+                          <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
+                           w-full flex justify-start items-start
+                          overflow-hidden flex-col">
+                              <div class="Box-1 w-full flex justify-start flex-col items-start">
+                                  <a href="@link" class="w-full flex justify-start items-start ">
+                                      <img src="@00283X00283prp" alt="@title" title="@title"
+                                       class="w-full object-cover">
+                                  </a>
+                                  <a href="@link"  alt="@title" title="@title" 
+                                  class=" w-auto flex font-IRANSansWeb500
+                                   text-sm font-medium leading-23 text-b1
+                                  justify-center items-center mx-auto">
+                                      @title
+                                  </a>
+                              </div>
+                              <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
+                               justify-between ease-in-out duration-[.5s]
+                               group-hover:opacity-[1] group-hover:translate-y-[0]
+                              items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
+                               bg-f" >
+                                  <a href="@link" alt="@title" title="@title"
+                                   class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
+                                  group-hover:translate-x-[0] duration-75 delay-[.8s] 
+                                  flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
+                                   justify-center items-center">
+                                      مشاهده
+                                  </a>
+                                  <a  href="@link" alt="@title" title="@title"
+                                   class=" w-auto flex translate-x-[-100px] opacity-0
+                                  group-hover:opacity-[1] duration-75 delay-[.8s] 
+                                  group-hover:translate-x-[0] 
+                                  font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
+                                  justify-center items-center ">
+                                  @title
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </face>
+              </basis>
+          </div>
       </div>
-  
-      <div class="relatedProducts">
-  <basis core="print" datamembername="db.relatedProduct">
-  <face>
-        <div class="proItem">
-          <a href="/@link" title="@title">
-            <img src="/@image" alt="@title" title="@title" loading="lazy"/>
-            <span> @title</span>
+   </div>
+  </section>
+<!-- SECTION-2 -->
+
+  <!-- SECTION-3 -->
+  <section class="Section-3 sec w-full flex justify-start items-start flex-col bg-b5
+  py-[5em]">
+      <div class="About-Container w-[90%] flex justify-start gap-[4em] items-start mx-auto">
+          <div class="Right w-[50%] flex justify-start
+          gap-[1.1em] items-start flex-col">
+             <div class="Title fadein w-full flex justify-start items-start overflow-hidden ">
+              <p class="font-IRANSansWeb500 leading-23 text-2xl translate-y-[-100px] opacity-0
+               font-medium text-b7">
+                  درباره ما
+              </p>
+             </div>
+             <div class="Text fadein w-full flex justify-start items-start flex-col mt-[2em] overflow-hidden">
+              <basis core="print" datamembername="db.AboutDef">
+                  <layout>
+                      @child
+                  </layout>
+                  <face filter="TypeID=129">
+                        <p class="font-IRANSansWeb400 font-light text-justify
+                text-sm leading-31 text-f translate-y-[-100px] opacity-0">
+                       @largetext
+                        </p>
+                  </face>
+              </basis>
+             </div>
+             <a  href="معرفی-شرکت-مکش-دهش" alt="درباره مکش دهش " title="درباره مکش دهش "
+             class="btn-show group bg-transparent mt-[1em]
+              duration-[.4s]
+             border-none outline-none flex justify-start
+              items-start relative">
+                 <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                 justify-center items-center leading-23 text-f rounded-sm
+                  font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[3.5em] border-t-[1px]
+                  border-b-[1px] border-f">
+                    درباره ما
+                 </span>
+                 <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                   width="100" height="100">
+                     <circle  fill="transparent" stroke="#fff" id="c1" 
+                     stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                     style="transform: translate(2px,82px);" r="30"
+                      cy="20" stroke-width="5" cx="100"></circle>
+                      <circle id="c2" cx="100" cy="100" 
+                      fill="transparent" stroke="#fff" stroke-width="5" 
+                      stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                       </svg>
           </a>
-        </div>
-  </face>
-  </basis>
-  
+          </div>
+          <div class="Left w-[50%] flex justify-start items-start">
+              <basis core="print" datamembername="db.image-AboutDef">
+                  <layout>
+                      @child
+                  </layout>
+                  <face filter="ord=1">
+                      <img src="@largeIMG" alt="makesh-dahesh" title="mackesh-dahesh"
+                       class="w-auto object-contain">
+                  </face>
+              </basis>
+        
+          </div>
+       
       </div>
-    </div>
-    <div class="section5">
-      <div class="productNav">
-        <div class="nextProduct">
-  <basis core="print" datamembername="db.relatedProduct">
-  <face filter="RowNumber = 1">
-          <a href="/@link" title="@title">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="#2F2F2F" />
-            </svg>
-            محصول بعدی
-  
-          </a>
-  </face>
-  </basis>
+  </section>
+ <!-- SECTION-3 -->
+
+  <!-- SECTION-4 -->
+  <section class="Section-4 sec w-full flex justify-start items-start flex-col mb-[8em]">
+    <div class="Brands-Container w-full flex justify-start items-start flex-col">
+        <div class="Title-p w-[90%] mx-auto flex justify-between items-center">
+             <p class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b1">
+                برندها
+             </p>
+             <a href="برندها" alt="برندها " title="برندها "
+              class="btn-show group bg-transparent translate-x-[-3em] mt-[1em]
+             duration-[.4s]
+            border-none outline-none flex justify-start
+             items-start relative">
+                <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                justify-center items-center leading-23 text-b1 rounded-sm
+                 font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[3.5em] border-t-[1px]
+                 border-b-[1px] border-b3">
+                 برندها
+                </span>
+                <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  width="100" height="100">
+                    <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                    stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                    style="transform: translate(2px,82px);" r="30"
+                     cy="20" stroke-width="5" cx="100"></circle>
+                     <circle id="c2" cx="100" cy="100" 
+                     fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                     stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                      </svg>
+            </a>
         </div>
-        <div class="prevProduct">
-  <basis core="print" datamembername="db.relatedProduct">
-  <face filter="RowNumber = 2">
-          <a href="/@link" title="@title">
+        <div class="Brands w-full mx-auto flex justify-center items-center">
+           <div class="swiper-brands w-full flex justify-center items-center">
+            <div class="swiper-wrapper w-ful">
+                <basis core="print" datamembername="db.list-DefBrand">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                        <div class="swiper-slide  border-l-[1px] group
+                        border-r-[1px] border-blue  w-full flex justify-center items-center relative">
+                           <a href="@link" title="@title" alt="@title" class=" flex justify-center items-center">
+                            <div class="IMG-1 w-full flex justify-center items-center" class="h-full">
+                            <img src="@type_159" title="@title" alt="@title" class="object-cover h-[134px] w-full">
+                           </div>
+                        </a>
+                           <div class="IMG-2 absolute w-full h-[134px] left-0 top-0 z-1 group-hover:translate-y-[0]
+                           duration-[.5s]
+                            group-hover:opacity-[1]
+                           translate-y-[-100px] pointer-events-none opacity-0">
+                            <img src="@00264X00134prp" title="@title" alt="@title" class="object-cover  w-full">
+                           </div>
+                        </div>
+                    </face>
+                </basis>
+             
   
-            محصول قبلی
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.825 7H16V9H3.825L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7Z" fill="#2F2F2F" />
-            </svg>
-          </a>
-  </face>
-  </basis>
+            </div>
+           </div>
+        </div>
+    </div>
+ </section>
+<!-- SECTION-4 -->
+    <!-- SECTION-5 -->  
+    <section class="Section-5 sec w-full flex justify-start items-start flex-col mb-[8em]">
+         
+
+      <div class="ProductCat-Container w-full flex justify-start items-start flex-col relative overflow-hidden">
+         <div class="Cursor absolute left-0 top-0 z-3 w-[65px] h-[65px]
+         rounded-full bg-f flex justify-center items-center select-none duration-[.1s] pointer-events-none">
+         <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M25 13C25 13.1499 24.9427 13.2937 24.8408 13.3997C24.7389 13.5057 24.6007 13.5652 24.4565 13.5652H13.0435V25.4348C13.0435 25.5847 12.9862 25.7285 12.8843 25.8345C12.7824 25.9405 12.6441 26 12.5 26C12.3559 26 12.2176 25.9405 12.1157 25.8345C12.0138 25.7285 11.9565 25.5847 11.9565 25.4348V13.5652H0.543478C0.399339 13.5652 0.261103 13.5057 0.159181 13.3997C0.0572593 13.2937 0 13.1499 0 13C0 12.8501 0.0572593 12.7063 0.159181 12.6003C0.261103 12.4943 0.399339 12.4348 0.543478 12.4348H11.9565V0.565217C11.9565 0.415312 12.0138 0.271547 12.1157 0.165548C12.2176 0.0595496 12.3559 0 12.5 0C12.6441 0 12.7824 0.0595496 12.8843 0.165548C12.9862 0.271547 13.0435 0.415312 13.0435 0.565217V12.4348H24.4565C24.6007 12.4348 24.7389 12.4943 24.8408 12.6003C24.9427 12.7063 25 12.8501 25 13Z" fill="#64748B"/>
+             </svg>
+             
+     </div>
+     <div class="Cursor-follower"></div>
+         <div class="Title-p w-[90%] mx-auto flex justify-between items-center">
+             <p class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b1">
+               محصولات
+             </p>
+             <a href="دسته-بندی-محصولات"  alt="محصولات" title="محصولات" class="btn-show group bg-transparent translate-x-[-3em] mt-[1em]
+             duration-[.4s]
+            border-none outline-none flex justify-start
+             items-start relative">
+                <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                justify-center items-center leading-23 text-b1 rounded-sm
+                 font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[3.5em]
+                 pl-[2.5em] border-t-[1px]
+                 border-b-[1px] border-b3">
+                محصولات
+                </span>
+                <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  width="100" height="100">
+                    <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                    stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                    style="transform: translate(2px,82px);" r="30"
+                     cy="20" stroke-width="5" cx="100"></circle>
+                     <circle id="c2" cx="100" cy="100" 
+                     fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                     stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                      </svg>
+            </a>
+        </div>
+        <div class="ProductCats w-full grid grid-cols-[1fr,1fr,1fr] cursor-none justify-center items-center ">
+         <basis core="print" datamembername="db.productCat">
+             <layout>
+                 @child
+             </layout>
+             <face filter="catid in (21182,21183,209714)">
+                 <div class="P-Cat w-full flex justify-start items-start h-[900px] hover:cursor-none group cursor-none">
+                     <a href="@link" alt="@title" title="@title"
+                      class="w-full flex justify-start items-start flex-col hover:cursor-none relative h-full">
+                     <div class="IMG w-full flex justify-center items-center h-full ">
+                         <img src="images/new/@catid.jpg" alt="@title" title="@title" 
+                         class="w-full object-cover h-full">
+                     </div> 
+                     <div class="OV w-full h-full flex justify-center items-center
+                      group-hover:bg-[transparent] bg-[#00000073] z-2 duration-[.9s]
+                      flex-col absolute left-0 top-0">
+                         <div class="Title w-full flex justify-center items-center overflow-hidden py-[1em]">
+                             <p class="font-IRANSansWeb500 leading-23 group-hover:translate-y-[0] 
+                             translate-y-[100px] opacity-0 group-hover:opacity-[1] duration-[.9s]
+                              font-medium text-2xl text-f">
+                                @title
+                             </p>
+                         </div>
+                         <div class="Det w-full flex justify-center items-center flex-col overflow-hidden py-[1em]">
+                             <p class="font-IRANSansWeb500 leading-23 translate-y-[100px] group-hover:translate-y-[0]
+                              opacity-0  group-hover:opacity-[1] duration-[.9s]
+                              font-medium text-base text-f">
+                                @urldescription
+                             </p>
+                         </div>
+                     </div>
+                  </a>
+                 </div> 
+             </face>
+         </basis>
         </div>
       </div>
-    </div>
-  </div>
-  <basis core="call" file="footer.inc" />
+     </section>
+    <!-- SECTION-5 -->
+       <!-- SECTION-6 --> 
+       <section class="Section-6 sec w-full flex justify-start items-start  ">
+        <div class="Projects-Container w-full flex justify-start items-start flex-col">
+            <div class="Title-p w-[90%] mx-auto flex justify-between items-center">
+                <p class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b1">
+                  دسته بندی پروژه ها
+                </p>
+                <a href="پروژه" alt="پروژه-های-مکش-و-دهش" title="پروژه-های-مکش-و-دهش"
+                 class="btn-show group bg-transparent translate-x-[-3em] mt-[1em]
+                duration-[.4s]
+               border-none outline-none flex justify-start
+                items-start relative">
+                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                   justify-center items-center leading-23 text-b1 rounded-sm
+                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[3.5em]
+                    pl-[2.5em] border-t-[1px]
+                    border-b-[1px] border-b3">
+                   پروژه ها
+                   </span>
+                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     width="100" height="100">
+                       <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                       style="transform: translate(2px,82px);" r="30"
+                        cy="20" stroke-width="5" cx="100"></circle>
+                        <circle id="c2" cx="100" cy="100" 
+                        fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                         </svg>
+               </a>
+           </div>
+           <div class="Projects-Slider w-full flex justify-center items-center">
+            <div class="swiper-projects w-full flex justify-start items-start">
+                <div class="swiper-wrapper w-full">
+                    <basis core="print" datamembername="db.ProjectCat">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="catid not in (58702)">
+                            <div class="swiper-slide w-full flex justify-start items-start relative">
+                                <div class="IMG w-full flex justify-start items-start">
+                                    <a href="@link"  alt="@title" title="@title" 
+                                    class="w-full flex justify-start items-start">
+                                    <img src="images/new/@catid.jpg" alt="@title" title="@title"
+                                     class="w-full object-cover">
+                                </a>
+                                </div>
+                                <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
+                                justify-end items-end">
+                                    <div class="Ttile  w-full flex justify-start items-start ">
+                                        <p class="font-IRANSansWeb500 pr-[1em] pb-[1em]
+                                        text-2xl font-medium leading-23 text-f">
+                                           @title
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </face>
+                    </basis>
+                </div>
+            </div>
+           </div>
+        </div>
+      </section>
+     <!-- SECTION-6 -->
+
+         <!-- SECTION-7 -->
+         <section class="Section-7 sec w-full flex justify-start items-start ">
+          <div class="Services-Container  w-full flex justify-start items-start flex-col mt-[3em]">
+              <div class="Title-p w-[90%] mx-auto flex justify-between items-center">
+                  <p class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b1">
+                      خدمات
+                  </p>
+                  <a href="خدمات-مکش-دهش" alt="خدمات-مکش-و-دهش" title="خدمات-مکش-و-دهش"
+                   class="btn-show group bg-transparent translate-x-[-3em] mt-[1em]
+                  duration-[.4s]
+                 border-none outline-none flex justify-start
+                  items-start relative">
+                     <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                     justify-center items-center leading-23 text-b1 rounded-sm
+                      font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[3.5em]
+                      pl-[2.5em] border-t-[1px]
+                      border-b-[1px] border-b3">
+                      خدمات
+                     </span>
+                     <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                       width="100" height="100">
+                         <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                         stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                         style="transform: translate(2px,82px);" r="30"
+                          cy="20" stroke-width="5" cx="100"></circle>
+                          <circle id="c2" cx="100" cy="100" 
+                          fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                          stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                           </svg>
+                 </a>
+             </div>
+             <div class="Services-c w-[90%] gap-[3em] mx-auto grid grid-cols-[1fr,1fr] items-start ">
+              <div class="Text-ServiceContainer w-full flex justify-start items-start">
+                  <div class="Services w-full flex justify-start items-start flex-col gap-4">
+                    <basis core="repeater" name="rep" datamembername="db.list-DefServices">
+                      <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##rep.current.id##]">
+                        <member name="service"  type="view" postsql="select * from [db.service] where TypeID=129"/>
+                        </basis>
+                        <basis core="print" datamembername="rep.current">
+                          <layout>
+                              @child
+                          </layout>
+                          <face>
+                              <div class="Service w-full flex justify-start items-start gap-2
+                              flex-col" data-img="@00816X00403prp">
+                                  <div class="Top-S group w-full mx-auto flex justify-between items-start py-[1em]
+                                  border-b-[1px] border-b-b1  hover:cursor-pointer">
+                                      <div class="Title-S w-auto flex justify-start items-center">
+                                          <a href="@link" alt="@title" title="@title">
+                                          <p class="font-IRANSansWeb400 font-normal text-base leading-25.4 text-b1">
+                                            @title
+                                          </p></a>
+                                      </div>
+                                      <div class="Icon-S w-auto flex justify-end items-center">
+                                          <span class="Circle flex justify-center items-center  group-[&.active]:bg-b1 group-[&.active]:rounded-full 
+                                          group-[&.active]:h-[42px] group-[&.active]:w-[42px] duration-75">
+                                              <svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1"
+                                              viewBox="0 0 50 50" width="50px" xml:space="preserve" 
+                                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                              <rect fill="none" height="50" width="50"/><line fill="none" 
+                                              stroke="#475569" id="s1" stroke-miterlimit="10" stroke-width="4"
+                                               x1="9" x2="41" y1="25" y2="25"/><line fill="none" id="s2" stroke="#475569" 
+                                               stroke-miterlimit="10" stroke-width="4" x1="25" x2="25" y1="9" y2="41"/></svg>
+                                          </span>
+                                      </div>
+                                  </div>
+                                  <div class="Bottom-S w-full mx-auto flex
+                                  justify-start items-start py-[1em]">
+                                      <div class="Text w-full flex flex-col justify-start items-start">
+                                          <p class="font-IRANSansWeb300 font-light text-sm 
+                                          leading-21.91 text-b5 text-justify">
+                                          [##db.service.largeText##]
+                                            </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </face>
+                      </basis>
+
+                    </basis>
+                
+                
+                 
+                  </div>
+              </div>
+              <div class="IMG-SecviceContainer w-full flex justify-start items-start">
+                  <basis core="print" datamembername="db.list-DefServices">
+                      <layout>
+                          @child
+                      </layout>
+                      <face filter="RowNumber=1">
+                          <div class="IMG opacity-0 Show duration-[.4s] [&.Show]:opacity-[1]
+                          w-full flex justify-start items-start">
+                              <img src="@00816X00403prp" alt="@title" title="@title" 
+                              class="w-full object-cover">
+                          </div>
+                      </face>
+                  </basis>
+               
+              </div>
+         
+             </div>
+          </div>
+      </section>
+     <!-- SECTION-7 -->
+        <!-- SECTION-8 -->
+        <section class="Section-8 sec w-full flex justify-start items-start">
+          <div class="Blogs-Container  sec w-full flex justify-start items-start mt-[5em]
+           flex-col">
+              <div class="Title-p w-[90%] mx-auto flex justify-between items-center">
+                  <p class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b1">
+                      اخبار و مقالات
+                  </p>
+                  <a href="اخبار" alt="اخبار" title="اخبار" class="btn-show group bg-transparent translate-x-[-3em] mt-[1em]
+                  duration-[.4s]
+                 border-none outline-none flex justify-start
+                  items-start relative">
+                     <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                     justify-center items-center leading-23 text-b1 rounded-sm
+                      font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
+                      pl-[2.5em] border-t-[1px]
+                      border-b-[1px] border-b3">
+                      مشاهده بیشتر
+                     </span>
+                     <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                       width="100" height="100">
+                         <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                         stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                         style="transform: translate(2px,82px);" r="30"
+                          cy="20" stroke-width="5" cx="100"></circle>
+                          <circle id="c2" cx="100" cy="100" 
+                          fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                          stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                           </svg>
+                 </a>
+             </div>
+             <div class="Blogs sec w-full flex justify-start items-start">
+              <div class="swiper-blogs w-[90%] mx-auto overflow-hidden flex justify-start items-start">
+                  <div class="swiper-wrapper w-full">
+                <basis core="print" datamembername="db.list-DefBlog">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                      <div class="swiper-slide w-full flex justify-start items-start">
+                          <div class="Blog w-full flex justify-start gap-[1.2em]
+                          items-start flex-col">
+                              <div class="IMG w-full flex justify-center items-center
+                              overflow-hidden group ">
+                              <a href="@link" alt="@title" title="@title">
+                                  <img src="@00457X00304prp" alt="@title" title="@title"
+                                  class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]"></a>
+                              </div>
+                              <div class="Title w-full flex justify-start items-center">
+                                  <a href="@link" alt="@title" title="@title">
+                                  <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
+                                     @title
+                                  </p>
+                              </a>
+                              </div>
+                              <div class="Date w-full flex justify-start items-center">
+                                  <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
+                                     @date
+                                  </span>
+                              </div>
+                              <div class="Desc w-full flex justify-center items-start flex-col">
+                                  <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
+                                 @prp_7244
+                                 </p>
+                              </div>
+                              <div class="Btn w-full flex justify-start items-center" >
+                                  <a href="@link" alt="@title" title="@title"
+                                   class="btn-show group bg-transparent mt-[1em]
+                                  duration-[.4s]
+                                 border-none outline-none flex justify-start
+                                  items-start relative">
+                                     <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                                     justify-center items-center leading-23 text-b1 rounded-sm
+                                      font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
+                                      pl-[2.5em] border-t-[1px] 
+                                      border-b-[1px] border-b3">
+                                      مشاهده 
+                                     </span>
+                                     <svg class="BTN  relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                       width="100" height="100">
+                                         <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                                         stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                                         style="transform: translate(2px,82px);" r="30"
+                                          cy="20" stroke-width="5" cx="100"></circle>
+                                          <circle id="c2" cx="100" cy="100" 
+                                          fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                                          stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                                      </svg>
+                                 </a>
+                              </div>
+                          </div>
+                      </div>
+                    </face>
+                </basis>
+                  </div>
+              </div>
+             </div>
+          </div>
+         </section>
+        <!-- SECTION-8 -->
+           <!-- SECTION-9 -->
+      <section class="Section-9 sec w-full flex justify-start items-start mb-[8em]">
+        <div class="Gallery-Container w-[98%] mr-auto bg-b6 flex pb-[5em]
+        justify-start items-start flex-col">
+            <div class="Title-p w-[90%] mx-auto flex justify-between items-center">
+                <p class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-f">
+                    گالری تصاویر
+                </p>
+                <a href="گالری-مکش-دهش" alt="گالری" title="گالری"
+                 class="btn-show group bg-transparent translate-x-[-3em] mt-[1em]
+                duration-[.4s]
+               border-none outline-none flex justify-start
+                items-start relative">
+                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                   justify-center items-center leading-23 text-f rounded-sm
+                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
+                    pl-[2.5em] border-t-[1px]
+                    border-b-[1px] border-f">
+                    مشاهده بیشتر
+                   </span>
+                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     width="100" height="100">
+                       <circle  fill="transparent" stroke="#fff" id="c1" 
+                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                       style="transform: translate(2px,82px);" r="30"
+                        cy="20" stroke-width="5" cx="100"></circle>
+                        <circle id="c2" cx="100" cy="100" 
+                        fill="transparent" stroke="#fff" stroke-width="5" 
+                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                 </svg>
+               </a>
+           </div>
+           <div class="Gallery-Slider w-full flex justify-start items-end">
+            <div class="Nav w-[15%] flex justify-start items-start flex-col">
+                <div class="navigationBTN w-[80px] flex justify-start items-start flex-col mr-[5em]">
+                 
+                    <div class="swiper-button-next">
+                        <svg width="22" height="47" viewBox="0 0 22 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 46L0.999999 23.5L21 1" stroke="white" stroke-width="0.5"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="swiper-button-prev translate-y-[-5em] translate-x-[-2em]">
+                        <svg width="22" height="48" viewBox="0 0 22 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 47L21 24L1 0.999999" stroke="white"/>
+                            </svg>
+                            
+                    </div>
+                </div>
+                <div class="Counter-c w-[80px] flex justify-center items-start g mr-[5em]">
+                    <span class="Total font-IRANSansWeb500 text-base font-medium leading-23 text-f"></span>
+                    <span class="font-IRANSansWeb500 text-base font-medium mx-[.5em] leading-23 text-f" >/</span>
+                   <span class="Current font-IRANSansWeb500 text-base font-medium leading-23 text-f"></span>
+                  
+                </div>
+            </div>
+            <div class="swiper-gallery w-[85%] flex justify-start items-start py-[3em] overflow-hidden">
+                <div class="swiper-wrapper w-full">
+                    <basis core="print" datamembername="db.image-GalleyDef">
+                        <layout>
+                            @child
+                        </layout>
+                        <face>
+                            <div class="swiper-slide group  duration-[.8s] w-full flex justify-start items-start">
+                                 <div class="IMG w-full  duration-[.8s]
+                                flex justify-start items-start overflow-hidden">
+                                     <img src="@largeIMG" title="mackesh-dahesh"
+                                     class="w-full object-cover group-hover:scale-[1.1] duration-[.8s]" alt="mackesh-dahesh">
+                                 </div>
+                             </div>
+                        </face>
+                    </basis>
+                </div>
+            </div>
+           </div>
+        </div>
+      </section>
+    <!-- SECTION-9 -->
   
-  <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.4.1.min.js"></script>
-  <script src="[##cms.cms.cdn##]/js/bootstrap.bundle.min.js" ></script>
-  
-  <script src="[##cms.cms.cdn##]/js/playVideo.js"></script>
-  <!-- 
-  <script src="[##cms.cms.cdn##]/js/product.js"></script> -->
-  <script type="application/ld+json"> 
-    [##json.fq.column1##] 
-    </script>
-  </body>
-  
-  </html>
+  <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+
+  </main>
+
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/new/home.js"></script>
+</body>
+</html>

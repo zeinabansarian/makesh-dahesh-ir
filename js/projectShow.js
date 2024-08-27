@@ -4,3 +4,34 @@ document.querySelectorAll('.toggle-button').forEach(btn => {
       e.target.classList.toggle('toggle-button--active');
     });
   });
+
+
+  
+  const relatedPro = new Swiper(".relatedPro", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 4,
+
+  });
+  const relatedProject = new Swiper(".relatedProject", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 2.5,
+    spaceBetween: 49,
+  });
+
+  gsap.registerPlugin(ScrollTrigger) 
+// Scale in animation
+let scrollToTop = document.querySelectorAll('.scrollToTop')
+scrollToTop.forEach(s=>{
+      gsap.to(s , {
+        scrollTrigger:{
+          trigger:s,
+          start : "top 70%",
+          end : "bottom bottom",
+        },
+        opacity :1,
+        y:0,
+      })
+ 
+})

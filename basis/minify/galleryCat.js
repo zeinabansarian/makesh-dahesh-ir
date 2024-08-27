@@ -1,0 +1,1 @@
+gsap.registerPlugin(ScrollTrigger);let gallerys=document.querySelectorAll(".Gallery");gallerys.forEach((r=>{gsap.to(r,{y:0,opacity:1,scale:1,scrollTrigger:{trigger:r,start:"top 60%",end:"bottom bottom"}})}));

@@ -1,0 +1,83 @@
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" > 
+    <member request="cat" type="tree" name="galleryCat" parentid="58666" /> 
+</basis>	
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته بندی گالری</title>
+    <meta name="description" content="دسته بندی گالری">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/outputDesk.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/f-style.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/leaflet.css">
+</head>
+<body dir="rtl">
+    <main class="GalleryCat">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <div class="GalleryCats-C w-full flex flex-col justify-between items-center mt-[10em] overflow-hidden pb-[8em]">
+            <div class="Top w-[90%] mr-auto ml-auto">
+                <div class="Navigation flex justify-start items-center gap-1">
+                    <span class="nav w-auto flex justify-center items-center ">
+                        <a href="/" alt="mackesh-dahesh" title="makesh-dahesh" class="font-IRANSansWeb400 text-xs leading-18.78 text-b2">
+                            صفحه نخست
+                        </a>
+                    </span>
+                    <span class="nav w-auto flex justify-center items-center text-b2">
+                    /
+                    </span>
+                    <span class="nav w-auto flex justify-center items-center">
+                        <span class="font-IRANSansWeb400 text-xs leading-18.78 text-b2">
+                               دسته بندی گالری
+                        </span>
+                    </span>
+                </div>
+                <h1 class="font-IRANSansWeb500 font-medium text-4xl mt-[1.5em] leading-56.35 text-b1">
+                    گالری
+                </h1>
+          
+            </div>
+            <div class="Bottom w-full flex flex-col justify-start items-center mt-[1.8em]">
+                <div class="list-Gallerys w-full flex flex-col ">
+                    <basis core="print" datamembername="db.galleryCat">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="parentid=58666">
+                <div class="Gallery w-full flex justify-between border-b-b1 border-b-[1px]
+                     items-center duration-[1s] group hover:bg-b5 translate-y-[3em] opacity-[0]">
+                        <a href="@link" alt="@title" title="@title"  class="w-full flex justify-between items-center">
+                       <div class="DetBox w-[45%] flex flex-col justify-center items-start mr-auto">
+                        <div class="DetTitle w-full flex justify-start items-center">
+                            <h2 class="font-IRANSansWeb500 font-medium group-hover:text-f duration-[.8s]
+                             text-4xl leading-56.35 text-b2">
+                                @title
+                            </h2>
+                        </div>                   
+                        <span class="line w-[338px] h-[1px] bg-b2 mt-2 duration-[.8s]
+                        group-hover:bg-f group-hover:w-[150px]"></span>
+
+                       </div>
+                       <div class="IMG w-[50%] flex justify-center items-center">
+                        <img src="@image" alt="@title" title="@title" 
+                         class="w-full object-cover opacity-0 translate-x-[-2.5em]
+                         group-hover:opacity-[1] group-hover:translate-x-[0] duration-[1s]">
+                       </div>
+                    </a>
+                </div>
+                        </face>
+                    </basis>
+           
+                </div>
+                
+            </div>
+        </div>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/new/galleryCat.js"></script>
+</body>
+</html>

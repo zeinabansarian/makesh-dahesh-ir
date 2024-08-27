@@ -1,0 +1,119 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" > 
+    <member request="navcatid" type="tree" name="nav" parentid="[##cms.query.catid##]" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="[##cms.query.catid##]"> 
+    <member name="galleryList" type="list" size="451x253"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.nav">
+        <layout>
+            @child
+        </layout>
+        <face filter="parentcatid=[##cms.query.catid##]">
+    <title>@title</title>
+    <meta name="description" content="@title">
+        </face>
+    </basis>
+
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/outputDesk.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/f-style.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/leaflet.css">
+</head>
+<body dir="rtl">
+    <main class="GalleryList">
+        <basis core="call" file="header.inc" pageindex="[##cms.cdn.pageindex##]" />
+
+        <div class="GalleryLists-C w-full flex flex-col justify-between items-center mt-[10em] overflow-hidden pb-[8em]">
+            <div class="Top w-[90%] mr-auto ml-auto">
+                <div class="Navigation flex justify-start items-center gap-1">
+                    <span class="nav w-auto flex justify-center items-center ">
+                        <a href="/" alt="صفحه اصلی" title="صفحه اصلی" class="font-IRANSansWeb400 text-xs leading-18.78 text-b5">
+                            صفحه نخست
+                        </a>
+                    </span>
+                    <span class="nav w-auto flex justify-center items-center text-b1">
+                    /
+                    </span>
+                    <span class="nav w-auto flex justify-center items-center">
+                        <a href="گالری-مکش-دهش" alt="گالری" title="گالری" class="font-IRANSansWeb400 text-xs leading-18.78 text-b5">
+                               گالری
+                        </a>
+                    </span>
+                    <span class="nav w-auto flex justify-center items-center text-b1">
+                        /
+                        </span>
+                        <basis core="print" datamembername="db.nav">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="parentcatid=[##cms.query.catid##]">
+                        <span class="nav w-auto flex justify-center items-center">
+                            <span alt="@ @title" title="@ @title" class="font-IRANSansWeb400 text-xs leading-18.78 text-b5">
+                                @title
+                            </span>
+                        </span>
+                            </face>
+                        </basis>
+                </div>
+                <basis core="print" datamembername="db.nav">
+                    <layout>
+                        @child
+                    </layout>
+                    <face filter="parentcatid=[##cms.query.catid##]">
+                <h1 class="font-IRANSansWeb500 font-medium text-4xl mt-[1.5em] leading-56.35 text-b5">
+                    @title
+                </h1>
+                    </face>
+                </basis>
+          
+            </div>
+            <div class="Bottom w-full flex flex-col justify-start items-center mt-[1.8em]">
+                <div class="list-Gallerys w-[90%] ml-auto mr-auto
+                grid grid-cols-[1fr,1fr,1fr] gap-0 mt-[3em] ">
+                <basis core="print" datamembername="db.galleryList">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                        <div class="Gallery group flex-col translate-y-[50px] scale-[1.2] pt-[1em] pb-[1em] pl-[1em] pr-[1em]
+                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
+                        opacity-0 odd:justify-start overflow-hidden
+                        even:justify-end w-auto flex justify-center items-center duration-[.8s] delay-[.3s] ">
+                        <a href="@link" alt="@title" title="@title">
+                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
+                                <img src="@00451X00253prp"alt="@title" title="@title" class="w-auto object-cover">
+                                <div class="OV w-full h-full flex justify-center items-end absolute 
+                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
+                                </div>
+                            </div>
+                        </a>
+                            <div class="Title  pt-[.5em] pb-[.5em]
+                            w-full flex justify-center items-center">
+                               <a href="@link" alt="@title" title="@title" class="w-full flex justify-center items-center">
+                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
+                                  @title
+                               </p>
+                           </a>
+                           </div>
+                            
+                        </div> 
+                    </face>
+                </basis>
+                 
+                </div>
+                
+            </div>
+         </div>
+         <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+  
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/new/galleryList.js"></script>
+</body>
+</html>

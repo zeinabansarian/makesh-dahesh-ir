@@ -1,9 +1,11 @@
 
 gsap.registerPlugin(ScrollTrigger) 
 // TIMELINE
+let timelineNum = document.querySelector('.timeline__map .timeline__entry span')
+timelineNum.classList.add('is--active')
 let updateActiveYear = (e)=>{
    
-    let slideYear = e.slides[e.activeIndex].getAttribute('data-timeline-year')
+    let slideYear = e.slides[e.activeIndex].children[0].children[0].children[0].children[0].getAttribute('data-timeline-year')
     let timeLineYear = document.querySelector('[data-timeline-active-year="' + slideYear + '"]')
     let activeYears
     if (
@@ -38,7 +40,7 @@ let TimelineSwiper = new Swiper('.timeline__slides',{
          console.log(slides);
          
         for(let g = 0 ; g < e.slides.length ; g++){
-            slides[g].setAttribute('data-index',g)
+            slides[g].children[0].children[0].children[0].children[0].setAttribute('data-index',g)
         }
         document.querySelectorAll('[data-timeline="activeYear"]').forEach(function (i) {
             i.addEventListener("click", function (e) {
@@ -51,6 +53,9 @@ let TimelineSwiper = new Swiper('.timeline__slides',{
                 let activeIndex = e.currentTarget.getAttribute('data-timeline-active-year')
                 let activeSlide = document.querySelector('[data-timeline-year="' + activeIndex + '"]')
                 let index = activeSlide.getAttribute('data-index')
+                console.log('activeSlide',activeSlide);
+                console.log('index',index);
+                
                 TimelineSwiper.slideTo(index);
             });
         });
@@ -90,6 +95,66 @@ let swiperCertificate= new Swiper(".swiper-certificate", {
         end:"bottom bottom"
     }
   })
+  gsap.to(s.querySelectorAll('.fade-in p'),{
+    y:0,
+    opacity:1,
+    stagger:.2,
+    scrollTrigger:{
+      trigger:s,
+      start:"top 60%",
+      end:"bottom bottom"
+  }
+})
+gsap.to(s.querySelectorAll('.fade-in h2'),{
+  y:0,
+  opacity:1,
+  stagger:.2,
+  scrollTrigger:{
+    trigger:s,
+    start:"top 60%",
+    end:"bottom bottom"
+}
+})
+gsap.to(s.querySelectorAll('.fade-in h3'),{
+  y:0,
+  opacity:1,
+  stagger:.2,
+  scrollTrigger:{
+    trigger:s,
+    start:"top 60%",
+    end:"bottom bottom"
+}
+})
+gsap.to(s.querySelectorAll('.fade-in h4'),{
+  y:0,
+  opacity:1,
+  stagger:.2,
+  scrollTrigger:{
+    trigger:s,
+    start:"top 60%",
+    end:"bottom bottom"
+}
+})
+gsap.to(s.querySelectorAll('.fade-in h5'),{
+  y:0,
+  opacity:1,
+  stagger:.2,
+  scrollTrigger:{
+    trigger:s,
+    start:"top 60%",
+    end:"bottom bottom"
+}
+})
+gsap.to(s.querySelectorAll('.fade-in h6'),{
+  y:0,
+  opacity:1,
+  stagger:.2,
+  scrollTrigger:{
+    trigger:s,
+    start:"top 60%",
+    end:"bottom bottom"
+}
+})
   })
   
 let textF = document.querySelectorAll('.Section-4 .fade-in')
