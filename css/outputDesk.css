@@ -821,6 +821,10 @@ video {
   top: 1px;
 }
 
+.top-\[26px\] {
+  top: 26px;
+}
+
 .top-\[50\%\] {
   top: 50%;
 }
@@ -1233,6 +1237,10 @@ video {
   margin-right: 2.5rem;
 }
 
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
 .mr-20 {
   margin-right: 5rem;
 }
@@ -1267,6 +1275,10 @@ video {
 
 .mt-11 {
   margin-top: 2.75rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-14 {
@@ -1681,6 +1693,10 @@ video {
   width: 60%;
 }
 
+.w-\[609px\] {
+  width: 609px;
+}
+
 .w-\[65\%\] {
   width: 65%;
 }
@@ -1707,6 +1723,10 @@ video {
 
 .w-\[80px\] {
   width: 80px;
+}
+
+.w-\[814px\] {
+  width: 814px;
 }
 
 .w-\[82px\] {
@@ -1786,6 +1806,10 @@ video {
 
 .min-w-\[96px\] {
   min-width: 96px;
+}
+
+.max-w-\[825px\] {
+  max-width: 825px;
 }
 
 .max-w-\[890px\] {
@@ -3008,6 +3032,10 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .rounded-sm {
   border-radius: 0.125rem;
 }
@@ -3195,6 +3223,11 @@ video {
   border-color: rgb(228 228 231 / var(--tw-border-opacity));
 }
 
+.border-b5 {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 30 30 / var(--tw-border-opacity));
+}
+
 .border-b8 {
   --tw-border-opacity: 1;
   border-color: rgb(46 49 146 / var(--tw-border-opacity));
@@ -3328,6 +3361,18 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-white\/\[0\.6\] {
+  background-color: rgb(255 255 255 / 0.6);
+}
+
+.bg-white\/\[0\.8\] {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-none {
+  background-image: none;
 }
 
 .decoration-slice {
@@ -3534,6 +3579,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-48 {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -3634,6 +3684,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
 .py-\[\.5em\] {
   padding-top: .5em;
   padding-bottom: .5em;
@@ -3672,6 +3727,11 @@ video {
 .py-\[5em\] {
   padding-top: 5em;
   padding-bottom: 5em;
+}
+
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 .pb-10 {
@@ -4168,6 +4228,10 @@ video {
   color: rgb(30 30 30 / var(--tw-text-opacity));
 }
 
+.text-b6 {
+  color: #2E3192F3;
+}
+
 .text-b7 {
   color: #F37021F3;
 }
@@ -4485,6 +4549,11 @@ video {
 
 .brightness-\[0\.65\] {
   --tw-brightness: brightness(0.65);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.brightness-\[0\.8\] {
+  --tw-brightness: brightness(0.8);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -5783,8 +5852,12 @@ a {
   cursor: pointer;
 }
 
-.serviceShow .share svg {
+.serviceShow .share .social-link svg {
   stroke: #2e3192f3;
+}
+
+.serviceShow .inShare .social-link svg {
+  stroke: #F37021F3;
 }
 
 .serviceShow .share .social-link {
@@ -6045,7 +6118,7 @@ html {
 }
 
 .btnsMain:hover .hole1 {
-  border: 17px solid #2e3192;
+  border: 17px solid #2e3192!important;
 }
 
 .btnsMain:hover .text {
@@ -6112,6 +6185,76 @@ html {
 .activeFilter span{
   border-bottom: 3px solid #F37021F3;
   color: #1E1E1E;
+}
+
+.pause {
+  opacity: 1;
+}
+
+.play {
+  opacity: 0;
+  display: none;
+}
+
+.collapse.show{
+  visibility: visible;
+}
+
+.card-header{
+  background-color: transparent;
+}
+
+.serviceShow .accordion .card-header button::before {
+  content: "";
+  display: inline-block;
+  width: 67px;
+  height: 1px;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.serviceShow .accordion .card-header button {
+  display: flex;
+  align-items: center;
+}
+
+.serviceShow .accordion .card-header button:focus {
+  outline: none;
+}
+
+.serviceShow .accordion .card-header p::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.serviceShow .accordion .card-header button[aria-expanded=true]::before {
+  width: 87px;
+  background-color: #F26737;
+}
+
+.serviceShow .accordion .card-header button[aria-expanded=true] p::before {
+  background-color: #F26737;
+}
+
+.serviceShow .accordion:nth-child(1) .card-header{
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.serviceShow .userInfo::after{
+  content: "*";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: red;
+}
+
+.serviceShow .userInfo{
+  position: relative;
 }
 
 @media (min-width: 480px) {

@@ -25,6 +25,13 @@ filterBtn.forEach(element => {
 
 
 
+  document.querySelectorAll('.toggle-button').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.target.parentElement.classList.toggle('share__wrapper--active');
+      e.target.classList.toggle('toggle-button--active');
+    });
+  });
+
   gsap.registerPlugin(ScrollTrigger) 
   // Scale in animation
   let scrollToTop = document.querySelectorAll('.scrollToTop')
@@ -32,7 +39,7 @@ filterBtn.forEach(element => {
         gsap.to(s , {
           scrollTrigger:{
             trigger:s,
-            start : "top 60%",
+            start : "top 75%",
             end : "bottom bottom",
           },
           opacity :1,

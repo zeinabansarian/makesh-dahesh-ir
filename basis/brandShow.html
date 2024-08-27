@@ -1,23 +1,51 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> <member name="image-Brand" type="list" format="4"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member name="Brand" type="view"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="Related--Product" size="283x283" blgid="221" /> </basis>	
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member request="navigationcat" type="tree" name="nav" />
+</basis>
+
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
 <!DOCTYPE html>
 <html lang="fa">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/outputDesk.css" />
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/outputDesk.css">
   </head>
   <body>
     <div class="brandShow">
+        <basis core="call" file="header.inc" />
       <div class="section1 relative">
-        <div class="imgS h-svh overflow-hidden">
-          <img
-            class="w-full h-full brightness-[0.65]"
-            src="images/4223d704aa8174819012e483fc5deba3 (1).jfif"
-            alt="@name"
-            title="@name"
-          />
-        </div>
+        <basis core="print" datamembername="db.image-Brand">
+            <layout>
+                <div class="imgS h-svh overflow-hidden">
+                    @child
+                </div>
+            </layout>
+            <face filter="ord=1">
+                
+                <img
+                  class="w-full h-full brightness-[0.65]"
+                  src="/@largeIMG"
+                  alt="@name"
+                  title="@name"
+                />
+            </face>
+        </basis>
         <div class="breadcrum absolute top-[126px] right-20">
             <ul class="flex items-center gap-x-2" dir="rtl">
                 <li class="flex items-center gap-x-2">
@@ -28,18 +56,36 @@
                         /
                     </span>
                 </li>
-            
-                <li>
-                    <h2 class="text-xs text-b1 font-IRANSansWeb400 no-underline">
-                   خدمات
-                    </h2>
-                </li>
+                <basis core="print" datamembername="db.nav">
+                    <face filter="Parentcatid<>21092">
+                        <li class="flex items-center gap-x-2">
+                            <a class="text-xs text-b1 font-IRANSansWeb400 no-underline" href="/@link" title="@title">
+                                @title
+                            </a>
+                            <span class="text-xs text-b1 font-IRANSansWeb400">
+                                /
+                            </span>
+                        </li>
+                        
+                    </face>
+                </basis>
+            <basis core="print" datamembername="db.Brand">
+
+                <face filter="TypeID=150">
+                    
+                    <li>
+                        <h2 class="text-xs text-b1 font-IRANSansWeb400 no-underline">
+                       @Answer
+                        </h2>
+                    </li>
+                </face>
+            </basis>
             </ul>
         </div>
    
     
         <div class="btnsMain translate-x-[8px] absolute right-20 bottom-4 origin-top duration-700 flex items-center justify-start gap-x-7">
-            <a href="" class="btttns flex relative" dir="ltr">
+            <a href="/تماس- با -شرکت -مکش -و- دهش" class="btttns flex relative" dir="ltr">
                 <div class="holes z-1 translate-x-[50%]">
                     <div class="hole1 duration-500 border border-bg1"></div>
                     <div class="hole2 duration-500 border border-bg1"></div>
@@ -55,45 +101,53 @@
         </div>
       </div>
       <div class="section2 mt-9 px-20" dir="rtl">
-        <h1 class="mt-8 mb-5 text-4xl font-IRANSansWeb500 scrollToTop">برند SPITSAN</h1>
-        <div class="para font-IRANSansWeb300 text-sm text-b5 text-right scrollToTop">
-          <p>
-            شرکت Pitsan ترکیه از سال 1975 میلادی فعالیت خود را آغاز کرده و
-            محصولات این شرکت دارای گواهی نامه ISO9001 کنترل کیفیت و همچنین گواهی
-            نامه های CE، GOST و TSEK می باشد. این شرکت با هدف ارتقاع مداوم
-            محصولات خود یکی از تولید کنندگان مطرح در زمینه سیستم های تهویه مطبوع
-            خانگی، اداری تجاری، صنعتی، فروشگاهی، بیمارستانی و ... می باشد. ارائه
-            محصولات با کیفیت و با قیمت مناسب از اهداف اصلی این شرکت بوده و با
-            داشتن تاییدیه آزمایشگاه های معتبر جهان از جمله Efectis فرانسه،
-            Applus اسپانیا و BSRIA بریتانیا، محصولات خود را به کشورهایی از جمله،
-            ایران، عراق، مصر، هلند، فرانسه، روسیه و بسیاری دیگر صادر می نماید.
-            شرکت تهویه و تاسیسات مکش و دهش نماینده رسمی محصولات این شرکت در
-            ایران و مورد تأیید سازمان آتش نشانی کشور می باشد و از جمله این
-            محصولات می توان به اسموک فن ها و جت فن های با استاندارد F300 و F400
-            اشاره کرد.
-          </p>
-        </div>
+        <basis core="print" datamembername="db.Brand">
+            <face filter="TypeID=150">
+                
+                <h1 class="mt-8 mb-5 text-4xl font-IRANSansWeb500 scrollToTop">@Answer </h1>
+            </face>
+        </basis>
+        <basis core="print" datamembername="db.Brand">
+            <layout>
+                <div class="para font-IRANSansWeb300 text-sm text-b5 text-right scrollToTop">
+                    @child
+                </div>
+            </layout>
+            <face filter="TypeID in (129,250)">
+                @largetext
+            </face>
+        </basis>
       </div>
-    
-      <div class="section5 mt-24" dir="rtl">
-        <h4 class="px-20 font-IRANSansWeb500 text-2xl text-b1 scrollToTop">
-            محصولات این برند
-        </h4>
-    
-        <div class="swiper relatedPro px-20 py-5">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide productBox bg-white duration-500 rounded-[16px] hover:shadow-[0px_10px_15px_-2px_rgba(0,_0,_0,_0.1)]">
-                <div class="proBox px-8 z-1 relative bg-white">
-                    <a href="" title="@title" class="text-center px-12 pb-10">
+    <basis core="print" datamembername="db.Related--Product">
+        <layout>
+            <div class="section5 mt-24" dir="rtl">
+              <h4 class="px-20 font-IRANSansWeb500 text-2xl text-b1 scrollToTop">
+                  محصولات این برند
+              </h4>
+          
+              <div class="swiper relatedPro px-20 py-5">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                
+                    @child
+                  </div>
+               
+                </div>
+          </div>
+          
+        </layout>
+        <face>
+            <div class="swiper-slide flex flex-col justify-between h-auto productBox bg-white duration-500 rounded-[16px] hover:shadow-[0px_10px_15px_-2px_rgba(0,_0,_0,_0.1)]">
+                <div class="proBox h-fit px-8 z-1 relative bg-white">
+                    <a href="/@link" title="@title" class="text-center px-12 pb-10">
                         <div class="imgS flex items-center justify-center">
-                            <img src="images/pict8696700000016382171000011854001 1.png"
+                            <img src="/@00283X00283prp"
                                 alt="@title" title="@title" />
                         </div>
                         <div class="name">
                             <p class="font-IRANSansWeb500 text-sm mt-7 text-b5">
-                                تهویه مطبوع
+                              @title
                             </p>
                         </div>
                     </a>
@@ -101,13 +155,14 @@
                   
                 </div>
                 <div class="btmPro duration-1000 bg-b6 flex justify-between px-2 py-4 origin-top items-end z-0">
-                  <a href="" title="@title" class="font-IRANSansWeb500 text-sm mt-2 text-white">
+                  <a href="/@link" title="@title" class="font-IRANSansWeb500 text-sm mt-2 text-white">
                     مشاهده محصول
                   </a>
                   <div class="btns share">
                     <ul class="share__wrapper share__wrapper--open-left">
                       <li class="social-link">
-                          <a href="#" title="whatsapp">
+                        <a href="https://api.whatsapp.com/send?text=[##cms.request.host##]/@link" title="whatsapp">
+    
                               <svg width="26" height="32" viewBox="0 0 32 32" fill="none"
                                   xmlns="http://www.w3.org/2000/svg">
                                   <g clip-path="">
@@ -124,7 +179,8 @@
                           </a>
                       </li>
                       <li class="social-link">
-                          <a href="#" title="telegram">
+                        <a href="https://t.me/share/url?url=[##cms.request.host##]/@link&text=@link" title="telegram">
+    
                               <svg width="26" height="33" viewBox="0 0 33 33" fill="none"
                                   xmlns="http://www.w3.org/2000/svg">
                                   <g clip-path="">
@@ -141,7 +197,8 @@
                           </a>
                       </li>
                       <li class="social-link">
-                          <a href="#" title="linkdin">
+                        <a href="https://www.linkedin.com/?url=https://[##cms.request.host##]/@link" title="linkdin">
+    
                               <svg width="26" height="33" viewBox="0 0 33 33" fill="none"
                                   xmlns="http://www.w3.org/2000/svg">
                                   <g clip-path="">
@@ -169,16 +226,17 @@
                   </div>
                 </div>
             </div>
-            
-            </div>
-         
-          </div>
+        </face>
+    </basis>
+    <basis core="call" file="footer.inc" />
+
     </div>
-    
-    </div>
-    <script src="js/gsap.js"></script>
-    <script src="js/scrollTrigger.js"></script>
-    <script src="js/swiper-bundle11.0.5.min.js"></script>
-    <script src="js/brand.js"></script>
+    <basis core="call" file="script.inc" />
+
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/new/brand.js"></script>
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
   </body>
 </html>
