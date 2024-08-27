@@ -840,7 +840,7 @@ stroke: #2E3192;
     font-size: 14px;
     line-height: 21.91px;
     text-decoration: none;
-    color: #f26737;
+    /* color: #f26737; */
   }
 
   .newsList nav ul li.activeList{
