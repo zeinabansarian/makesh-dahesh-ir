@@ -116,9 +116,9 @@ header .Menu-Container {
   left: 0;
   top: 50%;
 }
-.BTN {
+
+  .BTN{
   transform: translate(2em, -1.5em);
-.BTN{
   transform: translate(2.5em,-1.7em);
   -webkit-transform: translate(2.5em,-1.7em);
   -moz-transform: translate(2.5em,-1.7em);
@@ -154,7 +154,7 @@ svg.BTN #c2,
   background-color: #fff;
   color: #000;
 }
-.swiper-pagination-bullet {
+.swiper-pagination-bullet ,
 .Home .swiper-pagination-bullet{
   width: 110px !important;
   background-color: transparent !important;
@@ -166,7 +166,7 @@ svg.BTN #c2,
   opacity: 1 !important;
 }
 
-.swiper-pagination-bullet .line {
+.swiper-pagination-bullet .line ,
 .Home .swiper-pagination-bullet .line{
   display: flex;
   width: 110px;
@@ -179,8 +179,7 @@ svg.BTN #c2,
   background-color: #ffffff80;
   position: relative;
 }
-.swiper-pagination-bullet-active .line::before {
-  content: "";
+.swiper-pagination-bullet-active .line::before ,
 .Home .swiper-pagination-bullet-active  .line::before{
   content: '';
   position: absolute;
@@ -206,8 +205,7 @@ svg.BTN #c2,
     width: 100%;
   }
 }
-.swiper-pagination {
-  width: auto !important;
+.swiper-pagination ,
 .Home .swiper-pagination{
   width:  auto !important;
   left: 5.8em !important  ;
@@ -279,7 +277,7 @@ svg.BTN #c2,
   width: 30px;
 }
 .navigationBTN .swiper-button-prev,
-.navigationBTN .swiper-button-next {
+.navigationBTN .swiper-button-next ,
 main.Home .navigationBTN .swiper-button-prev,main.Home .navigationBTN .swiper-button-next{
   position: static !important;
   margin: 0 !important;
@@ -290,17 +288,12 @@ main.Home .navigationBTN .swiper-button-prev,main.Home .navigationBTN .swiper-bu
 .navigationBTN .swiper-button-prev::before,
 .navigationBTN .swiper-button-next::before,
 .navigationBTN .swiper-button-prev::after,
-.navigationBTN .swiper-button-next::after {
+.navigationBTN .swiper-button-next::after ,
 main.Home .navigationBTN .swiper-button-prev::before,main.Home .navigationBTN .swiper-button-next::before,
 main.Home .navigationBTN .swiper-button-prev::after,main.Home .navigationBTN .swiper-button-next::after{
   content: none !important;
 }
-.swiper-gallery .swiper-slide-active .IMG {
-  transform: unset !important;
-  -webkit-transform: unset !important;
-  -moz-transform: unset !important;
-  -ms-transform: unset !important;
-  -o-transform: unset !important;
+.swiper-gallery .swiper-slide-active .IMG,
 main.Home .swiper-gallery .swiper-slide-active .IMG{
   transform:unset !important;
   -webkit-transform:unset !important;
@@ -308,12 +301,7 @@ main.Home .swiper-gallery .swiper-slide-active .IMG{
   -ms-transform:unset !important;
   -o-transform:unset !important;
 }
-.swiper-gallery .swiper-slide-next .IMG {
-  transform: translateY(5em);
-  -webkit-transform: translateY(5em);
-  -moz-transform: translateY(5em);
-  -ms-transform: translateY(5em);
-  -o-transform: translateY(5em);
+.swiper-gallery .swiper-slide-next .IMG ,
 main.Home .swiper-gallery .swiper-slide-next .IMG{
  transform: translateY(5em);
  -webkit-transform: translateY(5em);
@@ -358,6 +346,7 @@ main.Home .swiper-gallery .swiper-slide-next .IMG{
 }
 .RepContainer .Toggle-item {
   background-color: #1e1e1e;
+}
 header.GoBottom .Toggle-item{
   background-color: #1E1E1E;
 }
@@ -370,6 +359,7 @@ header.GoBottom .Toggle-item{
 .relatedPro .productBox .btmPro {
   opacity: 0;
   transform: translateY(-100%);
+}
 main.RepContainer .Toggle-item,
 main.GalleryCat .Toggle-item,
 main.GalleryList .Toggle-item,
