@@ -1,4 +1,7 @@
-      <!-- HEADER -->
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="productCat1" parentid="21181" /> 
+</basis>
+     <!-- HEADER -->
       <header class="DesktopHeader z-[9999] w-full fixed top-0 [&.GoBottom]:bg-[#FFFFFF80]
       left-0 justify-center items-center py-8 duration-[.5s]"  dir="rtl">
       <div class="Co w-[90%] mr-auto ml-auto grid grid-cols-[1fr,1fr] justify-center items-center">
@@ -129,21 +132,19 @@
                          before:w-[60%] before:h-[1px] before:bg-b7 before:z-1
                          top-0 z-5
                         justify-between items-start translate-x-[-100%] pr-[8em]">
-                            <div class="Menu-item">
-                                <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                    تهویه مطبوع
-                                </a>
-                            </div>
-                            <div class="Menu-item">
-                                <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                    تهویه مطبوع
-                                </a>
-                            </div>
-                            <div class="Menu-item">
-                                <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                    تهویه مطبوع
-                                </a>
-                            </div>
+                        <basis core="print" datamembername="db.productCat1">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="catid in (21182,21183,209714)">
+                                <div class="Menu-item">
+                                    <a href="@link" alt="@link" title="@link"
+                                     class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
+                                       @title
+                                    </a>
+                                </div>
+                        </face>
+                    </basis>
                         </div>
                     </li>
    
