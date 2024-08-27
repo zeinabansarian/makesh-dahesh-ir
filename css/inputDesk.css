@@ -118,6 +118,26 @@ header .Menu-Container {
 }
 .BTN {
   transform: translate(2em, -1.5em);
+.BTN{
+  transform: translate(2.5em,-1.7em);
+  -webkit-transform: translate(2.5em,-1.7em);
+  -moz-transform: translate(2.5em,-1.7em);
+  -ms-transform: translate(2.5em,-1.7em);
+  -o-transform: translate(2.5em,-1.7em);
+}
+footer .btn-show{
+  transform: translateY(1.4em);
+  -webkit-transform: translateY(1.4em);
+  -moz-transform: translateY(1.4em);
+  -ms-transform: translateY(1.4em);
+  -o-transform: translateY(1.4em);
+}
+footer .BTN {
+  transform: translate(2.5em,-1.5em) !important;
+  -webkit-transform: translate(2.5em,-1.5em) !important;
+  -moz-transform: translate(2.5em,-1.5em) !important;
+  -ms-transform: translate(2.5em,-1.5em) !important;
+  -o-transform: translate(2.5em,-1.5em) !important;
 }
 svg.BTN #c2,
 #c1 {
@@ -135,6 +155,7 @@ svg.BTN #c2,
   color: #000;
 }
 .swiper-pagination-bullet {
+.Home .swiper-pagination-bullet{
   width: 110px !important;
   background-color: transparent !important;
   display: flex !important;
@@ -146,6 +167,7 @@ svg.BTN #c2,
 }
 
 .swiper-pagination-bullet .line {
+.Home .swiper-pagination-bullet .line{
   display: flex;
   width: 110px;
   height: 4px;
@@ -159,6 +181,8 @@ svg.BTN #c2,
 }
 .swiper-pagination-bullet-active .line::before {
   content: "";
+.Home .swiper-pagination-bullet-active  .line::before{
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -184,6 +208,8 @@ svg.BTN #c2,
 }
 .swiper-pagination {
   width: auto !important;
+.Home .swiper-pagination{
+  width:  auto !important;
   left: 5.8em !important  ;
   right: unset !important;
   height: unset !important;
@@ -254,6 +280,7 @@ svg.BTN #c2,
 }
 .navigationBTN .swiper-button-prev,
 .navigationBTN .swiper-button-next {
+main.Home .navigationBTN .swiper-button-prev,main.Home .navigationBTN .swiper-button-next{
   position: static !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -264,6 +291,8 @@ svg.BTN #c2,
 .navigationBTN .swiper-button-next::before,
 .navigationBTN .swiper-button-prev::after,
 .navigationBTN .swiper-button-next::after {
+main.Home .navigationBTN .swiper-button-prev::before,main.Home .navigationBTN .swiper-button-next::before,
+main.Home .navigationBTN .swiper-button-prev::after,main.Home .navigationBTN .swiper-button-next::after{
   content: none !important;
 }
 .swiper-gallery .swiper-slide-active .IMG {
@@ -272,6 +301,12 @@ svg.BTN #c2,
   -moz-transform: unset !important;
   -ms-transform: unset !important;
   -o-transform: unset !important;
+main.Home .swiper-gallery .swiper-slide-active .IMG{
+  transform:unset !important;
+  -webkit-transform:unset !important;
+  -moz-transform:unset !important;
+  -ms-transform:unset !important;
+  -o-transform:unset !important;
 }
 .swiper-gallery .swiper-slide-next .IMG {
   transform: translateY(5em);
@@ -279,6 +314,12 @@ svg.BTN #c2,
   -moz-transform: translateY(5em);
   -ms-transform: translateY(5em);
   -o-transform: translateY(5em);
+main.Home .swiper-gallery .swiper-slide-next .IMG{
+ transform: translateY(5em);
+ -webkit-transform: translateY(5em);
+ -moz-transform: translateY(5em);
+ -ms-transform: translateY(5em);
+ -o-transform: translateY(5em);
 }
 .fadein p {
   transform: translateY(1.5em);
@@ -317,6 +358,8 @@ svg.BTN #c2,
 }
 .RepContainer .Toggle-item {
   background-color: #1e1e1e;
+header.GoBottom .Toggle-item{
+  background-color: #1E1E1E;
 }
 .RepContainer .Item a,
 .RepContainer .Item svg path {
@@ -327,6 +370,292 @@ svg.BTN #c2,
 .relatedPro .productBox .btmPro {
   opacity: 0;
   transform: translateY(-100%);
+main.RepContainer .Toggle-item,
+main.GalleryCat .Toggle-item,
+main.GalleryList .Toggle-item,
+main.GalleryShow .Toggle-item,
+main.Search .Toggle-item,
+main.Error.Toggle-item{
+background-color: #1E1E1E;
+}
+main.RepContainer .Item a,
+main.RepContainer .Item svg path,
+main.GalleryCat .Item a,
+main.GalleryCat .Item svg path,
+main.GalleryList .Item a,
+main.GalleryList .Item svg path,
+main.GalleryShow .Item a,
+main.GalleryShow .Item svg path,
+main.Search .Item a,
+main.Search .Item svg path,
+main.Error .Item a,
+main.Error .Item svg path,
+header.GoBottom .Item a,
+header.GoBottom svg path{
+color: #1E1E1E;
+fill: #1E1E1E;
+  }
+
+  main.aboutUS header,main.GalleryCat header,
+  main.RepContainer header,
+  main.GalleryList header
+  main.GalleryShow header,
+  main.Search header,
+  main.Error header{
+
+    background-color: #FFFFFF80;
+
+    box-shadow: 0px 10px 15px -3px #0000001A;
+    
+
+
+    
+  }
+
+.timeline {
+  position: relative;
+}
+
+.timeline .multimedia {
+  margin: 50px 0;
+}
+@media only screen and (min-width:1024px) {
+  .timeline .multimedia {
+  margin: 86px 0;
+}
+}.timeline__wrapper {
+  overflow: hidden;
+}
+
+@media only screen and (min-width:1024px) {
+
+}.timeline__entry {
+  position: relative;
+  display: flex;
+}
+.timeline__entry:after {
+  transition: none;
+  content: "";
+  height: 60px;
+  width: 1px;
+  background: #262626;
+  display: block;
+  position: absolute;
+  /* left: 50%; */
+  bottom: 60px;
+  z-index: 1;
+}
+.timeline__entry:nth-child(2n) span {
+  margin-top: 120px;
+  transform: translate(50%,0);
+  -webkit-transform: translate(50%,0);
+  -moz-transform: translate(50%,0);
+  -ms-transform: translate(50%,0);
+  -o-transform: translate(50%,0);
+}
+.timeline__entry:nth-child(2n+1) span {
+transform: translate(50%,-30px);
+-webkit-transform: translate(50%,-30px);
+-moz-transform: translate(50%,-30px);
+-ms-transform: translate(50%,-30px);
+-o-transform: translate(50%,-30px);
+}
+
+.timeline__entry:nth-child(2n):after {
+  bottom: 0;
+}
+.timeline__entry span {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  animation: fontAnimationOut .3s ease-in-out 1;
+  height: 20px;
+  padding: 2px 11px;
+  white-space: nowrap;
+}
+.timeline__entry span.is--active {
+  font-size: 30px;
+  animation: fontAnimationIn .5s ease-in-out 1;
+  font-weight: 800;
+  height: 35px;
+}
+.timeline__entry span.is--active:after {
+  height: 25px;
+  bottom: -25px;
+}
+.timeline__entry span.is--active:before, .timeline__entry span.is--active:hover:before {
+  height: 100%}
+.timeline__entry span:before {
+  content: "";
+  position: absolute;
+  bottom: .1em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  height: 0;
+  background-color:#F37021F3;
+  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+  z-index: -1;
+}
+.timeline__entry span:hover:before {
+  height: 50%}
+.timeline__map-wrapper {
+  position: relative;
+}
+.timeline__line {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #262626;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.timeline__map {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  position: relative;
+  height: 220px;
+  justify-content: space-between;
+  column-gap: 60px;
+  padding-right: 3em;
+}
+.timeline__map::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  height: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.timeline__map {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 50px 7.33333vw;
+  position: relative;
+  height: 220px;
+  padding-right: 3em;
+  justify-content: space-between;
+  column-gap: 60px;
+}
+@media only screen and (min-width:1024px) {
+  .timeline__map {
+  column-gap: 75px;
+  padding: 50px 0;
+  padding-right: 3em;
+}
+
+}.timeline__map::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  max-width: 12px!important;
+  max-height: 12px!important;
+}
+.timeline__map::-webkit-scrollbar-track {
+  background: #E4E4E7;
+}
+.timeline__map::-webkit-scrollbar-thumb {
+  background: #2E3192;
+}
+.timeline__map {
+  scrollbar-width: thin;
+}
+.timeline__map, .timeline__map:hover {
+  scrollbar-color: #2E3192 #E4E4E7;
+}
+@keyframes fontAnimationIn {
+  0% {
+  opacity: 0;
+}
+to {
+  font-weight: 800;
+  opacity: 1;
+}
+}@keyframes fontAnimationOut {
+  0% {
+  font-weight: 800;
+  opacity: 1;
+}
+50% {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}@media only screen and (min-width:1024px) {
+
+}.timeline__controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 88vw;
+  justify-content: center;
+  margin: -70px auto 70px;
+  z-index: 1;
+  position: relative;
+}
+@media print {
+  .timeline__controls {
+  display: block!important;
+}
+}@media only screen and (min-width:1024px) {
+  .timeline__controls {
+  justify-content: end;
+  margin-top: -200px;
+  margin-bottom: 200px;
+}
+}.timeline__controls div {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width:1024px) {
+  .timeline__controls div {
+  width: 65px;
+  height: 65px;
+}
+}
+.multimedia__subline p{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: #1E1E1E;
+  text-align: justify;
+}
+.aboutUS .swiper-pagination .swiper-pagination-bullet-active{
+  background-color: white;
+}
+.aboutUS .GallerySlider .swiper-pagination .swiper-pagination-bullet{
+width: 10px;
+height: 10px;
+}
+
+.aboutUS .GallerySlider .swiper-pagination{
+  position: unset;
+  width: fit-content;
+}
+main.aboutUS .GallerySlider svg{
+  width: 20px;
+
+}
+
+
+.brandShow .relatedPro .swiper-slide .btmPro{
+opacity: 0;
+height: 0;
+
 }
 
 .relatedPro .productBox:hover .btmPro {
@@ -545,6 +874,42 @@ a:hover {
 .newsList nav ul li.activeList span {
   color: #1e1e1e !important;
 }
+  h1,
+  h2 {
+    font-size: 24px;
+    line-height: 23px;
+    text-align: right;
+    font-family: "IRANSansWeb500";
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "IRANSansWeb500";
+    font-size: 16px;
+    line-height: 25.04px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  a {
+    font-family: "IRANSansWeb700";
+    font-size: 14px;
+    line-height: 21.91px;
+    text-decoration: none;
+    /* color: #f26737; */
+  }
+
+  .newsList nav ul li.activeList{
+    background-color: #E4E4E7;
+    color: #1E1E1E!important;
+    border-bottom: 5px solid #F37021F3;
+  }
+  
+  .newsList nav ul li.activeList span{
+    
+    color: #1E1E1E!important;
+
+  }
 
 .newsList .newsBox:hover .imgS img:nth-child(2) {
   opacity: 1;

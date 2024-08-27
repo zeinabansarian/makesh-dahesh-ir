@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="36" cy="36" r="36" fill="white"/>
+<path d="M45 18L27 36L45 54" stroke="#2E3192"/>
+=======
 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="36" height="36" fill="#F37021" fill-opacity="0.952941"/>
+>>>>>>> 0425aa53043524ab82aad400d225006f349beb52
 </svg>
