@@ -1524,10 +1524,6 @@ video {
   height: 41px;
 }
 
-.h-\[45px\] {
-  height: 45px;
-}
-
 .h-\[514px\] {
   height: 514px;
 }
@@ -1627,10 +1623,6 @@ video {
 
 .w-\[100\%\] {
   width: 100%;
-}
-
-.w-\[108px\] {
-  width: 108px;
 }
 
 .w-\[15\%\] {
@@ -2616,11 +2608,6 @@ video {
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
-}
-
-.gap-x-2\.5 {
-  -moz-column-gap: 2.5em;
-       column-gap: 2.5em;
 }
 
 .gap-x-20 {
@@ -6065,6 +6052,14 @@ html {
   transform: scaleY(0.7) scaleX(0.9);
   background-color: #2e3192;
   border: none;
+}
+
+.contactUs form .btnsMain:hover .hole2 {
+  border-color: rgb(217 ,217 ,217);
+}
+
+.contactUs form .btnsMain:hover .hole1 {
+  border: 17px solid  rgb(217 ,217 ,217);
 }
 
 .btnsMain .text::after {

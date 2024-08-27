@@ -15,7 +15,7 @@ scrollToTop.forEach(s=>{
       gsap.to(s , {
         scrollTrigger:{
           trigger:s,
-          start : "top 40%",
+          start : "top 60%",
           end : "bottom bottom",
         },
         opacity :1,
@@ -38,4 +38,5 @@ const relatedProject = new Swiper(".relatedProject", {
   slidesPerView: 2.5,
   spaceBetween: 49,
 });
+
 

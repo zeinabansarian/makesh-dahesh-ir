@@ -1176,7 +1176,12 @@ html {
   background-color: #2e3192;
   border: none;
 }
-
+.contactUs form .btnsMain:hover .hole2 {
+  border-color: rgb(217 ,217 ,217); 
+}
+.contactUs form .btnsMain:hover .hole1 {
+  border: 17px solid  rgb(217 ,217 ,217);
+}
 .btnsMain .text::after {
   content: "";
   width: 100%;
