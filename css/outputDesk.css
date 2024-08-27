@@ -3083,6 +3083,11 @@ video {
   border-color: rgb(46 49 146 / var(--tw-border-opacity));
 }
 
+.border-b9 {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
 .border-blue {
   border-color: #31407688;
 }
@@ -3997,6 +4002,11 @@ video {
 
 .text-b7 {
   color: #F37021F3;
+}
+
+.text-b9 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 .text-f {
@@ -5485,7 +5495,7 @@ a {
   font-size: 14px;
   line-height: 21.91px;
   text-decoration: none;
-  color: #f26737;
+  /* color: #f26737; */
 }
 
 .newsList nav ul li.activeList{
@@ -5864,6 +5874,16 @@ html{
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 
+.placeholder\:text-b9::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-b9::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
 .placeholder\:text-f::-moz-placeholder {
   color: #ffff;
 }
@@ -6017,6 +6037,11 @@ html{
   border-bottom-width: 1px;
 }
 
+.hover\:border-b9:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
 .hover\:bg-\[\#00000073\]:hover {
   background-color: #00000073;
 }
@@ -6028,6 +6053,11 @@ html{
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-b9:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-\[0_35px_60px_-15px_rgba\(0\2c 0\2c 0\2c 0\.3\)\]:hover {
@@ -6228,6 +6258,11 @@ html{
   fill: #2E3192;
 }
 
+.\[\&\.active\]\:text-b9.active {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
 .\[\&\.active\]\:opacity-\[1\].active {
   opacity: 1;
 }
@@ -6289,6 +6324,12 @@ html{
 .\[\&\>a\:not\(\:last-child\)\]\:before\:top-0>a:not(:last-child)::before {
   content: var(--tw-content);
   top: 0px;
+}
+
+.\[\&\>a\:not\(\:last-child\)\]\:before\:text-b9>a:not(:last-child)::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 .\[\&\>a\:not\(\:last-child\)\]\:before\:content-\[\'\2c \'\]>a:not(:last-child)::before {
