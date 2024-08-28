@@ -1,1307 +1,267 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="[##cms.query.catid##]"  q="[##cms.query.q##]">
+    <member name="projectList" type="list" size="301x201" propertyid="91112"   postsql=" select * from [db.projectList] where title like '%[##cms.query.q##]%'" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="25653"  q="[##cms.query.q##]">
+    <member name="articleList" type="list" size="426x283" perpage="200" link="article.bc"  
+     propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.articleList]"/> 
+</basis> 	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="58667" q="[##cms.query.q##]"> 
+    <member name="galleryList" type="list" size="330x185"   postsql=" select * from [db.galleryList] where title like '%[##cms.query.q##]%'" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" q="[##cms.query.q##]" >
+     <member name="productList" type="list" size="260x260" postsql=" select * from [db.productList] where title like '%[##cms.query.q##]%'" /> 
+</basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>search</title>
-    <link rel="stylesheet" href="css/outputDesk.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <title>جستجو</title>
+    <meta name="description" content="جستجو">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/leaflet.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/outputDesk.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/f-style.css">
 </head>
 <body dir="rtl">
-    <main class="Search overflow-hidden bg-b4">
-      <!-- HEADER -->
-      <header class="DesktopHeader z-[9999] w-full fixed top-0 [&.GoBottom]:bg-[#FFFFFF80]
-      left-0 justify-center items-center py-8 duration-[.5s]"  dir="rtl">
-      <div class="Co w-[90%] mr-auto ml-auto grid grid-cols-[1fr,1fr] justify-center items-center">
-   
-           <div class="Right w-full flex justify-start items-center ">
-            <div class="Items w-auto flex justify-start items-center gap-5">
-                <span class="Item w-auto flex justify-start items-center">
-                  <div class="Toggles w-auto flex justify-start flex-col items-start gap-1">
-                    <span class="Toggle-item w-[31px] h-[5px] bg-f rounded-[4px]"></span>
-                    <span class="Toggle-item w-[21px] h-[5px] bg-f rounded-[4px]"></span>
-                  </div>
-                </span>
-                <span class="Item w-auto flex justify-start items-center">
-                     <a href="" class="w-auto flex justify-start items-center font-normal leading-21.91 text-f
-                     font-IRANSansWeb400 text-sm">
-                        محصولات
-                     </a>
-                </span>
-                <span class="Item w-auto flex justify-start items-center">
-                    <div class="searchIcon w-auto flex justify-start items-center">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.6928 0C4.79783 0 0 4.79783 0 10.6928C0 16.5878 4.79783 21.3856 10.6928 21.3856C16.5878 21.3856 21.3856 16.5878 21.3856 10.6928C21.3856 4.79421 16.5878 0 10.6928 0ZM10.6928 19.9336C5.59445 19.9336 1.4484 15.7876 1.4484 10.6892C1.4484 5.59083 5.59445 1.44478 10.6928 1.44478C15.7912 1.44478 19.9372 5.59083 19.9372 10.6892C19.9372 15.7876 15.7876 19.9336 10.6928 19.9336Z" fill="white"/>
-                            <path d="M20.5956 19.7562C20.3167 19.4701 19.8569 19.4665 19.5708 19.7453C19.2848 20.0241 19.2811 20.484 19.5599 20.7701L22.5038 23.7827C22.645 23.9276 22.8333 24 23.0216 24C23.2027 24 23.3873 23.9312 23.5286 23.7936C23.8146 23.5148 23.8182 23.0549 23.5394 22.7688L20.5956 19.7562Z" fill="white"/>
-                            </svg>
-                            
-                    </div>
-                </span>
-            </div>
-           </div>
-           <div class="Left w-full flex justify-end items-center">
-            <div class="Logo w-full flex justify-end items-center">
-                <a href="" class="w-auto">
-                    <img src="images/logo (9) 1 (1).png" alt="">
-                </a>
-            </div>
-           </div>
-      </div>
-     <div class="Menu-Container w-full grid grid-cols-[1fr,2fr] justify-center top-0 left-0 h-[100vh] 
-      items-center fixed z-[100] bg-cover bg-no-repeat before:content-['']
-       before:absolute before:w-full before:h-full opacity-0 invisible [&.Open]:opacity-[1]
-       [&.Open]:visible group duration-[1.5s]
-      before:left-0 before:bottom-0 before:z-[0] before:bg-[#1e376183]
-      ">
-      <div class="BG w-full flex justify-end h-full
-       items-end absolute left-0 bottom-0 z-[-1]">
-        <img src="images/menu.jpeg" alt="" class=" h-0 duration-[1.5s] opacity-0 invisible w-full object-cover
-        group-[&.Open]:visible group-[&.Open]:opacity-[1] group-[&.Open]:h-[100%]">
-      </div>
-        <div class="Right relative z-0 flex 
-        flex-col justify-between items-start h-[90%] mr-10 my-auto">
-         <div class="Close w-auto flex justify-center items-center">
-            <span class="Close-Icon w-auto flex justify-center items-center">
-                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.42103 0.42103C0.982418 -0.140343 1.89259 -0.140343 2.45397 0.42103L11.5 9.4671L20.5461 0.42103C21.1074 -0.140343 22.0176 -0.140343 22.579 0.42103C23.1403 0.982418 23.1403 1.89259 22.579 2.45397L13.5329 11.5L22.579 20.5461C23.1403 21.1074 23.1403 22.0176 22.579 22.579C22.0176 23.1403 21.1074 23.1403 20.5461 22.579L11.5 13.5329L2.45397 22.579C1.89259 23.1403 0.982418 23.1403 0.42103 22.579C-0.140343 22.0176 -0.140343 21.1074 0.42103 20.5461L9.4671 11.5L0.42103 2.45397C-0.140343 1.89259 -0.140343 0.982418 0.42103 0.42103Z" fill="white"/>
-                    </svg>                      
-            </span>
-         </div>
-         <div class="Logo-Inner w-auto flex justify-center items-center">
-            <a href="" class="w-auto flex justify-center items-center">
-                <img src="images/Mask group (5).png" alt="">
-            </a>
-         </div>
-         <div class="Socials w-auto flex justify-start items-center gap-6">
-            <a href="" class="Social-link">
-                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5511 5.4389C24.3444 -1.7741 12.66 -1.77452 5.45366 5.4389C-0.766505 11.6649 -1.72659 21.4214 3.12929 28.7223L3.12803 28.7231C3.26458 28.93 3.30408 29.1975 3.21122 29.4478L0.612065 36.4067L7.5192 33.822C7.76164 33.7147 8.05155 33.7299 8.28895 33.8872C20.4545 41.9716 36.9557 33.2971 36.9557 18.4998C36.9562 13.3992 34.8906 8.7815 31.5511 5.4389ZM15.8205 18.043C17.1503 19.867 18.8373 21.2944 20.8255 22.3508C21.4141 21.7103 21.8877 21.0193 22.6238 20.8406V20.8398C22.9595 20.7586 23.3141 20.775 23.6528 20.8839L27.1381 22.0047C27.9154 22.2545 28.507 22.977 28.4238 23.8329C28.3578 24.5104 28.2032 26.768 28.0074 27.2722C27.7137 28.0296 26.9654 28.4935 26.1553 28.4334C16.7721 27.7382 9.27298 20.2321 8.57844 10.8401C8.49861 9.76098 9.26248 8.95057 10.3868 8.84122C15.0738 8.38407 14.3864 7.93954 16.1217 13.3446C16.2305 13.6835 16.2469 14.0389 16.1658 14.3749H16.165C15.9864 15.1118 15.2957 15.5857 14.6562 16.1745C15.0007 16.8268 15.3894 17.4517 15.8205 18.043ZM16.1284 20.873C17.307 22.0527 18.681 23.0427 20.1604 23.8177C21.7003 24.6248 22.6679 22.4429 22.9986 22.4038L26.807 23.6436L26.5511 26.4719C26.5322 26.6641 26.4936 26.8411 26.2679 26.8243C17.6856 26.1888 10.8205 19.3178 10.1847 10.727L10.2511 10.5319C10.3822 10.3901 12.9616 10.2072 13.3255 10.1719C13.5041 10.1546 14.4431 13.3816 14.5894 13.837C14.7772 14.4229 12.3158 15.1698 13.1894 16.8407C13.9625 18.3185 14.952 19.695 16.1284 20.873Z" fill="white"/>
-                    </svg>
-                    
-            </a>
-            <a href="" class="Social-link">
-                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.5003 2.45642C4.20199 2.45179 -2.95951 19.7295 7.14803 29.8362C9.39192 32.0798 12.251 33.6079 15.3637 34.2271C18.4764 34.8464 21.7029 34.529 24.6352 33.3151C27.5674 32.1013 30.0737 30.0454 31.837 27.4076C33.6004 24.7699 34.5416 21.6686 34.5416 18.4961C34.5416 9.63981 27.3616 2.4595 18.5003 2.45642ZM9.41386 10.457C10.1866 6.4513 15.4185 5.37819 17.706 8.75634C19.9934 12.1329 17.0551 16.5919 13.0478 15.821C12.4568 15.7075 11.8939 15.4787 11.3913 15.1477C10.8888 14.8166 10.4564 14.3898 10.1189 13.8917C9.78146 13.3935 9.54548 12.8338 9.42451 12.2445C9.30353 11.6551 9.29991 11.0477 9.41386 10.457ZM16.0802 24.3149C15.3029 28.3191 10.0694 29.3845 7.7866 26.0048C5.5038 22.6251 8.44522 18.1723 12.4524 18.9448C13.0436 19.0589 13.6064 19.2884 14.1087 19.6202C14.611 19.9519 15.043 20.3794 15.3799 20.8782C15.7169 21.3769 15.9521 21.9372 16.0723 22.5269C16.1925 23.1166 16.1952 23.7242 16.0802 24.3149ZM18.0237 20.6068C16.2468 20.263 15.7687 17.9441 17.2664 16.9265C18.7625 15.9089 20.7461 17.204 20.4129 18.9833C20.3635 19.247 20.2625 19.4983 20.1155 19.7228C19.9686 19.9473 19.7788 20.1405 19.5569 20.2914C19.335 20.4423 19.0854 20.5479 18.8226 20.602C18.5597 20.6561 18.2872 20.6578 18.0237 20.6068ZM27.5837 26.5244C26.8109 30.5301 21.579 31.6016 19.2916 28.225C17.0026 24.8469 19.9409 20.3894 23.9497 21.1588C24.5409 21.2723 25.104 21.5012 25.6066 21.8323C26.1093 22.1634 26.5418 22.5904 26.8792 23.0887C27.2167 23.587 27.4527 24.1469 27.5735 24.7365C27.6944 25.326 27.6979 25.9335 27.5837 26.5244ZM24.5497 18.0412C20.5425 17.2688 19.4705 12.0343 22.85 9.74619C26.2279 7.45966 30.6871 10.3968 29.9174 14.4025C29.8046 14.9941 29.5761 15.5575 29.2452 16.0607C28.9142 16.5639 28.4872 16.9968 27.9886 17.3348C27.49 17.6728 26.9296 17.9092 26.3396 18.0304C25.7495 18.1516 25.1412 18.1553 24.5497 18.0412ZM20.9512 35.8679L24.4433 36.8084C25.9117 37.1979 27.4747 36.9885 28.7887 36.2264C30.1027 35.4643 31.0601 34.2117 31.4506 32.7441L32.4377 29.0407C29.6585 32.7413 25.5297 35.195 20.9497 35.8679H20.9512ZM32.74 5.54779L29.0953 4.57798C30.9372 5.99422 32.4793 7.76208 33.6322 9.77892C34.785 11.7958 35.5256 14.0214 35.811 16.3267L36.8136 12.5354C37.1973 11.0687 36.9836 9.50976 36.2195 8.20026C35.4553 6.89075 34.203 5.93748 32.7369 5.54933L32.74 5.54779ZM1.02613 21.2899L0.191672 24.4352C-0.197949 25.903 0.0114753 27.4654 0.773905 28.7789C1.53634 30.0924 2.78936 31.0495 4.25752 31.4397L7.50742 32.3063C4.03778 29.5794 1.72467 25.6461 1.02613 21.2899ZM15.9646 1.08111L12.5604 0.193013C11.8328 -0.000727666 11.0742 -0.0492281 10.3278 0.0502839C9.5815 0.149796 8.86209 0.395369 8.21075 0.772965C7.5594 1.15056 6.98889 1.65278 6.53183 2.2509C6.07476 2.84903 5.74011 3.53133 5.54699 4.25882L4.69711 7.46891C7.50082 3.98073 11.5306 1.69557 15.9646 1.08111Z" fill="white"/>
-                    </svg>
-                    
-            </a>
-            <a href="" class="Social-link">
-                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_499_7474)">
-                    <path d="M19.0017 0.780029C8.92792 0.780029 0.761719 9.16113 0.761719 19.5C0.761719 29.8389 8.92792 38.22 19.0017 38.22C29.0755 38.22 37.2417 29.8389 37.2417 19.5C37.2417 9.16113 29.0755 0.780029 19.0017 0.780029ZM14.5367 27.2591H10.8431V15.0599H14.5367V27.2591ZM12.6671 13.5623C11.5005 13.5623 10.7462 12.714 10.7462 11.6649C10.7462 10.5944 11.5233 9.77148 12.7146 9.77148C13.9059 9.77148 14.6355 10.5944 14.6583 11.6649C14.6583 12.714 13.9059 13.5623 12.6671 13.5623ZM28.0267 27.2591H24.3331V20.4984C24.3331 18.9248 23.7973 17.8562 22.4616 17.8562C21.4413 17.8562 20.8352 18.5796 20.5673 19.2758C20.4685 19.5234 20.4438 19.8744 20.4438 20.2235V27.2571H16.7483V18.9501C16.7483 17.4272 16.7008 16.1538 16.6514 15.0579H19.8605L20.0296 16.7525H20.1037C20.5901 15.9569 21.7814 14.783 23.7745 14.783C26.2046 14.783 28.0267 16.4541 28.0267 20.046V27.2591Z" fill="white"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_499_7474">
-                    <rect width="38" height="39" fill="white"/>
-                    </clipPath>
-                    </defs>
-                    </svg>
-                    
-            </a>
-            <a href="" class="Social-link">
-                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-   <path d="M16.2586 22.7981C16.7701 23.1791 17.2825 23.5615 17.7953 23.9434C17.2599 24.4716 16.7236 25.0002 16.19 25.5279C16.1404 25.5789 16.0939 25.6322 16.0451 25.6841L16.0708 25.3347C16.1322 24.4896 16.1941 23.6432 16.2586 22.7981ZM20.4664 15.3478C17.8648 16.9888 15.2632 18.6342 12.6603 20.2742C12.6075 20.3072 12.5497 20.3329 12.491 20.3595C12.8319 21.4493 13.1727 22.5395 13.5126 23.6301C13.7555 24.3975 14.0074 25.1632 14.2372 25.9337C14.332 26.2534 14.4963 26.4244 14.843 26.364C14.9391 25.0598 15.0312 23.7565 15.1296 22.4519C15.1409 22.2998 15.159 22.1454 15.1775 21.9933C15.0303 21.9088 15.0949 21.7472 15.1459 21.694C15.2357 21.6014 15.3255 21.5071 15.4154 21.4132C15.4474 21.3834 15.4808 21.3531 15.512 21.3233C15.5571 21.2764 15.6009 21.2294 15.6456 21.1829C15.8609 20.9825 16.0754 20.7785 16.2907 20.5771C16.4135 20.4611 16.5376 20.3446 16.6609 20.2291C16.9949 19.9162 17.3285 19.6039 17.6684 19.296C18.5325 18.5105 19.4141 17.7431 20.2799 16.9608C21.3837 15.9622 22.4847 14.96 23.5781 13.9502C23.6584 13.8387 23.7103 13.6951 23.7807 13.5724C23.5848 13.5985 23.3551 13.566 23.1993 13.6577C22.2789 14.2062 21.3733 14.7763 20.4664 15.3478ZM37.951 19.0405C37.951 29.4838 29.485 37.9498 19.0417 37.9498C8.59795 37.9498 0.132812 29.4838 0.132812 19.0405C0.132812 8.59675 8.59795 0.131165 19.0417 0.131165C29.485 0.131165 37.951 8.59675 37.951 19.0405ZM27.4856 11.5071C27.4757 11.4349 27.4684 11.3608 27.454 11.29C27.2874 10.4873 26.8477 10.2449 26.0604 10.5144C25.9449 10.5532 25.8266 10.5785 25.7092 10.6106C25.27 10.792 24.8353 10.9861 24.3897 11.1527C23.6512 11.4313 22.9054 11.6917 22.1606 11.9603C21.7064 12.1495 21.2555 12.3472 20.7973 12.5264C19.6493 12.9751 18.4991 13.4153 17.3493 13.8595C14.9829 14.7718 12.6161 15.6837 10.2479 16.596C9.71613 16.8014 9.17983 16.996 8.65347 17.2149C8.19076 17.4059 7.71857 17.591 7.29242 17.8474C7.10373 17.9607 6.89607 18.2586 6.91774 18.4478C6.93851 18.6387 7.23058 18.8021 7.40934 18.9728C7.44184 19.0039 7.49737 19.0138 7.54432 19.0283C8.79883 19.4165 10.0533 19.8047 11.3088 20.1921C11.302 20.323 11.3169 20.4566 11.358 20.5889L11.8144 22.0528L12.4143 23.9737C12.4847 24.1967 12.5556 24.4156 12.6251 24.6345C12.7958 25.1695 12.9732 25.722 13.1343 26.2628C13.4855 27.4361 14.4326 27.5268 14.7148 27.5268C14.7567 27.5268 14.8014 27.5241 14.8457 27.5223C14.889 27.5241 14.9324 27.5255 14.9752 27.5255C15.6998 27.5255 16.1652 27.1264 16.4424 26.8876C16.4934 26.8429 16.5421 26.8018 16.5773 26.7748C16.6347 26.7319 16.6884 26.6854 16.7344 26.6335C16.7706 26.596 16.8035 26.5572 16.8392 26.5201C16.8974 26.4551 16.952 26.3942 17.0003 26.3463C17.4215 25.9292 17.8418 25.5135 18.2639 25.0973L18.7641 24.6038C18.8345 24.6526 18.9049 24.7009 18.9758 24.7492C20.1138 25.5988 21.2501 26.4524 22.3922 27.2975C23.2445 27.9277 23.8403 27.7643 24.2529 26.8014C24.4285 25.9893 24.6032 25.1754 24.7775 24.365C24.9373 23.5547 25.0953 22.7467 25.2533 21.9382C25.3549 21.494 25.4551 21.0484 25.5553 20.6047C25.8216 19.3533 26.0875 18.1006 26.3525 16.8488C26.4387 16.4493 26.5232 16.0502 26.6089 15.6507C26.6297 15.5559 26.6545 15.4607 26.6735 15.365C26.9452 14.0789 27.2152 12.7937 27.4856 11.5071Z" fill="white"/>
-   </svg>
-   
-            </a>
-         </div>
-        </div>
-        <div class="Left  w-full 
-        relative z-0 flex justify-start items-center h-full">
-            <div class="Menu w-full flex  justify-start items-start h-full">
-                <ul class="Menu-1 w-[50%] flex-col flex h-0  group-[&.Open]:h-[50%] duration-[.4s]
-                 delay-[1s] border-r-[1px] border-f pr-5
-                 my-auto justify-between items-start">
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            صفحه نخست
-                        </a>
-                    </li>
-                    <li class="Menu-item navbtn w-auto flex justify-center items-center relative">
-                        <span class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            محصولات
-                        </span>
-                        <div class="DropDown-Menu translate-y-100 opacity-0 [&.openNav]:opacity-[1]
-                         flex-col flex absolute ml-[-1em] [&.openNav]:translate-y-[0]
-                         duration-150
-                        left-0 before:content-['']  before:absolute before:right-0 before:top-[10%]
-                         before:w-[60%] before:h-[1px] before:bg-b7 before:z-1
-                         top-0 z-5
-                        justify-between items-start translate-x-[-100%] pr-[8em]">
-                            <div class="Menu-item">
-                                <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                    تهویه مطبوع
-                                </a>
-                            </div>
-                            <div class="Menu-item">
-                                <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                    تهویه مطبوع
-                                </a>
-                            </div>
-                            <div class="Menu-item">
-                                <a href="" class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
-                                    تهویه مطبوع
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-   
-                    <li class="Menu-item w-auto flex justify-center items-center overflow-hidden">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            پروژه ها
-                        </a>
-                
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            برند
-                        </a>
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            اخبار
-                        </a>
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            اخبار
-                        </a>
-                    </li>
-                </ul>
-                <ul class="Menu-2 w-[50% flex flex-col h-0 duration-[1s] group-[&.Open]:h-[50%] delay-[.4s]  border-r-[1px] border-f pr-5
-                 my-auto justify-between items-start gap-4">
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            درباره ما
-                        </a>
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center">
-                        <a href=" " class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            گالری
-                        </a>
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            خدمات
-                        </a>
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            تماس با ما
-                        </a>
-                    </li>
-                    <li class="Menu-item w-auto flex justify-center items-center ">
-                        <a href="" class="menu-link font-IRANSansWeb400 font-normal relative opacity-0 
-                        translate-x-[100%] duration-[.3s] overflow-hidden before:content-['']
-                        before:absolute before:duration-[.5s]
-                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
-                        hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
-                            نمایندگی ها
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-     </div>
-     </header>
-    <!-- HEADER -->
-    <div class="Result-Container mt-[15em] mb-[8em] w-full flex justify-start items-center flex-col gap-[4em]">
-      <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto">
-          <div class="Title w-full flex justify-start items-center">
-              <p class="text-xl font-IRANSansWeb400 font-normal leading-31.03 text-b5">
-                  نتیجه جستجو در محصولات:
-              </p>
-          </div>
-          <div class="Container w-full flex justify-start items-center mt-[2em]">
-              <div class="swiper-products pt-[1em] pb-[1em] overflow-hidden w-full flex justify-center items-center">
-                  <div class="swiper-wrapper  w-full">
-                      <div class="swiper-slide w-full flex justify-center items-center">
-                        <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
-                        w-full flex justify-start items-start
-                       overflow-hidden flex-col">
-                           <div class="Box-1 w-full flex justify-start flex-col items-start">
-                               <a href="" class="w-full flex justify-start items-start ">
-                                   <img src="images/pict8696700000016382171000011854001 1 (3).png" alt="" class="w-full object-cover">
-                               </a>
-                               <a href="" class=" w-auto
-                               my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center mx-auto">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                           <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
-                            justify-between ease-in-out duration-[.5s]
-                            group-hover:opacity-[1] group-hover:translate-y-[0]
-                           items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
-                            bg-f" >
-                               <a href="" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
-                               group-hover:translate-x-[0] duration-75 delay-[.8s] 
-                               flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                                justify-center items-center">
-                                   مشاهده
-                               </a>
-                               <a href="" class=" w-auto flex translate-x-[-100px] opacity-0
-                               group-hover:opacity-[1] duration-75 delay-[.8s] 
-                               group-hover:translate-x-[0] 
-                               font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center ">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                       </div>
-                      </div>
-                      <div class="swiper-slide w-full flex justify-center items-center">
-                        <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
-                        w-full flex justify-start items-start
-                       overflow-hidden flex-col">
-                           <div class="Box-1 w-full flex justify-start flex-col items-start">
-                               <a href="" class="w-full flex justify-start items-start ">
-                                   <img src="images/pict8696700000016382171000011854001 1 (3).png" alt="" class="w-full object-cover">
-                               </a>
-                               <a href="" class=" w-auto
-                               my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center mx-auto">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                           <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
-                            justify-between ease-in-out duration-[.5s]
-                            group-hover:opacity-[1] group-hover:translate-y-[0]
-                           items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
-                            bg-f" >
-                               <a href="" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
-                               group-hover:translate-x-[0] duration-75 delay-[.8s] 
-                               flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                                justify-center items-center">
-                                   مشاهده
-                               </a>
-                               <a href="" class=" w-auto flex translate-x-[-100px] opacity-0
-                               group-hover:opacity-[1] duration-75 delay-[.8s] 
-                               group-hover:translate-x-[0] 
-                               font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center ">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                       </div>
-                      </div>
-        
-                      <div class="swiper-slide w-full flex justify-center items-center">
-                        <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
-                        w-full flex justify-start items-start
-                       overflow-hidden flex-col">
-                           <div class="Box-1 w-full flex justify-start flex-col items-start">
-                               <a href="" class="w-full flex justify-start items-start ">
-                                   <img src="images/pict8696700000016382171000011854001 1 (3).png" alt="" class="w-full object-cover">
-                               </a>
-                               <a href="" class=" w-auto
-                               my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center mx-auto">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                           <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
-                            justify-between ease-in-out duration-[.5s]
-                            group-hover:opacity-[1] group-hover:translate-y-[0]
-                           items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
-                            bg-f" >
-                               <a href="" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
-                               group-hover:translate-x-[0] duration-75 delay-[.8s] 
-                               flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                                justify-center items-center">
-                                   مشاهده
-                               </a>
-                               <a href="" class=" w-auto flex translate-x-[-100px] opacity-0
-                               group-hover:opacity-[1] duration-75 delay-[.8s] 
-                               group-hover:translate-x-[0] 
-                               font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center ">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                       </div>
-                      </div>
-        
-                      <div class="swiper-slide w-full flex justify-center items-center">
-                        <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
-                        w-full flex justify-start items-start
-                       overflow-hidden flex-col">
-                           <div class="Box-1 w-full flex justify-start flex-col items-start">
-                               <a href="" class="w-full flex justify-start items-start ">
-                                   <img src="images/pict8696700000016382171000011854001 1 (3).png" alt="" class="w-full object-cover">
-                               </a>
-                               <a href="" class=" w-auto
-                               my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center mx-auto">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                           <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
-                            justify-between ease-in-out duration-[.5s]
-                            group-hover:opacity-[1] group-hover:translate-y-[0]
-                           items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
-                            bg-f" >
-                               <a href="" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
-                               group-hover:translate-x-[0] duration-75 delay-[.8s] 
-                               flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                                justify-center items-center">
-                                   مشاهده
-                               </a>
-                               <a href="" class=" w-auto flex translate-x-[-100px] opacity-0
-                               group-hover:opacity-[1] duration-75 delay-[.8s] 
-                               group-hover:translate-x-[0] 
-                               font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center ">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                       </div>
-                      </div>
-        
-                      <div class="swiper-slide w-full flex justify-center items-center">
-                        <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
-                        w-full flex justify-start items-start
-                       overflow-hidden flex-col">
-                           <div class="Box-1 w-full flex justify-start flex-col items-start">
-                               <a href="" class="w-full flex justify-start items-start ">
-                                   <img src="images/pict8696700000016382171000011854001 1 (3).png" alt="" class="w-full object-cover">
-                               </a>
-                               <a href="" class=" w-auto
-                               my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center mx-auto">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                           <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
-                            justify-between ease-in-out duration-[.5s]
-                            group-hover:opacity-[1] group-hover:translate-y-[0]
-                           items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
-                            bg-f" >
-                               <a href="" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
-                               group-hover:translate-x-[0] duration-75 delay-[.8s] 
-                               flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                                justify-center items-center">
-                                   مشاهده
-                               </a>
-                               <a href="" class=" w-auto flex translate-x-[-100px] opacity-0
-                               group-hover:opacity-[1] duration-75 delay-[.8s] 
-                               group-hover:translate-x-[0] 
-                               font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                               justify-center items-center ">
-                                   تهویه مطبوع
-                               </a>
-                           </div>
-                       </div>
-                      </div>
-        
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto overflow-hidden">
-          <div class="Title w-full flex justify-start items-center">
-              <p class="text-xl text-b5 font-IRANSansWeb400 font-normal leading-31.03">
-                  نتیجه جستجو در پروژه ها:
-              </p>
-          </div>
-          <div class="Container w-full flex justify-start items-center mt-[2em]">
-              <div class="swiper-projects pt-[1em] pb-[1em]  w-full flex justify-center items-center">
-                  <div class="swiper-wrapper  w-full">
-                    <div class="swiper-slide w-full flex justify-start items-start relative">
-                        <div class="IMG w-full flex justify-start items-start">
-                            <a href="" class="w-full flex justify-start items-start">
-                            <img src="images/cat607850000001 1 (1).png" alt=" " class="w-full object-cover">
-                        </a>
-                        </div>
-                        <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
-                        justify-end items-end">
-                            <div class="Ttile  w-full flex justify-start items-start ">
-                                <p class="font-IRANSansWeb500 pr-[1em] pb-[1em]
-                                text-2xl font-medium leading-23 text-f">
-                                    پروژه های صنعتی
-                                </p>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start relative">
-                        <div class="IMG w-full flex justify-start items-start">
-                            <a href="" class="w-full flex justify-start items-start">
-                            <img src="images/cat607850000001 1 (1).png" alt=" " class="w-full object-cover">
-                        </a>
-                        </div>
-                        <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
-                        justify-end items-end">
-                            <div class="Ttile  w-full flex justify-start items-start ">
-                                <p class="font-IRANSansWeb500 pr-[1em] pb-[1em]
-                                text-2xl font-medium leading-23 text-f">
-                                    پروژه های صنعتی
-                                </p>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start relative">
-                        <div class="IMG w-full flex justify-start items-start">
-                            <a href="" class="w-full flex justify-start items-start">
-                            <img src="images/cat607850000001 1 (1).png" alt=" " class="w-full object-cover">
-                        </a>
-                        </div>
-                        <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
-                        justify-end items-end">
-                            <div class="Ttile  w-full flex justify-start items-start ">
-                                <p class="font-IRANSansWeb500 pr-[1em] pb-[1em]
-                                text-2xl font-medium leading-23 text-f">
-                                    پروژه های صنعتی
-                                </p>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start relative">
-                        <div class="IMG w-full flex justify-start items-start">
-                            <a href="" class="w-full flex justify-start items-start">
-                            <img src="images/cat607850000001 1 (1).png" alt=" " class="w-full object-cover">
-                        </a>
-                        </div>
-                        <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
-                        justify-end items-end">
-                            <div class="Ttile  w-full flex justify-start items-start ">
-                                <p class="font-IRANSansWeb500 pr-[1em] pb-[1em]
-                                text-2xl font-medium leading-23 text-f">
-                                    پروژه های صنعتی
-                                </p>
-                            </div>
-                        
-                        </div>
-                    </div>
-                  </div>
+    <main class="Search overflow-hidden">
+        <basis core="call" file="header.inc" pageindex="[##cms.cdn.pageindex##]" />
+
+        <div class="Result-Container mt-[15em] mb-[8em] w-full flex justify-start items-center flex-col gap-[4em]">
       
-              </div>
-          </div>
-      </div>
-      <div class="Box w-[95%] flex justify-start items-center mt-[4em] flex-col mr-auto overflow-hidden">
-          <div class="Title w-full flex justify-start items-center">
-              <p class="text-xl tex-b5 font-IRANSansWeb400 font-normal leading-31.03">
-                  نتیجه جستجو در اخبار و مقالات::
-              </p>
-          </div>
-          <div class="Container w-full flex justify-start items-center mt-[2em]">
-              <div class="swiper-news pt-[1em] pb-[1em]  w-full flex justify-center items-center">
-                  <div class="swiper-wrapper  w-full">
-                    <div class="swiper-slide w-full flex justify-start items-start">
-                        <div class="Blog w-full flex justify-start gap-[1.2em]
-                        items-start flex-col">
-                            <div class="IMG w-full flex justify-center items-center
-                            overflow-hidden group ">
-                            <a href="">
-                                <img src="images/pict8559241000013367203000018654001 (1) 3.png" 
-                                class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
-                            </div>
-                            <div class="Title w-full flex justify-start items-center">
-                                <a href="">
-                                <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
-                                    هواکش ها و فن های صنعتی
-                                </p></a>
-                            </div>
-                            <div class="Date w-full flex justify-start items-center">
-                                <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
-                                    1402-12-07
-                                </span>
-                            </div>
-                            <div class="Desc w-full flex justify-center items-start flex-col">
-                                <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
-                                    در صنایع کشورهای توسعه یافته صنعتی حدود 15 درصد از برق مصرفی در الکتروموتورها توسط فن ها به مصرف میرسد.
-                                </p>
-                            </div>
-                            <div class="Btn w-full flex justify-start items-center" >
-                                <a href="#" class="btn-show group bg-transparent mt-[1em]
-                                duration-[.4s]
-                               border-none outline-none flex justify-start
-                                items-start relative">
-                                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
-                                   justify-center items-center leading-23 text-b1 rounded-sm
-                                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
-                                    pl-[2.5em] border-t-[1px]
-                                    border-b-[1px] border-b3">
-                                    مشاهده 
-                                   </span>
-                                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     width="100" height="100">
-                                       <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
-                                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                       style="transform: translate(2px,82px);" r="30"
-                                        cy="20" stroke-width="5" cx="100"></circle>
-                                        <circle id="c2" cx="100" cy="100" 
-                                        fill="transparent" stroke="#E4E4E7" stroke-width="5" 
-                                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
-                                         </svg>
-                               </a>
-                            </div>
-                        </div>
-                     
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start">
-                        <div class="Blog w-full flex justify-start gap-[1.2em]
-                        items-start flex-col">
-                            <div class="IMG w-full flex justify-center items-center
-                            overflow-hidden group ">
-                            <a href="">
-                                <img src="images/pict8559241000013367203000018654001 (1) 3.png" 
-                                class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
-                            </div>
-                            <div class="Title w-full flex justify-start items-center">
-                                <a href="">
-                                <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
-                                    هواکش ها و فن های صنعتی
-                                </p></a>
-                            </div>
-                            <div class="Date w-full flex justify-start items-center">
-                                <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
-                                    1402-12-07
-                                </span>
-                            </div>
-                            <div class="Desc w-full flex justify-center items-start flex-col">
-                                <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
-                                    در صنایع کشورهای توسعه یافته صنعتی حدود 15 درصد از برق مصرفی در الکتروموتورها توسط فن ها به مصرف میرسد.
-                                </p>
-                            </div>
-                            <div class="Btn w-full flex justify-start items-center" >
-                                <a href="#" class="btn-show group bg-transparent mt-[1em]
-                                duration-[.4s]
-                               border-none outline-none flex justify-start
-                                items-start relative">
-                                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
-                                   justify-center items-center leading-23 text-b1 rounded-sm
-                                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
-                                    pl-[2.5em] border-t-[1px]
-                                    border-b-[1px] border-b3">
-                                    مشاهده 
-                                   </span>
-                                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     width="100" height="100">
-                                       <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
-                                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                       style="transform: translate(2px,82px);" r="30"
-                                        cy="20" stroke-width="5" cx="100"></circle>
-                                        <circle id="c2" cx="100" cy="100" 
-                                        fill="transparent" stroke="#E4E4E7" stroke-width="5" 
-                                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
-                                         </svg>
-                               </a>
-                            </div>
-                        </div>
-                     
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start">
-                        <div class="Blog w-full flex justify-start gap-[1.2em]
-                        items-start flex-col">
-                            <div class="IMG w-full flex justify-center items-center
-                            overflow-hidden group ">
-                            <a href="">
-                                <img src="images/pict8559241000013367203000018654001 (1) 3.png" 
-                                class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
-                            </div>
-                            <div class="Title w-full flex justify-start items-center">
-                                <a href="">
-                                <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
-                                    هواکش ها و فن های صنعتی
-                                </p></a>
-                            </div>
-                            <div class="Date w-full flex justify-start items-center">
-                                <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
-                                    1402-12-07
-                                </span>
-                            </div>
-                            <div class="Desc w-full flex justify-center items-start flex-col">
-                                <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
-                                    در صنایع کشورهای توسعه یافته صنعتی حدود 15 درصد از برق مصرفی در الکتروموتورها توسط فن ها به مصرف میرسد.
-                                </p>
-                            </div>
-                            <div class="Btn w-full flex justify-start items-center" >
-                                <a href="#" class="btn-show group bg-transparent mt-[1em]
-                                duration-[.4s]
-                               border-none outline-none flex justify-start
-                                items-start relative">
-                                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
-                                   justify-center items-center leading-23 text-b1 rounded-sm
-                                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
-                                    pl-[2.5em] border-t-[1px]
-                                    border-b-[1px] border-b3">
-                                    مشاهده 
-                                   </span>
-                                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     width="100" height="100">
-                                       <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
-                                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                       style="transform: translate(2px,82px);" r="30"
-                                        cy="20" stroke-width="5" cx="100"></circle>
-                                        <circle id="c2" cx="100" cy="100" 
-                                        fill="transparent" stroke="#E4E4E7" stroke-width="5" 
-                                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
-                                         </svg>
-                               </a>
-                            </div>
-                        </div>
-                     
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start">
-                        <div class="Blog w-full flex justify-start gap-[1.2em]
-                        items-start flex-col">
-                            <div class="IMG w-full flex justify-center items-center
-                            overflow-hidden group ">
-                            <a href="">
-                                <img src="images/pict8559241000013367203000018654001 (1) 3.png" 
-                                class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
-                            </div>
-                            <div class="Title w-full flex justify-start items-center">
-                                <a href="">
-                                <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
-                                    هواکش ها و فن های صنعتی
-                                </p></a>
-                            </div>
-                            <div class="Date w-full flex justify-start items-center">
-                                <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
-                                    1402-12-07
-                                </span>
-                            </div>
-                            <div class="Desc w-full flex justify-center items-start flex-col">
-                                <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
-                                    در صنایع کشورهای توسعه یافته صنعتی حدود 15 درصد از برق مصرفی در الکتروموتورها توسط فن ها به مصرف میرسد.
-                                </p>
-                            </div>
-                            <div class="Btn w-full flex justify-start items-center" >
-                                <a href="#" class="btn-show group bg-transparent mt-[1em]
-                                duration-[.4s]
-                               border-none outline-none flex justify-start
-                                items-start relative">
-                                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
-                                   justify-center items-center leading-23 text-b1 rounded-sm
-                                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
-                                    pl-[2.5em] border-t-[1px]
-                                    border-b-[1px] border-b3">
-                                    مشاهده 
-                                   </span>
-                                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     width="100" height="100">
-                                       <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
-                                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                       style="transform: translate(2px,82px);" r="30"
-                                        cy="20" stroke-width="5" cx="100"></circle>
-                                        <circle id="c2" cx="100" cy="100" 
-                                        fill="transparent" stroke="#E4E4E7" stroke-width="5" 
-                                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
-                                         </svg>
-                               </a>
-                            </div>
-                        </div>
-                     
-                    </div>
-                    <div class="swiper-slide w-full flex justify-start items-start">
-                        <div class="Blog w-full flex justify-start gap-[1.2em]
-                        items-start flex-col">
-                            <div class="IMG w-full flex justify-center items-center
-                            overflow-hidden group ">
-                            <a href="">
-                                <img src="images/pict8559241000013367203000018654001 (1) 3.png" 
-                                class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
-                            </div>
-                            <div class="Title w-full flex justify-start items-center">
-                                <a href="">
-                                <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
-                                    هواکش ها و فن های صنعتی
-                                </p></a>
-                            </div>
-                            <div class="Date w-full flex justify-start items-center">
-                                <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
-                                    1402-12-07
-                                </span>
-                            </div>
-                            <div class="Desc w-full flex justify-center items-start flex-col">
-                                <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
-                                    در صنایع کشورهای توسعه یافته صنعتی حدود 15 درصد از برق مصرفی در الکتروموتورها توسط فن ها به مصرف میرسد.
-                                </p>
-                            </div>
-                            <div class="Btn w-full flex justify-start items-center" >
-                                <a href="#" class="btn-show group bg-transparent mt-[1em]
-                                duration-[.4s]
-                               border-none outline-none flex justify-start
-                                items-start relative">
-                                   <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
-                                   justify-center items-center leading-23 text-b1 rounded-sm
-                                    font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
-                                    pl-[2.5em] border-t-[1px]
-                                    border-b-[1px] border-b3">
-                                    مشاهده 
-                                   </span>
-                                   <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     width="100" height="100">
-                                       <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
-                                       stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                       style="transform: translate(2px,82px);" r="30"
-                                        cy="20" stroke-width="5" cx="100"></circle>
-                                        <circle id="c2" cx="100" cy="100" 
-                                        fill="transparent" stroke="#E4E4E7" stroke-width="5" 
-                                        stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
-                                         </svg>
-                               </a>
-                            </div>
-                        </div>
-                     
-                    </div>
-       
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto overflow-hidden">
-          <div class="Title w-full flex justify-start items-center">
-              <p class="text-xl text-b5 font-IRANSansWeb400 font-normal leading-31.03">
-                  نتیجه جستجو در  گالری :
-              </p>
-          </div>
-          <div class="Container w-full flex justify-start items-center mt-[2em]">
-              <div class="swiper-gallery  pb-[1em]  w-full flex justify-center items-center">
-                  <div class="swiper-wrapper  w-full">
-                      <div class="swiper-slide w-full flex justify-between items-start">
-                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
-                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
-                        overflow-hidden
-                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
-                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
-                                <img src="images/Frame 16133.png" alt="" class="w-auto object-cover">
-                                <div class="OV w-full h-full flex justify-center items-end absolute 
-                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
-                                </div>
-                            </div>
-                            <div class="Title  pt-[.5em] pb-[.5em]
-                            w-full flex justify-center items-center">
-                               <a href="" class="w-full flex justify-center items-center">
-                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
-                                   تهویه مطبوع
-                               </p>
-                           </a>
-                           </div>
-                            
-                        </div>
-                      </div>
-                      <div class="swiper-slide w-full flex justify-between items-start">
-                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
-                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
-                        overflow-hidden
-                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
-                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
-                                <img src="images/Frame 16133.png" alt="" class="w-auto object-cover">
-                                <div class="OV w-full h-full flex justify-center items-end absolute 
-                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
-                                </div>
-                            </div>
-                            <div class="Title  pt-[.5em] pb-[.5em]
-                            w-full flex justify-center items-center">
-                               <a href="" class="w-full flex justify-center items-center">
-                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
-                                   تهویه مطبوع
-                               </p>
-                           </a>
-                           </div>
-                            
-                        </div>
-                      </div>
-                      <div class="swiper-slide w-full flex justify-between items-start">
-                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
-                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
-                        overflow-hidden
-                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
-                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
-                                <img src="images/Frame 16133.png" alt="" class="w-auto object-cover">
-                                <div class="OV w-full h-full flex justify-center items-end absolute 
-                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
-                                </div>
-                            </div>
-                            <div class="Title  pt-[.5em] pb-[.5em]
-                            w-full flex justify-center items-center">
-                               <a href="" class="w-full flex justify-center items-center">
-                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
-                                   تهویه مطبوع
-                               </p>
-                           </a>
-                           </div>
-                            
-                        </div>
-                      </div>
-                      <div class="swiper-slide w-full flex justify-between items-start">
-                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
-                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
-                        overflow-hidden
-                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
-                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
-                                <img src="images/Frame 16133.png" alt="" class="w-auto object-cover">
-                                <div class="OV w-full h-full flex justify-center items-end absolute 
-                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
-                                </div>
-                            </div>
-                            <div class="Title  pt-[.5em] pb-[.5em]
-                            w-full flex justify-center items-center">
-                               <a href="" class="w-full flex justify-center items-center">
-                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
-                                   تهویه مطبوع
-                               </p>
-                           </a>
-                           </div>
-                            
-                        </div>
-                      </div>
-                      <div class="swiper-slide w-full flex justify-between items-start">
-                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
-                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
-                        overflow-hidden
-                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
-                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
-                                <img src="images/Frame 16133.png" alt="" class="w-auto object-cover">
-                                <div class="OV w-full h-full flex justify-center items-end absolute 
-                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
-                                </div>
-                            </div>
-                            <div class="Title  pt-[.5em] pb-[.5em]
-                            w-full flex justify-center items-center">
-                               <a href="" class="w-full flex justify-center items-center">
-                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
-                                   تهویه مطبوع
-                               </p>
-                           </a>
-                           </div>
-                            
-                        </div>
-                      </div>
-              
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-  <!-- FOOTER -->
-  <footer class="FooterDesktop-2 flex flex-col  relative">
-    <div  class="News-Form
-   
-    ml-auto mr-auto w-[100%] bg-b6">
-      <div class="FormC w-[90%] ml-auto mr-auto flex gap-2 justify-start items-center ">
-          <span class="Title w-[30%] flex justify-start items-center" >
-              <span class="w-max font-IRANSansWeb500 text-f1 leading-23 text-f">
-                  عضویت در خبرنامه
-              </span>
-          </span>
-          <div class="Form-Container w-[70%] flex justify-end items-center">
-              <div class="Box w-full flex justify-end items-center" >
-                  <basis core="schema" run="atclient" OnRendered="rendered"
-                  schemaUrl="/schema/domainform/CAF8D957-6EFB-4D19-A590-5BD254CD749D/DEFB5430-D3BB-45DD-A785-4FA284CD9F51/fa/خبرنامه"
-              displayMode="new" button="[data-btn-add]" resultSourceId="demo.data"> 
-              </basis> 
-              
-              <basis core="callback" run="AtClient" triggers="demo.data" method="onSource"></basis> 
-              <basis core="api" url="/schema/domainform/CAF8D957-6EFB-4D19-A590-5BD254CD749D/fa/editobject" method="post" 
-              run="atclient" 
-              body="object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}" 
-              content-type="application/x-www-form-urlencoded" triggers="edit.object" if="{##edit.object|(false)##}" 
-              OnProcessed="OnProcessesEditObjectFn"> 
-              </basis>
-              <basis core="dbsource" source="trust_login" run="atclient" name="captcha" triggers="refresh.captcha">
-                  <member type="scalar" request="captcha" name="code" />
-                  </basis>
-                      <div class="col w-auto flex justify-end items-end">
-                      <basis core="print" datamembername="captcha.code" run="atclient">
-                          <layout>
-                              <script type="text/template">
-                              @child
-                              </script>
-                          </layout>
-                          <face>
-                        
-                             <script type="text/template">
-                                 <div class="captchaBox gap-4 border-b border-b-1 border-f border-solid
-                                  w-full flex justify-start items-center">
-                                     <input type="hidden" name="captchaid" value="@captcha@"
-                                     class="border-b border border-b9 border-solid" />
-                                       <!-- <input type="hidden" name="captcha" value="@captcha@" /> -->
-                                    <input type="text" class="codeinputm
-                                    placeholder:text-f 
-                                    placeholder:font-IRANSansWeb300
-                                    placeholder:text-right   placeholder:font-light   placeholder:text-sm
-                                    placeholder:leading-21.91 pt-[.8em] pb-[.8em]" 
-                                    name="captcha" placeholder="  کد امنیتی را وارد کنید "
-                                   /> 
-                                   <div class="captchaa">
-                                     <img src="@captcha@" alt="captcha"  title="captcha"
-                                     class="capcha border-l-1 border-r-1 border-b9 border-solid"/>
-                                    </div>
-                      
-                                 
-                                    <img src="https://www.freeform.ir/assets/images/sync.png" class="refresh" alt="" bc-triggers="click" 
-                                    name="refresh.captcha" bc-value="true"/>
-                                  
-                               </div>
-                              </script>
-                          </face>
-                      </basis>
-                            <a href="#" class="btn-show group bg-transparent duration-[.4s]
-                            border-none outline-none flex justify-start
-                             items-start relative">
-                                <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s] 
-                                justify-center items-center leading-23 text-f rounded-sm
-                                 font-IRANSansWeb500 text-sm border-r-[1px] px-[4em] py-[1.2em] border-t-[1px]
-                                 border-b-[1px] border-f">
-                                  ثبت
-                                </span>
-                                <svg class="BTN  relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                  width="100" height="100">
-                                    <circle  fill="transparent" stroke="#fff" id="c1" 
-                                    stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                    style="transform: translate(2px,82px);" r="30"
-                                     cy="20" stroke-width="5" cx="100"></circle>
-                                     <circle id="c2" cx="100" cy="100" 
-                                     fill="transparent" stroke="#fff" stroke-width="5" 
-                                     stroke-dasharray="565.48px" stroke-dashoffset="0" r="80"></circle>
-                                      </svg>
-                                    </a>
-                     
-                    </div>
-                   
-                      
-                      
-                      </div>
-                   
-                 
-              </div>
-            
-          </div>
-      </div>
-    </div>
- 
-   <div class="Bottom bg-f ml-auto mr-auto w-[90%] flex flex-col pt-[1em] pb-[1em]
-   justify-center items-center gap-[3em]">
-   <div class="Canter grid grid-cols-[1fr,2fr,1fr]">
-     <div class="Middle w-full flex justify-start items-center h-full">
-         <div class="box h-full w-auto flex-col flex justify-center items-center gap-3">
-             <span class="Qr w-auto flex justify-center items-center">
-                 <img src="images/Frame 15823.png" alt="mackesh-dahesh" title="mackesh-dahesh">
-             </span>
-             <span class="Link w-auto flex justify-start items-center">
-                 <a href="[##cms.cms.cdn##]/file/MackeshFanSelection.zip" download="" alt="mackesh-dahesh" title="mackesh-dahesh"
-                  class="text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                     دریافت نرم افزار
-                 </a>
-             </span>
-             <span class="Link w-auto flex justify-start items-center">
-               <basis core="print" datamembername="db.cataloge">
-                   <layout>
-                       @child
-                   </layout>
-                   <face filter="ord=1000">
-                       <a href="@largeIMG" download="" alt="mackesh-dahesh" title="mackesh-dahesh"
-                       class="text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                           دریافت کاتالوگ
-                       </a>
-                   </face>
-               </basis>
-              
-             </span>
-             <span class="Link w-auto flex justify-start items-center">
-                 <a href="#" alt="mackesh-dahesh" title="mackesh-dahesh"
-                 class="text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                     دریافت رزومه
-                 </a>
-             </span>
-         </div>
-     </div>
-     <div class="Right w-full flex flex-col justify-center items-center">
-         <div class="Logo  w-full flex justify-center items-center">
-             <a href="/" alt="mackesh-dahesh" title="mackesh-dahesh">
-                 <img src="/images/logo (9) 1 (1).png" alt="mackesh-dahesh" title="mackesh-dahesh">
-             </a>
-         </div>
-          <div class="Contact-box w-full flex justify-center items-center flex-col gap-5">
-              <span class="Address w-full flex justify-start items-center">
-                <basis core="print" datamembername="db.footer">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="TypeID=244">
-                        <p class="text-center font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                       @Answer
+            <basis core="group" if="'[##db.projectList.RowNumber##]' = '' and
+            '[##db.articleList.RowNumber##]' = '' and 
+            '[##db.galleryList.RowNumber##]' = '' and
+            '[##db.productList.RowNumber##]' = '' ">
+            <div class="resultSearch">
+              <p>باعرض پوزش مطلبی پیدا نشد. واژه دیگری را جست و جو نمایید.</p>
+            </div>
+          </basis>
+
+         <basis core="print" datamembername="db.productList">
+             <layout>
+                <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto ">
+                    <div class="Title w-full flex justify-start items-center">
+                        <p class="text-xl font-IRANSansWeb400 font-normal leading-31.03">
+                            نتیجه جستجو در محصولات:
                         </p>
-                    </face>
-                </basis>
-                
-              </span>
-              <span class="Phones w-full flex justify-center items-center gap-3 
-              [&>a:not(:last-child)]:before:absolute
-              [&>a:not(:last-child)]:before:left-[-7px]  [&>a:not(:last-child)]:before:top-0
-              [&>a:not(:last-child)]:before:text-b9  [&>a:not(:last-child)]:before:content-[',']">
-              <basis core="print" datamembername="db.footer">
-                <layout>
-                    @child
-                </layout>
-                <face filter="TypeID=240">
-                    <a href="tel:@Answer" alt="mackesh-dahesh" title="makesh-dahesh"
-                     class="relative text-center font-IRANSansWeb300 font-light 
-                    text-sm leading-21.91 text-b9">
-                   @Answer
-                </a>
-                </face>
-            </basis>
-            
-              </span>
-              <span class="Email  w-full flex justify-center items-center gap-3">
-                <basis core="print" datamembername="db.footer">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="TypeID=242">
-                        <a href="mailto:@Answer" class="YekanBakh400 font-normal text-sm leading-23 text-center text-b9">
-                       @Answer
-                    </a>
-                    </face>
-                </basis>
-               
-              </span>
-              <span class="Time w-full flex justify-center items-center gap-3">
-      
-                  <p class="text-center font-IRANSansWeb300 font-light text-sm leading-21.91 text-b9">
-                      شنبه تا چهارشنبه از ساعت 9 الی 17 
-                  </p>
-              </span>
-              <div class="Socials w-full flex justify-center items-center gap-[1.3em]">
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                        
- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path fill-rule="evenodd" clip-rule="evenodd" d="M27.286 4.70399C21.0531 -1.53429 10.9477 -1.53465 4.7152 4.70399C-0.664401 10.0886 -1.49474 18.5267 2.70493 24.841L2.70384 24.8417C2.82195 25.0207 2.8561 25.252 2.7758 25.4684L0.527876 31.487L6.50162 29.2515C6.71129 29.1588 6.96203 29.1719 7.16734 29.3079C17.6889 36.2998 31.9602 28.7976 31.9602 15.9999C31.9606 11.5886 30.1742 7.59489 27.286 4.70399ZM13.6811 15.6049C14.8312 17.1824 16.2902 18.4168 18.0098 19.3305C18.5189 18.7766 18.9284 18.179 19.5651 18.0244V18.0236C19.8554 17.9535 20.1621 17.9676 20.455 18.0618L23.4693 19.0312C24.1416 19.2472 24.6532 19.8721 24.5813 20.6123C24.5242 21.1983 24.3905 23.1507 24.2212 23.5868C23.9671 24.2419 23.32 24.6431 22.6193 24.5911C14.5042 23.9899 8.0184 17.4981 7.41772 9.37533C7.34867 8.442 8.00931 7.7411 8.98174 7.64653C13.0353 7.25116 12.4408 6.8667 13.9416 11.5413C14.0357 11.8345 14.0499 12.1418 13.9798 12.4324H13.9791C13.8246 13.0697 13.2272 13.4796 12.6741 13.9888C12.9721 14.553 13.3082 15.0935 13.6811 15.6049ZM13.9474 18.0524C14.9667 19.0726 16.155 19.9289 17.4345 20.5992C18.7663 21.2972 19.6032 19.4102 19.8892 19.3763L23.183 20.4486L22.9616 22.8947C22.9453 23.0609 22.9119 23.214 22.7167 23.1995C15.2942 22.6499 9.35676 16.7073 8.80695 9.27748L8.86437 9.10872C8.97774 8.98614 11.2086 8.82792 11.5233 8.79737C11.6777 8.78245 12.4899 11.5733 12.6163 11.9672C12.7788 12.4739 10.6501 13.1199 11.4055 14.565C12.0742 15.8431 12.93 17.0336 13.9474 18.0524Z" fill="#1E1E1E"/>
-     </svg>
-     
-                      </a>
-                  </span> 
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                
- <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M16.5003 2.19086C3.74772 2.18674 -2.63957 17.5966 6.37527 26.6107C8.37657 28.6118 10.9266 29.9746 13.7028 30.5269C16.479 31.0792 19.3567 30.7961 21.9719 29.7135C24.5872 28.6308 26.8225 26.7973 28.3952 24.4447C29.9679 22.092 30.8073 19.326 30.8074 16.4965C30.8074 8.59766 24.4036 2.19361 16.5003 2.19086ZM8.39615 9.32649C9.08536 5.75386 13.7517 4.79676 15.7918 7.80971C17.8319 10.8213 15.2113 14.7982 11.6373 14.1106C11.1101 14.0094 10.6081 13.8053 10.1598 13.5101C9.71162 13.2148 9.32599 12.8342 9.025 12.3899C8.724 11.9456 8.51354 11.4464 8.40564 10.9207C8.29774 10.3951 8.29451 9.85337 8.39615 9.32649ZM14.3418 21.6863C13.6485 25.2576 8.98081 26.2078 6.9448 23.1935C4.9088 20.1791 7.53222 16.2077 11.1062 16.8967C11.6335 16.9985 12.1354 17.2032 12.5834 17.4991C13.0315 17.795 13.4167 18.1762 13.7172 18.6211C14.0177 19.0659 14.2276 19.5656 14.3348 20.0915C14.4419 20.6175 14.4443 21.1594 14.3418 21.6863ZM16.0752 18.3791C14.4904 18.0724 14.064 16.0042 15.3997 15.0966C16.7341 14.189 18.5033 15.3441 18.2061 16.931C18.1621 17.1662 18.0719 17.3904 17.9409 17.5906C17.8099 17.7908 17.6405 17.9632 17.4426 18.0978C17.2447 18.2323 17.0221 18.3265 16.7877 18.3747C16.5532 18.423 16.3102 18.4245 16.0752 18.3791ZM24.6017 23.6569C23.9125 27.2295 19.2461 28.1852 17.206 25.1737C15.1645 22.1607 17.7852 18.1852 21.3606 18.8714C21.8879 18.9726 22.39 19.1767 22.8384 19.4721C23.2867 19.7674 23.6724 20.1482 23.9734 20.5926C24.2744 21.0371 24.4848 21.5365 24.5926 22.0622C24.7004 22.588 24.7035 23.1299 24.6017 23.6569ZM21.8957 16.0908C18.3217 15.4019 17.3656 10.7333 20.3797 8.69255C23.3924 6.65321 27.3695 9.27286 26.6831 12.8455C26.5824 13.3731 26.3787 13.8756 26.0835 14.3244C25.7883 14.7732 25.4075 15.1593 24.9628 15.4608C24.5181 15.7622 24.0183 15.9731 23.492 16.0812C22.9657 16.1893 22.4233 16.1926 21.8957 16.0908ZM18.6862 31.9903L21.8008 32.8291C23.1104 33.1765 24.5044 32.9898 25.6764 32.31C26.8483 31.6303 27.7023 30.5132 28.0505 29.2042L28.9309 25.9011C26.4522 29.2017 22.7697 31.3901 18.6849 31.9903H18.6862ZM29.2006 4.94803L25.9498 4.08306C27.5926 5.3462 28.968 6.92293 29.9963 8.72174C31.0245 10.5206 31.685 12.5056 31.9396 14.5617L32.8337 11.1802C33.1759 9.87206 32.9854 8.48168 32.3038 7.31374C31.6223 6.14581 30.5054 5.29559 29.1978 4.9494L29.2006 4.94803ZM0.915194 18.9883L0.170951 21.7936C-0.176549 23.1027 0.0102347 24.4962 0.69024 25.6677C1.37025 26.8392 2.48781 27.6928 3.79725 28.0409L6.69581 28.8137C3.60126 26.3817 1.53822 22.8736 0.915194 18.9883ZM14.2387 0.964231L11.2025 0.172146C10.5536 -0.000649 9.87698 -0.0439061 9.21132 0.0448478C8.54566 0.133602 7.90403 0.352626 7.3231 0.689401C6.74217 1.02618 6.23334 1.4741 5.82568 2.00756C5.41803 2.54102 5.11955 3.14957 4.94731 3.79841L4.18931 6.66146C6.68992 3.55038 10.2841 1.51226 14.2387 0.964231Z" fill="#1E1E1E"/>
-     </svg>
-     
-                              
-                      </a>
-                  </span>
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                       
- <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M16.5002 0.659912C7.75186 0.659912 0.660156 7.75161 0.660156 16.4999C0.660156 25.2482 7.75186 32.3399 16.5002 32.3399C25.2485 32.3399 32.3402 25.2482 32.3402 16.4999C32.3402 7.75161 25.2485 0.659912 16.5002 0.659912ZM12.6227 23.0653H9.41506V12.7429H12.6227V23.0653ZM10.9991 11.4757C9.98596 11.4757 9.33091 10.7579 9.33091 9.87021C9.33091 8.96436 10.0058 8.26806 11.0403 8.26806C12.0749 8.26806 12.7085 8.96436 12.7283 9.87021C12.7283 10.7579 12.0749 11.4757 10.9991 11.4757ZM24.3377 23.0653H21.1301V17.3447C21.1301 16.0132 20.6648 15.109 19.5048 15.109C18.6188 15.109 18.0924 15.7211 17.8598 16.3102C17.774 16.5197 17.7525 16.8167 17.7525 17.1121V23.0636H14.5433V16.0346C14.5433 14.746 14.502 13.6685 14.4591 12.7412H17.246L17.3928 14.1751H17.4572C17.8796 13.5019 18.9141 12.5086 20.645 12.5086C22.7553 12.5086 24.3377 13.9226 24.3377 16.9619V23.0653Z" fill="#1E1E1E"/>
-     </svg>
-     
-                      </a>
-                  </span>
-                  <span class="Social w-auto flex justify-center items-center">
-                      <a href="#">
-                      
- <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M13.7582 19.2908C14.191 19.6132 14.6245 19.9368 15.0585 20.2599C14.6054 20.7068 14.1516 21.1541 13.7002 21.6006C13.6581 21.6438 13.6188 21.6889 13.5775 21.7328L13.5993 21.4372C13.6513 20.7221 13.7036 20.0059 13.7582 19.2908ZM17.3186 12.9867C15.1173 14.3752 12.916 15.7675 10.7135 17.1552C10.6688 17.1831 10.6199 17.2049 10.5702 17.2274C10.8586 18.1495 11.147 19.072 11.4347 19.9948C11.6402 20.6442 11.8533 21.292 12.0477 21.944C12.1279 22.2145 12.267 22.3592 12.5603 22.3081C12.6417 21.2045 12.7196 20.1018 12.8029 18.9979C12.8124 18.8691 12.8277 18.7385 12.8434 18.6098C12.7189 18.5383 12.7735 18.4016 12.8166 18.3565C12.8927 18.2782 12.9687 18.1984 13.0447 18.1189C13.0718 18.0937 13.1001 18.0681 13.1264 18.0429C13.1646 18.0032 13.2017 17.9635 13.2395 17.9241C13.4217 17.7545 13.6031 17.5819 13.7853 17.4115C13.8892 17.3134 13.9943 17.2148 14.0986 17.117C14.3812 16.8523 14.6635 16.588 14.9511 16.3275C15.6822 15.6628 16.4282 15.0135 17.1609 14.3515C18.0948 13.5066 19.0264 12.6586 19.9516 11.8041C20.0196 11.7098 20.0635 11.5883 20.1231 11.4844C19.9573 11.5066 19.7629 11.4791 19.6311 11.5566C18.8522 12.0207 18.086 12.5031 17.3186 12.9867ZM32.1133 16.1113C32.1133 24.9479 24.9497 32.1115 16.1131 32.1115C7.27609 32.1115 0.113281 24.9479 0.113281 16.1113C0.113281 7.27427 7.27609 0.111084 16.1131 0.111084C24.9497 0.111084 32.1133 7.27427 32.1133 16.1113ZM23.2579 9.73687C23.2495 9.67575 23.2434 9.61311 23.2312 9.55314C23.0903 8.87399 22.7182 8.66886 22.052 8.8969C21.9543 8.92975 21.8542 8.95114 21.7549 8.97826C21.3832 9.13182 21.0154 9.29607 20.6384 9.43702C20.0134 9.6727 19.3824 9.8931 18.7522 10.1204C18.3679 10.2804 17.9863 10.4477 17.5986 10.5994C16.6272 10.9791 15.654 11.3515 14.6811 11.7273C12.6787 12.4993 10.6761 13.2709 8.67221 14.0429C8.22224 14.2167 7.76845 14.3813 7.32307 14.5666C6.93154 14.7281 6.532 14.8848 6.17141 15.1017C6.01175 15.1976 5.83604 15.4497 5.85437 15.6097C5.87194 15.7713 6.11908 15.9096 6.27034 16.054C6.29785 16.0803 6.34483 16.0887 6.38456 16.101C7.44607 16.4295 8.50758 16.758 9.56985 17.0857C9.56412 17.1965 9.57673 17.3095 9.61149 17.4215L9.99766 18.6602L10.5053 20.2855C10.5649 20.4742 10.6249 20.6595 10.6837 20.8447C10.8281 21.2974 10.9782 21.7649 11.1146 22.2225C11.4117 23.2153 12.2131 23.292 12.4519 23.292C12.4874 23.292 12.5252 23.2897 12.5626 23.2882C12.5993 23.2897 12.636 23.2909 12.6723 23.2909C13.2853 23.2909 13.6791 22.9532 13.9137 22.7512C13.9568 22.7133 13.9981 22.6786 14.0279 22.6557C14.0764 22.6194 14.1219 22.58 14.1608 22.5361C14.1914 22.5044 14.2193 22.4715 14.2494 22.4402C14.2987 22.3852 14.3449 22.3337 14.3858 22.2932C14.7422 21.9402 15.0978 21.5884 15.4549 21.2362L15.8782 20.8187C15.9378 20.86 15.9974 20.9009 16.0573 20.9417C17.0203 21.6606 17.9817 22.3829 18.9481 23.098C19.6693 23.6312 20.1735 23.493 20.5226 22.6782C20.6712 21.991 20.819 21.3023 20.9665 20.6167C21.1017 19.931 21.2354 19.2473 21.3691 18.5632C21.455 18.1873 21.5398 17.8103 21.6246 17.4348C21.85 16.376 22.075 15.316 22.2992 14.2568C22.3721 13.9187 22.4436 13.5811 22.5161 13.243C22.5337 13.1628 22.5547 13.0822 22.5708 13.0012C22.8007 11.913 23.0291 10.8255 23.2579 9.73687Z" fill="#1E1E1E"/>
-     </svg>
-     
-                      </a>
-                  </span>
-              </div>
-          </div>
-      </div>
-        
-         
-          <div class="Left w-full flex justify-end items-center h-full">
-            <basis core="print" datamembername="db.footer">
-                <face filter="TypeID =246">
-                   <div class=" Map Map_1 w-full mt-auto flex justify-end items-center h-[75%]" id="Map_1" data-x="@text" data-y="@largetext">
-                    <img src="images/Frame 1302.png" alt="">
+                    </div>
+                    <div class="Container w-full flex justify-start items-center mt-[2em]">
+                        <div class="swiper-products pt-[5em] pb-[1em] overflow-hidden w-full flex justify-center items-center">
+                            <div class="swiper-wrapper  w-full">
+                 @child
+                            </div>
+                        </div>
+                    </div>
                 </div>
+             </layout>
+             <face>
+                <div class="swiper-slide w-full flex justify-center items-center">
+                    <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
+                    w-full flex justify-start items-start
+                   overflow-hidden flex-col">
+                       <div class="Box-1 w-full flex justify-start flex-col items-start">
+                           <a href="/@link" title="@title" class="w-full flex justify-start items-start ">
+                               <img src="/@00260X00260prp" alt="@title" title="@title"  class="w-full object-cover">
+                           </a>
+                           <a href="/@link" title="@title" class=" w-auto
+                           my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
+                           justify-center items-center mx-auto">
+                              @title
+                           </a>
+                       </div>
+                       <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
+                        justify-between ease-in-out duration-[.5s]
+                        group-hover:opacity-[1] group-hover:translate-y-[0]
+                       items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
+                        bg-f" >
+                           <a href="/@link" title="@title" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
+                           group-hover:translate-x-[0] duration-75 delay-[.8s] 
+                           flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
+                            justify-center items-center">
+                               مشاهده
+                           </a>
+                           <a href="/@link" title="@title" class=" w-auto flex translate-x-[-100px] opacity-0
+                           group-hover:opacity-[1] duration-75 delay-[.8s] 
+                           group-hover:translate-x-[0] 
+                           font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
+                           justify-center items-center ">
+                               @title
+                           </a>
+                       </div>
+                   </div>
+                  </div>
              </face>
-                </basis>
-            
-          </div>
-   </div>
+         </basis>
+     
+
+                            <basis core="print" datamembername="db.projectList">
+                                <layout>
+                                    <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto overflow-hidden">
+                                    <div class="Title w-full flex justify-start items-center">
+                                        <p class="text-xl font-IRANSansWeb400 font-normal leading-31.03">
+                                            نتیجه جستجو در پروژه ها:
+                                        </p>
+                                    </div>
+                                    <div class="Container w-full flex justify-start items-center mt-[2em]">
+                                        <div class="swiper-projects pt-[5em] pb-[1em]  w-full flex justify-center items-center">
+                                            <div class="swiper-wrapper  w-full">
+                                    @child
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </layout>
+                                <face>
+                                    <div class="swiper-slide w-full flex justify-start items-start relative">
+                                        <div class="IMG w-full flex justify-start items-start">
+                                            <a href="@link" alt="@title" title="@title" class="w-full flex justify-start items-start">
+                                            <img src="@00301X00201prp" alt="@title" title="@title" class="w-full object-cover">
+                                        </a>
+                                        </div>
+                                        <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
+                                        justify-end items-end">
+                                            <div class="Ttile  w-full flex justify-start items-start ">
+                                                <p class="font-IRANSansWeb500 pr-[1em] pb-[1em]
+                                                text-2xl font-medium leading-23 text-f">
+                                                   @title
+                                                </p>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
+              
+     
+       
+                                <basis core="print" datamembername="db.articleList">
+                                      <layout>     
+                                    <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto overflow-hidden">
+              
+                                        <div class="Title w-full flex justify-start items-center">
+                                            <p class="text-xl font-IRANSansWeb400 font-normal leading-31.03">
+                                                نتیجه جستجو در اخبار و مقالات:
+                                            </p>
+                                        </div>
+                                        <div class="Container w-full flex justify-start items-center mt-[2em]">
+                                        <div class="swiper-news pt-[1em] pb-[1em]  w-full flex justify-center items-center">
+                                            <div class="swiper-wrapper  w-full">
+                                        @child
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    </div>
+                                      </layout>
+                                      <face>
+                                        <div class="swiper-slide w-full flex justify-start items-start">
+                                            <div class="Blog w-full flex justify-start gap-[1.2em]
+                                            items-start flex-col">
+                                                <div class="IMG w-full flex justify-center items-center
+                                                overflow-hidden group ">
+                                                <a href="@link" title="@title" class="w-full">
+                                                    <img src="/@00426X00283prp"
+                                                    class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
+                                                </div>
+                                                <div class="Title w-full flex justify-start items-center">
+                                                    <a href="@link" title="@title" class="w-full">
+                                                    <p class="font-IRANSansWeb500 text-base leading-25.04 font-medium text-b1">
+                                                       @title
+                                                    </p></a>
+                                                </div>
+                                                <div class="Date w-full flex justify-start items-center">
+                                                    <span class="faNum font-IRANSansWeb500 text-base leading-25.04 font-light text-b1">
+                                                        @date
+                                                    </span>
+                                                </div>
+                                                <div class="Desc w-full flex justify-center items-start flex-col">
+                                                    <p class="font-IRANSansWeb500 text-sm leading-21.91 font-light text-b1">
+                                                        @substr  </p>
+                                                </div>
+                                                <div class="Btn w-full flex justify-start items-center" >
+                                                    <a href="@link" title="@title"  class="btn-show group bg-transparent mt-[1em]
+                                                    duration-[.4s]
+                                                   border-none outline-none flex justify-start
+                                                    items-start relative">
+                                                       <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
+                                                       justify-center items-center leading-23 text-b1 rounded-sm
+                                                        font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
+                                                        pl-[2.5em] border-t-[1px]
+                                                        border-b-[1px] border-b3">
+                                                        مشاهده 
+                                                       </span>
+                                                       <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                         width="100" height="100">
+                                                           <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
+                                                           stroke-dasharray="565.48px" stroke-dashoffset="0" 
+                                                           style="transform: translate(2px,82px);" r="30"
+                                                            cy="20" stroke-width="5" cx="100"></circle>
+                                                            <circle id="c2" cx="100" cy="100" 
+                                                            fill="transparent" stroke="#E4E4E7" stroke-width="5" 
+                                                            stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
+                                                     </svg>
+                                                   </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </face>
+                                </basis>
   
-      <div class="Top bg-f ml-auto mr-auto w-[90%] grid grid-cols-[2fr,auto]
-      justify-center items-center  ">
-   
-        <div class="Right w-full flex justify-start items-center">
-            <nav class="Menu w-full flex justify-start items-center">
-               <ul class="w-full flex justify-center items-center gap-5">
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="/" alt="makesh-dahesh" title="mackesh-dahesh" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    صفحه نخست
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="محصولات"  alt="محصولات" title="محصولات" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03  text-b9">
-                    محصولات
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="پروژه-های-مکش-و-دهش" alt="پروژه-های-مکش-و-دهش" title="پروژه-های-مکش-و-دهش"  class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03  text-b9">
-                    پروژه ها
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="خدمات-مکش-و-دهش" alt="خدمات-مکش-و-دهش" title="خدمات-مکش-و-دهش" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    خدمات
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="اخبار-و-مقالات" alt="اخبار-و-مقالات" title="اخبار-و-مقالات" 
-                    class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    اخبار
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="اخبار-و-مقالات" alt="اخبار-و-مقالات" title="اخبار-و-مقالات"  class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    مقالات
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="تماس-با-فروشگاه-مکش-و-دهش" alt="تماس-با-فروشگاه-مکش-و-دهش" title="تماس-با-فروشگاه-مکش-و-دهش"
-                     class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    تماس با ما 
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="معرفی-فروشگاه-مکش-و-دهش" alt="معرفی-فروشگاه-مکش-و-دهش"  title="معرفی-فروشگاه-مکش-و-دهش"
-                    class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    درباره ما
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="نمایندگی-ها" alt="نمایندگی-ها" title="نمایندگی-ها" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    نمایندگی
-                </a>
-                </li>
-                <li class="menu-item w-auto flex justify-center items-center">
-                    <a href="گالری" alt="گالری" title="گالری" class="menu-link text-sm font-IRANSansWeb400 
-                    font-normal leading-32.03 text-b9">
-                    گالری
-                </a>
-                </li>
-               </ul>
-            </nav>
-        </div>
-     </div>
-   </div>
- 
-   <div class="CopyRightC w-full flex bg-b6 justify-center items-center pt-4 pb-4">
-          <a href="https://www.namasite.ir/" alt="namasite" title="namasite"
-           class="w-auto flex justify-center items-center gap-3"> 
-              <span class="copyRight text-right font-IRANSansWeb300 font-light text-sm leading-21.91 text-f">
-                  طراحی سایت و بهینه سازی سایت
-               </span>
-               <span>
-                  <img src="images/Namasite- 1.png" alt="namasite" title="namasite">
-               </span>
-          </a>
-   </div>
-  </footer>
-  <!-- FOOTER -->
-      <div class="main-container">
-        <span></span>
-      </div>
-      <div class="searchContainer opacity-0 duration-[.4s] pointer-events-none flex justify-center
-      [&.show]:opacity-[1]  [&.show]:pointer-events-auto flex-col items-center fixed z-[900000] 
-      left-0 top-0 w-full h-full bg-f">
-        <span class="CloseSerch hover:cursor-pointer ml-auto flex justify-center items-center mr-[2em] mt-[2em] absolute
-        top-0 right-0">
-          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30.0846 10.1492L27.8521 7.91666L19.0013 16.7675L10.1505 7.91666L7.91797 10.1492L16.7688 19L7.91797 27.8508L10.1505 30.0833L19.0013 21.2325L27.8521 30.0833L30.0846 27.8508L21.2338 19L30.0846 10.1492Z" fill="#1D2F3B"/>
-            </svg>
-            
-        </span>
-        <div class="inputBox flex w-[60%] justify-center items-center relative">
+         
+         
+                            <basis core="print" datamembername="db.galleryList">
+                                <layout>
+                                    <div class="Box w-[95%] flex justify-start items-center flex-col mr-auto overflow-hidden">
+       
+                                    <div class="Title w-full flex justify-start items-center">
+                                        <p class="text-xl font-IRANSansWeb400 font-normal leading-31.03">
+                                            نتیجه جستجو در  گالری :
+                                        </p>
+                                    </div>
+                                    <div class="Container w-full flex justify-start items-center mt-[2em]">
+              
+                                    <div class="swiper-gallery pt-[2.5em] pb-[1em]  w-full flex justify-center items-center">
+                                        <div class="swiper-wrapper  w-full">
+                                    @child
+                                    </div>
+                                </div>
+                                    </div>
+                                    </div>
+                                </layout>
+                                <face>
+                                    <div class="swiper-slide w-full flex justify-between items-start">
+                                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
+                                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
+                                        overflow-hidden
+                                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
+                                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
+                                                <a href="@link" alt="@title" title="@title" class="w-full flex justify-center items-center">
+                                                <img src="@00330x00185prp" alt="@title" title="@title" class="w-auto object-cover">
+                                                </a>
+                                                <div class="OV w-full h-full flex justify-center items-end absolute 
+                                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
+                                                </div>
+                                            </div>
+                                            <div class="Title  pt-[.5em] pb-[.5em]
+                                            w-full flex justify-center items-center">
+                                               <a href="@link" alt="@title" title="@title" class="w-full flex justify-center items-center">
+                                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
+                                                 @title
+                                               </p>
+                                           </a>
+                                           </div>
+                                            
+                                        </div>
+                                      </div>
+                                </face>
+                            </basis>
+                        </div>
         
-          <input type="search" name="q" id="search" placeholder="جستجو کنید" class="w-full h-[40px] border-t-0 border-l-0
-          border-r-0 border-b border-b9 border-solid placeholder:font-IRANSansWeb500 placeholder:text-base
-          placeholder:font-medium placeholder:leading-25.4 placeholder:text-b2 text-b1 focus-visible:outline-none"  >
-          <button type="submit" aria-label="search" class="sBTN border-none outline-none bg-transparent">
-          <span class="SearchIcon absolute left-0 top-[8px] z-20">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.92 13.92L17 17M16.111 8.581C16.111 12.768 12.728 16.162 8.556 16.162C4.383 16.162 1 12.768 1 8.582C1 4.393 4.383 1 8.555 1C12.728 1 16.111 4.394 16.111 8.581Z" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  </button>
-          </span>
     
-    
-      </div>
-      <!-- <div class="resultSearch">
-        <p>باعرض پوزش مطلبی پیدا نشد. واژه دیگری را جست و جو نمایید.</p>
-      </div> -->
-      </div>
-  </main>
-  <script src="js/gsap.js"></script>
-  <script src="js/jQuery.js"></script>
-  <script src="js/scrollTrigger.js"></script>
-  <script src="js/lenisScroll.js"></script>
-  <script src="js/swiper.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/config.js"></script>
+      <basis core="call" file="footer.inc" pageindex="[##cms.cdn.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/new/search.js"></script>
+
 </body>
 </html>

@@ -8,7 +8,7 @@ gallerys.forEach(gallery=>{
         scale:1,
         scrollTrigger:{
             trigger:gallery,
-            start:"top 60%",
+            start:"top 75%",
             end:"bottom bottom"
         }
     })

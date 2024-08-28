@@ -1124,9 +1124,13 @@ a:hover {
   cursor: pointer;
 }
 
-.serviceShow .share svg {
+.serviceShow .share .social-link svg {
   stroke: #2e3192f3;
 }
+.serviceShow .inShare .social-link svg {
+  stroke: #F37021F3;
+}
+
 
 .serviceShow .share .social-link {
   height: 30px;
@@ -1374,7 +1378,7 @@ html {
   border: none;
 }
 .btnsMain:hover .hole1 {
-  border: 17px solid #2e3192;
+  border: 17px solid #2e3192!important;
 }
 .btnsMain:hover .text {
   transform: scaleY(0.7) scaleX(0.9);
@@ -1436,4 +1440,68 @@ html {
 .activeFilter span{
   border-bottom: 3px solid #F37021F3;
   color: #1E1E1E;
+}
+
+.pause {
+  opacity: 1;
+}
+
+.play {
+  opacity: 0;
+  display: none;
+}
+
+.collapse.show{
+  visibility: visible;
+}
+
+
+.card-header{
+  background-color: transparent;
+}
+.serviceShow .accordion .card-header button::before {
+  content: "";
+  display: inline-block;
+  width: 67px;
+  height: 1px;
+  background-color: black;
+  transition: 0.5s;
+}
+.serviceShow .accordion .card-header button {
+  display: flex;
+  align-items: center;
+}
+.serviceShow .accordion .card-header button:focus {
+  outline: none;
+}
+.serviceShow .accordion .card-header p::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  transition: 0.5s;
+}
+.serviceShow .accordion .card-header button[aria-expanded=true]::before {
+  width: 87px;
+  background-color: #F26737;
+}
+.serviceShow .accordion .card-header button[aria-expanded=true] p::before {
+  background-color: #F26737;
+}
+
+.serviceShow .accordion:nth-child(1) .card-header{
+border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.serviceShow .userInfo::after{
+content: "*";
+position: absolute;
+left: 0;
+top: 10px;
+color: red;
+}
+.serviceShow .userInfo{
+position: relative;
 }

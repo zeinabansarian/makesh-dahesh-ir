@@ -1,21 +1,35 @@
+<basis core="dbsource" source="basiscore" mid="20" name="db" lid="1" usedforid="[##cms.query.id##]">
+    <member name="list5" type="list" request="groupid"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='[##cms.cms.cdn##]/css/new/bootstrap.min.css'>
 
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/outputDesk.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/outputDesk.css">
 
 </head>
 
 <body>
     <div class="productShow">
+        <basis core="call" file="header.inc" />
         <div class="breadcrum relative translate-y-[50%] mt-36 mr-20" dir="rtl">
             <ul class="flex items-center gap-x-2">
                 <li class="flex items-center gap-x-2">
@@ -37,17 +51,22 @@
         <div class="section1 bg-b4 mx-20 pb-16 pt-12 px-16 flex">
             <div class="lSide w-[60%] py-5 px-4" dir="rtl">
                 <div class="title pb-2 border-b border-b-b7 flex items-center justify-between scrollToTop">
-
-                    <h1>
-                        هواکش سانتریفوژ بین کانالی
-
-                    </h1>
+<basis core="print" datamembername="db.Product">
+    <face filter="TypeID=150">
+        <h1 class="font-IRANSansWeb500 text-4xl text-b5">
+           @Answer
+    
+        </h1>
+        
+    </face>
+</basis>
 
                     <div class="serviceShow">
                         <div class="share">
                             <ul class="share__wrapper share__wrapper--open-right">
                                 <li class="social-link">
-                                    <a href="#" title="whatsapp">
+                                    <a href="https://api.whatsapp.com/send?text=[##cms.request.host##]/[##db.list5.link##]"
+                                    title="whatsapp">
                                         <svg width="26" height="32" viewBox="0 0 32 32" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_798_87)">
@@ -65,7 +84,8 @@
                                     </a>
                                 </li>
                                 <li class="social-link">
-                                    <a href="#" title="telegram">
+                                    <a href="https://t.me/share/url?url=[##cms.request.host##]/[##db.list5.link##]&text=[##db.list5.link##]"
+                                    title="telegram">
                                         <svg width="26" height="33" viewBox="0 0 33 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_798_81)">
@@ -83,7 +103,8 @@
                                     </a>
                                 </li>
                                 <li class="social-link">
-                                    <a href="#" title="linkdin">
+                                    <a href="https://www.linkedin.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]"
+                                title="linkdin">
                                         <svg width="26" height="33" viewBox="0 0 33 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_798_83)">
@@ -114,42 +135,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="openPara overflow-hidden para mt-7 font-IRANSansWeb300 text-sm text-justify scrollToTop">
-                    <span class="font-IRANSansWeb500 text-base text-b5 mb-3">مشخصات کلی</span>
-                    <p>
-                        پلاگ فن ها نوعی از فن های سانتریفیوژ می باشند که دارای تنوع بالا بوده و با اشغال حجم کم دارای
-                        کاربردهای فراوانی هستند. این نوع فن ها که اصلی ترین تفاوت آنها با فن های یوتیلیتی نداشتن حوضینگ
-                        است در انواع اتصال مستقیم پروانه و موتور و اتصال پولی و تسمه به بازار عرضه می گردند. از مهمترین
-                        کاربردهای پلاگ فن ها می توان به استفاده آنها در هواسازها و خشک کن های صنعتی اشاره کرد.
-                        پلاگ فن ها نوعی از فن های سانتریفیوژ می باشند که دارای تنوع بالا بوده و با اشغال حجم کم دارای
-                        کاربردهای فراوانی هستند. این نوع فن ها که اصلی ترین تفاوت آنها با فن های یوتیلیتی نداشتن حوضینگ
-                        است در انواع اتصال مستقیم پروانه و موتور و اتصال پولی و تسمه به بازار عرضه می گردند. از مهمترین
-                        کاربردهای پلاگ فن ها می توان به استفاده آنها در هواسازها و خشک کن های صنعتی اشاره کرد.
-                        پلاگ فن ها نوعی از فن های سانتریفیوژ می باشند که دارای تنوع بالا بوده و با اشغال حجم کم دارای
-                        کاربردهای فراوانی هستند. این نوع فن ها که اصلی ترین تفاوت آنها با فن های یوتیلیتی نداشتن حوضینگ
-                        است در انواع اتصال مستقیم پروانه و موتور و اتصال پولی و تسمه به بازار عرضه می گردند. از مهمترین
-                        کاربردهای پلاگ فن ها می توان به استفاده آنها در هواسازها و خشک کن های صنعتی اشاره کرد.
-                        پلاگ فن ها نوعی از فن های سانتریفیوژ می باشند که دارای تنوع بالا بوده و با اشغال حجم کم دارای
-                        کاربردهای فراوانی هستند. این نوع فن ها که اصلی ترین تفاوت آنها با فن های یوتیلیتی نداشتن حوضینگ
-                        است در انواع اتصال مستقیم پروانه و موتور و اتصال پولی و تسمه به بازار عرضه می گردند. از مهمترین
-                        کاربردهای پلاگ فن ها می توان به استفاده آنها در هواسازها و خشک کن های صنعتی اشاره کرد.
-                    </p>
-                </div>
-                <div class="schemasList mt-10 border-b border-b-b7 pb-4 scrollToTop">
-                    <ul>
+                <basis core="print" datamembername="db.Product144">
+                    <layout>
+                        <div class="openPara overflow-hidden para mt-7 font-IRANSansWeb300 text-sm text-justify scrollToTop">
+                            <span class="font-IRANSansWeb500 text-base text-b5 mb-3">مشخصات کلی</span>
+                          
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="RowNumber=1">
+                        @Answer
+                    </face>
+                </basis>
+                <basis core="view" datamembername="db.Product">
+                    <layout>
+                        <div class="schemasList mt-10 border-b border-b-b7 pb-4 scrollToTop">
+                            <ul>
+                            
+                                @child
+                            </ul>
+                        </div>
+                    </layout>
+                    <face level="1" filter="TypeID=128">
                         <li class="flex items-center gap-x-2 p-3">
                             <span class="font-IRANSansWeb300 text-sm text-b5">
-                                مدل :
+                                @Question :
                             </span>
                             <div class="schema font-IRANSansWeb500 text-base text-b5 flex items-center gap-x-2">
-                                <p>
-                                    MDTBIN
-                                </p>
-                                <span class="last:hidden">,</span>
+                           @child
                             </div>
                         </li>
-                    </ul>
-                </div>
+                    </face>
+                    <face level="2">
+                        <p>
+                            @Answer
+                        </p>
+                        <span class="last:hidden">,</span>
+                    </face>
+                </basis>
                 <div class="items pt-3 pb-11 flex border-b border-b-b7 justify-between items-center" dir="rtl">
                     <div class="btnnss flex">
                         <button type="button" data-toggle="modal" data-target="#exampleModal"
@@ -231,39 +254,37 @@
             </div>
             <div class="rSide w-[40%] overflow-hidden py-5 px-4" dir="rtl">
                 <div class="innSlides">
+                    <basis core="print" datamembername="db.image-Product">
+                        <layout>
+                            <div class="swiper w-full mb-8 imageSwiper shadow-[0px_0px_20.6px_0px_#8F8F8F40]">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                  
+                                   @child
+                                </div>
+        
+                            </div>
+                          
+                        </layout>
+                        <face filter="ord=1010"> 
+                              <div class="swiper-slide">
+                                        <div class="imgS flex items-center justify-center">
+                                            <img class="" src="/@largeIMG" alt="@name"
+                                                title="@name">
+                                        </div>
+                                    </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.image-Product">
+                        <layout>
+                            @child
+                        </layout>
 
-                    <div class="swiper w-full mb-8 imageSwiper shadow-[0px_0px_20.6px_0px_#8F8F8F40]">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <div class="imgS flex items-center justify-center">
-                                    <img class="" src="images/9572dda4e86bfb6a0d2735b3fe63ace3.jfif" alt="@name"
-                                        title="@name">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="imgS flex items-center justify-center">
-                                    <img class="" src="images/9572dda4e86bfb6a0d2735b3fe63ace3.jfif" alt="@name"
-                                        title="@name">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="imgS flex items-center justify-center">
-                                    <img class="" src="images/9572dda4e86bfb6a0d2735b3fe63ace3.jfif" alt="@name"
-                                        title="@name">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="imgS flex items-center justify-center">
-                                    <img class="" src="images/9572dda4e86bfb6a0d2735b3fe63ace3.jfif" alt="@name"
-                                        title="@name">
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                        <face>
+                            
+                        </face>
+                    </basis>
                     <div class="thumbSlider relative swiper py-3">
 
                         <!-- Additional required wrapper -->
@@ -610,14 +631,16 @@
 
             </div>
         </div>
+        <basis core="call" file="footer.inc" />   
     </div>
-    <script src="js/jQuery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script src="js/gsap.js"></script>
-<script src="js/scrollTrigger.js"></script>
-    <script src="js/swiper-bundle11.0.5.min.js"></script>
-    <script src="js/producShow.js"></script>
+<basis core="call" file="script.inc" />   
+ <script src="[##cms.cms.cdn##]/_js/readmore.min.js"></script>
+    <script src='[##cms.cms.cdn##]/_js/bootstrap3.3.7.min.js'></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/new/producShow.js"></script>
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
 </body>
 
 </html>

@@ -1,0 +1,1 @@
+let swiperProduct=new Swiper(".swiper-products",{slidesPerView:4,spaceBetween:40,speed:1e3}),swiperProject=new Swiper(".swiper-projects",{slidesPerView:2.4,spaceBetween:50,speed:800}),swiperNews=new Swiper(".swiper-news",{slidesPerView:3.2,spaceBetween:30,speed:800}),swiperGallery=new Swiper(".swiper-gallery",{slidesPerView:3.2,spaceBetween:30,speed:800});
