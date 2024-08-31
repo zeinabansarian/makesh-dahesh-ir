@@ -117,10 +117,13 @@ footer .captchaa img{
 }
 .Address{
   width: 80%;
-  margin-top: 2em;
+ 
 }
 footer .Contact-box{
-  margin-top: 3em;
+  margin-top: 0;
+}
+footer .Right >.Logo {
+  margin-bottom: 2em;
 }
 .main-container{
   position: fixed;
@@ -439,9 +442,6 @@ border: none !important;
   stroke: #fff !important;
 }
 
-.Service .Top-S:hover svg {
-  width: 30px;
-}
 main.Home .navigationBTN .swiper-button-prev,main.Home .navigationBTN .swiper-button-next,
 .navigationBTN .swiper-button-prev,
 .navigationBTN .swiper-button-next 
@@ -1560,7 +1560,8 @@ header .DropDownn-Menu .Menu-item{
   width: max-content;
 }
 header .DropDownn-Menu{
-  padding-right: 9em !important;
+  padding-right: 10em !important;
+  gap: .8em;
 }
 header .DropDownn-Menu::before{
   top: 1em !important;
@@ -1596,4 +1597,28 @@ footer .btnsMain{
 }
 .searchContainer{
   direction: rtl;
+}
+footer .Map_1{
+  width: 345px;
+  margin-top: 9em;
+  height: 239px;
+}
+footer .Socials{ transform: translateY(10px); 
+  -webkit-transform: translateY(10px);
+   -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+     -o-transform: translateY(10px);
+}
+footer .Middle img{
+  width: 80px;
+  height: 80px;
+}
+footer .Middle {
+  justify-content: space-between;
+  height: 68%;
+  margin-top: auto;
+}
+footer .Middle .box{
+  margin: 0;
+  justify-content: space-between;
 }

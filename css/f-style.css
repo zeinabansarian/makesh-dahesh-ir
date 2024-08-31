@@ -21,7 +21,7 @@ main.Home .swiper-brands .swiper-slide,
 main.Home .swiper-brands .swiper-slide a,
 main.Home .swiper-brands .swiper-slide .IMG-2,
 main.Home .swiper-brands .swiper-slide .IMG-2 img{
-    height: 134px;
+    height: 100%;
 }
 main.Home .Brands-Container a.btn-show{
     transform: translate(-3em, 1em) !important;
@@ -160,4 +160,60 @@ line-height: 31px;
 color: #1E1E1E;
 text-align: justify;
 font-family: "IRANSansWeb300";
+}
+main.Home .Section-3 .Left{
+    justify-content: flex-end;
+}
+main.Home .Section-3  .btnsMain{
+    margin-top: .5em;
+}
+main.Home .Section-4 .Title-p .btText,
+main.Home .Section-5 .Title-p .btText{
+    margin-right: 1em;
+}
+main.Home .Section-4  .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main.Home .Section-7 .Icon-S {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid #475569;
+
+}
+main.Home .Section-7 .Service.colorB .Title-S{
+    transition: all .8s ease;
+    opacity: .5;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+} 
+main.Home .Section-7 .Service.colorN .Title-S{
+    transition: all .8s ease;
+    opacity: 1;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+} 
+.Blog .IMG >a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main.aboutUS .Section-2 {
+    margin-top: 3em;
+}
+.GalleryShow .Top h1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 56.35px;
+    color: #1E1E1E;
+    margin-top: 1em;
 }

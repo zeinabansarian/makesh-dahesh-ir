@@ -111,7 +111,11 @@ $(document).ready(function() {
   nav.addEventListener('mouseenter',(e)=>{
     IsOpen =Boolean(`${e.currentTarget.getAttribute('IS-OP')}`) 
     e.currentTarget.children[0].classList.add('active')
-    // $(e.currentTarget.children[1]).slideDown();
+    let navBtns = document.querySelectorAll('.Service')
+    for(let i=0 ; i<navBtns.length ; i++){
+      navBtns[i].classList.add('colorB')
+    }
+    e.currentTarget.classList.add('colorN')
     e.currentTarget.children[1].style.display='flex'
 
     let current = e.currentTarget.getAttribute('data-img')
@@ -122,7 +126,7 @@ $(document).ready(function() {
 
     MainIMG.classList.add('Show')
 
-    }, 200);
+    }, 500);
 
     IsOpen =false;
     e.currentTarget.setAttribute('IS-OP',true)
@@ -130,15 +134,27 @@ $(document).ready(function() {
  nav.addEventListener('mouseleave',(e)=>{
     IsOpen =Boolean(`${e.currentTarget.getAttribute('IS-OP')}`) 
     e.currentTarget.children[0].classList.remove('active')
-    // $(e.currentTarget.children[1]).slideUp();
     e.currentTarget.children[1].style.display='none'
     e.currentTarget.setAttribute('IS-OP',false)
+    let navBtns = document.querySelectorAll('.Service')
+    for(let i=0 ; i<navBtns.length ; i++){
+      navBtns[i].classList.add('colorB')
+      navBtns[i].classList.remove('colorN')
+
+    }
     IsOpen =true;
      })
   })
 
   })
-  
+  document.querySelector('.Text-ServiceContainer').addEventListener('mouseleave',(e)=>{
+    let navBtns = document.querySelectorAll('.Service')
+    for(let i=0 ; i<navBtns.length ; i++){
+      navBtns[i].classList.remove('colorB')
+      navBtns[i].classList.remove('colorN')
+
+    }
+  })
 
   //  BLOG SLIDER
 let swiperBlog= new Swiper(".swiper-blogs", {

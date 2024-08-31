@@ -9,7 +9,7 @@ faders.forEach(fade=>{
         stagger:.2,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -20,7 +20,7 @@ faders.forEach(fade=>{
         stagger:.2,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -30,7 +30,7 @@ faders.forEach(fade=>{
         scale:1,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -40,7 +40,7 @@ faders.forEach(fade=>{
         scale:1,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -50,7 +50,7 @@ faders.forEach(fade=>{
         scale:1,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -60,7 +60,7 @@ faders.forEach(fade=>{
         scale:1,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -70,7 +70,7 @@ faders.forEach(fade=>{
         scale:1,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
@@ -80,7 +80,17 @@ faders.forEach(fade=>{
         scale:1,
         scrollTrigger:{
             trigger:fade,
-            start:"top 60%",
+            start:"top 90%",
+            end:"bottom bottom"
+        }
+    })
+    gsap.to(fade.querySelectorAll('h6'),{
+        y:0,
+        opacity:1,
+        scale:1,
+        scrollTrigger:{
+            trigger:fade,
+            start:"top 90%",
             end:"bottom bottom"
         }
     })
