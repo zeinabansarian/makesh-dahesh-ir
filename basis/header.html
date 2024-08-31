@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/leaflet.css">
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
     <member request="cat" type="tree" name="productCat1" parentid="21181" /> 
 </basis>
@@ -42,15 +43,15 @@
       </div>
      <div class="Menu-Container w-full grid grid-cols-[1fr,2fr] justify-center top-0 left-0 h-[100vh] 
       items-center fixed z-[100] bg-cover bg-no-repeat before:content-['']
-       before:absolute before:w-full before:h-full opacity-0 invisible [&.Open]:opacity-[1]
+       before:absolute before:w-full before:h-full opacity-0  [&.Open]:opacity-[1]
        [&.Open]:visible group duration-[1.5s]
       before:left-0 before:bottom-0 before:z-[0] before:bg-[#1e376183]
-      ">
+      " style="visibility: hidden;">
       <div class="BG w-full flex justify-end h-full
        items-end absolute left-0 bottom-0 z-[-1]">
         <img src="[##cms.cms.cdn##]/images/new/menu.jpg" alt="makeshdahesh" title="makeshdahesh"
-         class=" h-0 duration-[1.5s] opacity-0 invisible w-full object-cover
-        group-[&.Open]:visible group-[&.Open]:opacity-[1] group-[&.Open]:h-[100%]">
+         class=" h-0 duration-[1.5s] opacity-0  w-full object-cover
+        group-[&.Open]:visible group-[&.Open]:opacity-[1] group-[&.Open]:h-[100%]" style="visibility: hidden;">
       </div>
         <div class="Right relative z-0 flex 
         flex-col justify-between items-start h-[90%] mr-10 my-auto">
@@ -112,7 +113,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             صفحه نخست
                         </a>
                     </li>
@@ -122,10 +123,10 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             محصولات
                         </span>
-                        <div class="DropDown-Menu translate-y-100 opacity-0 [&.openNav]:opacity-[1]
+                        <div class="DropDownn-Menu translate-y-100 opacity-0 [&.openNav]:opacity-[1]
                          flex-col flex absolute ml-[-1em] [&.openNav]:translate-y-[0]
                          duration-150
                         left-0 before:content-['']  before:absolute before:right-0 before:top-[10%]
@@ -137,7 +138,11 @@
                                 @child
                             </layout>
                             <face filter="catid in (21182,21183,209714)">
-                                <div class="Menu-item">
+                                <div class="Menu-item relative
+                                overflow-hidden before:content-['']
+                        before:absolute before:duration-[.5s]
+                        before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
+                        hover:before:w-full ">
                                     <a href="@link" alt="@link" title="@link"
                                      class="font-IRANSansWeb500 font-medium text-base leading-31.03 text-f">
                                        @title
@@ -155,7 +160,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             پروژه ها
                         </a>
                 
@@ -166,7 +171,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             برند
                         </a>
                     </li>
@@ -176,7 +181,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             اخبار
                         </a>
                     </li>
@@ -189,7 +194,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             درباره ما
                         </a>
                     </li>
@@ -199,7 +204,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f">
                             گالری
                         </a>
                     </li>
@@ -209,7 +214,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             خدمات
                         </a>
                     </li>
@@ -219,7 +224,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f">
                             تماس با ما
                         </a>
                     </li>
@@ -229,7 +234,7 @@
                         before:absolute before:duration-[.5s]
                         before:w-0 before:h-[1px] before:bg-b7 before:bottom-0 before:right-0
                         hover:before:w-full 
-                         text-xl leading-31.03 text-f pb-2">
+                         text-xl leading-31.03 text-f ">
                             نمایندگی ها
                         </a>
                     </li>

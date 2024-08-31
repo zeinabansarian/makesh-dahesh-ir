@@ -42,15 +42,15 @@ main.Home .Brands-Container a.btn-show{
   height: 244px;
   object-fit: cover;
 }
-.timeline__entry:nth-child(2n):after{
+/* .timeline__entry:nth-child(2n):after{
     bottom: -.7em !important; 
-}
+} */
 .timeline__entry:nth-child(2n) span{
     margin-top: 127px !important;
 }
-.timeline__entry:after{
+/* .timeline__entry:after{
     bottom: 49px !important; 
-}
+} */
 .timeline__map::before{
     background-color: #FAFAFA !important;
 }
@@ -71,4 +71,93 @@ main.Home .Brands-Container a.btn-show{
     -moz-transition: all .8s ;
     -ms-transition: all .8s ;
     -o-transition: all .8s ;
+}
+.resultSearch p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 55px;
+    color:#1E293B;
+    text-align: justify;
+    font-family: "IRANSansWeb500";
+}
+main.Error .Toggle-item{
+    background-color: #1E1E1E;
+    }
+ main.Error {
+        height: 100vh;
+        overflow: hidden;
+ }
+ .fadeIN{
+    overflow: hidden;
+ }
+ .fadeIN p,
+ .fadeIN span,
+ .fadeIN h1,
+ .fadeIN h2,
+ .fadeIN h3,
+ .fadeIN h4,
+ .fadeIN h5,
+ .fadeIN h6,
+ .fadeIN li
+{
+    opacity: 0;
+    transform: translateY(1.5em);
+    -webkit-transform: translateY(1.5em);
+    -moz-transform: translateY(1.5em);
+    -ms-transform: translateY(1.5em);
+    -o-transform: translateY(1.5em);
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+}
+
+main.Home-Mobile .Service{
+    opacity: 0;
+    transform: translateY(1.5em);
+    -webkit-transform: translateY(1.5em);
+    -moz-transform: translateY(1.5em);
+    -ms-transform: translateY(1.5em);
+    -o-transform: translateY(1.5em);
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+}
+main.Home .Section-1 .Btn:hover svg{
+    stroke: #2E3192F3;
+}
+.btnsMain{
+    position: relative;
+    right: unset;
+    left: unset;
+    bottom: unset;
+}
+.Title-p {
+    padding: 2em 0;
+}
+.Title-p .btnsMain{ transform: translateX(-1em); 
+    -webkit-transform: translateX(-1em); 
+    -moz-transform: translateX(-1em);
+     -ms-transform: translateX(-1em);
+      -o-transform: translateX(-1em);
+}
+main.Home .swiper-banner .btnsMain {
+    margin-bottom: 3.8em;
+}
+.Blog .btText{
+    margin-right: 1em;
+}
+main.Home .Section-8 {
+    margin-bottom: 3em;
+}
+main.Home .Service .Bottom-S p{
+    font-size: 14px;
+font-weight: 300;
+line-height: 31px;
+color: #1E1E1E;
+text-align: justify;
+font-family: "IRANSansWeb300";
 }

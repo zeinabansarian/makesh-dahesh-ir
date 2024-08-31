@@ -51,3 +51,13 @@ btnss.forEach(b=>{
         
     })
 })
+gsap.to(fade.querySelectorAll('h5'),{
+    y:0,
+    opacity:1,
+    scale:1,
+    scrollTrigger:{
+        trigger:fade,
+        start:"top 60%",
+        end:"bottom bottom"
+    }
+})

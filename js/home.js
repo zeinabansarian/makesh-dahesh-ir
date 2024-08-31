@@ -22,18 +22,7 @@ let swiperProduct= new Swiper(".swiper-products", {
     spaceBetween: 40,
       speed:1000
   });  
-let sections =document.querySelectorAll('.sec')
-sections.forEach(s=>{
-    gsap.to('.fadein p',{
-        opacity:1,
-        y:0,
-        scrollTrigger:{
-            trigger:s,
-            start:"top 60%",
-            end:"bottom bottom"
-        }
-      })
-})
+
 //  BRAND SLIDER
 let swiperBrand= new Swiper(".swiper-brands", {
     slidesPerView:4,
@@ -190,4 +179,17 @@ let swiperGallery= new Swiper(".swiper-gallery", {
   }
    
 
- 
+  let servicess = document.querySelectorAll('.Service')
+  servicess.forEach(s=>{
+      gsap.to(s,{
+          y:0,
+          opacity:1,
+          scale:1,
+          stagger:.2,
+          scrollTrigger:{
+              trigger:s,
+              start:"top 60%",
+              end:"bottom bottom"
+          }
+      })
+    })

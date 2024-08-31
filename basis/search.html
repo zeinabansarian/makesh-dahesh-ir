@@ -1,15 +1,15 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="[##cms.query.catid##]"  q="[##cms.query.q##]">
-    <member name="projectList" type="list" size="301x201" propertyid="91112"   postsql=" select * from [db.projectList] where title like '%[##cms.query.q##]%'" />
+    <member name="projectList" type="list"  size="948x900" propertyid="91112"   postsql=" select * from [db.projectList] where title like '%[##cms.query.q##]%'" />
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="25653"  q="[##cms.query.q##]">
-    <member name="articleList" type="list" size="426x283" perpage="200" link="article.bc"  
+    <member name="articleList" type="list" size="457x304" perpage="200" link="article.bc"  
      propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.articleList]"/> 
 </basis> 	
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="58667" q="[##cms.query.q##]"> 
-    <member name="galleryList" type="list" size="330x185"   postsql=" select * from [db.galleryList] where title like '%[##cms.query.q##]%'" /> 
+    <member name="galleryList" type="list" size="451x253"   postsql=" select * from [db.galleryList] where title like '%[##cms.query.q##]%'" /> 
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" q="[##cms.query.q##]" >
-     <member name="productList" type="list" size="260x260" postsql=" select * from [db.productList] where title like '%[##cms.query.q##]%'" /> 
+     <member name="productList" type="list"  size="283x283" postsql=" select * from [db.productList] where title like '%[##cms.query.q##]%'" /> 
 </basis>
 <!DOCTYPE html>
 <html lang="fa">
@@ -56,41 +56,42 @@
                 </div>
              </layout>
              <face>
-                <div class="swiper-slide w-full flex justify-center items-center">
-                    <div class="Product group hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
-                    w-full flex justify-start items-start
-                   overflow-hidden flex-col">
-                       <div class="Box-1 w-full flex justify-start flex-col items-start">
-                           <a href="/@link" title="@title" class="w-full flex justify-start items-start ">
-                               <img src="/@00260X00260prp" alt="@title" title="@title"  class="w-full object-cover">
-                           </a>
-                           <a href="/@link" title="@title" class=" w-auto
-                           my-[.3em] flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                           justify-center items-center mx-auto">
-                              @title
-                           </a>
-                       </div>
-                       <div class="Box w-[80%] mx-auto flex absolute bottom-0 left-0 right-0
-                        justify-between ease-in-out duration-[.5s]
-                        group-hover:opacity-[1] group-hover:translate-y-[0]
-                       items-center py-[1em] opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
-                        bg-f" >
-                           <a href="/@link" title="@title" class="Showbtn w-auto translate-x-[100px] opacity-0 group-hover:opacity-[1]
-                           group-hover:translate-x-[0] duration-75 delay-[.8s] 
-                           flex font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                            justify-center items-center">
-                               مشاهده
-                           </a>
-                           <a href="/@link" title="@title" class=" w-auto flex translate-x-[-100px] opacity-0
-                           group-hover:opacity-[1] duration-75 delay-[.8s] 
-                           group-hover:translate-x-[0] 
-                           font-IRANSansWeb500 text-sm font-medium leading-23 text-b1
-                           justify-center items-center ">
-                               @title
-                           </a>
-                       </div>
-                   </div>
-                  </div>
+                <div class="swiper-slide w-full flex justify-start items-start flex-col">
+                    <div class="Product group  hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] duration-[.5s]
+                     w-full flex justify-start items-start
+                    overflow-hidden flex-col">
+                        <div class="Box-1 w-full overflow-hidden flex justify-start flex-col items-start">
+                            <a href="@link" class="w-full flex justify-start items-start ">
+                                <img src="@00283X00283prp" alt="@title" title="@title"
+                                 class="w-full object-cover">
+                            </a>
+                            <a href="@link"  alt="@title" title="@title" 
+                            class=" w-auto flex font-IRANSansWeb500
+                             text-sm font-medium leading-23 text-b1
+                            justify-center items-center mx-auto">
+                                @title
+                            </a>
+                        </div>
+                        <div class="Box w-full mx-auto flex mt-[1em] overflow-hidden
+                         justify-between py-[1em] px-[1em] duration-[1s]
+                         group-hover:opacity-[1] group-hover:translate-y-[0]
+                        items-center  opacity-0 translate-y-[-100.9%] group-hover:shadow-[0 0 50px rgba(0,0,0,.1)]
+                         bg-b6" >
+                            <a href="@link" alt="@title" title="@title"
+                             class="Showbtn w-auto 
+                            flex font-IRANSansWeb500 text-sm font-medium leading-23 text-f
+                             justify-center items-center">
+                                مشاهده محصول
+                            </a>
+                            <span pro-link="@link" class="SharePro hover:cursor-pointer w-auto flex justify-center items-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.35C15.11 18.56 15.08 18.78 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z" fill="white"/>
+                                    </svg>
+                                    
+                            </span>
+                        </div>
+                    </div>
+                </div>
              </face>
          </basis>
      
@@ -116,7 +117,7 @@
                                     <div class="swiper-slide w-full flex justify-start items-start relative">
                                         <div class="IMG w-full flex justify-start items-start">
                                             <a href="@link" alt="@title" title="@title" class="w-full flex justify-start items-start">
-                                            <img src="@00301X00201prp" alt="@title" title="@title" class="w-full object-cover">
+                                            <img src="@00948X00900prp" alt="@title" title="@title" class="w-full object-cover">
                                         </a>
                                         </div>
                                         <div class="OV absolute left-0 top-0 z-2 h-full w-full flex bg-[#00000073] pointer-events-none
@@ -160,7 +161,7 @@
                                                 <div class="IMG w-full flex justify-center items-center
                                                 overflow-hidden group ">
                                                 <a href="@link" title="@title" class="w-full">
-                                                    <img src="/@00426X00283prp"
+                                                    <img src="/@00457X00304prp"
                                                     class="w-full object-cover group-hover:scale-[1.1] duration-[.5s]" alt=""></a>
                                                 </div>
                                                 <div class="Title w-full flex justify-start items-center">
@@ -179,28 +180,22 @@
                                                         @substr  </p>
                                                 </div>
                                                 <div class="Btn w-full flex justify-start items-center" >
-                                                    <a href="@link" title="@title"  class="btn-show group bg-transparent mt-[1em]
-                                                    duration-[.4s]
-                                                   border-none outline-none flex justify-start
-                                                    items-start relative">
-                                                       <span class="Btn group-hover:h-[20px] w-auto flex duration-[.4s]
-                                                       justify-center items-center leading-23 text-b1 rounded-sm
-                                                        font-IRANSansWeb500 text-sm py-[1em] border-r-[1px] px-[1.5em]
-                                                        pl-[2.5em] border-t-[1px]
-                                                        border-b-[1px] border-b3">
-                                                        مشاهده 
-                                                       </span>
-                                                       <svg class="BTN relative left-0 top-0" viewBox="-25 -25 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                                         width="100" height="100">
-                                                           <circle  fill="transparent" stroke="#E4E4E7" id="c1" 
-                                                           stroke-dasharray="565.48px" stroke-dashoffset="0" 
-                                                           style="transform: translate(2px,82px);" r="30"
-                                                            cy="20" stroke-width="5" cx="100"></circle>
-                                                            <circle id="c2" cx="100" cy="100" 
-                                                            fill="transparent" stroke="#E4E4E7" stroke-width="5" 
-                                                            stroke-dasharray="565.48px" stroke-dashoffset="0" r="75"></circle>
-                                                     </svg>
-                                                   </a>
+                                                    <div class="btnsMain translate-x-[8px] absolute right-20 bottom-4 origin-top duration-700 flex items-center justify-end gap-x-7">
+                                                        <a href="@link" alt="@title" title="@title"
+                                                         class="btttns flex relative" dir="ltr">
+                                                         <div class="holes z-1 translate-x-[45%]">
+                                                        <div class="hole1 duration-500 border border-b3"></div>
+                                                        <div class="hole2 duration-500 border border-b3"></div>
+                                                        </div>
+                                                        
+                                                        <div class="text relative top-[1px] origin-top duration-500 rounded-tr-md 
+                                                        rounded-br-md scale-x-90  w-[130px]  flex items-center justify-center border-t border-t-bg1 border-r border-r-bg1">
+                                                        </div>
+                                                        <span class="btText font-IRANSansWeb500 text-center self-center duration-500 text-sm text-b1 absolute right-4 w-fit">
+                                                            مشاهده
+                                                        </span>
+                                                        </a>
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,28 +225,28 @@
                                 </layout>
                                 <face>
                                     <div class="swiper-slide w-full flex justify-between items-start">
-                                        <div class="Gallery group flex-col pt-[1em] pb-[1em] pl-[1em] pr-[1em]
-                                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
-                                        overflow-hidden
-                                        w-full flex justify-center items-center duration-[.8s] delay-[.3s] ">
-                                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
-                                                <a href="@link" alt="@title" title="@title" class="w-full flex justify-center items-center">
-                                                <img src="@00330x00185prp" alt="@title" title="@title" class="w-auto object-cover">
-                                                </a>
-                                                <div class="OV w-full h-full flex justify-center items-end absolute 
-                                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
-                                                </div>
-                                            </div>
-                                            <div class="Title  pt-[.5em] pb-[.5em]
-                                            w-full flex justify-center items-center">
-                                               <a href="@link" alt="@title" title="@title" class="w-full flex justify-center items-center">
-                                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
-                                                 @title
-                                               </p>
-                                           </a>
-                                           </div>
-                                            
-                                        </div>
+                                        <div class="Gallery group flex-col  pt-[1em] pb-[1em] pl-[1em] pr-[1em]
+                        hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]
+                        overflow-hidden
+                       w-auto flex justify-center items-center  delay-[.3s] ">
+                        <a href="@link" alt="@title" title="@title">
+                            <div class="IMG  hover:cursor-pointer w-auto flex justify-center items-center relative ">
+                                <img src="@00451X00253prp"alt="@title" title="@title" class="w-auto object-cover">
+                                <div class="OV w-full h-full flex justify-center items-end absolute 
+                                 left-0 top-0 z-2 linear group-hover:opacity-[0] opacity-1 duration-[.5s] ">
+                                </div>
+                            </div>
+                        </a>
+                            <div class="Title  pt-[.5em] pb-[.5em]
+                            w-full flex justify-center items-center">
+                               <a href="@link" alt="@title" title="@title" class="w-full flex justify-center items-center">
+                               <p class="font-IRANSansWeb500 text-base font-medium leading-25.4 text-b1 text-center">
+                                  @title
+                               </p>
+                           </a>
+                           </div>
+                            
+                        </div> 
                                       </div>
                                 </face>
                             </basis>
@@ -260,8 +255,51 @@
     
       <basis core="call" file="footer.inc" pageindex="[##cms.cdn.pageindex##]" />
     </main>
+    <div class="ShareBox-Container fixed left-0 flex flex-col justify-center items-center pointer-events-none opacity-0
+    top-0 h-full w-full z-[999] bg-[#000000CC] duration-500
+    [&.OpenShare]:opacity-[1] [&.OpenShare]:pointer-events-auto">
+       <span class="CloseShare absolute hover:cursor-pointer right-0 top-0 z-[99] mr-[1.5em] mt-[3em]">
+           <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.42103 0.42103C0.982418 -0.140343 1.89259 -0.140343 2.45397 0.42103L11.5 9.4671L20.5461 0.42103C21.1074 -0.140343 22.0176 -0.140343 22.579 0.42103C23.1403 0.982418 23.1403 1.89259 22.579 2.45397L13.5329 11.5L22.579 20.5461C23.1403 21.1074 23.1403 22.0176 22.579 22.579C22.0176 23.1403 21.1074 23.1403 20.5461 22.579L11.5 13.5329L2.45397 22.579C1.89259 23.1403 0.982418 23.1403 0.42103 22.579C-0.140343 22.0176 -0.140343 21.1074 0.42103 20.5461L9.4671 11.5L0.42103 2.45397C-0.140343 1.89259 -0.140343 0.982418 0.42103 0.42103Z" fill="white"/>
+               </svg>
+               
+       </span>
+       <div class="ShareBox w-auto px-[1em] py-[1em] mx-auto h-[60px] bg-b6 flex justify-center items-center gap-2">
+           <span class="ShareItem flex justify-center items-center">
+               <a href="" class="whatsapp">
+                   <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path fill-rule="evenodd" clip-rule="evenodd" d="M27.786 4.70423C21.5531 -1.53404 11.4477 -1.53441 5.2152 4.70423C-0.164401 10.0888 -0.994743 18.5269 3.20493 24.8412L3.20384 24.8419C3.32195 25.0209 3.3561 25.2522 3.2758 25.4686L1.02788 31.4872L7.00162 29.2518C7.21129 29.159 7.46203 29.1721 7.66734 29.3081C18.1889 36.3001 32.4602 28.7978 32.4602 16.0001C32.4606 11.5888 30.6742 7.59513 27.786 4.70423ZM14.1811 15.6051C15.3312 17.1826 16.7902 18.4171 18.5098 19.3308C19.0189 18.7768 19.4284 18.1792 20.0651 18.0246V18.0239C20.3554 17.9537 20.6621 17.9679 20.955 18.0621L23.9693 19.0314C24.6416 19.2475 25.1532 19.8724 25.0813 20.6125C25.0242 21.1985 24.8905 23.151 24.7212 23.5871C24.4671 24.2422 23.82 24.6434 23.1193 24.5913C15.0042 23.9901 8.5184 17.4983 7.91772 9.37557C7.84867 8.44225 8.50931 7.74135 9.48174 7.64678C13.5353 7.25141 12.9408 6.86695 14.4416 11.5416C14.5357 11.8347 14.5499 12.1421 14.4798 12.4327H14.4791C14.3246 13.0699 13.7272 13.4799 13.1741 13.9891C13.4721 14.5532 13.8082 15.0937 14.1811 15.6051ZM14.4474 18.0526C15.4667 19.0729 16.655 19.9291 17.9345 20.5994C19.2663 21.2974 20.1032 19.4104 20.3892 19.3766L23.683 20.4489L23.4616 22.8949C23.4453 23.0611 23.4119 23.2143 23.2167 23.1997C15.7942 22.6501 9.85676 16.7076 9.30695 9.27773L9.36437 9.10896C9.47774 8.98638 11.7086 8.82816 12.0233 8.79761C12.1777 8.7827 12.9899 11.5736 13.1163 11.9675C13.2788 12.4742 11.1501 13.1201 11.9055 14.5652C12.5742 15.8434 13.43 17.0338 14.4474 18.0526Z" fill="white"/>
+                       </svg>
+                       
+               </a>
+           </span>
+           <span class="ShareItem flex justify-center items-center">
+               <a href="" class="linkdin">
+                   <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M16.0002 0.660156C7.25186 0.660156 0.160156 7.75186 0.160156 16.5002C0.160156 25.2485 7.25186 32.3402 16.0002 32.3402C24.7485 32.3402 31.8402 25.2485 31.8402 16.5002C31.8402 7.75186 24.7485 0.660156 16.0002 0.660156ZM12.1227 23.0655H8.91506V12.7431H12.1227V23.0655ZM10.4991 11.4759C9.48596 11.4759 8.83091 10.7582 8.83091 9.87046C8.83091 8.96461 9.50576 8.26831 10.5403 8.26831C11.5749 8.26831 12.2085 8.96461 12.2283 9.87046C12.2283 10.7582 11.5749 11.4759 10.4991 11.4759ZM23.8377 23.0655H20.6301V17.345C20.6301 16.0134 20.1648 15.1092 19.0048 15.1092C18.1188 15.1092 17.5924 15.7214 17.3598 16.3104C17.274 16.52 17.2525 16.817 17.2525 17.1123V23.0639H14.0433V16.0349C14.0433 14.7462 14.002 13.6688 13.9591 12.7415H16.746L16.8928 14.1753H16.9572C17.3796 13.5021 18.4141 12.5088 20.145 12.5088C22.2553 12.5088 23.8377 13.9229 23.8377 16.9622V23.0655Z" fill="white"/>
+                       </svg>
+                       
+               </a>
+           </span>
+           <span class="ShareItem flex justify-center items-center">
+               <a href="" class="telegram">
+                   <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <g clip-path="url(#clip0_726_5408)">
+                       <path d="M14.2582 19.2911C14.691 19.6135 15.1245 19.937 15.5585 20.2602C15.1054 20.7071 14.6516 21.1544 14.2002 21.6009C14.1581 21.6441 14.1188 21.6891 14.0775 21.7331L14.0993 21.4374C14.1513 20.7223 14.2036 20.0061 14.2582 19.2911ZM17.8186 12.987C15.6173 14.3754 13.416 15.7677 11.2135 17.1555C11.1688 17.1833 11.1199 17.2051 11.0702 17.2277C11.3586 18.1497 11.647 19.0722 11.9347 19.9951C12.1402 20.6444 12.3533 21.2923 12.5477 21.9443C12.6279 22.2147 12.767 22.3595 13.0603 22.3083C13.1417 21.2048 13.2196 20.102 13.3029 18.9981C13.3124 18.8694 13.3277 18.7387 13.3434 18.61C13.2189 18.5386 13.2735 18.4018 13.3166 18.3568C13.3927 18.2785 13.4687 18.1986 13.5447 18.1192C13.5718 18.094 13.6001 18.0684 13.6264 18.0432C13.6646 18.0034 13.7017 17.9637 13.7395 17.9244C13.9217 17.7548 14.1031 17.5821 14.2853 17.4118C14.3892 17.3136 14.4943 17.215 14.5986 17.1173C14.8812 16.8526 15.1635 16.5882 15.4511 16.3277C16.1822 15.6631 16.9282 15.0137 17.6609 14.3518C18.5948 13.5068 19.5264 12.6588 20.4516 11.8044C20.5196 11.71 20.5635 11.5885 20.6231 11.4847C20.4573 11.5068 20.2629 11.4793 20.1311 11.5568C19.3522 12.0209 18.586 12.5034 17.8186 12.987ZM32.6133 16.1115C32.6133 24.9481 25.4497 32.1117 16.6131 32.1117C7.77609 32.1117 0.613281 24.9481 0.613281 16.1115C0.613281 7.27452 7.77609 0.111328 16.6131 0.111328C25.4497 0.111328 32.6133 7.27452 32.6133 16.1115ZM23.7579 9.73711C23.7495 9.676 23.7434 9.61335 23.7312 9.55338C23.5903 8.87423 23.2182 8.66911 22.552 8.89715C22.4543 8.93 22.3542 8.95139 22.2549 8.97851C21.8832 9.13206 21.5154 9.29631 21.1384 9.43726C20.5134 9.67294 19.8824 9.89334 19.2522 10.1206C18.8679 10.2807 18.4863 10.448 18.0986 10.5996C17.1272 10.9793 16.154 11.3517 15.1811 11.7276C13.1787 12.4996 11.1761 13.2711 9.17221 14.0431C8.72224 14.2169 8.26845 14.3816 7.82307 14.5668C7.43154 14.7284 7.032 14.885 6.67141 15.102C6.51175 15.1978 6.33604 15.4499 6.35437 15.61C6.37194 15.7716 6.61908 15.9098 6.77034 16.0542C6.79785 16.0806 6.84483 16.089 6.88456 16.1012C7.94607 16.4297 9.00758 16.7582 10.0698 17.0859C10.0641 17.1967 10.0767 17.3098 10.1115 17.4217L10.4977 18.6604L11.0053 20.2857C11.0649 20.4744 11.1249 20.6597 11.1837 20.845C11.3281 21.2976 11.4782 21.7651 11.6146 22.2227C11.9117 23.2155 12.7131 23.2923 12.9519 23.2923C12.9874 23.2923 13.0252 23.29 13.0626 23.2885C13.0993 23.29 13.136 23.2911 13.1723 23.2911C13.7853 23.2911 14.1791 22.9535 14.4137 22.7514C14.4568 22.7136 14.4981 22.6788 14.5279 22.6559C14.5764 22.6196 14.6219 22.5803 14.6608 22.5363C14.6914 22.5046 14.7193 22.4718 14.7494 22.4405C14.7987 22.3855 14.8449 22.3339 14.8858 22.2934C15.2422 21.9405 15.5978 21.5887 15.9549 21.2365L16.3782 20.819C16.4378 20.8602 16.4974 20.9011 16.5573 20.942C17.5203 21.6609 18.4817 22.3832 19.4481 23.0982C20.1693 23.6315 20.6735 23.4932 21.0226 22.6784C21.1712 21.9913 21.319 21.3026 21.4665 20.6169C21.6017 19.9313 21.7354 19.2475 21.8691 18.5634C21.955 18.1876 22.0398 17.8105 22.1246 17.4351C22.35 16.3762 22.575 15.3162 22.7992 14.257C22.8721 13.919 22.9436 13.5813 23.0161 13.2433C23.0337 13.1631 23.0547 13.0825 23.0708 13.0015C23.3007 11.9132 23.5291 10.8257 23.7579 9.73711Z" fill="white"/>
+                       </g>
+                       <defs>
+                       <clipPath id="clip0_726_5408">
+                       <rect width="33" height="33" fill="white" transform="translate(0.5)"/>
+                       </clipPath>
+                       </defs>
+                       </svg>
+                       
+               </a>
+           </span>
+       </div>
+   </div>
 <basis core="call" file="script.inc" />
 <script src="[##cms.cms.cdn##]/js/new/search.js"></script>
-
+<script src="[##cms.cms.cdn##]/js/new/sharePro.js"></script>
 </body>
 </html>

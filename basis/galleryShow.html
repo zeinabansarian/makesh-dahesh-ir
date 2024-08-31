@@ -16,6 +16,9 @@
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]">
     <member name="galleryVideo" type="list" format="3"/> 
 </basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="fq" />
+</basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -63,22 +66,30 @@
                 <div class="galleryContainer flex-col w-full  flex justify-center items-center  ">
                     <section class="w-full mt-[3em] flex items-center justify-center sidebar bg-b4">
                         <ul class="w-auto flex items-center justify-center ">
-                            <li class="w-auto min-w-[100px] group cursor-pointer justify-center duration-[.2s]
-                            active [&.active]:shadow-[rgba(0,_0,_0,_0.24)_0px_1px_2px] [&.active]:bg-[#E4E4E7] [&.active]:border-b-[2px]
-                             py-4 flex items-center gap-x-4 [&.active]:border-b-b7" id="img">
+                            <li class="w-auto min-w-[100px] group cursor-pointer justify-center relative
+                            active [&.active]:shadow-[rgba(0,_0,_0,_0.24)_0px_1px_2px] [&.active]:bg-[#E4E4E7] 
+                             py-4 flex items-center gap-x-4  before:contents-['']
+                             before:absolute before:left-0 before:bottom-0 before:h-[5px] [&.active]before:bg-b7
+                             duration-[.5s] before:w-0 [&.active]:before:w-full [&.active]:before:bg-b7
+                            before:right-0 before:mx-auto
+                             hover:before:w-full hover:before:bg-b7 before:duration-[.5s] hover:bg-[#E4E4E7]"
+                              id="img">
                                 <p class=" font-IRANSansWeb500   duration-[.2s]
-                                 group-[&.active]:text-b1
+                                 group-[&.active]:text-b1 group-hover:text-b1
                                 font-medium leading-25.4 
                                 text-base text-b12">
                                    عکس
                                 </p>
                             </li>
-                             <li class="w-auto min-w-[100px] group cursor-pointer justify-center duration-[.2s]
-                             [&.active]:shadow-[rgba(0,_0,_0,_0.24)_0px_1px_2px]
-                             [&.active]:bg-[#E4E4E7] [&.active]:border-b-[2px]
-                             py-4 flex items-center gap-x-4 [&.active]:border-b-b7" id="video">
+                             <li class="w-auto min-w-[100px] group cursor-pointer justify-center relative
+                              [&.active]:shadow-[rgba(0,_0,_0,_0.24)_0px_1px_2px] [&.active]:bg-[#E4E4E7]
+                              py-4 flex items-center gap-x-4  before:contents-['']
+                              before:absolute before:left-0 before:bottom-0 before:h-[5px] [&.active]before:bg-b7
+                              duration-[.5s] before:w-0 [&.active]:before:w-full [&.active]:before:bg-b7
+                             before:right-0 before:mx-auto
+                              hover:before:w-full hover:before:bg-b7 before:duration-[.5s] hover:bg-[#E4E4E7]" id="video">
                                 <p class=" font-IRANSansWeb500   duration-[.2s]
-                                group-[&.active]:text-b1
+                                group-[&.active]:text-b1  group-hover:text-b1
                                 font-medium leading-25.4 
                                 text-base text-b12">
                                     ویدیو
@@ -199,5 +210,8 @@
     </main>
     <basis core="call" file="script.inc" />
     <script src="[##cms.cms.cdn##]/js/new/galleryShow.js"></script>
+    <script type="application/ld+json">
+        [##json.fq.column1##]
+      </script>
 </body>
 </html>
