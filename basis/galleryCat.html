@@ -1,6 +1,5 @@
-
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" > 
-    <member request="cat" type="tree" name="galleryCat" parentid="58666" /> 
+    <member request="cat" type="tree" name="galleryCat" parentid="58666" link="gallery-list.bc" /> 
 </basis>	
 <!DOCTYPE html>
 <html lang="fa">
@@ -45,7 +44,7 @@
                         <layout>
                             @child
                         </layout>
-                        <face filter="parentid=58666">
+                        <face filter="catid in (58667,58668)">
                 <div class="Gallery w-full flex justify-between border-b-b1 border-b-[1px]
                      items-center duration-[1s] group hover:bg-b5 translate-y-[3em] opacity-[0]">
                         <a href="@link" alt="@title" title="@title"  class="w-full flex justify-between items-center">

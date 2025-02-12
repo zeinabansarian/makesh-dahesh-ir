@@ -40,6 +40,8 @@ let TimelineSwiper = new Swiper('.timeline__slides',{
          console.log(slides);
          
         for(let g = 0 ; g < e.slides.length ; g++){
+          console.log( slides[g]);
+          
             slides[g].children[0].children[0].children[0].children[0].setAttribute('data-index',g)
         }
         document.querySelectorAll('[data-timeline="activeYear"]').forEach(function (i) {
@@ -67,12 +69,15 @@ let TimelineSwiper = new Swiper('.timeline__slides',{
 })
 //   PARTNER SLIDER
 let PartnerSwiper = new Swiper('.swiper-partner',{
-    speed: 1500,
-    slidesPerView:5,
     spaceBetween: 40,
-    centeredSlides: true,
-    loop:true,
-    grabCursor:true,
+   slidesPerView:5,
+   grabCursor:true,
+   loop: true,
+     autoplay: {
+         delay: 0,
+     },
+     speed: 3000,          //add
+  
 
 })
 
@@ -80,7 +85,8 @@ let PartnerSwiper = new Swiper('.swiper-partner',{
 let swiperCertificate= new Swiper(".swiper-certificate", {
     slidesPerView:4,
     spaceBetween: 10,
-      speed:1000
+      speed:1000,
+    
   });  
   // ANIMATIONS
   let sections = document.querySelectorAll('.sec')

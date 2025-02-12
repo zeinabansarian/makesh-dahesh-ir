@@ -7,11 +7,11 @@
   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2359771">
    <member name="bannertext" type="view" postsql="select * from [db.bannertext] where TypeID=250"/> 
   </basis>
-  <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="1445255"> 
+  <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="1409501"> 
     <member name="pdf-def" type="list" format="9" postsql="select * from [db.pdf-def] where ord=1000"/>
   </basis>
   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209687">
-    <member name="list-DefProduct" size="283x283" type="list"/>
+    <member name="list-DefProduct" size="283x283" type="list" link="product.bc"/>
   </basis>
   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2359909"> 
     <member name="AboutDef" type="view"/> 
@@ -20,7 +20,7 @@
     <member name="image-AboutDef" type="list" format="4"/> 
   </basis>	
   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="58083"> 
-    <member name="list-DefBrand" size="264x134" type="list" typeID="159"/>
+    <member name="list-DefBrand" size="264x134" type="list" typeID="159" link="brand.bc"/>
   </basis>
   <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
     <member request="cat" type="tree" name="productCat" parentid="21181" /> 
@@ -29,10 +29,10 @@
     <member request="cat" type="tree" name="ProjectCat" parentid="58702"  /> 
   </basis>
   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209725">
-    <member name="list-DefServices" size="816x403" type="list"/>
+    <member name="list-DefServices" size="816x403" type="list" link="service.bc"/>
     </basis>
   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="25653">
-    <member name="list-DefBlog" size="457x304" type="list" propertyid="7248,7244"/>
+    <member name="list-DefBlog" size="457x304" type="list" propertyid="7248,7244" link="article.bc"/>
   </basis>
   <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2359974">
     <member name="image-GalleyDef" type="list" format="4"/> 
@@ -536,17 +536,39 @@
                                               @title
                                             </p></a>
                                         </div>
-                                        <div class="Icon-S w-auto flex justify-end items-center">
-                                            <span class="Circle flex justify-center items-center  group-[&.active]:bg-b1 group-[&.active]:rounded-full 
+                                        <div class="Icon-S w-auto  flex justify-end items-center relative">
+                                            <span class="Circle flex absolute left-0 top-[-1em] justify-center items-center 
+                                             group-[&.active]:opacity-0 group-[&.active]:rounded-full 
                                             duration-75">
-                                                <svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1"
-                                                viewBox="0 0 50 50" width="50px" xml:space="preserve" 
-                                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <rect fill="none" height="50" width="50"/><line fill="none" 
-                                                stroke="#475569" id="s1" stroke-miterlimit="10" stroke-width="4"
-                                                 x1="9" x2="41" y1="25" y2="25"/><line fill="none" id="s2" stroke="#475569" 
-                                                 stroke-miterlimit="10" stroke-width="4" x1="25" x2="25" y1="9" y2="41"/></svg>
+                                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_457_3949)">
+                                                <path d="M21.0008 0.133789C9.49527 0.133789 0.134766 9.49429 0.134766 20.9998C0.134766 32.5053 9.49527 41.8658 21.0008 41.8658C32.5063 41.8658 41.8668 32.5053 41.8668 20.9998C41.8668 9.49429 32.5063 0.133789 21.0008 0.133789ZM21.0008 39.8783C10.5908 39.8783 2.12227 31.4098 2.12227 20.9998C2.12227 10.5898 10.5908 2.12129 21.0008 2.12129C31.4108 2.12129 39.8793 10.5898 39.8793 20.9998C39.8793 31.4098 31.4108 39.8783 21.0008 39.8783ZM32.3448 20.9998C32.3448 21.5488 31.8998 21.9933 31.3513 21.9933H21.9943V31.3498C21.9943 31.8988 21.5493 32.3433 21.0008 32.3433C20.4523 32.3433 20.0073 31.8983 20.0073 31.3498V21.9933H10.6508C10.1023 21.9933 9.65727 21.5483 9.65727 20.9998C9.65727 20.4513 10.1023 20.0063 10.6508 20.0063H20.0073V10.6498C20.0073 10.1008 20.4523 9.65629 21.0008 9.65629C21.5493 9.65629 21.9943 10.1013 21.9943 10.6498V20.0063H31.3508C31.8998 20.0063 32.3448 20.4508 32.3448 20.9998Z" fill="#475569"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_457_3949">
+                                                <rect width="42" height="42" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                                </svg>
+                                                
                                             </span>
+                                            <span class="closee absolute left-0 top-[-1em] opacity-0
+                                             flex justify-center items-center group-[&.active]:opacity-[1]
+                                          group-[&.active]:rounded-full 
+                                           duration-75">
+                                           <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_601_5478)">
+                                            <rect width="42" height="42" fill="white"/>
+                                            <path d="M5.92614 6.56966C-2.03058 14.8803 -1.74262 28.1149 6.56804 36.0717C14.8787 44.0284 28.1133 43.7404 36.07 35.4298C44.0268 27.1191 43.7388 13.8845 35.4281 5.92776C27.1175 -2.02896 13.8829 -1.74101 5.92614 6.56966ZM34.6344 34.0553C27.4353 41.5746 15.4619 41.8352 7.94251 34.636C0.423152 27.4369 0.162638 15.4635 7.36176 7.94413C14.5609 0.424767 26.5343 0.164249 34.0537 7.36337C41.573 14.5625 41.8335 26.5359 34.6344 34.0553ZM28.8431 12.8057C29.2397 13.1854 29.253 13.8142 28.8737 14.2104L22.4028 20.9691L29.1612 27.4397C29.5577 27.8194 29.5711 28.4482 29.1917 28.8444C28.8124 29.2406 28.1832 29.2543 27.787 28.875L21.0287 22.4044L14.5581 29.1628C14.1788 29.559 13.5496 29.5727 13.1534 29.1934C12.7572 28.814 12.7435 28.1849 13.1228 27.7887L19.5934 21.0303L12.835 14.5597C12.4385 14.18 12.4251 13.5512 12.8044 13.155C13.1838 12.7588 13.8129 12.7451 14.2091 13.1245L20.9675 19.595L27.4381 12.8366C27.8178 12.4401 28.4466 12.426 28.8431 12.8057Z" fill="#64748B"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_601_5478">
+                                            <rect width="42" height="42" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                            
+                                        </span>
                                         </div>
                                     </div>
                                     <div class="Bottom-S w-full mx-auto flex

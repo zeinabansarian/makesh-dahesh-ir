@@ -153,6 +153,19 @@ main.Home .swiper-banner .btnsMain {
 main.Home .Section-8 {
     margin-bottom: 3em;
 }
+main.Home .Service{
+    opacity: 0;
+    transform: translateY(1.5em);
+    -webkit-transform: translateY(1.5em);
+    -moz-transform: translateY(1.5em);
+    -ms-transform: translateY(1.5em);
+    -o-transform: translateY(1.5em);
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+}
 main.Home .Service .Bottom-S p{
     font-size: 14px;
 font-weight: 300;

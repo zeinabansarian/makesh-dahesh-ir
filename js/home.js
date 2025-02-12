@@ -203,8 +203,8 @@ let swiperGallery= new Swiper(".swiper-gallery", {
           scale:1,
           stagger:.2,
           scrollTrigger:{
-              trigger:s,
-              start:"top 60%",
+              trigger:'.Services-c',
+              start:"top 70%",
               end:"bottom bottom"
           }
       })

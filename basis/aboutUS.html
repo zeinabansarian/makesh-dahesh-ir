@@ -25,7 +25,9 @@
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2360148"> 
     <member name="image-adward" type="list" format="4"/> 
 </basis>	
-    
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2360144">
+    <member name="tejarii" propertyid="7244" type="view" postsql="select * from [db.tejarii] where TypeID=129"/>
+</basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -113,6 +115,34 @@
             </h2>
       
        </div>
+
+
+       <div class="faceTimeline" style="display: none;">
+        <basis core="print" datamembername="db.history1">
+            <face>
+        <div class="timeline-title">
+            @text
+        </div>
+            </face>
+        </basis>
+        <basis core="print" datamembername="db.history1">
+            <face>
+        <div class="timeline-text">
+            @largetext
+        </div>
+            </face>
+        </basis>
+        <basis core="print" datamembername="db.image-history">
+            <layout>
+                @child
+            </layout>
+            <face>
+        <div class="timeline-img">
+            <img src="@largeIMG" alt="">
+        </div>
+            </face>
+        </basis>
+       </div>
         <div class="timeline Time-lineC module--margin is--scrollable w-[90%] mx-auto"
          data-timeline="root">
             <div class="timeline__wrapper">
@@ -144,622 +174,7 @@
                     <div class="timeline__slider w-full flex justify-start items-start relative" data-timeline="slider">
                         <div class="timeline__slides w-full flex justify-start items-start" data-timeline="slides">
                             <div class="swiper-wrapper w-full" >  
-                         
-                                        <div class="timeline__slide swiper-slide
-                                        w-full flex justify-start items-start" 
-                                        data-timeline="slide" 
-                                       >
-                                        <div class="timeline__slide__content w-full flex justify-start items-start">
-                                        <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                            <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                            before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                             justify-start items-start">
-                                                   
-                                             <basis core="print" datamembername="db.history1">
-                                                <face filter="RowNumber=1">
-                                             <div  data-timeline-year="@text" class=" multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                     flex justify-start items-start flex-col fadeIN">          
-                                                     <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                     text-2xl font-medium leading-23 text-b5 before:z-1
-                                                     before:w-full before:absolute before:bottom-0 before:left-0
-                                                     before:bg-[#F37021F3] before:h-[1px] ">@text</h2>         
-                                                        <div class="multimedia__subline rte fadeIN">
-                                                                <p>
-                                                                    @largetext
-                                                                </p>
-                                        
-                                                            </div>                                                                                                                                                
-                                                    </div>   
-                                                </face>
-                                             </basis>                                    
-                               
-
-                                             <basis core="print" datamembername="db.image-history">
-                                                <layout>
-                                                    @child
-                                                </layout>
-                                                <face filter="ord =1">
-                                         
-                                                <div class="multimedia__image-col translate-y-[-40px]
-                                                 w-full flex justify-end items-start">
-                                                    <div class="multimedia__image w-full flex justify-end items-start">
-                                                                
-                                            <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                             src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                        
-                                                </div>
-
-                                                </face>
-                                            </basis>
-
-                                            </div>
-                                        
-                                        </div>
-                                     </div>
-                                     </div>
-                                     <div class="timeline__slide swiper-slide
-                                     w-full flex justify-start items-start" 
-                                     data-timeline="slide" 
-                                  >
-                                     <div class="timeline__slide__content w-full flex justify-start items-start">
-                                     <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                         <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                         before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                          justify-start items-start">      
-                                          <basis core="print" datamembername="db.history1">
-                                             <face filter="RowNumber=2">
-                                          <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                  flex justify-start items-start flex-col fadeIN">          
-                                                  <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                  text-2xl font-medium leading-23 text-b5 before:z-1
-                                                  before:w-full before:absolute before:bottom-0 before:left-0
-                                                  before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                     <div class="multimedia__subline rte fadeIN">
-                                                             <p>
-                                                                 @largetext
-                                                             </p>
-                                     
-                                                         </div>                                                                                                                                                
-                                                 </div>   
-                                             </face>
-                                          </basis>                                    
-                            
-
-                                          <basis core="print" datamembername="db.image-history">
-                                             <layout>
-                                                 @child
-                                             </layout>
-                                             <face filter="ord =2">
-                                      
-                                             <div class="multimedia__image-col translate-y-[-40px]
-                                              w-full flex justify-end items-start">
-                                                 <div class="multimedia__image w-full flex justify-end items-start">
-                                                             
-                                         <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                          src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                     
-                                             </div>
-
-                                             </face>
-                                         </basis>
-
-                                         </div>
-                                     
-                                     </div>
-                                  </div>
-                                     </div>  
-                                     <div class="timeline__slide swiper-slide
-                                     w-full flex justify-start items-start" 
-                                     data-timeline="slide" 
-                                  >
-                                     <div class="timeline__slide__content w-full flex justify-start items-start">
-                                     <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                         <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                         before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                          justify-start items-start">      
-                                          <basis core="print" datamembername="db.history1">
-                                             <face filter="RowNumber=3">
-                                          <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                  flex justify-start items-start flex-col fadeIN">          
-                                                  <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                  text-2xl font-medium leading-23 text-b5 before:z-1
-                                                  before:w-full before:absolute before:bottom-0 before:left-0
-                                                  before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                     <div class="multimedia__subline rte fadeIN">
-                                                             <p>
-                                                                 @largetext
-                                                             </p>
-                                     
-                                                         </div>                                                                                                                                                
-                                                 </div>   
-                                             </face>
-                                          </basis>                                    
-                            
-
-                                          <basis core="print" datamembername="db.image-history">
-                                             <layout>
-                                                 @child
-                                             </layout>
-                                             <face filter="ord =3">
-                                      
-                                             <div class="multimedia__image-col translate-y-[-40px]
-                                              w-full flex justify-end items-start">
-                                                 <div class="multimedia__image w-full flex justify-end items-start">
-                                                             
-                                         <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                          src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                     
-                                             </div>
-
-                                             </face>
-                                         </basis>
-
-                                         </div>
-                                     
-                                     </div>
-                                  </div>
-                                    </div>  
-                                    <div class="timeline__slide swiper-slide
-                                    w-full flex justify-start items-start" 
-                                    data-timeline="slide" 
-                                  >
-                                    <div class="timeline__slide__content w-full flex justify-start items-start">
-                                    <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                        <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                        before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                         justify-start items-start">      
-                                         <basis core="print" datamembername="db.history1">
-                                            <face filter="RowNumber=4">
-                                         <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                 flex justify-start items-start flex-col fadeIN">          
-                                                 <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                 text-2xl font-medium leading-23 text-b5 before:z-1
-                                                 before:w-full before:absolute before:bottom-0 before:left-0
-                                                 before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                    <div class="multimedia__subline rte fadeIN">
-                                                            <p>
-                                                                @largetext
-                                                            </p>
-                                    
-                                                        </div>                                                                                                                                                
-                                                </div>   
-                                            </face>
-                                         </basis>                                    
-                           
-
-                                         <basis core="print" datamembername="db.image-history">
-                                            <layout>
-                                                @child
-                                            </layout>
-                                            <face filter="ord =4">
-                                     
-                                            <div class="multimedia__image-col translate-y-[-40px]
-                                             w-full flex justify-end items-start">
-                                                <div class="multimedia__image w-full flex justify-end items-start">
-                                                            
-                                        <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                         src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                    
-                                            </div>
-
-                                            </face>
-                                        </basis>
-
-                                        </div>
-                                    
-                                    </div>
-                                 </div>
-                                    </div>
-                                    <div class="timeline__slide swiper-slide
-                                    w-full flex justify-start items-start" 
-                                    data-timeline="slide" 
-                                    data-timeline-year="@text">
-                                    <div class="timeline__slide__content w-full flex justify-start items-start">
-                                    <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                        <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                        before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                         justify-start items-start">      
-                                         <basis core="print" datamembername="db.history1">
-                                            <face filter="RowNumber=5">
-                                         <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                 flex justify-start items-start flex-col fadeIN">          
-                                                 <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                 text-2xl font-medium leading-23 text-b5 before:z-1
-                                                 before:w-full before:absolute before:bottom-0 before:left-0
-                                                 before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                    <div class="multimedia__subline rte fadeIN">
-                                                            <p>
-                                                                @largetext
-                                                            </p>
-                                    
-                                                        </div>                                                                                                                                                
-                                                </div>   
-                                            </face>
-                                         </basis>                                    
-                           
-
-                                         <basis core="print" datamembername="db.image-history">
-                                            <layout>
-                                                @child
-                                            </layout>
-                                            <face filter="ord =5">
-                                     
-                                            <div class="multimedia__image-col translate-y-[-40px]
-                                             w-full flex justify-end items-start">
-                                                <div class="multimedia__image w-full flex justify-end items-start">
-                                                            
-                                        <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                         src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                    
-                                            </div>
-
-                                            </face>
-                                        </basis>
-
-                                        </div>
-                                    
-                                    </div>
-                                 </div>
-                                    </div>
-                                    <div class="timeline__slide swiper-slide
-                                    w-full flex justify-start items-start" 
-                                    data-timeline="slide" 
-                                  >
-                                    <div class="timeline__slide__content w-full flex justify-start items-start">
-                                    <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                        <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                        before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                         justify-start items-start">      
-                                         <basis core="print" datamembername="db.history1">
-                                            <face filter="RowNumber=6">
-                                         <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                 flex justify-start items-start flex-col fadeIN">          
-                                                 <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                 text-2xl font-medium leading-23 text-b5 before:z-1
-                                                 before:w-full before:absolute before:bottom-0 before:left-0
-                                                 before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                    <div class="multimedia__subline rte fadeIN">
-                                                            <p>
-                                                                @largetext
-                                                            </p>
-                                    
-                                                        </div>                                                                                                                                                
-                                                </div>   
-                                            </face>
-                                         </basis>                                    
-                           
-
-                                         <basis core="print" datamembername="db.image-history">
-                                            <layout>
-                                                @child
-                                            </layout>
-                                            <face filter="ord =6">
-                                     
-                                            <div class="multimedia__image-col translate-y-[-40px]
-                                             w-full flex justify-end items-start">
-                                                <div class="multimedia__image w-full flex justify-end items-start">
-                                                            
-                                        <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                         src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                    
-                                            </div>
-
-                                            </face>
-                                        </basis>
-
-                                        </div>
-                                    
-                                    </div>
-                                 </div>
-                                   </div>
-                                   <div class="timeline__slide swiper-slide
-                                   w-full flex justify-start items-start" 
-                                   data-timeline="slide" 
-                                >
-                                   <div class="timeline__slide__content w-full flex justify-start items-start">
-                                   <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                       <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                       before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                        justify-start items-start">      
-                                        <basis core="print" datamembername="db.history1">
-                                           <face filter="RowNumber=7">
-                                        <div  data-timeline-year="@text"  class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                flex justify-start items-start flex-col fadeIN">          
-                                                <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                text-2xl font-medium leading-23 text-b5 before:z-1
-                                                before:w-full before:absolute before:bottom-0 before:left-0
-                                                before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                   <div class="multimedia__subline rte fadeIN">
-                                                           <p>
-                                                               @largetext
-                                                           </p>
-                                   
-                                                       </div>                                                                                                                                                
-                                               </div>   
-                                           </face>
-                                        </basis>                                    
-                          
-
-                                        <basis core="print" datamembername="db.image-history">
-                                           <layout>
-                                               @child
-                                           </layout>
-                                           <face filter="ord =7">
-                                    
-                                           <div class="multimedia__image-col translate-y-[-40px]
-                                            w-full flex justify-end items-start">
-                                               <div class="multimedia__image w-full flex justify-end items-start">
-                                                           
-                                       <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                        src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                   
-                                           </div>
-
-                                           </face>
-                                       </basis>
-
-                                       </div>
-                                   
-                                   </div>
-                                </div>
-                                   </div>
-                                   <div class="timeline__slide swiper-slide
-                                   w-full flex justify-start items-start" 
-                                   data-timeline="slide" 
-                               >
-                                   <div class="timeline__slide__content w-full flex justify-start items-start">
-                                   <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                       <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                       before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                        justify-start items-start">      
-                                        <basis core="print" datamembername="db.history1">
-                                           <face filter="RowNumber=8">
-                                        <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                                flex justify-start items-start flex-col fadeIN">          
-                                                <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                                text-2xl font-medium leading-23 text-b5 before:z-1
-                                                before:w-full before:absolute before:bottom-0 before:left-0
-                                                before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                   <div class="multimedia__subline rte fadeIN" >
-                                                           <p>
-                                                               @largetext
-                                                           </p>
-                                   
-                                                       </div>                                                                                                                                                
-                                               </div>   
-                                           </face>
-                                        </basis>                                    
-                          
-
-                                        <basis core="print" datamembername="db.image-history">
-                                           <layout>
-                                               @child
-                                           </layout>
-                                           <face filter="ord =8">
-                                    
-                                           <div class="multimedia__image-col translate-y-[-40px]
-                                            w-full flex justify-end items-start">
-                                               <div class="multimedia__image w-full flex justify-end items-start">
-                                                           
-                                       <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                        src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                   
-                                           </div>
-
-                                           </face>
-                                       </basis>
-
-                                       </div>
-                                   
-                                   </div>
-                                </div>
-                                </div> 
-                                <div class="timeline__slide swiper-slide
-                                w-full flex justify-start items-start" 
-                                data-timeline="slide" 
-                               >
-                                <div class="timeline__slide__content w-full flex justify-start items-start">
-                                <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                    <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                    before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                     justify-start items-start">      
-                                     <basis core="print" datamembername="db.history1">
-                                        <face filter="RowNumber=9">
-                                     <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                             flex justify-start items-start flex-col fadeIN">          
-                                             <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                             text-2xl font-medium leading-23 text-b5 before:z-1
-                                             before:w-full before:absolute before:bottom-0 before:left-0
-                                             before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                <div class="multimedia__subline rte fadeIN">
-                                                        <p>
-                                                            @largetext
-                                                        </p>
-                                
-                                                    </div>                                                                                                                                                
-                                            </div>   
-                                        </face>
-                                     </basis>                                    
-                       
-
-                                     <basis core="print" datamembername="db.image-history">
-                                        <layout>
-                                            @child
-                                        </layout>
-                                        <face filter="ord =9">
-                                 
-                                        <div class="multimedia__image-col translate-y-[-40px]
-                                         w-full flex justify-end items-start">
-                                            <div class="multimedia__image w-full flex justify-end items-start">
-                                                        
-                                    <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                     src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                
-                                        </div>
-
-                                        </face>
-                                    </basis>
-
-                                    </div>
-                                
-                                </div>
-                             </div>
-                                </div>
-                                <div class="timeline__slide swiper-slide
-                                w-full flex justify-start items-start" 
-                                data-timeline="slide" 
-                            >
-                                <div class="timeline__slide__content w-full flex justify-start items-start">
-                                <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                    <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                    before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                     justify-start items-start">      
-                                     <basis core="print" datamembername="db.history1">
-                                        <face filter="RowNumber=10">
-                                     <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                             flex justify-start items-start flex-col fadeIN">          
-                                             <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                             text-2xl font-medium leading-23 text-b5 before:z-1
-                                             before:w-full before:absolute before:bottom-0 before:left-0
-                                             before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                                <div class="multimedia__subline rte fadeIN">
-                                                        <p>
-                                                            @largetext
-                                                        </p>
-                                
-                                                    </div>                                                                                                                                                
-                                            </div>   
-                                        </face>
-                                     </basis>                                    
-                       
-
-                                     <basis core="print" datamembername="db.image-history">
-                                        <layout>
-                                            @child
-                                        </layout>
-                                        <face filter="ord =10">
-                                 
-                                        <div class="multimedia__image-col translate-y-[-40px]
-                                         w-full flex justify-end items-start">
-                                            <div class="multimedia__image w-full flex justify-end items-start">
-                                                        
-                                    <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                     src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                                
-                                        </div>
-
-                                        </face>
-                                    </basis>
-
-                                    </div>
-                                
-                                </div>
-                             </div>
-                             </div>
-                             <div class="timeline__slide swiper-slide
-                             w-full flex justify-start items-start" 
-                             data-timeline="slide" 
-                                  >
-                             <div class="timeline__slide__content w-full flex justify-start items-start">
-                             <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                 <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                 before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                  justify-start items-start">      
-                                  <basis core="print" datamembername="db.history1">
-                                     <face filter="RowNumber=11">
-                                  <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                          flex justify-start items-start flex-col fadeIN">          
-                                          <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                          text-2xl font-medium leading-23 text-b5 before:z-1
-                                          before:w-full before:absolute before:bottom-0 before:left-0
-                                          before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                             <div class="multimedia__subline rte fadeIN">
-                                                     <p>
-                                                         @largetext
-                                                     </p>
                              
-                                                 </div>                                                                                                                                                
-                                         </div>   
-                                     </face>
-                                  </basis>                                    
-                    
-
-                                  <basis core="print" datamembername="db.image-history">
-                                     <layout>
-                                         @child
-                                     </layout>
-                                     <face filter="ord =11">
-                              
-                                     <div class="multimedia__image-col translate-y-[-40px]
-                                      w-full flex justify-end items-start">
-                                         <div class="multimedia__image w-full flex justify-end items-start">
-                                                     
-                                 <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                  src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                             
-                                     </div>
-
-                                     </face>
-                                 </basis>
-
-                                 </div>
-                             
-                             </div>
-                          </div>
-                             </div>
-                             <div class="timeline__slide swiper-slide
-                             w-full flex justify-start items-start" 
-                             data-timeline="slide" 
-                      >
-                             <div class="timeline__slide__content w-full flex justify-start items-start">
-                             <div class="multimedia module--margin multimedia--timeline w-full flex justify-start items-start" data-media-type="current" data-motion="">
-                                 <div class="grid-row w-full grid grid-cols-[50%,50%] before:content-[''] relative
-                                 before:absolute before:right-0 before:z-[-1] before:w-[80%] before:h-full before:bg-b3
-                                  justify-start items-start">      
-                                  <basis core="print" datamembername="db.history1">
-                                     <face filter="RowNumber=12">
-                                  <div  data-timeline-year="@text" class="fade-in multimedia__text w-[90%] mx-auto py-[5em] pb-[3em]
-                                          flex justify-start items-start flex-col fadeIN">          
-                                          <h2 class="multimedia__headline relative faNum py-[.5em] mb-[.8em] font-IRANSansWeb500
-                                          text-2xl font-medium leading-23 text-b5 before:z-1
-                                          before:w-full before:absolute before:bottom-0 before:left-0
-                                          before:bg-[#F37021F3] before:h-[1px]">@text</h2>         
-                                             <div class="multimedia__subline rte fadeIN">
-                                                     <p>
-                                                         @largetext
-                                                     </p>
-                             
-                                                 </div>                                                                                                                                                
-                                         </div>   
-                                     </face>
-                                  </basis>                                    
-                    
-
-                                  <basis core="print" datamembername="db.image-history">
-                                     <layout>
-                                         @child
-                                     </layout>
-                                     <face filter="ord =12">
-                              
-                                     <div class="multimedia__image-col translate-y-[-40px]
-                                      w-full flex justify-end items-start">
-                                         <div class="multimedia__image w-full flex justify-end items-start">
-                                                     
-                                 <img class=" ls-is-cached lazyloaded w-full object-cover"
-                                  src="@largeIMG" alt="mackesh-dahesh" title="makesh-dahesh">   </div>
-                             
-                                     </div>
-
-                                     </face>
-                                 </basis>
-
-                                 </div>
-                             
-                             </div>
-                          </div>
-                          </div>
-                      
-         
                       
                           </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -790,13 +205,13 @@
     <section class="Section-4 sec w-full flex justify-center items-center  mt-[3em] flex-col gap-[3em]">
             <div class="Title-p fadeIN w-[90%] mx-auto flex justify-between items-center ">
                 <h3 class="font-IRANSansWeb500 text-2xl font-medium leading-23 text-b5">
-                    شرکای تجاری
+                   [##db.tejarii.largetext##]
                 </h3>
           
            </div>
         <div class="PartnersContainer w-full flex justify-center items-center ">
-              <div class="swiper-partner w-full flex justify-center items-center overflow-hidden pb-[1em]">
-                <div class="swiper-wrapper w-full flex justify-center items-center ">
+              <div class="swiper-partner w-full flex  overflow-hidden pb-[1em]">
+                <div class="swiper-wrapper w-full  ">
                     <basis core="print" datamembername="db.image-customer">
                         <layout>
                             @child
@@ -815,7 +230,24 @@
                     </div>
                         </face>
                     </basis>
-                    
+                    <basis core="print" datamembername="db.image-customer">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="ord=1000"> 
+                    <div class="swiper-slide w-full flex justify-center
+                    items-center flex-col  bg-f duration-[.4s] ">
+                        <div class="Partner w-full h-full  bg-f duration-[.4s] flex 
+                         justify-center items-center flex-col hover:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
+                            <div class="IMG w-full h-full bg-f duration-[.4s] flex justify-center items-center flex-col">
+                                <img src="@largeIMG" alt="makesh-dahesh" title="makesh-dahesh"
+                                 class=" pt-[10px] pb-[10px] pr-[10px] pl-[10px] rounded-full bg-f duration-[.4s]
+                                object-cover w-full h-full">
+                            </div>
+                        </div>
+                    </div>
+                        </face>
+                    </basis>
                 </div>
               </div>
         </div>
